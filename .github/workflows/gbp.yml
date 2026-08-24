@@ -48,8 +48,8 @@ jobs:
       - name: Setup git
         if: steps.value_holder.outputs.ACTIONS_ENABLED
         run: |
-          git config --global user.name "gbp-action"
-          git config --global user.email "<>"
+          git config --local user.name "moonwizards-ci[bot]"
+          git config --local user.email "320573166+moonwizards-ci[bot]@users.noreply.github.com"
       - name: Checkout alternate branch
         if: steps.value_holder.outputs.ACTIONS_ENABLED
         uses: actions/checkout@v7

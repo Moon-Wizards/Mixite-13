@@ -32,8 +32,8 @@ jobs:
       - name: Commit and Push
         continue-on-error: true
         run: |
-          git config user.name "novasector-ci[bot]"
-          git config user.email "181600888+novasector-ci[bot]@users.noreply.github.com"
+          git config --local user.name "moonwizards-ci[bot]"
+          git config --local user.email "320573166+moonwizards-ci[bot]@users.noreply.github.com"
           git add .
           git commit -m 'Update TGS DMAPI'
           git push -f -u origin tgs-dmapi-update
