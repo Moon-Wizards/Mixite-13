@@ -155,7 +155,7 @@ GLOBAL_LIST_INIT(holiday_mail, list())
 	poster_icon = "holiday_love"
 	holiday_mail = list(
 		/obj/item/food/bonbon/chocolate_truffle,
-		/obj/item/food/candyheart,
+		///obj/item/food/candyheart, // M13 REMOVAL
 		/obj/item/food/grown/flower/rose,
 		)
 

@@ -7,18 +7,20 @@
 /// Examine Panel OOC notes
 #define EXAMINE_DNA_OOC_NOTES "ooc_notes"
 /// Examine Panel NSFW ooc notes—requires you to click a tab to see
-#define EXAMINE_DNA_OOC_NOTES_NSFW "ooc_notes_nsfw"
+//#define EXAMINE_DNA_OOC_NOTES_NSFW "ooc_notes_nsfw" // M13 REMOVAL
 
-/// Examine text when a person has low arousal
-#define ERP_FLAVOR_DNA_LOW_AROUSAL "erp_low_arousal_text"
-/// Examine text when a person has medium arousal
-#define ERP_FLAVOR_DNA_MEDIUM_AROUSAL "erp_medium_arousal_text"
-/// Examine text when a person has high arousal
-#define ERP_FLAVOR_DNA_HIGH_AROUSAL "erp_high_arousal_text"
-/// Flavor text when licking someone
-#define ERP_FLAVOR_DNA_TASTE "erp_taste"
-/// Flavor text when smelling someone
-#define ERP_FLAVOR_DNA_SCENT "erp_scent"
+// M13 REMOVAL START
+///// Examine text when a person has low arousal
+//#define ERP_FLAVOR_DNA_LOW_AROUSAL "erp_low_arousal_text"
+///// Examine text when a person has medium arousal
+//#define ERP_FLAVOR_DNA_MEDIUM_AROUSAL "erp_medium_arousal_text"
+///// Examine text when a person has high arousal
+//#define ERP_FLAVOR_DNA_HIGH_AROUSAL "erp_high_arousal_text"
+///// Flavor text when licking someone
+//#define ERP_FLAVOR_DNA_TASTE "erp_taste"
+///// Flavor text when smelling someone
+//#define ERP_FLAVOR_DNA_SCENT "erp_scent"
+// M13 REMOVAL END
 
 //We start from 30 to not interfere with TG species defines, should they add more
 /// We're using all three mutcolor features for our skin coloration
@@ -157,10 +159,12 @@
 	"butt_uses_skincolor" = TRUE,\
 )
 
-#define AROUSAL_CANT 0
-#define AROUSAL_NONE 1
-#define AROUSAL_PARTIAL 2
-#define AROUSAL_FULL 3
+// M13 REMOVAL START
+//#define AROUSAL_CANT 0
+//#define AROUSAL_NONE 1
+//#define AROUSAL_PARTIAL 2
+//#define AROUSAL_FULL 3
+// M13 REMOVAL END
 
 //Species IDs. If you wanna look at tg's species ID defines, go look in the *other* DNA.dm file
 #define SPECIES_AKULA "akula"

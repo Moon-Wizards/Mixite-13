@@ -40,13 +40,17 @@
 	var/reusable = TRUE
 	///How many times the chip can be used.
 	var/uses = 1
+	// M13 REMOVAL START
 	///Whether or not this chip requires lewd item preference enforcement.
-	var/is_lewd = FALSE
+	//var/is_lewd = FALSE
+	// M13 REMOVAL END
 
 /obj/item/disk/neuroware/Initialize(mapload)
 	. = ..()
-	if(is_lewd && CONFIG_GET(flag/disable_lewd_items))
-		return INITIALIZE_HINT_QDEL
+	// M13 REMOVAL START
+	//if(is_lewd && CONFIG_GET(flag/disable_lewd_items))
+	//	return INITIALIZE_HINT_QDEL
+	// M13 REMOVAL END
 	if(isnull(manufacturer_tag))
 		return
 	desc += "<br>"
@@ -155,9 +159,11 @@
 		// Target lacks a robotic brain, so use the NIF
 		slot_name = "[nif_implant] slot"
 
-	if(is_lewd && !(target.client?.prefs.read_preference(/datum/preference/toggle/erp/aphro)))
-		balloon_alert(user, "installation failed!")
-		return
+	// M13 REMOVAL START
+	//if(is_lewd && !(target.client?.prefs.read_preference(/datum/preference/toggle/erp/aphro)))
+	//	balloon_alert(user, "installation failed!")
+	//	return
+	// M13 REMOVAL END
 
 	if(target != user)
 		target.visible_message(

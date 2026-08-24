@@ -515,7 +515,7 @@
 	new /obj/item/disk/nifsoft_uploader/shapeshifter(src)
 	new /obj/item/disk/nifsoft_uploader/summoner(src)
 	new /obj/item/disk/nifsoft_uploader/dorms(src)
-	new /obj/item/disk/nifsoft_uploader/dorms/hypnosis(src)
+	//new /obj/item/disk/nifsoft_uploader/dorms/hypnosis(src) // M13 REMOVAL
 	new /obj/item/disk/nifsoft_uploader/soulcatcher(src)
 	new /obj/item/disk/nifsoft_uploader/job/money_sense(src)
 

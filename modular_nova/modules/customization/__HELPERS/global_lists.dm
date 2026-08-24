@@ -110,92 +110,94 @@
 	for(var/datum/augment_item/aug_path as anything in valid_subtypesof(/datum/augment_item))
 		GLOB.augment_items[aug_path] = new aug_path()
 
+// M13 REMOVAL START
 /// If the "Remove ERP Interaction" config is disabled, remove ERP things from various lists
-/proc/remove_erp_things()
-	if(!CONFIG_GET(flag/disable_erp_preferences))
-		return
-	// Chemical reactions aren't handled here because they're loaded in the reagents SS
-	// See Initialize() on SSReagents
+///proc/remove_erp_things()
+//	if(!CONFIG_GET(flag/disable_erp_preferences))
+//		return
+//	// Chemical reactions aren't handled here because they're loaded in the reagents SS
+//	// See Initialize() on SSReagents
 
-	// Loadouts
-	for(var/datum/loadout_category/category in GLOB.all_loadout_categories)
-		if (category.erp_category)
-			GLOB.all_loadout_categories -= category
-	for(var/datum/loadout_category/category in GLOB.all_loadout_categories)
-		for(var/datum/loadout_item/loadout_item in category.associated_items)
-			if(!loadout_item.erp_item)
-				continue
+//	// Loadouts
+//	for(var/datum/loadout_category/category in GLOB.all_loadout_categories)
+//		if (category.erp_category)
+//			GLOB.all_loadout_categories -= category
+//	for(var/datum/loadout_category/category in GLOB.all_loadout_categories)
+//		for(var/datum/loadout_item/loadout_item in category.associated_items)
+//			if(!loadout_item.erp_item)
+//				continue
 
-			category.associated_items -= loadout_item
+//			category.associated_items -= loadout_item
 
-	for(var/loadout_path in GLOB.all_loadout_datums)
-		var/datum/loadout_item/loadout_datum = GLOB.all_loadout_datums[loadout_path]
-		if(!loadout_datum.erp_item)
-			continue
-		qdel(loadout_datum) // This actually handles removing it from the list.
-		// Ensure this FULLY works later
-
-
-	// Underwear
-	for(var/sprite_name in SSaccessories.underwear_list)
-		var/datum/sprite_accessory/sprite_datum = SSaccessories.underwear_list[sprite_name]
-		if(!sprite_datum?.erp_accessory)
-			continue
-		SSaccessories.underwear_list -= sprite_name
-
-	for(var/sprite_name in SSaccessories.underwear_f)
-		var/datum/sprite_accessory/sprite_datum = SSaccessories.underwear_f[sprite_name]
-		if(!sprite_datum?.erp_accessory)
-			continue
-		SSaccessories.underwear_f -= sprite_name
-
-	for(var/sprite_name in SSaccessories.underwear_m)
-		var/datum/sprite_accessory/sprite_datum = SSaccessories.underwear_m[sprite_name]
-		if(!sprite_datum?.erp_accessory)
-			continue
-		SSaccessories.underwear_m -= sprite_name
-
-	// Undershirts
-	for(var/sprite_name in SSaccessories.undershirt_list)
-		var/datum/sprite_accessory/sprite_datum = SSaccessories.undershirt_list[sprite_name]
-		if(!sprite_datum?.erp_accessory)
-			continue
-		SSaccessories.undershirt_list -= sprite_name
-
-	for(var/sprite_name in SSaccessories.undershirt_f)
-		var/datum/sprite_accessory/sprite_datum = SSaccessories.undershirt_f[sprite_name]
-		if(!sprite_datum?.erp_accessory)
-			continue
-		SSaccessories.undershirt_f -= sprite_name
-
-	for(var/sprite_name in SSaccessories.undershirt_m)
-		var/datum/sprite_accessory/sprite_datum = SSaccessories.undershirt_m[sprite_name]
-		if(!sprite_datum?.erp_accessory)
-			continue
-		SSaccessories.undershirt_m -= sprite_name
+//	for(var/loadout_path in GLOB.all_loadout_datums)
+//		var/datum/loadout_item/loadout_datum = GLOB.all_loadout_datums[loadout_path]
+//		if(!loadout_datum.erp_item)
+//			continue
+//		qdel(loadout_datum) // This actually handles removing it from the list.
+//		// Ensure this FULLY works later
 
 
-	// Bras
-	for(var/sprite_name in SSaccessories.bra_list)
-		var/datum/sprite_accessory/sprite_datum = SSaccessories.bra_list[sprite_name]
-		if(!sprite_datum?.erp_accessory)
-			continue
+//	// Underwear
+//	for(var/sprite_name in SSaccessories.underwear_list)
+//		var/datum/sprite_accessory/sprite_datum = SSaccessories.underwear_list[sprite_name]
+//		if(!sprite_datum?.erp_accessory)
+//			continue
+//		SSaccessories.underwear_list -= sprite_name
 
-		SSaccessories.bra_list -= sprite_name
+//	for(var/sprite_name in SSaccessories.underwear_f)
+//		var/datum/sprite_accessory/sprite_datum = SSaccessories.underwear_f[sprite_name]
+//		if(!sprite_datum?.erp_accessory)
+//			continue
+//		SSaccessories.underwear_f -= sprite_name
 
-	for(var/sprite_name in SSaccessories.bra_f)
-		var/datum/sprite_accessory/sprite_datum = SSaccessories.bra_f[sprite_name]
-		if(!sprite_datum?.erp_accessory)
-			continue
+//	for(var/sprite_name in SSaccessories.underwear_m)
+//		var/datum/sprite_accessory/sprite_datum = SSaccessories.underwear_m[sprite_name]
+//		if(!sprite_datum?.erp_accessory)
+//			continue
+//		SSaccessories.underwear_m -= sprite_name
 
-		SSaccessories.bra_f -= sprite_name
+//	// Undershirts
+//	for(var/sprite_name in SSaccessories.undershirt_list)
+//		var/datum/sprite_accessory/sprite_datum = SSaccessories.undershirt_list[sprite_name]
+//		if(!sprite_datum?.erp_accessory)
+//			continue
+//		SSaccessories.undershirt_list -= sprite_name
 
-	for(var/sprite_name in SSaccessories.bra_m)
-		var/datum/sprite_accessory/sprite_datum = SSaccessories.bra_m[sprite_name]
-		if(!sprite_datum?.erp_accessory)
-			continue
+//	for(var/sprite_name in SSaccessories.undershirt_f)
+//		var/datum/sprite_accessory/sprite_datum = SSaccessories.undershirt_f[sprite_name]
+//		if(!sprite_datum?.erp_accessory)
+//			continue
+//		SSaccessories.undershirt_f -= sprite_name
 
-		SSaccessories.bra_m -= sprite_name
+//	for(var/sprite_name in SSaccessories.undershirt_m)
+//		var/datum/sprite_accessory/sprite_datum = SSaccessories.undershirt_m[sprite_name]
+//		if(!sprite_datum?.erp_accessory)
+//			continue
+//		SSaccessories.undershirt_m -= sprite_name
+
+
+//	// Bras
+//	for(var/sprite_name in SSaccessories.bra_list)
+//		var/datum/sprite_accessory/sprite_datum = SSaccessories.bra_list[sprite_name]
+//		if(!sprite_datum?.erp_accessory)
+//			continue
+
+//		SSaccessories.bra_list -= sprite_name
+
+//	for(var/sprite_name in SSaccessories.bra_f)
+//		var/datum/sprite_accessory/sprite_datum = SSaccessories.bra_f[sprite_name]
+//		if(!sprite_datum?.erp_accessory)
+//			continue
+
+//		SSaccessories.bra_f -= sprite_name
+
+//	for(var/sprite_name in SSaccessories.bra_m)
+//		var/datum/sprite_accessory/sprite_datum = SSaccessories.bra_m[sprite_name]
+//		if(!sprite_datum?.erp_accessory)
+//			continue
+
+//		SSaccessories.bra_m -= sprite_name
+// M13 REMOVAL END
 
 /proc/build_erp_item_list()
 	for(var/obj/item/fun_item as anything in subtypesof(/obj/item))

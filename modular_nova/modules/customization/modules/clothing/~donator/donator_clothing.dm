@@ -732,31 +732,32 @@
 	icon_state = "infcloak"
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/custom_w.dmi'
 
+// M13 REMOVAL START
 // Donation reward for inferno707
-/obj/item/clothing/neck/inferno_collar
-	name = "Kiara's collar"
-	desc = "A soft black collar that seems to stretch to fit whoever wears it."
-	icon_state = "infcollar"
-	icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
-	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/custom_w.dmi'
-	alternate_worn_layer = UNDER_SUIT_LAYER
-	/// What's the name on the tag, if any?
-	var/tagname = null
-	/// What treat item spawns inside the collar?
-	var/treat_path = /obj/item/food/cookie
+///obj/item/clothing/neck/inferno_collar
+//	name = "Kiara's collar"
+//	desc = "A soft black collar that seems to stretch to fit whoever wears it."
+//	icon_state = "infcollar"
+//	icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
+//	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/custom_w.dmi'
+//	alternate_worn_layer = UNDER_SUIT_LAYER
+//	/// What's the name on the tag, if any?
+//	var/tagname = null
+//	/// What treat item spawns inside the collar?
+//	var/treat_path = /obj/item/food/cookie
 
-/obj/item/clothing/neck/inferno_collar/Initialize(mapload)
-	. = ..()
-	create_storage(storage_type = /datum/storage/collar)
-	if(treat_path)
-		new treat_path(src)
+///obj/item/clothing/neck/inferno_collar/Initialize(mapload)
+//	. = ..()
+//	create_storage(storage_type = /datum/storage/collar)
+//	if(treat_path)
+//		new treat_path(src)
 
-/obj/item/clothing/neck/inferno_collar/attack_self(mob/user)
-	tagname = stripped_input(user, "Would you like to change the name on the tag?", "Name your new pet", "Kiara", MAX_NAME_LEN)
-	if(tagname)
-		name = "[initial(name)] - [tagname]"
-
+///obj/item/clothing/neck/inferno_collar/attack_self(mob/user)
+//	tagname = stripped_input(user, "Would you like to change the name on the tag?", "Name your new pet", "Kiara", MAX_NAME_LEN)
+//	if(tagname)
+//		name = "[initial(name)] - [tagname]"
 // Donation reward for inferno707
+// M13 REMOVAL END
 /obj/item/clothing/accessory/medal/steele
 	name = "Insignia Of Steele"
 	desc = "An intricate pendant given to those who help a key member of the Steele Corporation."

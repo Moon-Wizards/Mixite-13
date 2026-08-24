@@ -859,10 +859,12 @@
 		for(var/type in sort_list(valid_subtypesof(/datum/quirk), GLOBAL_PROC_REF(cmp_typepaths_asc)))
 			var/datum/quirk/quirk_type = type
 			// NOVA EDIT ADDITION START
-			if(initial(quirk_type.erp_quirk) && CONFIG_GET(flag/disable_erp_preferences))
-				continue
-			if(initial(quirk_type.tum_quirk) && CONFIG_GET(flag/disable_tums_preferences))
-				continue
+			// M13 REMOVAL START
+			//if(initial(quirk_type.erp_quirk) && CONFIG_GET(flag/disable_erp_preferences))
+			//	continue
+			//if(initial(quirk_type.tum_quirk) && CONFIG_GET(flag/disable_tums_preferences))
+			//	continue
+			// M13 REMOVAL END
 			// NOVA EDIT ADDITION END
 			var/qname = initial(quirk_type.name)
 			options[has_quirk(quirk_type) ? "[qname] (Remove)" : "[qname] (Add)"] = quirk_type

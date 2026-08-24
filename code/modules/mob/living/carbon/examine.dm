@@ -301,13 +301,15 @@
 	if(length(gunpointed))
 		for(var/datum/gunpoint/GP in gunpointed)
 			. += "<span class='warning'><b>[GP.source.name] [GP.source.p_are()] holding [t_him] at gunpoint with [GP.aimed_gun.name]!</b></span>\n"
-	if(has_dna(src))
-		for(var/genital_slot in GLOB.possible_genitals)
-			var/obj/item/organ/genital/possible_genital = get_organ_slot(genital_slot)
-			if(possible_genital)
-				if(possible_genital.is_exposed())
-					. += "<span class='notice'>[t_He] [t_has] exposed genitals... <a href='byond://?src=[REF(src)];lookup_info=genitals'>\[Look closer...\]</a></span>"
-					break
+	// M13 REMOVAL START
+	//if(has_dna(src))
+	//	for(var/genital_slot in GLOB.possible_genitals)
+	//		var/obj/item/organ/genital/possible_genital = get_organ_slot(genital_slot)
+	//		if(possible_genital)
+	//			if(possible_genital.is_exposed())
+	//				. += "<span class='notice'>[t_He] [t_has] exposed genitals... <a href='byond://?src=[REF(src)];lookup_info=genitals'>\[Look closer...\]</a></span>"
+	//				break
+	// M13 REMOVAL END
 
 	var/flavor_text_link
 	/// The first 1-FLAVOR_PREVIEW_LIMIT characters in the mob's "flavor_text" DNA feature. FLAVOR_PREVIEW_LIMIT is defined in flavor_defines.dm.
@@ -323,8 +325,10 @@
 		flavor_text_link = span_notice("<a href='byond://?src=[REF(src)];lookup_info=open_examine_panel'>\[Examine closely...\]</a>")
 	if (flavor_text_link)
 		. += flavor_text_link
-	if (!face_obscured && !HAS_TRAIT(src, TRAIT_UNKNOWN_APPEARANCE) && client?.prefs.read_preference(/datum/preference/text/character_ad))
-		. += span_notice("[t_He] [t_has] an ad in the character directory... <a href='byond://?src=[REF(src)];lookup_info=open_character_ad'>\[Open directory?\]</a>")
+	// M13 REMOVAL START
+	//if (!face_obscured && !HAS_TRAIT(src, TRAIT_UNKNOWN_APPEARANCE) && client?.prefs.read_preference(/datum/preference/text/character_ad))
+	//	. += span_notice("[t_He] [t_has] an ad in the character directory... <a href='byond://?src=[REF(src)];lookup_info=open_character_ad'>\[Open directory?\]</a>")
+	// M13 REMOVAL END
 
 	//Temporary flavor text addition:
 	if(temporary_flavor_text)
@@ -335,10 +339,12 @@
 
 	. += EXAMINE_SECTION_BREAK
 
-	if(client)
-		var/erp_status_pref = client.prefs.read_preference(/datum/preference/choiced/erp_status)
-		if(erp_status_pref && !CONFIG_GET(flag/disable_erp_preferences) && user.client.prefs.read_preference(/datum/preference/toggle/master_erp_preferences))
-			. += span_info("ERP Status: [span_revenboldnotice(erp_status_pref)]")
+	// M13 REMOVAL START
+	//if(client)
+	//	var/erp_status_pref = client.prefs.read_preference(/datum/preference/choiced/erp_status)
+	//	if(erp_status_pref && !CONFIG_GET(flag/disable_erp_preferences) && user.client.prefs.read_preference(/datum/preference/toggle/master_erp_preferences))
+	//		. += span_info("ERP Status: [span_revenboldnotice(erp_status_pref)]")
+	// M13 REMOVAL END
 
 	if (!CONFIG_GET(flag/disable_conflict_opt_in_preferences))
 		var/conflict_opt_in_status = mind?.get_effective_conflict_opt_in_level()

@@ -65,7 +65,9 @@
 	var/custom_species_lore
 	var/obscured
 	var/ooc_notes = ""
-	var/ooc_notes_nsfw = ""
+	// M13 REMOVAL START
+	//var/ooc_notes_nsfw = ""
+	// M13 REMOVAL END
 	var/ideal_antag_optin_status
 	var/current_antag_optin_status
 	var/ideal_conflict_optin_status
@@ -74,18 +76,20 @@
 
 	// OOC notes go first
 	if(preferences)
-		if(user.client?.prefs?.read_preference(/datum/preference/toggle/master_erp_preferences))
-			var/e_prefs = preferences.read_preference(/datum/preference/choiced/erp_status)
-			var/e_prefs_hypno = preferences.read_preference(/datum/preference/choiced/erp_status_hypno)
-			var/e_prefs_v = preferences.read_preference(/datum/preference/choiced/erp_status_v)
-			var/e_prefs_nc = preferences.read_preference(/datum/preference/choiced/erp_status_nc)
-			var/e_prefs_mechanical = preferences.read_preference(/datum/preference/choiced/erp_status_mechanics)
-			ooc_notes_nsfw += "ERP: [e_prefs]\n"
-			ooc_notes_nsfw += "Hypnosis: [e_prefs_hypno]\n"
-			ooc_notes_nsfw += "Vore: [e_prefs_v]\n"
-			ooc_notes_nsfw += "Non-Con: [e_prefs_nc]\n"
-			ooc_notes_nsfw += "ERP Mechanics: [e_prefs_mechanical]\n"
-			ooc_notes_nsfw += "\n"
+		// M13 REMOVAL START
+		//if(user.client?.prefs?.read_preference(/datum/preference/toggle/master_erp_preferences))
+		//	var/e_prefs = preferences.read_preference(/datum/preference/choiced/erp_status)
+		//	var/e_prefs_hypno = preferences.read_preference(/datum/preference/choiced/erp_status_hypno)
+		//	var/e_prefs_v = preferences.read_preference(/datum/preference/choiced/erp_status_v)
+		//	var/e_prefs_nc = preferences.read_preference(/datum/preference/choiced/erp_status_nc)
+		//	var/e_prefs_mechanical = preferences.read_preference(/datum/preference/choiced/erp_status_mechanics)
+		//	ooc_notes_nsfw += "ERP: [e_prefs]\n"
+		//	ooc_notes_nsfw += "Hypnosis: [e_prefs_hypno]\n"
+		//	ooc_notes_nsfw += "Vore: [e_prefs_v]\n"
+		//	ooc_notes_nsfw += "Non-Con: [e_prefs_nc]\n"
+		//	ooc_notes_nsfw += "ERP Mechanics: [e_prefs_mechanical]\n"
+		//	ooc_notes_nsfw += "\n"
+		// M13 REMOVAL END
 
 /*		if(!CONFIG_GET(flag/disable_antag_opt_in_preferences))
 			var/antag_prefs = holder.mind?.ideal_antag_opt_in_level
@@ -112,7 +116,9 @@
 			flavor_text = preferences.read_preference(/datum/preference/text/silicon_flavor_text)
 			flavor_text_nsfw = preferences.read_preference(/datum/preference/text/silicon_flavor_text_nsfw)
 			ooc_notes += preferences.read_preference(/datum/preference/text/ooc_notes)
-			ooc_notes_nsfw += preferences.read_preference(/datum/preference/text/ooc_notes_nsfw)
+			// M13 REMOVAL START
+			//ooc_notes_nsfw += preferences.read_preference(/datum/preference/text/ooc_notes_nsfw)
+			// M13 REMOVAL END
 			headshot += preferences.read_preference(/datum/preference/text/headshot/silicon)
 
 	if(ishuman(holder))
@@ -124,7 +130,9 @@
 		flavor_text_nsfw = obscured ? "Obscured" : holder_human.dna.features[EXAMINE_DNA_FLAVOR_TEXT_NSFW]
 		custom_species_lore = obscured ? "Obscured" : holder_human.dna.species.lore_protected ? holder_human.dna.species.get_species_lore().Join("\n") : holder_human.dna.features["custom_species_lore"]
 		ooc_notes += holder_human.dna.features[EXAMINE_DNA_OOC_NOTES]
-		ooc_notes_nsfw += holder_human.dna.features[EXAMINE_DNA_OOC_NOTES_NSFW]
+		// M13 REMOVAL START
+		//ooc_notes_nsfw += holder_human.dna.features[EXAMINE_DNA_OOC_NOTES_NSFW]
+		// M13 REMOVAL END
 		if(!obscured)
 			headshot += holder_human.dna.features[EXAMINE_DNA_HEADSHOT]
 
@@ -142,7 +150,9 @@
 		"custom_species_lore" = custom_species_lore,
 		// Descriptions, but requiring manual input to see
 		"flavor_text_nsfw" = flavor_text_nsfw,
-		"ooc_notes_nsfw" = ooc_notes_nsfw,
+		// M13 REMOVAL START
+		//"ooc_notes_nsfw" = ooc_notes_nsfw,
+		// M13 REMOVAL END
 		// Antaggery
 		"ideal_antag_optin_status" = ideal_antag_optin_status, // Our Antag Opt-In from prefs when we joined the game
 		"current_antag_optin_status" = current_antag_optin_status, // The current Antag Opt-In, if it was forced to be something different

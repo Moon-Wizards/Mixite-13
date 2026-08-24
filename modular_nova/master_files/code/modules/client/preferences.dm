@@ -25,7 +25,9 @@
 
 	var/needs_update = TRUE
 
-	var/arousal_preview = AROUSAL_NONE
+	// M13 REMOVAL START
+	//var/arousal_preview = AROUSAL_NONE
+	// M13 REMOVAL END
 
 	// BACKGROUND STUFF
 	var/general_record = ""

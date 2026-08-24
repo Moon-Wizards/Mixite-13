@@ -110,10 +110,12 @@
 
 /obj/item/summon_beacon/relax/equipped(mob/user, slot, initial)
 	. = ..()
-	if (!CONFIG_GET(flag/disable_erp_preferences) && user?.client?.prefs.read_preference(/datum/preference/toggle/master_erp_preferences))
-		selectable_atoms += /obj/machinery/vending/dorms/bitrunning
-	else
-		selectable_atoms -= /obj/machinery/vending/dorms/bitrunning
+	// M13 REMOVAL START
+	//if (!CONFIG_GET(flag/disable_erp_preferences) && user?.client?.prefs.read_preference(/datum/preference/toggle/master_erp_preferences))
+	//	selectable_atoms += /obj/machinery/vending/dorms/bitrunning
+	//else
+	// M13 REMOVAL END
+	selectable_atoms -= /obj/machinery/vending/dorms/bitrunning
 
 // Be warned, ye who dares to optimize the following bit of code, Initialize is required for vendors to be all_products_free = TRUE, for the code designed for circuits actually resets the value on iniitialize otherwise. be warned and do not spend hours debugging as your predecesors had.
 

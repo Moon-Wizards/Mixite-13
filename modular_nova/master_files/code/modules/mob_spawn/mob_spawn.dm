@@ -38,10 +38,12 @@
 
 	if(apply_prefs && loadout_enabled)
 		spawned_human?.equip_outfit_and_loadout(outfit, spawned_mob.client.prefs, FALSE, null, allow_mechanical_loadout_items)
-	else if (!isnull(spawned_human))
-		equip(spawned_human)
-		var/mutable_appearance/character_appearance = new(spawned_human.appearance)
-		GLOB.name_to_appearance[spawned_human.real_name] = character_appearance // Cache this for Character Directory
+	// M13 REMOVAL START
+	//else if (!isnull(spawned_human))
+	//	equip(spawned_human)
+	//	var/mutable_appearance/character_appearance = new(spawned_human.appearance)
+	//	GLOB.name_to_appearance[spawned_human.real_name] = character_appearance // Cache this for Character Directory
+	// M13 REMOVAL END
 
 	SEND_SIGNAL(spawned_mob, COMSIG_HUMAN_CHARACTER_SETUP_FINISHED)
 	return spawned_mob

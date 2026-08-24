@@ -518,27 +518,31 @@
 	set_holdable(list(
 		/obj/item/kitchen/spoon/plastic,
 		/obj/item/kitchen/fork/plastic,
-		/obj/item/serviette,
+		///obj/item/serviette, // M13 REMOVAL
 	))
 
 /obj/item/storage/box/utensils/PopulateContents()
 	new /obj/item/kitchen/spoon/plastic(src)
 	new /obj/item/kitchen/fork/plastic(src)
-	new /obj/item/serviette/colonial(src)
-	new /obj/item/serviette/colonial(src)
+	// M13 REMOVAL START
+	//new /obj/item/serviette/colonial(src)
+	//new /obj/item/serviette/colonial(src)
+	// M13 REMOVAL END
 
-/obj/item/serviette/colonial
-	name = "colonial napkin"
-	desc = "To clean all the mess. Comes with a custom <i>combined</i> design of red and blue."
-	icon_state = "napkin_unused"
-	icon = 'modular_nova/modules/food_replicator/icons/rationpack.dmi'
-	used_serviette = /obj/item/serviette_used/colonial
+// M13 REMOVAL START
+///obj/item/serviette/colonial
+//	name = "colonial napkin"
+//	desc = "To clean all the mess. Comes with a custom <i>combined</i> design of red and blue."
+//	icon_state = "napkin_unused"
+//	icon = 'modular_nova/modules/food_replicator/icons/rationpack.dmi'
+//	used_serviette = /obj/item/serviette_used/colonial
 
-/obj/item/serviette_used/colonial
-	name = "dirty colonial napkin"
-	desc = "No longer useful, super dirty, or soaked, or otherwise unrecognisable."
-	icon_state = "napkin_used"
-	icon = 'modular_nova/modules/food_replicator/icons/rationpack.dmi'
+///obj/item/serviette_used/colonial
+//	name = "dirty colonial napkin"
+//	desc = "No longer useful, super dirty, or soaked, or otherwise unrecognisable."
+//	icon_state = "napkin_used"
+//	icon = 'modular_nova/modules/food_replicator/icons/rationpack.dmi'
+// M13 REMOVAL END
 
 /obj/item/storage/box/colonial_rations
 	name = "foreign colonization ration"

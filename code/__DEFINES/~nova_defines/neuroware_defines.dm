@@ -45,7 +45,7 @@
 
 ///Returns a random neuroware reagent type. Excludes aphrodisiac reagents.
 /proc/get_random_neuroware()
-	return GLOB.name2neuroware_safe[pick(GLOB.name2neuroware_safe)]
+	return GLOB.name2neuroware[pick(GLOB.name2neuroware)] // M13 EDIT Original: return GLOB.name2neuroware_safe[pick(GLOB.name2neuroware_safe)]
 
 ///Returns TRUE if the given mob can metabolize neuroware reagents. Returns FALSE otherwise.
 ///Neuroware requires a robotic brain, or any brain combined with a functional NIF.

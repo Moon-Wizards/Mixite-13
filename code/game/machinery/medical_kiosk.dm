@@ -280,10 +280,12 @@
 		var/list/trauma_text = list()
 		for(var/t in patient.get_traumas())
 			var/datum/brain_trauma/trauma = t
+			// M13 REMOVAL START
 			//NOVA EDIT: Scary Traits (Bimbo)
-			if(!trauma.display_scanner)
-				continue
+			//if(!trauma.display_scanner)
+			//	continue
 			//NOVA EDIT: Scary Traits (Bimbo)
+			// M13 REMOVAL END
 			var/trauma_desc = ""
 			switch(trauma.resilience)
 				if(TRAUMA_RESILIENCE_SURGERY)

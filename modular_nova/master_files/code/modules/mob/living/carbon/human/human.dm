@@ -5,20 +5,24 @@
 /mob/living/carbon/human/Initialize(mapload)
 	. = ..()
 	mob_examine_panel = new(src) //create the datum
-	AddComponent(/datum/component/interactable)
-	//Removing ERP IC verbs depending on config
-	if(CONFIG_GET(flag/disable_erp_preferences))
-		UNASSIGN_GAME_VERB(src, /mob/living/carbon/human, toggle_genitals)
-		UNASSIGN_GAME_VERB(src, /mob/living/carbon/human, toggle_arousal)
-	if(CONFIG_GET(flag/disable_erp_preferences))
-		UNASSIGN_GAME_VERB(src, /mob/living/carbon/human, climax_verb)
-	if(CONFIG_GET(flag/disable_lewd_items))
-		UNASSIGN_GAME_VERB(src, /mob/living/carbon/human, safeword)
+	// M13 REMOVAL START
+	//AddComponent(/datum/component/interactable)
+	////Removing ERP IC verbs depending on config
+	//if(CONFIG_GET(flag/disable_erp_preferences))
+	//	UNASSIGN_GAME_VERB(src, /mob/living/carbon/human, toggle_genitals)
+	//	UNASSIGN_GAME_VERB(src, /mob/living/carbon/human, toggle_arousal)
+	//if(CONFIG_GET(flag/disable_erp_preferences))
+	//	UNASSIGN_GAME_VERB(src, /mob/living/carbon/human, climax_verb)
+	//if(CONFIG_GET(flag/disable_lewd_items))
+	//	UNASSIGN_GAME_VERB(src, /mob/living/carbon/human, safeword)
+	// M13 REMOVAL END
 
 
 /mob/living/carbon/human/Destroy()
 	QDEL_NULL(mob_examine_panel)
-	QDEL_NULL(genital_layering_panel)
+	// M13 REMOVAL START
+	//QDEL_NULL(genital_layering_panel)
+	// M13 REMOVAL
 
 	if(held_left)
 		held_left.UnregisterSignal(src, COMSIG_ATOM_DIR_CHANGE)
