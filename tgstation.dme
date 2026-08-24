@@ -7300,6 +7300,8 @@
 #include "interface\fonts\fonts_datum.dm"
 #include "modular_mixite\modules\emotes\code\emotes.dm"
 #include "interface\fonts\grand_9k.dm"
+#include "interface\fonts\pixellari.dm"
+#include "interface\fonts\spess_font.dm"
 #include "modular_mixite\modules\accessories\code\markings\ears.dm"
 #include "modular_mixite\modules\emotes\code\laugh_datums.dm"
 #include "interface\fonts\tiny_unicode.dm"
