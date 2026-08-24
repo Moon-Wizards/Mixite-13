@@ -840,3 +840,4 @@ export const holo_scanline: Feature<boolean> = {
     'Renders a faint scanline flicker across your body (not visible until you spawn).',
   component: CheckboxInput,
 };
+
