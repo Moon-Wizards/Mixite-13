@@ -40,7 +40,7 @@
 /*
 *	COLLARS
 */
-
+/* // M13 REMOVAL START
 /// THIN
 /datum/loadout_item/neck/thinchoker
 	name = "Choker"
@@ -120,6 +120,7 @@
 /datum/loadout_item/neck/spikecollar
 	name = "Collar (Spiked)"
 	item_path = /obj/item/clothing/neck/collar/spike
+*/ // M13 REMOVAL END
 
 /*
 *	SCARVES

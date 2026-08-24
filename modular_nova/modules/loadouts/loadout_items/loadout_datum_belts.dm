@@ -72,9 +72,11 @@
 	name = "Lantern"
 	item_path = /obj/item/flashlight/lantern
 
+/* // M13 REMOVAL START
 /datum/loadout_item/belts/thigh_satchel
 	name = "Thigh Satchel"
 	item_path = /obj/item/storage/belt/thigh_satchel
+*/ // M13 REMOVAL END
 
 // HOLSTERS
 

@@ -282,7 +282,7 @@
 	pressure_affected = TRUE,
 	falloff_distance = SOUND_DEFAULT_FALLOFF_DISTANCE,
 	use_reverb = TRUE,
-	pref_to_check = /datum/preference/toggle/erp/sex_toy_sounds,
+	pref_to_check = /datum/preference/toggle/sound_eating, // M13 EDIT
 )
 	if(isarea(source))
 		CRASH("playsound(): source is an area")
@@ -326,6 +326,7 @@
 		. += listening_mob
 
 /// The looping sound datum but we check for prefs and use `playsound_if_pref` instead of `playsound`
+/* // M13 REMOVAL START
 /datum/looping_sound/lewd
 	/// What preference are we going to check with our looping sound when we play it for people?
 	var/pref_to_check = /datum/preference/toggle/erp/sex_toy_sounds
@@ -338,7 +339,7 @@
 		SEND_SOUND(parent, sound_to_play)
 		return
 
-	playsound_if_pref(
+	playsound(
 		parent,
 		sound_to_play,
 		volume,
@@ -348,7 +349,8 @@
 		pressure_affected = pressure_affected,
 		falloff_distance = falloff_distance,
 		use_reverb = use_reverb,
-		pref_to_check = pref_to_check
+		//pref_to_check = pref_to_check // M13 REMOVAL
 	)
+*/
 
 // M13 ADDITION END

@@ -464,7 +464,7 @@
 		/obj/item/reagent_containers/cup/bottle/capsaicin,
 	)
 	crate_name = "fiesta crate"
-	
+
 /datum/supply_pack/organic/ration
 	name = "Emergency Rations Box"
 	desc = "Is the station starving because there isn't a chef? Are the lizardpeople among the crew puking up the pizza? This box contains 8 surplus emergency rations, designed to be nutritious, filling, and to be edible across a wide range of crew species. \
@@ -788,13 +788,13 @@
 /*
 * VENDING RESTOCKS
 */
-
+/* // M13 REMOVAL START
 /datum/supply_pack/vending/dorms
 	name = "LustWish Supply Crate"
 	desc = "This crate contains a single refill for the LustWish vendor."
 	cost = CARGO_CRATE_VALUE * 2
 	contains = list(/obj/item/vending_refill/lustwish)
-
+*/ // M13 REMOVAL END
 /datum/supply_pack/vending/barber
 	name = "Fab-O-Vend Supply Crate"
 	desc = "Contains a single restock for the Fab-O-Vend, great for those who are indecisive about their looks."

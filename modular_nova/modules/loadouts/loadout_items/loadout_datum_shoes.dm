@@ -312,7 +312,7 @@
 /*
 *	erp_item
 */
-
+/* // M13 REMOVAL START
 /datum/loadout_item/shoes/ballet_heels
 	name = "Ballet Heels"
 	item_path = /obj/item/clothing/shoes/ballet_heels
@@ -327,7 +327,7 @@
 	name = "Latex Socks"
 	item_path = /obj/item/clothing/shoes/latex_socks
 	erp_item = TRUE
-
+*/ // M13 REMOVAL END
 /*
 *	DONATOR
 */

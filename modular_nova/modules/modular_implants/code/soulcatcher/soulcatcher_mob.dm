@@ -155,12 +155,13 @@ GAME_VERB(/mob/living/soulcatcher_soul, leave_soulcatcher, "Leave Soulcatcher", 
 
 	room.send_message(message, src, TRUE)
 	return TRUE
-
+/* // M13 REMOVAL START
 /mob/living/soulcatcher_soul/subtle()
 	return FALSE
 
 /mob/living/soulcatcher_soul/subtler()
 	return FALSE
+*/ // M13 REMOVAL END
 
 /mob/living/soulcatcher_soul/whisper_verb()
 	return FALSE

@@ -17,6 +17,7 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	"Detective" = 'icons/hud/screen_detective.dmi',
 ))
 
+/* // M13 REMOVAL BEGIN
 //NOVA EDIT - ADDITION - ERP ICONS FIX
 
 GLOBAL_LIST_INIT(available_erp_ui_styles, list(
@@ -30,16 +31,18 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 ))
 
 //NOVA EDIT - ADDITION - ERP ICONS FIX - END
+*/ // M13 REMOVAL END
 
 /proc/ui_style2icon(ui_style)
 	return GLOB.available_ui_styles[ui_style] || GLOB.available_ui_styles[GLOB.available_ui_styles[1]]
 
+/* // M13 REMOVAL BEGIN
 //NOVA EDIT - ADDITION - ERP ICONS FIX
-
 /proc/erp_ui_style2icon(ui_style)
 	return GLOB.available_erp_ui_styles[ui_style] || GLOB.available_erp_ui_styles[GLOB.available_erp_ui_styles[1]]
 
 //NOVA EDIT - ADDITION - ERP ICONS FIX - END
+*/ // M13 REMOVAL END
 
 /datum/hud
 	var/mob/mymob
@@ -116,7 +119,7 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	if (!ui_style)
 		// will fall back to the default if any of these are null
 		ui_style = ui_style2icon(owner.client?.prefs?.read_preference(/datum/preference/choiced/ui_style))
-		erp_ui_style = erp_ui_style2icon(owner.client?.prefs?.read_preference(/datum/preference/choiced/ui_style)) //NOVA EDIT - ADDITION - ERP ICONS FIX
+		//erp_ui_style = erp_ui_style2icon(owner.client?.prefs?.read_preference(/datum/preference/choiced/ui_style)) //NOVA EDIT - ADDITION - ERP ICONS FIX // M13 REMOVAL
 
 	add_screen_object(/atom/movable/screen/button_palette, HUD_MOB_TOGGLE_PALETTE)
 	add_screen_object(/atom/movable/screen/palette_scroll/down, HUD_MOB_PALETTE_DOWN)

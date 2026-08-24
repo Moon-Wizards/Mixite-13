@@ -8762,7 +8762,7 @@
 #include "modular_nova\modules\food_replicator\code\replicator_designs\replicator_clothing.dm"
 #include "modular_nova\modules\food_replicator\code\replicator_designs\replicator_food.dm"
 #include "modular_nova\modules\food_replicator\code\replicator_designs\replicator_medical.dm"
-// #include "modular_nova\modules\GAGS\greyscale_configs.dm" // M13 REMOVAL
+#include "modular_nova\modules\GAGS\greyscale_configs.dm"
 // #include "modular_nova\modules\GAGS\nsfw\belt.dm" // M13 REMOVAL
 // #include "modular_nova\modules\GAGS\nsfw\ears.dm" // M13 REMOVAL
 // #include "modular_nova\modules\GAGS\nsfw\eyes.dm" // M13 REMOVAL
@@ -8930,7 +8930,7 @@
 #include "modular_nova\modules\loadouts\loadout_items\loadout_datum_toys_plushies.dm"
 #include "modular_nova\modules\loadouts\loadout_items\loadout_datum_weapons.dm"
 #include "modular_nova\modules\loadouts\loadout_items\pizzabox.dm"
-#include "modular_nova\modules\loadouts\loadout_items\donator\personal\donator_personal.dm"
+// #include "modular_nova\modules\loadouts\loadout_items\donator\personal\donator_personal.dm" // M13 REMOVAL
 #include "modular_nova\modules\loadouts\loadout_items\under\donator.dm"
 #include "modular_nova\modules\loadouts\loadout_items\under\loadout_datum_under.dm"
 #include "modular_nova\modules\loadouts\loadout_items\under\loadout_datum_under_costumes.dm"
@@ -9104,6 +9104,7 @@
 #include "modular_nova\modules\modular_ert\code\fumigators\fumigator.dm"
 #include "modular_nova\modules\modular_ert\code\fumigators\fumigator_outfit.dm"
 #include "modular_nova\modules\modular_ert\code\fumigators\head.dm"
+#include "modular_nova\modules\modular_ert\code\marine_override\modified_gear.dm"
 #include "modular_nova\modules\modular_ert\code\marine_override\modified_equipment.dm"
 #include "modular_nova\modules\modular_ert\code\odst\ert.dm"
 #include "modular_nova\modules\modular_ert\code\odst\odst.dm"
@@ -9129,7 +9130,7 @@
 #include "modular_nova\modules\modular_implants\code\nifsofts\blood_steal.dm"
 #include "modular_nova\modules\modular_implants\code\nifsofts\book_summoner.dm"
 #include "modular_nova\modules\modular_implants\code\nifsofts\detective_summoner.dm"
-#include "modular_nova\modules\modular_implants\code\nifsofts\dorms.dm"
+// #include "modular_nova\modules\modular_implants\code\nifsofts\dorms.dm" // M13 REMOVAL
 #include "modular_nova\modules\modular_implants\code\nifsofts\hivemind.dm"
 #include "modular_nova\modules\modular_implants\code\nifsofts\huds.dm"
 // #include "modular_nova\modules\modular_implants\code\nifsofts\hypnosis.dm" // M13 REMOVAL
@@ -9173,7 +9174,7 @@
 #include "modular_nova\modules\modular_items\code\summon_beacon.dm"
 #include "modular_nova\modules\modular_items\code\tailoring.dm"
 #include "modular_nova\modules\modular_items\code\thieving_gloves.dm"
-#include "modular_nova\modules\modular_items\code\thigsatchel.dm"
+// #include "modular_nova\modules\modular_items\code\thigsatchel.dm" // M13 REMOVAL
 #include "modular_nova\modules\modular_items\code\wetsuit.dm"
 // #include "modular_nova\modules\modular_items\lewd_items\code\alt_appearance.dm" // M13 REMOVAL
 // #include "modular_nova\modules\modular_items\lewd_items\code\clothing_pref_check.dm" // M13 REMOVAL

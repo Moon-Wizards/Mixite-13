@@ -168,6 +168,7 @@
 	AddComponent(/datum/component/reagent_clothing, ITEM_SLOT_GLOVES)
 	AddElement(/datum/element/adjust_fishing_difficulty, -4)
 
+/* // M13 REMOVAL START
 /obj/item/clothing/neck/collar/reagent_clothing
 	name = "collar"
 	desc = "A collar that is ready to be worn for certain individuals."
@@ -188,6 +189,7 @@
 /obj/item/clothing/neck/collar/reagent_clothing/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/reagent_clothing, ITEM_SLOT_NECK)
+*/ // M13 REMOVAL END
 
 /obj/item/restraints/handcuffs/reagent_clothing
 	name = "handcuffs"

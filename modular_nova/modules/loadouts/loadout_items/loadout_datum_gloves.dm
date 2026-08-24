@@ -146,11 +146,12 @@
 /*
 *	erp_item
 */
-
+/* // M13 REMOVAL START
 /datum/loadout_item/gloves/latex
 	name = "Latex Gloves"
 	item_path = /obj/item/clothing/gloves/long_gloves
 	erp_item = TRUE
+*/ // M13 REMOVAL END
 
 /*
 *	DONATOR
