@@ -60,7 +60,7 @@
 	var/datum/preferences/preferences = holder.client?.prefs
 
 	var/flavor_text
-	var/flavor_text_nsfw
+	// var/flavor_text_nsfw // M13 REMOVAL
 	var/custom_species
 	var/custom_species_lore
 	var/obscured
@@ -114,7 +114,7 @@
 		custom_species_lore = "A silicon unit, like a cyborg or pAI."
 		if(preferences)
 			flavor_text = preferences.read_preference(/datum/preference/text/silicon_flavor_text)
-			flavor_text_nsfw = preferences.read_preference(/datum/preference/text/silicon_flavor_text_nsfw)
+			// flavor_text_nsfw = preferences.read_preference(/datum/preference/text/silicon_flavor_text_nsfw) // M13 REMOVAL
 			ooc_notes += preferences.read_preference(/datum/preference/text/ooc_notes)
 			// M13 REMOVAL START
 			//ooc_notes_nsfw += preferences.read_preference(/datum/preference/text/ooc_notes_nsfw)
@@ -127,7 +127,7 @@
 		obscured = !can_bypass_obscure && ((holder_human.wear_mask && (holder_human.wear_mask.flags_inv & HIDEFACE)) || (holder_human.head && (holder_human.head.flags_inv & HIDEFACE)))
 		custom_species = obscured ? "Obscured" : holder_human.dna.species.lore_protected ? holder_human.dna.species.name : holder_human.dna.features["custom_species"]
 		flavor_text = obscured ? "Obscured" : holder_human.dna.features[EXAMINE_DNA_FLAVOR_TEXT]
-		flavor_text_nsfw = obscured ? "Obscured" : holder_human.dna.features[EXAMINE_DNA_FLAVOR_TEXT_NSFW]
+		// flavor_text_nsfw = obscured ? "Obscured" : holder_human.dna.features[EXAMINE_DNA_FLAVOR_TEXT_NSFW] // M13 REMOVAL
 		custom_species_lore = obscured ? "Obscured" : holder_human.dna.species.lore_protected ? holder_human.dna.species.get_species_lore().Join("\n") : holder_human.dna.features["custom_species_lore"]
 		ooc_notes += holder_human.dna.features[EXAMINE_DNA_OOC_NOTES]
 		// M13 REMOVAL START
@@ -149,8 +149,8 @@
 		"custom_species" = custom_species,
 		"custom_species_lore" = custom_species_lore,
 		// Descriptions, but requiring manual input to see
-		"flavor_text_nsfw" = flavor_text_nsfw,
 		// M13 REMOVAL START
+		// "flavor_text_nsfw" = flavor_text_nsfw,
 		//"ooc_notes_nsfw" = ooc_notes_nsfw,
 		// M13 REMOVAL END
 		// Antaggery

@@ -106,32 +106,8 @@ export function ExaminePanel(props) {
                   fill
                   preserveWhitespace
                   title="Flavor Text"
-                  buttons={
-                    <>
-                      <Button
-                        selected={flavorTextIndex === 'SFW'}
-                        bold={flavorTextIndex === 'SFW'}
-                        onClick={() => setFlavorTextIndex('SFW')}
-                        textAlign="center"
-                        width="150px"
-                      >
-                        SFW
-                      </Button>
-                      <Button
-                        selected={flavorTextIndex === 'NSFW'}
-                        disabled={!flavor_text_nsfw}
-                        bold={flavorTextIndex === 'NSFW'}
-                        onClick={() => setFlavorTextIndex('NSFW')}
-                        textAlign="center"
-                        width="150px"
-                      >
-                        NSFW
-                      </Button>
-                    </>
-                  }
                 >
-                  {flavorTextIndex === 'SFW' && formatURLs(flavor_text)}
-                  {flavorTextIndex === 'NSFW' && formatURLs(flavor_text_nsfw)}
+                  {formatURLs(flavor_text)}
                 </Section>
               </Stack.Item>
               <Stack.Item grow>
@@ -142,29 +118,6 @@ export function ExaminePanel(props) {
                       fill
                       title="OOC Notes"
                       preserveWhitespace
-                      buttons={
-                        <>
-                          <Button
-                            selected={oocNotesIndex === 'SFW'}
-                            bold={oocNotesIndex === 'SFW'}
-                            onClick={() => setOocNotesIndex('SFW')}
-                            textAlign="center"
-                            minWidth="60px"
-                          >
-                            SFW
-                          </Button>
-                          <Button
-                            selected={oocNotesIndex === 'NSFW'}
-                            disabled={!ooc_notes_nsfw}
-                            bold={oocNotesIndex === 'NSFW'}
-                            onClick={() => setOocNotesIndex('NSFW')}
-                            textAlign="center"
-                            minWidth="60px"
-                          >
-                            NSFW
-                          </Button>
-                        </>
-                      }
                     >
                       {!!nova_star_status && (
                         <Stack.Item mb="8px">
@@ -174,50 +127,47 @@ export function ExaminePanel(props) {
                               fontWeight: 'bold',
                             }}
                           >
-                            Nova Star! ⭐
+                            Mixite Star! ⭐
                           </span>
                         </Stack.Item>
                       )}
-                      {oocNotesIndex === 'SFW' && (
-                        <Stack.Item>
-                          {ideal_antag_optin_status && (
-                            <Stack.Item>
-                              Dynamic Opt-In:{' '}
-                              <span
-                                style={{
-                                  fontWeight: 'bold',
-                                  color:
-                                    antag_opt_in_colors[
-                                      current_antag_optin_status
-                                    ],
-                                }}
-                              >
-                                {current_antag_optin_status}
-                              </span>
-                              {'\n'}
-                            </Stack.Item>
-                          )}
-                          {ideal_conflict_optin_status && (
-                            <Stack.Item>
-                              Conflict Opt-In:{' '}
-                              <span
-                                style={{
-                                  fontWeight: 'bold',
-                                  color:
-                                    conflict_opt_in_colors[
-                                      current_conflict_optin_status
-                                    ],
-                                }}
-                              >
-                                {current_conflict_optin_status}
-                              </span>
-                              {'\n\n'}
-                            </Stack.Item>
-                          )}
-                          {formatURLs(ooc_notes)}
-                        </Stack.Item>
-                      )}
-                      {oocNotesIndex === 'NSFW' && formatURLs(ooc_notes_nsfw)}
+                      <Stack.Item>
+                        {ideal_antag_optin_status && (
+                          <Stack.Item>
+                            Dynamic Opt-In:{' '}
+                            <span
+                              style={{
+                                fontWeight: 'bold',
+                                color:
+                                  antag_opt_in_colors[
+                                    current_antag_optin_status
+                                  ],
+                              }}
+                            >
+                              {current_antag_optin_status}
+                            </span>
+                            {'\n'}
+                          </Stack.Item>
+                        )}
+                        {ideal_conflict_optin_status &&
+                          <Stack.Item>
+                            Conflict Opt-In:{' '}
+                            <span
+                              style={{
+                                fontWeight: 'bold',
+                                color:
+                                  conflict_opt_in_colors[
+                                    current_conflict_optin_status
+                                  ],
+                              }}
+                            >
+                              {current_conflict_optin_status}
+                            </span>
+                            {'\n\n'}
+                          </Stack.Item>
+                        }
+                        {formatURLs(ooc_notes)}
+                      </Stack.Item>
                     </Section>
                   </Stack.Item>
                   <Stack.Item grow basis={0}>

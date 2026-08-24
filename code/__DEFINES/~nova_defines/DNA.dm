@@ -3,7 +3,7 @@
 /// Examine Panel flavor text
 #define EXAMINE_DNA_FLAVOR_TEXT "flavor_text"
 /// Examine Panel NSFW flavor text—requires you to click a tab to see
-#define EXAMINE_DNA_FLAVOR_TEXT_NSFW "flavor_text_nsfw"
+// #define EXAMINE_DNA_FLAVOR_TEXT_NSFW "flavor_text_nsfw" // M13 REMOVAL
 /// Examine Panel OOC notes
 #define EXAMINE_DNA_OOC_NOTES "ooc_notes"
 /// Examine Panel NSFW ooc notes—requires you to click a tab to see
