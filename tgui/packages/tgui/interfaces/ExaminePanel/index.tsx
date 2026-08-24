@@ -101,12 +101,7 @@ export function ExaminePanel(props) {
           <Stack.Item grow>
             <Stack fill vertical>
               <Stack.Item grow>
-                <Section
-                  scrollable
-                  fill
-                  preserveWhitespace
-                  title="Flavor Text"
-                >
+                <Section scrollable fill preserveWhitespace title="Flavor Text">
                   {formatURLs(flavor_text)}
                 </Section>
               </Stack.Item>
@@ -149,7 +144,7 @@ export function ExaminePanel(props) {
                             {'\n'}
                           </Stack.Item>
                         )}
-                        {ideal_conflict_optin_status &&
+                        {ideal_conflict_optin_status && (
                           <Stack.Item>
                             Conflict Opt-In:{' '}
                             <span
@@ -165,7 +160,7 @@ export function ExaminePanel(props) {
                             </span>
                             {'\n\n'}
                           </Stack.Item>
-                        }
+                        )}
                         {formatURLs(ooc_notes)}
                       </Stack.Item>
                     </Section>

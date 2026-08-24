@@ -52,8 +52,7 @@ export const flavor_text_nsfw: Feature<string> = {
 
 export const silicon_flavor_text: Feature<string> = {
   name: 'Flavor Text (Silicon)',
-  description:
-    "Only appears if you're playing as a borg/AI.",
+  description: "Only appears if you're playing as a borg/AI.",
   component: FeatureLongTextInput,
 };
 
