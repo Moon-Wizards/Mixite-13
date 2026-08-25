@@ -99,6 +99,7 @@
 /datum/dna_block/feature/mutant/taur
 	feature_key = FEATURE_TAUR
 
+/* // M13 REMOVAL START
 // Yes, that means you can change them via genetics. Needed to be here for polymorphism
 /datum/dna_block/feature/mutant/penis
 	feature_key = FEATURE_PENIS
@@ -120,6 +121,7 @@
 
 /datum/dna_block/feature/mutant/butt
 	feature_key = FEATURE_BUTT
+*/ // M13 REMOVAL END
 
 #undef FEATURE_HASH_PART_START
 #undef FEATURE_HASH_PART_END

@@ -9,18 +9,18 @@
 /// Examine Panel NSFW ooc notes—requires you to click a tab to see
 //#define EXAMINE_DNA_OOC_NOTES_NSFW "ooc_notes_nsfw" // M13 REMOVAL
 
-// M13 REMOVAL START
-///// Examine text when a person has low arousal
-//#define ERP_FLAVOR_DNA_LOW_AROUSAL "erp_low_arousal_text"
-///// Examine text when a person has medium arousal
-//#define ERP_FLAVOR_DNA_MEDIUM_AROUSAL "erp_medium_arousal_text"
-///// Examine text when a person has high arousal
-//#define ERP_FLAVOR_DNA_HIGH_AROUSAL "erp_high_arousal_text"
-///// Flavor text when licking someone
-//#define ERP_FLAVOR_DNA_TASTE "erp_taste"
-///// Flavor text when smelling someone
-//#define ERP_FLAVOR_DNA_SCENT "erp_scent"
-// M13 REMOVAL END
+/* // M13 REMOVAL START
+/// Examine text when a person has low arousal
+#define ERP_FLAVOR_DNA_LOW_AROUSAL "erp_low_arousal_text"
+/// Examine text when a person has medium arousal
+#define ERP_FLAVOR_DNA_MEDIUM_AROUSAL "erp_medium_arousal_text"
+/// Examine text when a person has high arousal
+#define ERP_FLAVOR_DNA_HIGH_AROUSAL "erp_high_arousal_text"
+/// Flavor text when licking someone
+#define ERP_FLAVOR_DNA_TASTE "erp_taste"
+/// Flavor text when smelling someone
+#define ERP_FLAVOR_DNA_SCENT "erp_scent"
+*/ // M13 REMOVAL END
 
 //We start from 30 to not interfere with TG species defines, should they add more
 /// We're using all three mutcolor features for our skin coloration
@@ -120,6 +120,7 @@
 #define FEATURE_SYNTH_HEAD "synth_head"
 #define FEATURE_SYNTH_HAIR "synth_hair"
 
+/* // M13 REMOVAL START
 // Genitals
 #define FEATURE_PENIS "penis"
 #define FEATURE_SHEATH "sheath"
@@ -129,6 +130,7 @@
 #define FEATURE_BREASTS "breasts"
 #define FEATURE_ANUS "anus"
 #define FEATURE_BUTT "butt"
+*/ // M13 REMOVAL END
 
 
 #define MANDATORY_FEATURE_LIST list(\

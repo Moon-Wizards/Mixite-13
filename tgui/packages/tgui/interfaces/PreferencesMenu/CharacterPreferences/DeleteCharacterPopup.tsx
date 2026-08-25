@@ -11,16 +11,30 @@ type Props = {
 export function DeleteCharacterPopup(props: Props) {
   const { data, act } = useBackend<PreferencesMenuData>();
   const [secondsLeft, setSecondsLeft] = useState(3);
+  const [required, setRequired] = useState(false);
 
   const { close } = props;
 
   useEffect(() => {
+    if (!required || secondsLeft <= 0) return;
     const interval = setInterval(() => {
-      setSecondsLeft((current) => current - 1);
+      setSecondsLeft((current) => Math.max(0, current - 1));
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [required, secondsLeft]);
+
+  const toggleRequired = () => {
+    setRequired((current) => {
+      const next = !current;
+
+      if (!next) {
+        setSecondsLeft(3);
+      }
+
+      return next;
+    });
+  };
 
   return (
     <Modal>
@@ -30,7 +44,15 @@ export function DeleteCharacterPopup(props: Props) {
         </Stack.Item>
 
         <Stack.Item maxWidth="300px">
-          <Box>{`You're about to delete ${data.character_preferences.names[data.name_to_use]} forever. Are you sure you want to do this?`}</Box>
+          <Box>
+            {`You're about to delete ${data.character_preferences.names[data.name_to_use]} forever. Are you sure you want to do this?`}
+          </Box>
+        </Stack.Item>
+
+        <Stack.Item>
+          <Button.Checkbox checked={required} onClick={toggleRequired}>
+            Yes, do exactly as I say!
+          </Button.Checkbox>
         </Stack.Item>
 
         <Stack.Item>
@@ -39,7 +61,7 @@ export function DeleteCharacterPopup(props: Props) {
               {/* Explicit width so that the layout doesn't shift */}
               <Button
                 color="danger"
-                disabled={secondsLeft > 0}
+                disabled={!required || secondsLeft > 0}
                 width="80px"
                 onClick={() => {
                   act('remove_current_slot');
