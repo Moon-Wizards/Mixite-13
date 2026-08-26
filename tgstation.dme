@@ -10055,4 +10055,5 @@
 #include "modular_nova\modules\xenomorph\alien.dm"
 #include "modular_nova\modules\xenomorph\queen.dm"
 #include "modular_nova\modules\zubbers_taur\code\taur.dm"
+#include "modular_mixite\master_files\code\datums\keybindings\mixite-defaults.dm"
 // END_INCLUDE
