@@ -33,7 +33,7 @@
 			return
 		spawn_text.maptext = MAPTEXT_PIXELLARI(copytext_char(text, 1, i))
 		// M13 ADDITION START
-		mob.playsound_local(get_turf(mob), 'modular_mixite/master_files/sound/effects/typewriter.wav', 50, FALSE, channel = CHANNEL_AMBIENCE)
+		mob.playsound_local(get_turf(mob), 'modular_zmixite/master_files/sound/effects/typewriter.wav', 50, FALSE, channel = CHANNEL_AMBIENCE)
 		// M13 ADDITION END
 		sleep(0.25) // M13 EDIT CHANGE - ORIGINAL: sleep(1)
 
@@ -43,7 +43,7 @@
 	if(QDELETED(spawn_text))
 		return
 	// M13 ADDITION START
-	mob.playsound_local(get_turf(mob), 'modular_mixite/master_files/sound/effects/combine_out.wav', 50, FALSE, channel = CHANNEL_AMBIENCE)
+	mob.playsound_local(get_turf(mob), 'modular_zmixite/master_files/sound/effects/combine_out.wav', 50, FALSE, channel = CHANNEL_AMBIENCE)
 	// M13 ADDITION END
 	animate(spawn_text, alpha = 0, time = 1 SECONDS) // M13 EDIT CHANGE - ORIGINAL: sleep(1)
 	sleep(5)
