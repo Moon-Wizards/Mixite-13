@@ -8,7 +8,6 @@ import {
   Button,
   Floating,
   Input,
-  Icon, // NOVA EDIT ADDITION
   LabeledList,
   Section,
   Stack,
@@ -533,7 +532,7 @@ export function MainPage(props: MainPageProps) {
   }
 
   const [currentPrefPage, setCurrentPrefPage] = useState(PrefPage.Visual);
-  const filteredCurrentPrefPage = currentPrefPage
+  const filteredCurrentPrefPage = currentPrefPage;
 
   let prefPageContents;
   switch (filteredCurrentPrefPage) {

@@ -102,7 +102,7 @@
 	icon_state = "infcloak"
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/custom_w.dmi'
 	supports_variations_flags = NONE
-
+*/ // M13 REMOVAL END
 // Donation reward
 // might make it have some flavour functionality in future, a'la rewritable piece of paper - JOKES ON YOU I'M MAKING IT DRAW
 // Note from thedragmeme- The fact this can actually draw is epic, Im making this an item accessable to all donors so if an actual coder could make it print out drawings or make it save the drawings to the library that would be epic
@@ -124,7 +124,7 @@
 	nooverlayupdates = TRUE
 	var/currentcolor = "#ffffff"
 	var/list/colors = list("Eraser" = "#ffffff")
-
+/* // M13 REMOVAL START
 /obj/item/canvas/drawingtablet/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/dtselectcolor))
 		currentcolor = tgui_color_picker(user, "", "Choose Color", currentcolor)
