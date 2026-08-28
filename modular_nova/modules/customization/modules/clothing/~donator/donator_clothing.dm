@@ -124,7 +124,7 @@
 	nooverlayupdates = TRUE
 	var/currentcolor = "#ffffff"
 	var/list/colors = list("Eraser" = "#ffffff")
-/* // M13 REMOVAL START
+
 /obj/item/canvas/drawingtablet/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/dtselectcolor))
 		currentcolor = tgui_color_picker(user, "", "Choose Color", currentcolor)
@@ -206,6 +206,7 @@
 	button_icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
 	button_icon_state = "drawingtablet"
 
+/* // M13 REMOVAL START
 // Donation reward for DrpMstr
 /obj/item/clothing/suit/costume/butter
 	name = "butter costume"
