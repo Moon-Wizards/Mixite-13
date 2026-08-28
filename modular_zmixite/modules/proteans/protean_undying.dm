@@ -129,4 +129,5 @@
 		revive_timer_id = addtimer(CALLBACK(src, PROC_REF(revive)), time, TIMER_STOPPABLE)
 
 #undef TRANSFORM_TRAITS
+#undef DESTROYED_MASS_TRAITS
 #undef SUIT_TRANSFORMATION_DURATION
