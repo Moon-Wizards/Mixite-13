@@ -98,10 +98,12 @@
 	icon_state = "thong"
 	gender = FEMALE
 
+/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/underwear/thong_babydoll
 	name = "Thong (Alt)"
 	icon_state = "thong_babydoll"
 	gender = FEMALE
+*/ // M13 REMOVAL END
 
 /datum/sprite_accessory/clothing/underwear/panties_swimsuit
 	name = "Panties - Swimsuit"

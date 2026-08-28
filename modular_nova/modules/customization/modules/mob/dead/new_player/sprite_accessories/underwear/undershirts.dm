@@ -136,6 +136,7 @@
 	use_static = FALSE
 	gender = FEMALE
 
+/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/undershirt/babydoll
 	name = "Babydoll"
 	icon_state = "babydoll"
@@ -152,3 +153,4 @@
 	name = "Fishnet - Sleeveless (Greyscale)"
 	icon_state = "fishnet_body_alt"
 	use_static = FALSE
+*/ // M13 REMOVAL START
