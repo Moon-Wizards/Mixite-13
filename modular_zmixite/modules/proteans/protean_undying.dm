@@ -22,8 +22,6 @@
 
 
 /obj/item/organ/brain/protean/on_owner_death(mob/living/source, gibbed)
-	SIGNAL_HANDLER
-
 	if(dead)
 		return
 
