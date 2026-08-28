@@ -3901,9 +3901,6 @@
 /obj/structure/desk_bell{
 	pixel_x = -13
 	},
-/obj/item/serviette_pack{
-	pixel_y = 4
-	},
 /turf/open/floor/iron/kitchen,
 /area/station/service/kitchen)
 "bhw" = (
@@ -5869,7 +5866,6 @@
 /area/station/security/brig/entrance)
 "bJn" = (
 /mob/living/basic/pet/cat/fennec,
-/obj/item/fancy_pillow,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/greater)
 "bJq" = (
@@ -21562,7 +21558,6 @@
 /area/station/security/corrections_officer)
 "gnC" = (
 /mob/living/basic/pet/cat/fennec,
-/obj/item/fancy_pillow,
 /turf/open/floor/plating,
 /area/station/service/salon)
 "gnX" = (
@@ -34149,7 +34144,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/obj/structure/liquid_pump,
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
@@ -68743,9 +68737,7 @@
 "tUd" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark,
 /obj/structure/closet,
-/obj/item/storage/box/strippole_kit,
 /obj/item/storage/backpack/satchel,
-/obj/item/clothing/glasses/nice_goggles,
 /turf/open/floor/iron/dark,
 /area/station/commons/dorms/room4)
 "tUl" = (
