@@ -263,7 +263,7 @@
 		/obj/item/clothing/suit/armor/vest/det_suit/runner = 2,
 		/obj/item/clothing/under/rank/security/detective/runner = 2,
 		/obj/item/clothing/suit/toggle/labcoat/nova/highvis = 2,
-		/obj/item/clothing/under/rank/security/detective/cowboy = 2,
+		// /obj/item/clothing/under/rank/security/detective/cowboy = 2, // M13 REMOVAL
 		/obj/item/clothing/suit/toggle/jacket/nova/det_trench/cowboyvest = 2,
 		/obj/item/storage/backpack/messenger/sec = 2,
 		/obj/item/clothing/head/playbunnyears/detective = 2,

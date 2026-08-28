@@ -1681,7 +1681,7 @@
 /datum/greyscale_config/chrimbo/worn/digi
 	name = "christmas_male (Worn, Digi)"
 	icon_file = 'modular_nova/master_files/icons/mob/clothing/under/costume_digi.dmi'
-
+/* // M13 REMOVAL START
 //HALF-LEOTARD (DONATOR)
 /datum/greyscale_config/half_leotard
 	name = "One-Sleeved Leotard"
@@ -1691,6 +1691,7 @@
 /datum/greyscale_config/half_leotard/worn
 	name = "One-Sleeved Leotard (Worn)"
 	icon_file = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
+*/ // M13 REMOVAL END
 
 //RELIGIOUS COSTUMES (MONK HABIT, ETC)
 /datum/greyscale_config/monk_habit
@@ -2047,6 +2048,7 @@ TREK
 	name = "Leg Wraps (Worn, Digi)"
 	json_config = 'modular_nova/modules/GAGS/json_configs/wraps/legwraps_worn_digi.json'
 
+/* // M13 REMOVAL START
 /datum/greyscale_config/armwraps
 	name = "Cloth Arm Wraps"
 	icon_file = 'modular_nova/master_files/icons/donator/obj/clothing/gloves.dmi'
@@ -2056,6 +2058,7 @@ TREK
 	name = "Cloth Arm Wraps (Worn)"
 	icon_file = 'modular_nova/master_files/icons/donator/mob/clothing/hands.dmi'
 	json_config = 'modular_nova/modules/GAGS/json_configs/arm_wraps/arm_wraps_worn.json'
+*/ // M13 REMOVAL END
 
 // MISC SHOES
 

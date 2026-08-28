@@ -1,6 +1,7 @@
 // MODULAR SECURITY WEAR (NOT OVERRIDES, LOOK IN 'modular_nova\modules\sec_haul\code\security_clothing\sec_clothing_overrides.dm')
 
 // DETECTIVE
+/* // M13 REMOVAL START
 /obj/item/clothing/under/rank/security/detective/cowboy
 	name = "blonde cowboy uniform"
 	desc = "A blue shirt and dark jeans, with a pair of spurred cowboy boots to boot."
@@ -14,6 +15,7 @@
 
 /obj/item/clothing/under/rank/security/detective/cowboy/armorless //Donator variant, just uses the sprite.
 	armor_type = /datum/armor/clothing_under
+*/ // M13 REMOVAL END
 
 /obj/item/clothing/suit/cowboyvest
 	name = "blonde cowboy vest"

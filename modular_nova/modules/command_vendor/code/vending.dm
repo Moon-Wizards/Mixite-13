@@ -27,7 +27,7 @@
 		/obj/item/clothing/head/hats/caphat/bicorne = 1,
 		/obj/item/clothing/under/rank/captain = 1,
 		/obj/item/clothing/under/rank/captain/skirt = 1,
-		/obj/item/clothing/under/rank/captain/dress = 1,
+		// /obj/item/clothing/under/rank/captain/dress = 1, // M13 REMOVAL
 		/obj/item/clothing/under/rank/captain/nova/kilt = 1,
 		/obj/item/clothing/under/rank/captain/royal = 1,
 		/obj/item/clothing/under/imperial/captain = 1,
