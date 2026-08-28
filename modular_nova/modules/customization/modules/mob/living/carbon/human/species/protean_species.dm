@@ -72,10 +72,8 @@
 		TRAIT_RDS_SUPPRESSED,
 		TRAIT_MADNESS_IMMUNE,
 
-		/* // M13 REMOVAL START
 		// Separate handling will be used. Proteans never truly "die". They get stuck in their suit.
 		TRAIT_NODEATH,
-		*/ // M13 REMOVAL END
 	)
 
 	inherent_biotypes = MOB_ROBOTIC | MOB_HUMANOID

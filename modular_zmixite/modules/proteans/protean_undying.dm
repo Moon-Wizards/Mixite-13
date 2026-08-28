@@ -17,9 +17,8 @@
 	handle_refactory(owner.get_organ_slot(ORGAN_SLOT_STOMACH))
 	handle_orchestrator(owner.get_organ_slot(ORGAN_SLOT_HEART))
 
-	if(owner.stat >= DEAD)
+	if(owner.stat >= HARD_CRIT)
 		alive_retreat()
-
 
 /obj/item/organ/brain/protean/on_owner_death(mob/living/source, gibbed)
 	if(dead)
@@ -47,8 +46,9 @@
 	qdel(owner.get_organ_slot(ORGAN_SLOT_STOMACH))
 
 	// The real dead state is brain.dead, not the mob stat
+	owner.revive(HEAL_DAMAGE | HEAL_BODY | HEAL_ORGANS, force_grab_ghost = TRUE)
 	owner.stat = STABLE
-	owner.revive(HEAL_DAMAGE, force_grab_ghost = TRUE)
+
 	var/atom/current_loc = owner.loc
 
 	owner.visible_message(span_warning("[owner] retreats into [suit]!"))
@@ -103,10 +103,7 @@
 	var/obj/item/mod/control/pre_equipped/protean/suit = get_protean_modsuit(owner)
 	suit?.set_distress_signal(FALSE)
 
-	if(owner.stat == DEAD)
-		owner.revive(HEAL_DAMAGE | HEAL_ORGANS, force_grab_ghost = TRUE)
-
-	owner.fully_heal()
+	owner.revive(HEAL_DAMAGE | HEAL_ORGANS, force_grab_ghost = TRUE)
 	owner.stat = STABLE
 
 	if(istype(owner.loc, /obj/item/mod/control/pre_equipped/protean))
@@ -119,12 +116,7 @@
 	if(IS_CHANGELING(owner))
 		revive_timer_id = addtimer(CALLBACK(src, PROC_REF(revive)), 40 SECONDS, TIMER_STOPPABLE)
 	else
-		var/time = 5 MINUTES
-		#ifdef DEBUG
-		time = 5 // Makes it easier to debug stuff without waiting out the whole 5 minutes
-		#endif
-
-		revive_timer_id = addtimer(CALLBACK(src, PROC_REF(revive)), time, TIMER_STOPPABLE)
+		revive_timer_id = addtimer(CALLBACK(src, PROC_REF(revive)), 5 MINUTES, TIMER_STOPPABLE)
 
 #undef TRANSFORM_TRAITS
 #undef DESTROYED_MASS_TRAITS
