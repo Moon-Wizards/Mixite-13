@@ -35347,7 +35347,6 @@
 	pixel_y = -8
 	},
 /mob/living/carbon/human/species/monkey,
-/obj/structure/sign/poster/contraband/korpstech/directional/north,
 /turf/open/floor/grass,
 /area/station/science/genetics)
 "jYQ" = (

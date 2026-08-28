@@ -2845,7 +2845,6 @@
 /obj/item/clothing/head/costume/rice_hat,
 /obj/item/clothing/mask/joy,
 /obj/item/clothing/mask/luchador/tecnicos,
-/obj/item/clothing/mask/luchador/enzo,
 /turf/open/floor/iron,
 /area/station/common/wrestling/locker)
 "aEY" = (
@@ -25633,10 +25632,6 @@
 /obj/item/clothing/suit/modern_winter{
 	pixel_y = -3;
 	pixel_x = 7
-	},
-/obj/item/clothing/suit/jacket/delta{
-	pixel_x = -6;
-	pixel_y = 6
 	},
 /obj/item/clothing/suit/jacket/puffer{
 	pixel_x = -3;

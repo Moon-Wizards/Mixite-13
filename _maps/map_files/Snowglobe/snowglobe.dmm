@@ -32051,10 +32051,6 @@
 	pixel_x = 3;
 	pixel_y = 4
 	},
-/obj/item/hairbrush/switchblade{
-	pixel_x = -12;
-	pixel_y = 4
-	},
 /turf/open/floor/plating,
 /area/station/maintenance/gag_room)
 "iAS" = (

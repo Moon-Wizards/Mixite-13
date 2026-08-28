@@ -774,8 +774,6 @@
 /obj/item/clothing/suit/armor/vest/det_suit/runner{
 	name = "Investigative coat"
 	},
-/obj/item/clothing/neck/cross,
-/obj/item/clothing/mask/gas/nightlight,
 /obj/item/gun/ballistic/revolver/cowboy,
 /obj/item/storage/backpack/tinypakc,
 /obj/effect/light_emitter/fake_outdoors,
