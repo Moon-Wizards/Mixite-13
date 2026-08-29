@@ -132,7 +132,7 @@
 #define FEATURE_BUTT "butt"
 */ // M13 REMOVAL END
 
-
+/* // M13 REMOVAL START
 #define MANDATORY_FEATURE_LIST list(\
 	FEATURE_MUTANT_COLOR = "#FFFFBB",\
 	FEATURE_MUTANT_COLOR_TWO = "#FFFFBB",\
@@ -160,6 +160,19 @@
 	"butt_uses_skintones" = TRUE,\
 	"butt_uses_skincolor" = TRUE,\
 )
+*/ // M13 REMOVAL END
+
+// M13 EDIT
+#define MANDATORY_FEATURE_LIST list(\
+	FEATURE_MUTANT_COLOR = "#FFFFBB",\
+	FEATURE_MUTANT_COLOR_TWO = "#FFFFBB",\
+	FEATURE_MUTANT_COLOR_THREE = "#FFFFBB",\
+	FEATURE_SKIN_COLOR = "#FFEEDD",\
+	EXAMINE_DNA_FLAVOR_TEXT = "",\
+	"body_size" = BODY_SIZE_NORMAL,\
+	"custom_species" = null,\
+)
+
 
 // M13 REMOVAL START
 //#define AROUSAL_CANT 0

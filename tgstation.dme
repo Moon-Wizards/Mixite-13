@@ -9896,6 +9896,7 @@
 #include "modular_nova\modules\xenomorph\queen.dm"
 #include "modular_nova\modules\zubbers_taur\code\taur.dm"
 #include "modular_zmixite\master_files\code\datums\keybindings\mixite-defaults.dm"
+#include "modular_zmixite\modules\accessories\code\accessories\accessories.dm"
 #include "modular_zmixite\modules\accessories\code\markings\ears.dm"
 #include "modular_zmixite\modules\emotes\code\emotes.dm"
 #include "modular_zmixite\modules\emotes\code\laugh_datums.dm"

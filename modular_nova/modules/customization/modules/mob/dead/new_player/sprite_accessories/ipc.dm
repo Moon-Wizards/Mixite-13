@@ -4,7 +4,7 @@
 *******************************************/
 /datum/sprite_accessory/screen
 	icon = 'modular_nova/master_files/icons/mob/sprite_accessory/ipc_screens.dmi'
-	color_src = null
+	color_src = USE_ONE_COLOR // M13 EDIT ORIGINAL: color_src = null
 	key = FEATURE_SYNTH_SCREEN
 	organ_type = /obj/item/organ/synth_screen
 
