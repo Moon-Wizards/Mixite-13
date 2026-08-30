@@ -32,7 +32,7 @@ type ChatScreenState = {
   message: string;
   previewingImage?: string;
   selectingPhoto: boolean;
-  subtleMode: boolean; // NOVA EDIT ADDITION
+  //subtleMode: boolean; // NOVA EDIT ADDITION // M13 REMOVAL
 };
 
 const READ_UNREADS_TIME_MS = 1000;
@@ -46,7 +46,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
     message: '',
     selectingPhoto: false,
     canSend: true,
-    subtleMode: false, // NOVA EDIT ADDITION
+    //subtleMode: false, // NOVA EDIT ADDITION // M13 REMOVAL
   };
 
   constructor(props: ChatScreenProps) {
@@ -61,7 +61,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
     this.trySetReadTimeout = this.trySetReadTimeout.bind(this);
     this.tryClearReadTimeout = this.tryClearReadTimeout.bind(this);
     this.clearUnreads = this.clearUnreads.bind(this);
-    this.handleToggleSubtle = this.handleToggleSubtle.bind(this); // NOVA EDIT ADDITION
+    //this.handleToggleSubtle = this.handleToggleSubtle.bind(this); // NOVA EDIT ADDITION // M13 REMOVAL
   }
 
   componentDidMount() {
@@ -154,7 +154,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
     act('PDA_sendMessage', {
       ref: ref,
       message: this.state.message,
-      subtle: this.state.subtleMode, // NOVA EDIT ADDITION
+      //subtle: this.state.subtleMode, // NOVA EDIT ADDITION // M13 REMOVAL
     });
 
     this.setState({ message: '', canSend: false });
@@ -164,6 +164,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
   handleMessageInput(val: string) {
     this.setState({ message: val });
   }
+  /* // M13 REMOVAL START
   // NOVA EDIT ADDITION START
   handleToggleSubtle() {
     this.setState((state) => ({
@@ -171,6 +172,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
     }));
   }
   // NOVA EDIT ADDITION END
+  */ // M13 REMOVAL END
 
   render() {
     const { act } = useBackend();
@@ -185,8 +187,8 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
       unreads,
     } = this.props;
     // NOVA EDIT CHANGE - ORIGINAL: const { message, canSend, previewingImage, selectingPhoto } = this.state;
-    const { message, canSend, previewingImage, selectingPhoto, subtleMode } =
-      this.state;
+    // M13 EDIT, Original: const { message, canSend, previewingImage, selectingPhoto } = this.state;
+    const { message, canSend, previewingImage, selectingPhoto } = this.state;
 
     const filteredMessages: React.JSX.Element[] = [];
 
@@ -209,7 +211,7 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
             everyone={message.everyone}
             photoPath={message.photo_path}
             timestamp={message.timestamp}
-            subtle={message.subtle} // NOVA EDIT ADDITION
+            //subtle={message.subtle} // NOVA EDIT ADDITION // M13 REMOVAL
             onPreviewImage={
               message.photo_path
                 ? () => this.setState({ previewingImage: message.photo_path! })
@@ -283,14 +285,16 @@ export class ChatScreen extends Component<ChatScreenProps, ChatScreenState> {
         <>
           <Stack.Item>{attachmentButton}</Stack.Item>
           {/* NOVA EDIT ADDITION BEGIN */}
-          <Stack.Item>
+          {/* M13 REMOVAL START */}
+          {/*<Stack.Item>
             <Button
               tooltip="Toggle subtle mode; messages sent will be hidden from prying ghosts."
               icon={subtleMode ? 'fa-ear-deaf' : 'fa-ear-listen'}
               backgroundColor={subtleMode ? `hsl(281, 39%, 59%)` : ''}
               onClick={this.handleToggleSubtle}
             />
-          </Stack.Item>
+          </Stack.Item>*/}
+          {/* M13 REMOVAL END */}
           {/* NOVA EDIT ADDITION END */}
           <Stack.Item>
             <Button
@@ -418,7 +422,7 @@ type ChatMessageProps = {
   timestamp: string;
   photoPath?: string;
   onPreviewImage?: () => void;
-  subtle: BooleanLike; // NOVA EDIT ADDITION
+  //subtle: BooleanLike; // NOVA EDIT ADDITION // M13 REMOVAL
 };
 
 const ChatMessage = (props: ChatMessageProps) => {
@@ -431,7 +435,7 @@ const ChatMessage = (props: ChatMessageProps) => {
     photoPath,
     timestamp,
     onPreviewImage,
-    subtle,
+    //subtle, // M13 REMOVAL
   } = props;
   // NOVA EDIT CHANGE END
 
@@ -441,17 +445,16 @@ const ChatMessage = (props: ChatMessageProps) => {
 
   return (
     // NOVA EDIT CHANGE START - ORIGINAL: <Box className={`NtosChatMessage${outgoing ? '_outgoing' : ''}`}>
-    <Box
-      className={`NtosChatMessage${
-        subtle
-          ? outgoing
-            ? '_subtle_outgoing'
-            : '_subtle'
-          : outgoing
-            ? '_outgoing'
-            : ''
-      }`}
-    >
+    // M13 EDIT, Original: className={`NtosChatMessage${
+    //  subtle
+    //    ? outgoing
+    //      ? '_subtle_outgoing'
+    //      : '_subtle'
+    //    : outgoing
+    //      ? '_outgoing'
+    //      : ''
+    //}`}
+    <Box className={`NtosChatMessage${outgoing ? '_outgoing' : ''}`}>
       {/* NOVA EDIT CHANGE END */}
       <Box className="NtosChatMessage__content">
         <Box as="span" dangerouslySetInnerHTML={messageHTML} />
