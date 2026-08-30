@@ -119,6 +119,7 @@ export const MESSAGE_TYPES: MessageType[] = [
     description: 'Urist McTraitor has stabbed you with a knife!',
     selector: '.danger',
   },
+  /* // M13 REMOVAL START
   {
     // NOVA EDIT ADDITION START
     type: MESSAGE_TYPE_SUBTLE,
@@ -126,6 +127,7 @@ export const MESSAGE_TYPES: MessageType[] = [
     description: 'Subtle and Subtler actions.',
     selector: '.subtle, .subtler',
   }, // NOVA EDIT ADDITION END
+  */ // M13 REMOVAL END
   {
     type: MESSAGE_TYPE_UNKNOWN,
     name: 'Unsorted',
