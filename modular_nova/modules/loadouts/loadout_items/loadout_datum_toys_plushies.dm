@@ -144,7 +144,7 @@
 /*
 *	DONATOR
 */
-
+/* // M13 REMOVAL START
 /datum/loadout_item/toys/plush/fermis
 	name = "Medcat Plushie"
 	item_path = /obj/item/toy/plush/nova/donator/fermis
@@ -320,3 +320,4 @@
 /datum/loadout_item/toys/plush/plush_skaag
 	name = "Skaag Plushie"
 	item_path = /obj/item/toy/plush/nova/skaag
+*/ // M13 REMOVAL

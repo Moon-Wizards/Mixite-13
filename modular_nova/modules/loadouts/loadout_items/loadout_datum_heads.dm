@@ -1018,11 +1018,12 @@
 /*
 *	erp_item
 */
-
+/* // M13 REMOVAL START
 /datum/loadout_item/head/domina_cap
 	name = "Dominant Cap"
 	item_path = /obj/item/clothing/head/domina_cap
 	erp_item = TRUE
+*/ // M13 REMOVAL END
 
 /*
 *	DONATOR

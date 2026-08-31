@@ -1,7 +1,7 @@
 ///Similar to name2reagent list but contains only neuroware reagents.
 GLOBAL_LIST_INIT(name2neuroware, build_name2neurowarelist())
 ///name2neuroware list which omits lewd reagents
-GLOBAL_LIST_INIT(name2neuroware_safe, build_name2neurowarelist_safe())
+//GLOBAL_LIST_INIT(name2neuroware_safe, build_name2neurowarelist_safe()) // M13 REMOVAL
 
 ///Same as build_name2reagentlist() but contains only neuroware reagents.
 /proc/build_name2neurowarelist()
@@ -11,11 +11,13 @@ GLOBAL_LIST_INIT(name2neuroware_safe, build_name2neurowarelist_safe())
 			neuroware_list[initial(reagent.name)] = reagent
 	return neuroware_list
 
+// M13 REMOVAL START
 ///Same as build_name2neurowarelist() but omits aphrodisiacs.
-/proc/build_name2neurowarelist_safe()
-	var/list/neuroware_list = GLOB.name2neuroware.Copy()
-	for (var/reagent_name in GLOB.name2neuroware)
-		var/datum/reagent/reagent = GLOB.name2neuroware[reagent_name]
-		if(ispath(reagent, /datum/reagent/drug/aphrodisiac))
-			neuroware_list.Remove(reagent_name)
-	return neuroware_list
+///proc/build_name2neurowarelist_safe()
+//	var/list/neuroware_list = GLOB.name2neuroware.Copy()
+//	for (var/reagent_name in GLOB.name2neuroware)
+//		var/datum/reagent/reagent = GLOB.name2neuroware[reagent_name]
+//		if(ispath(reagent, /datum/reagent/drug/aphrodisiac))
+//			neuroware_list.Remove(reagent_name)
+//	return neuroware_list
+// M13 REMOVAL END

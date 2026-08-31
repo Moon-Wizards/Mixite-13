@@ -118,9 +118,11 @@
 	name = "Toeless Jackboots"
 	item_path = /obj/item/clothing/shoes/jackboots/toeless
 
+/* // M13 REMOVAL START
 /datum/loadout_item/shoes/jackboots/heel //Donator reward for Thedragmeme, unrestricted at their request
 	name = "Boots - Jackboots, High-Heel"
 	item_path = /obj/item/clothing/shoes/jackboots/heel
+*/ // M13 REMOVAL END
 
 /datum/loadout_item/shoes/kneeboot
 	name = "Boots - Jackboots, Knee"
@@ -312,7 +314,7 @@
 /*
 *	erp_item
 */
-
+/* // M13 REMOVAL START
 /datum/loadout_item/shoes/ballet_heels
 	name = "Ballet Heels"
 	item_path = /obj/item/clothing/shoes/ballet_heels
@@ -327,7 +329,7 @@
 	name = "Latex Socks"
 	item_path = /obj/item/clothing/shoes/latex_socks
 	erp_item = TRUE
-
+*/ // M13 REMOVAL END
 /*
 *	DONATOR
 */

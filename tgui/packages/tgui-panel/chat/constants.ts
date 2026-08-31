@@ -39,7 +39,7 @@ export const MESSAGE_TYPE_ADMINLOG = 'adminlog';
 export const MESSAGE_TYPE_ATTACKLOG = 'attacklog';
 export const MESSAGE_TYPE_DEBUG = 'debug';
 export const MESSAGE_TYPE_MENTOR = 'mentor'; // NOVA EDIT ADDITION
-export const MESSAGE_TYPE_SUBTLE = 'subtle'; // NOVA EDIT ADDITION
+//export const MESSAGE_TYPE_SUBTLE = 'subtle'; // NOVA EDIT ADDITION // M13 REMOVAL
 
 type MessageType = {
   type: string;
@@ -119,12 +119,15 @@ export const MESSAGE_TYPES: MessageType[] = [
     description: 'Urist McTraitor has stabbed you with a knife!',
     selector: '.danger',
   },
-  { // NOVA EDIT ADDITION START
+  /* // M13 REMOVAL START
+  {
+    // NOVA EDIT ADDITION START
     type: MESSAGE_TYPE_SUBTLE,
     name: 'Subtle',
     description: 'Subtle and Subtler actions.',
     selector: '.subtle, .subtler',
   }, // NOVA EDIT ADDITION END
+  */ // M13 REMOVAL END
   {
     type: MESSAGE_TYPE_UNKNOWN,
     name: 'Unsorted',
@@ -170,10 +173,11 @@ export const MESSAGE_TYPES: MessageType[] = [
     description: 'DEBUG: SSPlanets subsystem Recover().',
     admin: true,
   },
-  { // NOVA EDIT ADDITION START
+  {
+    // NOVA EDIT ADDITION START
     type: MESSAGE_TYPE_MENTOR,
     name: 'Mentor Log',
     description: 'Mentor PMs and other mentor things.',
     selector: '.mentor, .mentornotice',
-  },// NOVA EDIT ADDITION END
+  }, // NOVA EDIT ADDITION END
 ];

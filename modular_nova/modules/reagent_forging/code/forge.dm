@@ -100,9 +100,9 @@
 		/datum/reagent/teslium,
 		/datum/reagent/eigenstate,
 		/datum/reagent/drug/pcp,
-		/datum/reagent/consumable/cum,
-		/datum/reagent/consumable/femcum,
-		/datum/reagent/consumable/breast_milk,
+		// /datum/reagent/consumable/cum, // M13 REMOVAL
+		// /datum/reagent/consumable/femcum, // M13 REMOVAL
+		// /datum/reagent/consumable/breast_milk, // M13 REMOVAL
 		/datum/reagent/toxin/acid,
 		/datum/reagent/phlogiston,
 		/datum/reagent/napalm,

@@ -1402,7 +1402,6 @@
 	dir = 1;
 	id = "interdynedisp"
 	},
-/obj/item/serviette_used,
 /obj/item/shard/plastitanium,
 /obj/item/paper/valentine,
 /obj/machinery/light/small/directional/west,
@@ -4811,11 +4810,6 @@
 "mZ" = (
 /turf/open/floor/plating/reinforced,
 /area/ruin/interdyne_planetary_base/eng)
-"na" = (
-/obj/structure/table,
-/obj/item/serviette_pack,
-/turf/open/floor/iron/dark/small,
-/area/ruin/interdyne_planetary_base/serv)
 "nb" = (
 /turf/open/floor/iron/dark/small,
 /area/ruin/interdyne_planetary_base/serv)
@@ -8924,7 +8918,7 @@ lG
 mg
 mn
 mF
-na
+mH
 nu
 nR
 ok

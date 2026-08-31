@@ -15,6 +15,9 @@
 *	ITEMS BELOW HERE
 */
 
+/datum/loadout_item/suit/jacket
+	abstract_type = /datum/loadout_item/suit/jacket
+
 /datum/loadout_item/suit/dagger_mantle
 	name = "'Dagger' Designer Mantle"
 	item_path = /obj/item/clothing/suit/dagger_mantle
@@ -1217,13 +1220,16 @@
 	name = "Cowboy Vest"
 	item_path = /obj/item/clothing/suit/cowboyvest
 
+/* // M13 REMOVAL START
 /datum/loadout_item/suit/digicoat_glitched //Public donator reward for Razurath.
 	name = "Digicoat - Glitched"
 	item_path = /obj/item/clothing/suit/toggle/digicoat/glitched
+*/ // M13 REMOVAL END
 
 /datum/loadout_item/suit/donator/digicoat
 	abstract_type = /datum/loadout_item/suit/donator/digicoat
 
+/* // M13 REMOVAL START
 /datum/loadout_item/suit/donator/digicoat/interdyne
 	name = "Digicoat - Interdyne"
 	item_path = /obj/item/clothing/suit/toggle/digicoat/interdyne
@@ -1231,6 +1237,7 @@
 /datum/loadout_item/suit/donator/digicoat/nanotrasen
 	name = "Digicoat - Nanotrasen"
 	item_path = /obj/item/clothing/suit/toggle/digicoat/nanotrasen
+*/ // M13 REMOVAL END
 
 /datum/loadout_item/suit/donator/furredjacket
 	name = "Furred Jacket"
@@ -1244,17 +1251,21 @@
 	name = "Furred Jacket (Cream)"
 	item_path = /obj/item/clothing/suit/brownfurrich/cream
 
+/* // M13 REMOVAL START
 /datum/loadout_item/suit/donator/chokha //All-donators donator item for BlindPoet
 	name = "Iseurian Chokha"
 	item_path = /obj/item/clothing/suit/chokha
+*/ // M13 REMOVAL END
 
 /datum/loadout_item/suit/donator/modern_winter
 	name = "Modern Winter Coat"
 	item_path = /obj/item/clothing/suit/modern_winter
 
+/* // M13 REMOVAL START
 /datum/loadout_item/suit/donator/replica_parade_jacket
 	name = "Replica Parade Jacket"
 	item_path = /obj/item/clothing/suit/replica_parade_jacket
+*/ // M13 REMOVAL END
 
 /datum/loadout_item/suit/croptop_bomber_jacket
 	name = "Croptop Bomber Jacket"

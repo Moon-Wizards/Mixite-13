@@ -4,9 +4,11 @@
 		mob_examine_panel.ui_interact(usr) //datum has a examine_panel datum, here we open the window
 	if(href_list["temporary_flavor"]) // we need this here because tg code doesnt call parent in /mob/living/silicon/Topic()
 		show_temp_ftext(usr)
-	if(href_list["lookup_info"] == "open_character_ad")
-		if(usr.client)
-			INVOKE_GAME_VERB(usr.client, usr.client, /client, show_character_directory, specific_ad = name)
+	// M13 REMOVAL START
+	//if(href_list["lookup_info"] == "open_character_ad")
+	//	if(usr.client)
+	//		INVOKE_GAME_VERB(usr.client, usr.client, /client, show_character_directory, specific_ad = name)
+	// M13 REMOVAL END
 	if(href_list["open_door"])
 		var/obj/machinery/door/airlock/door = locate(href_list["open_door"]) in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/door/airlock)
 		var/mob/living/requester = locate(href_list["user"]) in GLOB.mob_list

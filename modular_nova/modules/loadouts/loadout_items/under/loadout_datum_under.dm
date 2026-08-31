@@ -380,7 +380,7 @@
 /datum/loadout_item/under/bunny
 	abstract_type = /datum/loadout_item/under/bunny
 	group = "Bunny Suits"
-
+/* // M13 REMOVAL START
 /datum/loadout_item/under/bunny/black
 	name = "Bunny Suit (Black)"
 	item_path = /obj/item/clothing/under/costume/bunnylewd
@@ -392,6 +392,7 @@
 	item_path = /obj/item/clothing/under/costume/bunnylewd/white
 	erp_item = TRUE
 	group = "Bunny Suits"
+*/ // M13 REMOVAL END
 
 /datum/loadout_item/under/bunny/color
 	name = "Bunny Suit (Colorable)"
@@ -534,6 +535,7 @@
 	erp_item = TRUE
 	group = "Bunny Suits"
 
+/* // M13 REMOVAL START
 /datum/loadout_item/under/miscellaneous/latex_catsuit
 	name = "Latex Catsuit"
 	item_path = /obj/item/clothing/under/misc/latex_catsuit
@@ -545,6 +547,7 @@
 	item_path = /obj/item/clothing/under/tearaway_garments
 	erp_item = TRUE
 	group = "Costumes"
+*/ // M13 REMOVAL END
 
 /*
 	SECURITY

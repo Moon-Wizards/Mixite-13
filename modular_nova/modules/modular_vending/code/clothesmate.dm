@@ -31,7 +31,7 @@
 			"name" = "Accessories",
 			"icon" = "glasses",
 			"products" = list(
-				/obj/item/storage/belt/thigh_satchel = 5,
+				// /obj/item/storage/belt/thigh_satchel = 5, // M13 REMOVAL
 				/obj/item/clothing/neck/ranger_poncho = 5,
 				/obj/item/clothing/neck/cloak/colourable = 5,
 				/obj/item/clothing/neck/cloak/colourable/veil = 5,
@@ -46,7 +46,7 @@
 				/obj/item/clothing/glasses/hud/ar/projector = 5,
 				/obj/item/clothing/neck/face_scarf = 5,
 				/obj/item/clothing/mask/neck_gaiter = 5,
-				/obj/item/clothing/gloves/bracer/wraps = 5,
+				// /obj/item/clothing/gloves/bracer/wraps = 5, // M13 REMOVAL
 				/obj/item/clothing/gloves/recolorable = 5,
 				/obj/item/clothing/gloves/recolorable/fingerless = 5,
 				/obj/item/clothing/gloves/recolorable/long = 5,
@@ -219,7 +219,7 @@
 				/obj/item/storage/backpack/tinypaka = 5,
 				/obj/item/storage/backpack/tinypakb = 5,
 				/obj/item/storage/backpack/tinypakc = 5,
-				/obj/item/toy/pillow/torapillow = 5,
+				// /obj/item/toy/pillow/torapillow = 5, // M13 REMOVAL
 			)
 		)
 	)

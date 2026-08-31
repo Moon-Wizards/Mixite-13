@@ -6,7 +6,7 @@ export type NtMessage = {
   photo_path?: string;
   everyone: BooleanLike;
   timestamp: string;
-  subtle: BooleanLike; // NOVA EDIT ADDITION
+  //subtle: BooleanLike; // NOVA EDIT ADDITION // M13 REMOVAL
 };
 
 export type NtPicture = {

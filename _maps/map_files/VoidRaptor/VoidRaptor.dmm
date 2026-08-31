@@ -30378,10 +30378,6 @@
 /obj/structure/cable,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
-"iGD" = (
-/obj/structure/liquid_pump,
-/turf/open/floor/iron/smooth,
-/area/station/maintenance/department/crew_quarters/bar)
 "iGH" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -35351,7 +35347,6 @@
 	pixel_y = -8
 	},
 /mob/living/carbon/human/species/monkey,
-/obj/structure/sign/poster/contraband/korpstech/directional/north,
 /turf/open/floor/grass,
 /area/station/science/genetics)
 "jYQ" = (
@@ -47193,10 +47188,6 @@
 	dir = 1
 	},
 /obj/structure/table,
-/obj/item/serviette_pack{
-	pixel_x = 4;
-	pixel_y = 4
-	},
 /obj/item/reagent_containers/condiment/saltshaker{
 	desc = "Salt. From space oceans, presumably. A staple of modern medicine.";
 	pixel_x = -8;
@@ -78958,7 +78949,6 @@
 /area/station/science/ordnance/burnchamber)
 "vNq" = (
 /obj/structure/table,
-/obj/item/bdsm_candle,
 /turf/open/floor/glass/reinforced,
 /area/station/maintenance/port/fore)
 "vNs" = (
@@ -86657,10 +86647,6 @@
 /obj/effect/spawner/random/trash/moisture_trap,
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/starboard/aft)
-"xVS" = (
-/obj/structure/liquid_pump,
-/turf/open/floor/iron/smooth,
-/area/station/maintenance/starboard/lesser)
 "xWm" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -117383,7 +117369,7 @@ bvi
 aZq
 esi
 wjI
-iGD
+eWu
 hfT
 qmk
 quO
@@ -126676,7 +126662,7 @@ ryo
 xud
 mdf
 gZX
-xVS
+ctd
 onP
 onP
 onP

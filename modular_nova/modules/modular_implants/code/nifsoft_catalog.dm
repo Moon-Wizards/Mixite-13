@@ -2,12 +2,12 @@ GLOBAL_LIST_INIT(purchasable_nifsofts, list(
 	/datum/nifsoft/hivemind,
 	/datum/nifsoft/summoner,
 	/datum/nifsoft/action_granter/shapeshifter,
-	/datum/nifsoft/summoner/dorms,
+	// /datum/nifsoft/summoner/dorms, // M13 REMOVAL
 	/datum/nifsoft/soul_poem,
 	/datum/nifsoft/soulcatcher,
 	/datum/nifsoft/scryer,
 	/datum/nifsoft/summoner/book,
-	/datum/nifsoft/action_granter/hypnosis,
+	// /datum/nifsoft/action_granter/hypnosis, // M13 REMOVAL
 ))
 
 /datum/computer_file/program/nifsoft_downloader
@@ -71,8 +71,10 @@ GLOBAL_LIST_INIT(purchasable_nifsofts, list(
 	for(var/datum/nifsoft/buyable_nifsoft as anything in GLOB.purchasable_nifsofts)
 		if(!buyable_nifsoft)
 			continue
-		if(initial(buyable_nifsoft.lewd_nifsoft) && CONFIG_GET(flag/disable_lewd_items))
-			continue
+		// M13 REMOVAL START
+		//if(initial(buyable_nifsoft.lewd_nifsoft) && CONFIG_GET(flag/disable_lewd_items))
+		//	continue
+		// M13 REMOVAL END
 
 		var/list/nifsoft_details = list(
 			"name" = initial(buyable_nifsoft.name),

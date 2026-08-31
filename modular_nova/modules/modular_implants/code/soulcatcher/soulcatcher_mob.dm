@@ -54,8 +54,6 @@
 	soulcatcher_action.soulcatcher_user_component = WEAKREF(user_component)
 
 	// These verbs are overridden below but they're not hidden by default. hide them from the verb panel too
-	remove_verb(src, /mob/living/verb/subtle)
-	remove_verb(src, /mob/living/verb/subtler)
 	remove_verb(src, /mob/verb/whisper_verb)
 	remove_verb(src, /mob/living/verb/container_emote)
 
@@ -157,12 +155,13 @@ GAME_VERB(/mob/living/soulcatcher_soul, leave_soulcatcher, "Leave Soulcatcher", 
 
 	room.send_message(message, src, TRUE)
 	return TRUE
-
+/* // M13 REMOVAL START
 /mob/living/soulcatcher_soul/subtle()
 	return FALSE
 
 /mob/living/soulcatcher_soul/subtler()
 	return FALSE
+*/ // M13 REMOVAL END
 
 /mob/living/soulcatcher_soul/whisper_verb()
 	return FALSE

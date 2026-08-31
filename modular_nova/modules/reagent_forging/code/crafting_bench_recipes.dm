@@ -68,6 +68,7 @@
 	resulting_item = /obj/item/clothing/gloves/ring/reagent_clothing
 	required_good_hits = 4
 
+/* // M13 REMOVAL START
 /datum/crafting_bench_recipe/collar
 	recipe_name = "collar"
 	recipe_requirements = list(
@@ -75,6 +76,7 @@
 	)
 	resulting_item = /obj/item/clothing/neck/collar/reagent_clothing
 	required_good_hits = 6
+*/ // M13 REMOVAL END
 
 /datum/crafting_bench_recipe/handcuffs
 	recipe_name = "handcuffs"

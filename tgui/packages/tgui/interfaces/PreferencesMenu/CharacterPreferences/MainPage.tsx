@@ -8,7 +8,6 @@ import {
   Button,
   Floating,
   Input,
-  Icon, // NOVA EDIT ADDITION
   LabeledList,
   Section,
   Stack,
@@ -530,15 +529,10 @@ export function MainPage(props: MainPageProps) {
   enum PrefPage {
     Visual, // The visual parts
     Profile, // Flavor Text, Age, Records, PDA ringtone, etc
-    ERP, // ERP Prefs
   }
 
   const [currentPrefPage, setCurrentPrefPage] = useState(PrefPage.Visual);
-  const erpEnabled = !!data.erp_pref;
-  const filteredCurrentPrefPage =
-    currentPrefPage === PrefPage.ERP && !erpEnabled
-      ? PrefPage.Visual
-      : currentPrefPage;
+  const filteredCurrentPrefPage = currentPrefPage;
 
   let prefPageContents;
   switch (filteredCurrentPrefPage) {
@@ -568,19 +562,6 @@ export function MainPage(props: MainPageProps) {
         />
       );
       break;
-    case PrefPage.ERP:
-    prefPageContents = (
-      <PreferenceList
-        randomizations={getRandomization(
-          erpPreferences,
-          serverData,
-          randomBodyEnabled,
-        )}
-        preferences={erpPreferences}
-        maxHeight="auto"
-      />
-    );
-    break;
     default:
       exhaustiveCheck(filteredCurrentPrefPage);
   }
@@ -779,17 +760,6 @@ export function MainPage(props: MainPageProps) {
                   Character Profile
                 </PageButton>
               </Stack.Item>
-             {erpEnabled && (
-              <Stack.Item grow={0.5}>
-                <PageButton
-                  currentPage={currentPrefPage}
-                  page={PrefPage.ERP}
-                  setPage={setCurrentPrefPage}
-                >
-                <Icon name="heart" />
-                </PageButton>
-              </Stack.Item>
-            )}
             </Stack>
             {prefPageContents}
           </Stack>

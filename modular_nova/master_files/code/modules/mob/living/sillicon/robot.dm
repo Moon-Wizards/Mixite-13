@@ -98,8 +98,10 @@ GAME_VERB_PROC(/mob/living/silicon/robot, toggle_smoke, "Toggle smoke", "AI Comm
 	layer = ABOVE_MOB_LAYER
 
 // Update the borg's model appearance when they change models
-/obj/item/robot_model/do_transform_animation()
-	. = ..()
-	var/mob/living/silicon/robot/cyborg = loc
-	var/mutable_appearance/character_appearance = new(cyborg.appearance)
-	GLOB.name_to_appearance[cyborg.real_name] = character_appearance // Cache this for Character Directory
+// M13 REMOVAL START
+///obj/item/robot_model/do_transform_animation()
+//	. = ..()
+//	var/mob/living/silicon/robot/cyborg = loc
+//	var/mutable_appearance/character_appearance = new(cyborg.appearance)
+//	GLOB.name_to_appearance[cyborg.real_name] = character_appearance // Cache this for Character Directory
+// M13 REMOVAL END

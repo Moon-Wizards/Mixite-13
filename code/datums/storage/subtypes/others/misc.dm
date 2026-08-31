@@ -203,7 +203,7 @@
 	set_holdable(
 		can_hold_list = list(
 			// NOVA EDIT ADDITION BEGIN
-			/obj/item/condom_pack,
+			///obj/item/condom_pack, // M13 REMOVAL
 			/obj/item/gbp_punchcard,
 			/obj/item/disk/neuroware,
 			// NOVA EDIT ADDITION END

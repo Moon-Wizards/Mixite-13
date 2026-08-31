@@ -10,11 +10,13 @@
 /*
 	Adding has_custom_digi_sprite to TG stuff, as well as setting digi_icon_state to null on the boxers, because we have dedicated digi sprites for those
 */
+/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/underwear/female_kinky
 	name = "Panties - Lingerie"
 	icon_state = "panties_kinky"
 	gender = FEMALE
 	has_custom_digi_sprite = TRUE
+*/ // M13 REMOVAL END
 
 /datum/sprite_accessory/clothing/underwear/male_briefs
 	has_custom_digi_sprite = TRUE
@@ -96,10 +98,12 @@
 	icon_state = "thong"
 	gender = FEMALE
 
+/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/underwear/thong_babydoll
 	name = "Thong (Alt)"
 	icon_state = "thong_babydoll"
 	gender = FEMALE
+*/ // M13 REMOVAL END
 
 /datum/sprite_accessory/clothing/underwear/panties_swimsuit
 	name = "Panties - Swimsuit"
@@ -166,6 +170,7 @@
 	gender = FEMALE
 	use_static = TRUE
 
+/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/underwear/thong_cheetah
 	name = "Thong - Cheetah"
 	icon_state = "thong_cheetah"
@@ -183,6 +188,7 @@
 	icon_state = "thong_zebra"
 	gender = FEMALE
 	use_static = TRUE
+*/ // M13 REMOVAL START
 
 //Full-Body Underwear, i.e. swimsuits (Including re-enabling 3 from TG)
 //These likely require hides_breasts = TRUE
@@ -219,6 +225,7 @@
 	hides_breasts = TRUE
 
 //Fishnets
+/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/underwear/fishnet_lower
 	name = "Panties - Fishnet"
 	icon_state = "fishnet_lower"
@@ -247,3 +254,4 @@
 	name = "Chastity Cage"
 	icon_state = "chastcage"
 	erp_accessory = TRUE
+*/ // M13 REMOVAL START

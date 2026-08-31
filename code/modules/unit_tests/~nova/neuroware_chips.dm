@@ -23,8 +23,10 @@
 			continue
 
 		// Skip lewd neuroware chips
-		if(test_chip.is_lewd)
-			continue
+		// M13 REMOVAL START
+		//if(test_chip.is_lewd)
+		//	continue
+		// M13 REMOVAL END
 
 		// Setup default synthetic humanoid
 		var/mob/living/carbon/human/species/synth/test_robot = EASY_ALLOCATE()

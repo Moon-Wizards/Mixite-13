@@ -3,12 +3,13 @@
 /// Examine Panel flavor text
 #define EXAMINE_DNA_FLAVOR_TEXT "flavor_text"
 /// Examine Panel NSFW flavor text—requires you to click a tab to see
-#define EXAMINE_DNA_FLAVOR_TEXT_NSFW "flavor_text_nsfw"
+// #define EXAMINE_DNA_FLAVOR_TEXT_NSFW "flavor_text_nsfw" // M13 REMOVAL
 /// Examine Panel OOC notes
 #define EXAMINE_DNA_OOC_NOTES "ooc_notes"
 /// Examine Panel NSFW ooc notes—requires you to click a tab to see
-#define EXAMINE_DNA_OOC_NOTES_NSFW "ooc_notes_nsfw"
+//#define EXAMINE_DNA_OOC_NOTES_NSFW "ooc_notes_nsfw" // M13 REMOVAL
 
+/* // M13 REMOVAL START
 /// Examine text when a person has low arousal
 #define ERP_FLAVOR_DNA_LOW_AROUSAL "erp_low_arousal_text"
 /// Examine text when a person has medium arousal
@@ -19,6 +20,7 @@
 #define ERP_FLAVOR_DNA_TASTE "erp_taste"
 /// Flavor text when smelling someone
 #define ERP_FLAVOR_DNA_SCENT "erp_scent"
+*/ // M13 REMOVAL END
 
 //We start from 30 to not interfere with TG species defines, should they add more
 /// We're using all three mutcolor features for our skin coloration
@@ -118,6 +120,7 @@
 #define FEATURE_SYNTH_HEAD "synth_head"
 #define FEATURE_SYNTH_HAIR "synth_hair"
 
+/* // M13 REMOVAL START
 // Genitals
 #define FEATURE_PENIS "penis"
 #define FEATURE_SHEATH "sheath"
@@ -127,8 +130,9 @@
 #define FEATURE_BREASTS "breasts"
 #define FEATURE_ANUS "anus"
 #define FEATURE_BUTT "butt"
+*/ // M13 REMOVAL END
 
-
+/* // M13 REMOVAL START
 #define MANDATORY_FEATURE_LIST list(\
 	FEATURE_MUTANT_COLOR = "#FFFFBB",\
 	FEATURE_MUTANT_COLOR_TWO = "#FFFFBB",\
@@ -156,11 +160,26 @@
 	"butt_uses_skintones" = TRUE,\
 	"butt_uses_skincolor" = TRUE,\
 )
+*/ // M13 REMOVAL END
 
-#define AROUSAL_CANT 0
-#define AROUSAL_NONE 1
-#define AROUSAL_PARTIAL 2
-#define AROUSAL_FULL 3
+// M13 EDIT
+#define MANDATORY_FEATURE_LIST list(\
+	FEATURE_MUTANT_COLOR = "#FFFFBB",\
+	FEATURE_MUTANT_COLOR_TWO = "#FFFFBB",\
+	FEATURE_MUTANT_COLOR_THREE = "#FFFFBB",\
+	FEATURE_SKIN_COLOR = "#FFEEDD",\
+	EXAMINE_DNA_FLAVOR_TEXT = "",\
+	"body_size" = BODY_SIZE_NORMAL,\
+	"custom_species" = null,\
+)
+
+
+// M13 REMOVAL START
+//#define AROUSAL_CANT 0
+//#define AROUSAL_NONE 1
+//#define AROUSAL_PARTIAL 2
+//#define AROUSAL_FULL 3
+// M13 REMOVAL END
 
 //Species IDs. If you wanna look at tg's species ID defines, go look in the *other* DNA.dm file
 #define SPECIES_AKULA "akula"

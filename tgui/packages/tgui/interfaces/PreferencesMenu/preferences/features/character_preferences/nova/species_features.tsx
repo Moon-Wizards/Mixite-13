@@ -38,43 +38,49 @@ export const feature_mcolor3: Feature<string> = {
 export const flavor_text: Feature<string> = {
   name: 'Flavor Text',
   description:
-    "Appears when your character is examined (but only if they're identifiable - try a gas mask). Do not put sexual things in here—move those to Flavor Text (NSFW).",
+    "Appears when your character is examined (but only if they're identifiable - try a gas mask)..",
   component: FeatureLongTextInput,
 };
 
+/* // M13 REMOVAL START
 export const flavor_text_nsfw: Feature<string> = {
   name: 'Flavor Text (NSFW)',
   description: 'Same as Flavor Text but requires you to click a tab to view.',
   component: FeatureLongTextInput,
 };
+*/ // M13 REMOVAL END
 
 export const silicon_flavor_text: Feature<string> = {
   name: 'Flavor Text (Silicon)',
-  description:
-    "Only appears if you're playing as a borg/AI. Do not put sexual things in here—move those to Flavor Text (Silicon, NSFW).",
+  description: "Only appears if you're playing as a borg/AI.",
   component: FeatureLongTextInput,
 };
 
+/* // M13 REMOVAL START
 export const silicon_flavor_text_nsfw: Feature<string> = {
   name: 'Flavor Text (Silicon, NSFW)',
   description:
     'Same as Silicon Flavor Text but requires you to click a tab to view.',
   component: FeatureLongTextInput,
 };
+*/ // M13 REMOVAL END
 
 export const ooc_notes: Feature<string> = {
   name: 'OOC Notes',
   description:
-    'Anything you want other players to know about you goes here, such as antag information, OOC triggers, etc. Do not put sexual things in here—move those to OOC Notes (NSFW).',
+    'Anything you want other players to know about you goes here, such as antag information, OOC triggers, etc.',
   component: FeatureLongTextInput,
 };
 
+/* // M13 REMOVAL START
 export const ooc_notes_nsfw: Feature<string> = {
   name: 'OOC Notes (NSFW)',
   description: 'Same as OOC Notes but requires you to click a tab to view.',
   component: FeatureLongTextInput,
 };
+*/ // M13 REMOVAL END
 
+/* // M13 REMOVAL START
 export const character_ad: Feature<string> = {
   name: 'Character Advert',
   description:
@@ -88,6 +94,7 @@ export const attraction: FeatureChoiced = {
     'What your character is attracted to. This is displayed in the Directory.',
   component: FeatureDropdownInput,
 };
+*/ // M13 REMOVAL END
 
 export const display_gender: FeatureChoiced = {
   name: 'Character Gender',
@@ -168,11 +175,13 @@ export const allow_mismatched_hair_color_toggle: FeatureToggle = {
   component: CheckboxInput,
 };
 
+/* // M13 REMOVAL START
 export const allow_genitals_toggle: FeatureToggle = {
   name: 'Allow Genital Parts',
   description: 'Enables if you want to have genitals on your character.',
   component: CheckboxInput,
 };
+*/ // M13 REMOVAL END
 
 export const allow_emissives_toggle: FeatureToggle = {
   name: 'Allow Emissives',
@@ -831,3 +840,4 @@ export const holo_scanline: Feature<boolean> = {
     'Renders a faint scanline flicker across your body (not visible until you spawn).',
   component: CheckboxInput,
 };
+

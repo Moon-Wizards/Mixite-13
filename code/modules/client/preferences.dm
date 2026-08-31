@@ -183,8 +183,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		tainted_character_profiles = FALSE
 	//NOVA EDIT ADDITION BEGIN
 	data["preview_selection"] = preview_pref
-	data["erp_pref"] = read_preference(/datum/preference/toggle/master_erp_preferences)
-	data["erp_belly_pref"] = read_preference(/datum/preference/toggle/erp/belly_master)
+	// M13 REMOVAL START
+	//data["erp_pref"] = read_preference(/datum/preference/toggle/master_erp_preferences)
+	//data["erp_belly_pref"] = read_preference(/datum/preference/toggle/erp/belly_master)
+	// M13 REMOVAL END
 	data["quirk_points_enabled"] = !CONFIG_GET(flag/disable_quirk_points)
 	data["quirks_balance"] = GetQuirkBalance()
 	data["positive_quirk_count"] = GetPositiveQuirkCount()
@@ -205,10 +207,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/data = list()
 
 	// NOVA EDIT ADDITION START
-	if(CONFIG_GET(flag/disable_erp_preferences))
-		data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR, PREVIEW_PREF_NAKED)
-	else
-		data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR, PREVIEW_PREF_NAKED, PREVIEW_PREF_NAKED_AROUSED)
+	// M13 REMOVAL START
+	//if(CONFIG_GET(flag/disable_erp_preferences))
+	data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR, PREVIEW_PREF_NAKED)
+	//else
+	//	data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR, PREVIEW_PREF_NAKED, PREVIEW_PREF_NAKED_AROUSED)
+	// M13 REMOVAL END
 	// NOVA EDIT ADDITION END
 	data["character_preview_view"] = character_preview_view.assigned_map
 	data["overflow_role"] = SSjob.get_job_type(SSjob.overflow_role).title
@@ -325,9 +329,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			update_preference(GLOB.preference_entries[/datum/preference/choiced/background_state], params["new_background"])
 			return TRUE
 
-		if ("open_belly_prefs")
-			GLOB.erp_belly_prefshelper.ui_interact(usr)
-			return TRUE
+		// M13 REMOVAL START
+		//if ("open_belly_prefs")
+		//	GLOB.erp_belly_prefshelper.ui_interact(usr)
+		//	return TRUE
+		// M13 REMOVAL END
 
 		if ("set_tricolor_preference")
 			var/requested_preference_key = params["preference"]

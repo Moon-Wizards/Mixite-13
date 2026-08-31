@@ -32,14 +32,20 @@
 		if(QDELETED(spawn_text) || QDELETED(src))
 			return
 		spawn_text.maptext = MAPTEXT_PIXELLARI(copytext_char(text, 1, i))
-		sleep(1)
+		// M13 ADDITION START
+		mob.playsound_local(get_turf(mob), 'modular_zmixite/master_files/sound/effects/typewriter.wav', 50, FALSE, channel = CHANNEL_AMBIENCE)
+		// M13 ADDITION END
+		sleep(0.25) // M13 EDIT CHANGE - ORIGINAL: sleep(1)
 
 	addtimer(CALLBACK(src, PROC_REF(fade_spawn_text_overlay), src, spawn_text), duration)
 
 /client/proc/fade_spawn_text_overlay(client/player_client, atom/movable/screen/spawn_text)
 	if(QDELETED(spawn_text))
 		return
-	animate(spawn_text, alpha = 0, time = 0.5 SECONDS)
+	// M13 ADDITION START
+	mob.playsound_local(get_turf(mob), 'modular_zmixite/master_files/sound/effects/combine_out.wav', 50, FALSE, channel = CHANNEL_AMBIENCE)
+	// M13 ADDITION END
+	animate(spawn_text, alpha = 0, time = 1 SECONDS) // M13 EDIT CHANGE - ORIGINAL: sleep(1)
 	sleep(5)
 	if(player_client && !QDELETED(spawn_text))
 		player_client.screen -= spawn_text

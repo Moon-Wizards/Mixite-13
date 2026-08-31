@@ -23,7 +23,7 @@
 	var/list/items_to_give_out = list(
 		/obj/item/paper/valentine,
 		/obj/item/storage/fancy/heart_box,
-		/obj/item/food/candyheart,
+		///obj/item/food/candyheart, // M13 REMOVAL
 	)
 
 /datum/round_event/valentines/proc/is_valid_valentine(mob/living/guy)
@@ -133,17 +133,19 @@
 	default_raw_text = pick_list(VALENTINE_FILE, "valentines") || "A generic message of love or whatever."
 	return ..()
 
-/obj/item/food/candyheart
-	name = "candy heart"
-	icon = 'icons/obj/holiday/holiday_misc.dmi'
-	icon_state = "candyheart"
-	desc = "A heart-shaped candy that reads: "
-	food_reagents = list(/datum/reagent/consumable/sugar = 2)
-	junkiness = 5
-
-/obj/item/food/candyheart/Initialize(mapload)
-	. = ..()
-	desc = pick(strings(VALENTINE_FILE, "candyhearts"))
-	icon_state = pick("candyheart", "candyheart2", "candyheart3", "candyheart4")
+// M13 REMOVAL START
+///obj/item/food/candyheart
+//	name = "candy heart"
+//	icon = 'icons/obj/holiday/holiday_misc.dmi'
+//	icon_state = "candyheart"
+//	desc = "A heart-shaped candy that reads: "
+//	food_reagents = list(/datum/reagent/consumable/sugar = 2)
+//	junkiness = 5
+//
+///obj/item/food/candyheart/Initialize(mapload)
+//	. = ..()
+//	desc = pick(strings(VALENTINE_FILE, "candyhearts"))
+//	icon_state = pick("candyheart", "candyheart2", "candyheart3", "candyheart4")
+// M13 REMOVAL END
 
 #undef VALENTINE_FILE

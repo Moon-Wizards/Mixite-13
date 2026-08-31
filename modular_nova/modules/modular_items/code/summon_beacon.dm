@@ -210,10 +210,12 @@
 
 /obj/item/summon_beacon/vendors/equipped(mob/user, slot, initial)
 	. = ..()
-	if (!CONFIG_GET(flag/disable_erp_preferences) && user?.client?.prefs.read_preference(/datum/preference/toggle/master_erp_preferences))
-		selectable_atoms += /obj/machinery/vending/dorms
-	else
-		selectable_atoms -= /obj/machinery/vending/dorms
+	// M13 REMOVAL START
+	//if (!CONFIG_GET(flag/disable_erp_preferences) && user?.client?.prefs.read_preference(/datum/preference/toggle/master_erp_preferences))
+	//	selectable_atoms += /obj/machinery/vending/dorms
+	//else
+	// M13 REMOVAL END
+	selectable_atoms -= /obj/machinery/vending/dorms
 
 /obj/item/summon_beacon/gas_miner/hacked
 	name = "hacked gas miner beacon"

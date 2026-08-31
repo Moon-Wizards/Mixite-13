@@ -1,247 +1,305 @@
 <html>
-		<head>
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-			<style type='text/css'>
-				@font-face {
-					font-family: "Fixedsys";
-					src: url("FixedsysExcelsior3.01Regular.ttf");
-				}
-				body,
-				html {
-					margin: 0;
-					overflow: hidden;
-					text-align: center;
-					background-color: black;
-					padding-top: 5vmin;
-					-ms-user-select: none;
-					cursor: default;
-				}
 
-				img {
-					border-style:none;
-				}
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type='text/css'>
+        @font-face {
+            font-family: "Fixedsys";
+            src: url("FixedsysExcelsior3.01Regular.ttf");
+        }
 
-				.bg {
-					position: absolute;
-					width: auto;
-					height: 100vmin;
-					min-width: 100vmin;
-					min-height: 100vmin;
-					top: 50%;
-					left:50%;
-					transform: translate(-50%, -50%);
-					z-index: 0;
-				}
+        body,
+        html {
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+            background-color: black;
+            padding-top: 5vmin;
+            -ms-user-select: none;
+            cursor: default;
+        }
 
-				.container_terminal {
-					position: absolute;
-					width: 100%;
-					height: calc(100% - 7vmin);
-					overflow: clip;
-					box-sizing: border-box;
-					padding: 3vmin 2vmin;
-					top: 0%;
-					left:0%;
-					z-index: 1;
-				}
+        img {
+            border-style: none;
+        }
 
-				.terminal_text {
-					display: inline-block;
-					font-weight: lighter;
-					text-decoration: none;
-					width: 100%;
-					text-align: right;
-					color:green;
-					text-shadow: 1px 1px black;
-					margin-right: 0%;
-					margin-top: 0px;
-					font-size: 2vmin;
-					line-height: 1vmin;
-					letter-spacing: 1px;
-				}
+        .bg {
+            position: absolute;
+            width: auto;
+            height: 100vmin;
+            min-width: 100vmin;
+            min-height: 100vmin;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
 
-				.container_progress {
-					position: absolute;
-					box-sizing: border-box;
-					bottom: 3vmin;
-					left: 2vmin;
-					height: 4vmin;
-					width: calc(100% - 4vmin);
-					border-left: 2px solid green;
-					border-right: 2px solid green;
-					padding: 4px;
-					background-color: black;
-				}
+        .container_terminal {
+            position: absolute;
+            width: 100%;
+            height: calc(100% - 7vmin);
+            overflow: clip;
+            box-sizing: border-box;
+            padding: 3vmin 2vmin;
+            top: 0%;
+            left: 0%;
+            z-index: 1;
+        }
 
-				.progress_bar {
-					width: 0%;
-					height: 100%;
-					background-color: green;
-				}
+        .terminal_text {
+            display: inline-block;
+            font-weight: lighter;
+            text-decoration: none;
+            width: 100%;
+            text-align: right;
+            color: green;
+            text-shadow: 1px 1px black;
+            margin-right: 0%;
+            margin-top: 0px;
+            font-size: 2vmin;
+            line-height: 1vmin;
+            letter-spacing: 1px;
+        }
 
-				@keyframes looping_sub_pattern {
-					from {
-						background-position: 0px 0px;
-					}
-					to {
-						background-position: 11.3137px 0px;
-					}
-				}
+        .container_progress {
+            position: absolute;
+            box-sizing: border-box;
+            bottom: 3vmin;
+            left: 2vmin;
+            height: 4vmin;
+            width: calc(100% - 4vmin);
+            border-left: 2px solid green;
+            border-right: 2px solid green;
+            padding: 4px;
+            background-color: black;
+        }
 
-				.sub_progress_bar {
-					width: 0%;
-					height: 100%;
-					float: right;
-					background-color: lime;
-					background-image: repeating-linear-gradient(
-						-45deg,
-						green,
-						green 7px,
-						black 7px,
-						black 8px
-					);
-					background-attachment: fixed;
-					animation: looping_sub_pattern 1s linear infinite;
-				}
+        .progress_bar {
+            width: 0%;
+            height: 100%;
+            background-color: green;
+        }
 
-				.container_nav {
-					position: absolute;
-					box-sizing: border-box;
-					width: 90vmin;
-					min-height: 10vmin;
-					top: calc(50% + 22.5vmin);
-					left:50%;
-					transform: translate(-50%, -50%);
-					z-index: 1;
-					border: 2px solid white;
-					border-radius: 4px;
-					box-shadow: 2px 2px #333, inset 1px 1px #333;
-					background: linear-gradient(to bottom, rgba(110, 45, 136, 0.6), rgba(120, 68, 204, 0.6), rgba(68, 68, 204, 0.6), rgba(68, 68, 204, 0.6), rgba(0, 0, 102, 0.6));
-					opacity: 95%;
-					padding: 1em;
-				}
+        @keyframes looping_sub_pattern {
+            from {
+                background-position: 0px 0px;
+            }
 
-				.container_nav hr {
-					height: 2px;
-					background-color: #cde;
-					border: none;
-					box-shadow: 2px 2px black;
-				}
+            to {
+                background-position: 11.3137px 0px;
+            }
+        }
 
-				.menu_button {
-					display: block;
-					box-sizing: border-box;
-					font-family: "Fixedsys";
-					font-weight: lighter;
-					text-decoration: none;
-					font-size: 4vmin;
-					text-shadow: 2px 2px black;
-					line-height: 4vmin;
-					width: 100%;
-					text-align: left;
-					color: #cde;
-					height: 4vmin;
-					padding-left: 5vmin;
-					letter-spacing: 1px;
-					cursor: pointer;
-					white-space: nowrap;
-					overflow: hidden;
-				}
+        .sub_progress_bar {
+            width: 0%;
+            height: 100%;
+            float: right;
+            background-color: lime;
+            background-image: repeating-linear-gradient(-45deg,
+                    green,
+                    green 7px,
+                    black 7px,
+                    black 8px);
+            background-attachment: fixed;
+            animation: looping_sub_pattern 1s linear infinite;
+        }
 
-				.menu_button:hover {
-					padding-left: 0px;
-					color: yellow;
-				}
+        .container_nav {
+            position: absolute;
+            box-sizing: border-box;
 
-				.menu_button:active {
-					padding-left: 0px;
-					transform: translate(2px, 2px);
-				}
+            min-height: 10vmin;
 
-				.menu_button:hover::before {
-					content: "☞";
-					text-align: center;
-					width: 5vmin;
-					display: inline-block;
-				}
+            bottom: 10%;
+            left: 5%;
 
-				@keyframes pulse_button {
-					0% {transform: translateX(0px);}
-					100% {transform: translateX(2px);}
-				}
+            z-index: 1;
 
-				.menu_button:active::before {
-					content: "☛";
-					text-align: center;
-					width: 5vmin;
-					animation: pulse_button 0.25s infinite alternate;
-				}
-                .menu_button.info_display {
-                    cursor: default;
-                    pointer-events: none;
-                }
-                .menu_button.info_display:hover {
-                    background: inherit;
-                }
+            padding: 1.5vmin 1vmin 1.5vmin 1.5vmin;
 
-				@keyframes pollsbox {
-					0% {color: #cde;}
-					50% {color: #f80;}
-				}
+            border-left: 2px solid rgba(205, 238, 255, 0.8);
 
-				.menu_newpoll {
-					animation: pollsbox 2s step-start infinite;
-					padding-left: 0px;
-				}
+            background: linear-gradient(to right,
+                    rgba(20, 20, 30, 0.35),
+                    rgba(20, 20, 30, 0.12),
+                    transparent);
 
-				.menu_newpoll::before {
-					content: "→";
-					text-align: center;
-					width: 5vmin;
-					display: inline-block;
-				}
+            box-shadow:
+                inset 8px 0 18px rgba(0, 0, 0, 0.15);
 
-				.menu_newpoll::after {
-					content: "←";
-					text-align: center;
-					width: 5vmin;
-					display: inline-block;
-				}
+            opacity: 0.95;
+        }
 
-				.container_notice {
-					position: absolute;
-					box-sizing: border-box;
-					width: auto;
-					padding-top: 1vmin;
-					top: calc(50% - 10vmin);
-					left:50%;
-					transform: translate(-50%, -50%);
-					z-index: 1;
-				}
+        .container_nav hr {
+            height: 2px;
+            margin: 1vmin 0.5vmin;
 
-				.menu_notice {
-					display: inline-block;
-					font-family: "Fixedsys";
-					font-weight: lighter;
-					text-decoration: none;
-					width: 100%;
-					text-align: left;
-					color: red;
-					text-shadow: 1px 0px black, -1px 0px black, 0px 1px black, 0px -1px black, 2px 0px black, -2px 0px black, 0px 2px black, 0px -2px black;
-					margin-right: 0%;
-					margin-top: 0px;
-					font-size: 3vmin;
-					line-height: 2vmin;
-				}
+            background-color: rgba(205, 238, 255, 0.5);
+            border: none;
 
-				.unchecked {
-					color: #F44;
-				}
+            box-shadow: 1px 1px black;
+        }
 
-				.checked {
-					color: #4F4;
-				}
-			</style>
-		</head>
-		<body>
+        .menu_button {
+            display: block;
+            box-sizing: border-box;
+
+            position: relative;
+
+            font-family: "Fixedsys", "Fixedsys Regular";
+            font-weight: lighter;
+            text-decoration: none;
+            font-size: 4vmin;
+            text-shadow: 2px 2px black;
+            line-height: 4vmin;
+
+            width: 100%;
+            height: 4vmin;
+
+            text-align: left;
+            color: #cde;
+
+            padding-left: 4.5vmin;
+
+            letter-spacing: 1px;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+
+            transition:
+                background-color 100ms ease,
+                color 100ms ease,
+                text-shadow 100ms ease;
+        }
+
+        .menu_button:hover {
+            color: #ffffa0;
+
+            background: linear-gradient(to right,
+                    rgba(205, 238, 255, 0.13),
+                    rgba(205, 238, 255, 0.06),
+                    transparent);
+
+            text-shadow:
+                2px 2px black,
+                0 0 6px rgba(255, 255, 180, 0.25);
+        }
+
+        .menu_button:hover::before {
+            content: ">";
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 4vmin;
+            display: inline-block;
+
+            text-align: center;
+        }
+
+        .menu_button:active {
+            transform: translateX(2px);
+        }
+
+        .menu_button:active::before {
+            animation: pulse_button 0.25s infinite alternate;
+        }
+
+        @keyframes pulse_button {
+            0% {
+                transform: translateX(0px);
+            }
+
+            100% {
+                transform: translateX(2px);
+            }
+        }
+
+        .menu_button.info_display {
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .menu_button.info_display:hover {
+            background: transparent;
+            color: #cde;
+            text-shadow: 2px 2px black;
+        }
+
+        @keyframes pollsbox {
+            0% {
+                color: #cde;
+            }
+
+            50% {
+                color: #f80;
+            }
+        }
+
+        .menu_newpoll {
+            animation: pollsbox 2s step-start infinite;
+            padding-left: 0px;
+        }
+
+        .menu_newpoll::before {
+            content: "→";
+            text-align: center;
+            width: 5vmin;
+            display: inline-block;
+        }
+
+        .menu_newpoll::after {
+            content: "←";
+            text-align: center;
+            width: 5vmin;
+            display: inline-block;
+        }
+
+        .container_notice {
+            position: absolute;
+            box-sizing: border-box;
+            width: auto;
+            padding-top: 1vmin;
+            top: calc(50% - 10vmin);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .menu_notice {
+            display: inline-block;
+            font-family: "Fixedsys", "Fixedsys Regular";
+            font-weight: lighter;
+            text-decoration: none;
+            width: 100%;
+            text-align: left;
+            color: red;
+            text-shadow:
+                1px 0px black,
+                -1px 0px black,
+                0px 1px black,
+                0px -1px black,
+                2px 0px black,
+                -2px 0px black,
+                0px 2px black,
+                0px -2px black;
+            margin-right: 0%;
+            margin-top: 0px;
+            font-size: 3vmin;
+            line-height: 2vmin;
+        }
+
+        .unchecked {
+            color: #F44;
+        }
+
+        .checked {
+            color: #4F4;
+        }
+    </style>
+</head>
+
+<body>

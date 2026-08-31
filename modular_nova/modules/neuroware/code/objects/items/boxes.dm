@@ -53,32 +53,34 @@
 	for(var/i in 1 to 5)
 		new /obj/item/disk/neuroware/thc(src)
 
-// Lewd neurowares
+// Lewd neurowares // M13 REMOVAL START
 
-/obj/item/storage/box/flat/neuroware/crocin
-	name = "neuroware chips (EroStim)"
+///obj/item/storage/box/flat/neuroware/crocin
+//	name = "neuroware chips (EroStim)"
 
-/obj/item/storage/box/flat/neuroware/crocin/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/disk/neuroware/crocin(src)
+///obj/item/storage/box/flat/neuroware/crocin/PopulateContents()
+//	for(var/i in 1 to 5)
+//		new /obj/item/disk/neuroware/crocin(src)
 
-/obj/item/storage/box/flat/neuroware/hexacrocin
-	name = "neuroware chips (EroStim Deluxe)"
+///obj/item/storage/box/flat/neuroware/hexacrocin
+//	name = "neuroware chips (EroStim Deluxe)"
 
-/obj/item/storage/box/flat/neuroware/hexacrocin/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/disk/neuroware/hexacrocin(src)
+///obj/item/storage/box/flat/neuroware/hexacrocin/PopulateContents()
+//	for(var/i in 1 to 5)
+//		new /obj/item/disk/neuroware/hexacrocin(src)
 
-/obj/item/storage/box/flat/neuroware/camphor
-	name = "neuroware chips (AphroCalm)"
+///obj/item/storage/box/flat/neuroware/camphor
+//	name = "neuroware chips (AphroCalm)"
 
-/obj/item/storage/box/flat/neuroware/camphor/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/disk/neuroware/camphor(src)
+///obj/item/storage/box/flat/neuroware/camphor/PopulateContents()
+//	for(var/i in 1 to 5)
+//		new /obj/item/disk/neuroware/camphor(src)
 
-/obj/item/storage/box/flat/neuroware/pentacamphor
-	name = "neuroware chips (Nobido Xtreme)"
+///obj/item/storage/box/flat/neuroware/pentacamphor
+//	name = "neuroware chips (Nobido Xtreme)"
 
-/obj/item/storage/box/flat/neuroware/pentacamphor/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/disk/neuroware/pentacamphor(src)
+///obj/item/storage/box/flat/neuroware/pentacamphor/PopulateContents()
+//	for(var/i in 1 to 5)
+//		new /obj/item/disk/neuroware/pentacamphor(src)
+
+// M13 REMOVAL END

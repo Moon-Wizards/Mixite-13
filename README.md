@@ -1,31 +1,31 @@
-## Nova Sector (/tg/station Downstream)
+## Mixite/13 (Nova Sector Downstream)
 
-[![CI Suite](https://github.com/NovaSector/NovaSector/workflows/CI%20Suite/badge.svg)](https://github.com/NovaSector/NovaSector/actions?query=workflow%3A%22CI+Suite%22)
-[![Percentage of issues still open](https://isitmaintained.com/badge/open/NovaSector/NovaSector.svg)](https://isitmaintained.com/project/NovaSector/NovaSector "Percentage of issues still open")
-[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/NovaSector/NovaSector.svg)](https://isitmaintained.com/project/NovaSector/NovaSector "Average time to resolve an issue")
-![Coverage](https://img.shields.io/codecov/c/github/NovaSector/NovaSector)
+[![CI Suite](https://github.com/Moon-Wizards/Mixite-13/workflows/CI%20Suite/badge.svg)](https://github.com/Moon-Wizards/Mixite-13/actions?query=workflow%3A%22CI+Suite%22)
+[![Percentage of issues still open](https://isitmaintained.com/badge/open/Moon-Wizards/Mixite-13.svg)](https://isitmaintained.com/project/Moon-Wizards/Mixite-13 "Percentage of issues still open")
+[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/Moon-Wizards/Mixite-13.svg)](https://isitmaintained.com/project/Moon-Wizards/Mixite-13 "Average time to resolve an issue")
+![Coverage](https://img.shields.io/codecov/c/github/Moon-Wizards/Mixite-13)
 
 [![resentment](.github/images/badges/built-with-resentment.svg)](.github/images/comics/131-bug-free.png) [![technical debt](.github/images/badges/contains-technical-debt.svg)](.github/images/comics/106-tech-debt-modified.png) [![forinfinityandbyond](.github/images/badges/made-in-byond.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
-| Website                          | Link                                                                                                                                   |
-| -----------------------          | -------------------------------------------------------------------------------------------------------------------------------------- |
-| How to Write a Design Doc        |  [https://hackmd.io/@tgstation/BkzmU9EyK](https://hackmd.io/@tgstation/BkzmU9EyK)                                                      |
-| Git / GitHub cheatsheet          | [https://www.notion.so/Git-GitHub-61bc81766b2e4c7d9a346db3078ce833](https://www.notion.so/Git-GitHub-61bc81766b2e4c7d9a346db3078ce833) |
-| Guide to Modularization          | [./modular_nova/readme.md](./modular_nova/readme.md)                                                                                   |
-| Guide to Mirroring               | [./modular_nova/mirroring_guide.md](./modular_nova/mirroring_guide.md)                                                                 |
-| Code                             | [https://github.com/NovaSector/NovaSector](https://github.com/NovaSector/NovaSector)                                                   |
-| Wiki                             | [https://wiki.novasector13.com](https://wiki.novasector13.com)                                                                         |
-| Codedocs                         | [https://NovaSector.github.io/NovaSector/](https://NovaSector.github.io/NovaSector/)                                                   |
-| Nova Sector's Discord            | [https://discord.gg/novasector](https://discord.gg/novasector)                                                                         |
-| Coderbus Discord                 | [https://discord.gg/Vh8TJp9](https://discord.gg/Vh8TJp9)                                                                               |
-| Contribution Guide               | [./.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md)                                                                                 |
+| Website                          | Link                                                                                                                                     |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| How to Write a Design Doc        | [https://hackmd.io/@tgstation/BkzmU9EyK](https://hackmd.io/@tgstation/BkzmU9EyK)                                                         |
+| Git / GitHub cheatsheet          | [https://www.notion.so/Git-GitHub-61bc81766b2e4c7d9a346db3078ce833](https://www.notion.so/Git-GitHub-61bc81766b2e4c7d9a346db3078ce833)   |
+| Guide to Modularization          | [./modular_nova/readme.md](./modular_nova/readme.md)                                                                                     |
+| Guide to Mirroring               | [./modular_nova/mirroring_guide.md](./modular_nova/mirroring_guide.md)                                                                   |
+| Code                             | [https://github.com/Moon-Wizards/Mixite-13](https://github.com/Moon-Wizards/Mixite-13)                                                   |
+| Wiki                             | [https://wiki.novasector13.com](https://wiki.novasector13.com)                                                                           |
+| Codedocs                         | [https://NovaSector.github.io/NovaSector/](https://NovaSector.github.io/NovaSector/)                                                     |
+| Nova Sector's Discord            | [https://discord.gg/novasector](https://discord.gg/novasector)                                                                           |
+| Coderbus Discord                 | [https://discord.gg/Vh8TJp9](https://discord.gg/Vh8TJp9)                                                                                 |
+| Contribution Guide               | [./.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md)                                                                                   |
 | Getting Started With Development | [https://hackmd.io/@tgstation/HJ8OdjNBc#tgstation-Development-Guide](https://hackmd.io/@tgstation/HJ8OdjNBc#tgstation-Development-Guide) |
-| Maintainer-Approved Design Docs  | [https://hackmd.io/@tgstation](https://hackmd.io/@tgstation)                                                                           |
-| Common Core Lore                 | [https://github.com/tgstation/common_core](https://github.com/tgstation/common_core)                                                   |
+| Maintainer-Approved Design Docs  | [https://hackmd.io/@tgstation](https://hackmd.io/@tgstation)                                                                             |
+| Common Core Lore (Coming soon!)  | [https://codeberg.org/MoonWizards/CommonCore](https://codeberg.org/MoonWizards/CommonCore)                                               |
 
-This is Nova Sector's downstream fork of /tg/station created in byond.
+This is Mixite/13's downstream a fork of Nova Sector which is a fork of /tg/station created in byond.
 
-**Please note that this repository contains sexually explicit content and is not suitable for those under the age of 18.**
+There might be NSFW sprites in the codebase, but all NSFW code has been removed. Sprites will be removed when possible. This is a SFW fork.
 
 Space Station 13 is a paranoia-laden round-based roleplaying game set against the backdrop of a nonsensical, metal death trap masquerading as a space station, with charming spritework designed to represent the sci-fi setting and its dangerous undertones. Have fun, and survive!
 

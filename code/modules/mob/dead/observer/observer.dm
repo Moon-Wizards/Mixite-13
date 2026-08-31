@@ -433,10 +433,10 @@ GAME_VERB(/mob/dead/observer, do_not_resuscitate, "Do Not Resuscitate", null)
 			var/atom/movable/screen/alert/A = throw_alert("[REF(source)]_revival", /atom/movable/screen/alert/revival)
 			if(A)
 				var/ui_style = client?.prefs?.read_preference(/datum/preference/choiced/ui_style)
-				var/erp_ui_style = client?.prefs?.read_preference(/datum/preference/choiced/ui_style) //NOVA EDIT - ADDITION - ERP ICONS FIX
+				// var/erp_ui_style = client?.prefs?.read_preference(/datum/preference/choiced/ui_style) //NOVA EDIT - ADDITION - ERP ICONS FIX // M13 REMOVAL
 				if(ui_style)
 					A.icon = ui_style2icon(ui_style)
-					A.icon = erp_ui_style2icon(erp_ui_style) //NOVA EDIT - ADDITION - ERP ICONS FIX
+					// A.icon = erp_ui_style2icon(erp_ui_style) //NOVA EDIT - ADDITION - ERP ICONS FIX // M13 REMOVAL
 				A.desc = message
 				var/old_layer = source.layer
 				var/old_plane = source.plane

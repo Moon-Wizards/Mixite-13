@@ -27,10 +27,12 @@
 		ViewManifest()
 		return
 
-	if(href_list["view_directory"])
-		play_lobby_button_sound()
-		client?.show_character_directory()
-		return
+	// M13 REMOVAL START
+	//if(href_list["view_directory"])
+	//	play_lobby_button_sound()
+	//	client?.show_character_directory()
+	//	return
+	// M13 REMOVAL END
 
 	if(href_list["toggle_antag"])
 		play_lobby_button_sound()

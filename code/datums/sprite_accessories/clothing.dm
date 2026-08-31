@@ -107,6 +107,7 @@
 	gender = MALE
 	digi_icon_state = "longjohns"
 
+/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/underwear/male_kinky
 	name = "Jockstrap"
 	icon_state = "male_kinky"
@@ -116,6 +117,7 @@
 	name = "Mankini"
 	icon_state = "male_mankini"
 	gender = MALE
+*/ // M13 REMOVAL START
 
 /datum/sprite_accessory/clothing/underwear/male_hearts
 	name = "Hearts Boxers"
@@ -610,9 +612,11 @@
 	name = "Knee-high (White)"
 	icon_state = "white_knee"
 
+/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/socks/fishnet_knee
 	name = "Knee-high (Fishnet)"
 	icon_state = "fishnet_knee"
+*/ // M13 REMOVAL END
 
 /datum/sprite_accessory/clothing/socks/black_norm
 	name = "Normal (Black)"
