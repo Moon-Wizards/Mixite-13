@@ -115,4 +115,9 @@
 	name = "GSOD"
 	icon_state = "gsod"
 
+/datum/sprite_accessory/screen/color_test
+	icon = CUSTOM_SCREEN_ICON
+	name = "Color Test"
+	icon_state = "color_test"
+
 #undef CUSTOM_SCREEN_ICON
