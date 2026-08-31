@@ -155,6 +155,7 @@
 	use_static = FALSE
 
 //ERP Accessories
+/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/bra/bra_latex
 	name = "Bra - Latex"
 	icon_state = "bra_latex"
@@ -185,3 +186,4 @@
 	name = "Shibari Sleeves"
 	icon_state = "shibari_sleeves"
 	erp_accessory = TRUE
+*/ // M13 REMOVAL END
