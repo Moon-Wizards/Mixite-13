@@ -275,6 +275,10 @@ DEFINE_BITFIELD(smoothing_junction, list(
 
 #define SMOOTH_GROUP_BOULDER_PLATFORM S_OBJ(87) ///obj/structure/lattice/catwalk/boulder
 
+// M13 EDIT ADDITION START
+#define SMOOTH_GROUP_SILK_WALLS S_OBJ(88) ///turf/closed/wall/material/silk /obj/structure/falsewall/silk
+// M13 EDIT ADDITION END
+
 /// Performs the work to set smoothing_groups and canSmoothWith.
 /// An inlined function used in both turf/Initialize and atom/Initialize.
 #define SETUP_SMOOTHING(...) \

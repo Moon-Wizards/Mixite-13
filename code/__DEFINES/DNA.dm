@@ -134,6 +134,10 @@
 #define ORGAN_SLOT_XENO_PLASMAVESSEL "plasma_vessel"
 #define ORGAN_SLOT_XENO_RESINSPINNER "resin_spinner"
 
+// M13 EDIT ADDITION START
+#define	ORGAN_SLOT_GLAND "gland"
+// M13 EDIT ADDITION END
+
 //organ defines
 #define STANDARD_ORGAN_THRESHOLD 100
 #define STANDARD_ORGAN_HEALING (50 / 100000)
@@ -188,6 +192,9 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 	ORGAN_SLOT_XENO_ACIDGLAND,
 	ORGAN_SLOT_XENO_NEUROTOXINGLAND,
 	ORGAN_SLOT_XENO_EGGSAC,
+	// M13 EDIT ADDITION START
+	ORGAN_SLOT_GLAND,
+	//  M13 EDIT ADDITION END
 ))
 
 // Defines for used in creating "perks" for the species preference pages.
