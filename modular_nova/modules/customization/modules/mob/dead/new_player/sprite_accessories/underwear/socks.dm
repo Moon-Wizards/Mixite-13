@@ -308,8 +308,10 @@
 /datum/sprite_accessory/clothing/socks/white_knee
 	has_custom_digi_sprite = TRUE
 
+/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/socks/fishnet_knee
 	has_custom_digi_sprite = TRUE
+*/ // M13 REMOVAL END
 
 /datum/sprite_accessory/clothing/socks/black_norm
 	has_custom_digi_sprite = TRUE

@@ -18,6 +18,7 @@
 /datum/quirk/fluffy_tongue
 	name = "Fluffy Tongue"
 	desc = "You have a unique manner of speaking that you may have picked up from too many Japanese cartoons."
+	medical_record_text = "Patient demonstrates an annoying speaking pattern akin to a japanese cartoon."
 	value = 0
 	icon = FA_ICON_CAT
 
