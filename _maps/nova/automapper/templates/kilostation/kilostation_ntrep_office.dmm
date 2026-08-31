@@ -98,17 +98,24 @@
 "w" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/directional/west,
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/nt_rep)
 "y" = (
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable,
 /turf/closed/wall/r_wall,
 /area/station/command/heads_quarters/captain)
 "A" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/fax/heads/nanotrasen_consultant,
 /obj/structure/table/wood,
+/obj/structure/cable,
 /turf/open/floor/wood,
+/area/station/command/heads_quarters/nt_rep)
+"B" = (
+/obj/structure/cable,
+/turf/closed/wall/r_wall,
 /area/station/command/heads_quarters/nt_rep)
 "C" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -200,7 +207,7 @@
 (1,1,1) = {"
 E
 a
-a
+B
 a
 a
 a
