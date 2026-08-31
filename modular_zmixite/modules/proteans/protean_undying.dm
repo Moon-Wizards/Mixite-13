@@ -39,15 +39,15 @@
 	if(!suit || owner.loc == suit)
 		return
 
-	dead = TRUE
 	owner.add_traits(DESTROYED_MASS_TRAITS, PROTEAN_TRAIT)
-
-	to_chat(owner, span_red("Your fragile refactory withers away with your mass reduced to scraps. Someone will have to help you."))
-	qdel(owner.get_organ_slot(ORGAN_SLOT_STOMACH))
 
 	// The real dead state is brain.dead, not the mob stat
 	owner.revive(HEAL_DAMAGE | HEAL_BODY | HEAL_ORGANS, force_grab_ghost = TRUE)
 	owner.stat = STABLE
+	dead = TRUE
+
+	to_chat(owner, span_red("Your fragile refactory withers away with your mass reduced to scraps. Someone will have to help you."))
+	qdel(owner.get_organ_slot(ORGAN_SLOT_STOMACH))
 
 	var/atom/current_loc = owner.loc
 
@@ -94,7 +94,6 @@
 	if(!dead)
 		return
 
-	dead = FALSE
 	owner.remove_traits(DESTROYED_MASS_TRAITS, PROTEAN_TRAIT)
 
 	playsound(owner, 'sound/machines/ping.ogg', 30)
@@ -105,6 +104,7 @@
 
 	owner.revive(HEAL_DAMAGE | HEAL_ORGANS, force_grab_ghost = TRUE)
 	owner.stat = STABLE
+	dead = FALSE
 
 	if(istype(owner.loc, /obj/item/mod/control/pre_equipped/protean))
 		owner.Stun(INFINITY, TRUE)
