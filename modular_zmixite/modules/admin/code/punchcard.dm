@@ -94,8 +94,8 @@ SUBSYSTEM_DEF(punchcard_reader)
 	save()
 
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
-			set_off_hours_state()
-			return TRUE
+		set_off_hours_state()
+		return TRUE
 
 	var/datum/map_config/minimal_runtime = config.maplist["runtimestation_minimal"]
 
