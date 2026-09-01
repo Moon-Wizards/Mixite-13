@@ -9914,6 +9914,7 @@
 #include "modular_zmixite\modules\admin\code\punchcard.dm"
 #include "modular_zmixite\modules\arachnids\code\arachnid_blood.dm"
 #include "modular_zmixite\modules\arachnids\code\arachnid_bodyparts.dm"
+#include "modular_zmixite\modules\arachnids\code\arachnid_emotes.dm"
 #include "modular_zmixite\modules\arachnids\code\arachnid_organs.dm"
 #include "modular_zmixite\modules\arachnids\code\arachnid_silk.dm"
 #include "modular_zmixite\modules\arachnids\code\arachnid_silk_structures.dm"
