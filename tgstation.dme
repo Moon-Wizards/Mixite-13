@@ -9903,12 +9903,12 @@
 #include "modular_zmixite\modules\accessories\code\accessories\accessories.dm"
 #include "modular_zmixite\modules\accessories\code\markings\ears.dm"
 #include "modular_zmixite\modules\balancing\code\wings.dm"
+#include "modular_zmixite\modules\admin\code\punchcard.dm"
 #include "modular_zmixite\modules\colourable_ipc_screens\code\monitor_change.dm"
 #include "modular_zmixite\modules\emotes\code\emotes.dm"
 #include "modular_zmixite\modules\emotes\code\laugh_datums.dm"
 #include "modular_zmixite\modules\proteans\protean_undying.dm"
 #include "modular_zmixite\modules\quirks\code\neutral_quirks\fluffy_tongue.dm"
 #include "modular_zmixite\modules\title_screen\code\new_player.dm"
-#include "modular_zmixite\modules\admin\code\punchcard.dm"
 #include "modular_zmixite\modules\whitelist\code\whitelist.dm"
 // END_INCLUDE

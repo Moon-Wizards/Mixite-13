@@ -90,6 +90,7 @@ SUBSYSTEM_DEF(punchcard_reader)
 	clock_info["last_clockout"] = world.realtime
 	save()
 
+	SSvote.reset()
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		set_off_hours_state()
 		return TRUE
@@ -113,7 +114,7 @@ SUBSYSTEM_DEF(punchcard_reader)
 
 ADMIN_VERB(clockserverin, R_ADMIN, "Punch Server In", "Server up!", ADMIN_CATEGORY_SERVER)
 	if(!SSpunchcard_reader.punch_in())
-		to_chat(span_admin("The server is already punched in!"))
+		to_chat(user, span_admin("The server is already punched in!"))
 		return
 
 	var/init_by = "Server punch in by [user.holder.fakekey ? "Admin" : user.key]."
@@ -128,7 +129,7 @@ ADMIN_VERB(clockserverin, R_ADMIN, "Punch Server In", "Server up!", ADMIN_CATEGO
 
 ADMIN_VERB(clockserverout, R_ADMIN, "Clock Server Out", "Server down!", ADMIN_CATEGORY_SERVER)
 	if(!SSpunchcard_reader.punch_out())
-		to_chat(span_admin("The server is already clocked out!"))
+		to_chat(user, span_admin("The server is already clocked out!"))
 		return
 
 	log_admin("[key_name(user)] clocked the server out.")
