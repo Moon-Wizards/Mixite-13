@@ -47,8 +47,12 @@
 /obj/item/organ/tongue/arachnid/modify_speech(datum/source, list/speech_args) //This is flypeople speech
 	var/static/regex/fly_buzz = new("z+", "g")
 	var/static/regex/fly_buZZ = new("Z+", "g")
+	var/static/regex/fly_buxz = new(@"x([^x])", "g")
+	var/static/regex/fly_buXZ = new(@"X([^X])", "g")
 	var/message = speech_args[SPEECH_MESSAGE]
 	if(message[1] != "*")
+		message = fly_buxz.Replace(message, "xs$1")
+		message = fly_buXZ.Replace(message, "XS$1")
 		message = fly_buzz.Replace(message, "zzz")
 		message = fly_buZZ.Replace(message, "ZZZ")
 		message = replacetext(message, "s", "z")
@@ -92,13 +96,11 @@
 	. = ..()
 	return TRUE //show them anyway no matter what you're wearing
 
-
 /obj/item/organ/arachnid_chelicerae
 	name = "arachnid chelicerae"
 	desc = "Some fang things, spooky."
 
 	zone = BODY_ZONE_HEAD
-
 	slot = ORGAN_SLOT_EXTERNAL_SNOUT
 
 	mutantpart_key = FEATURE_ARACHNID_CHELICERAE
