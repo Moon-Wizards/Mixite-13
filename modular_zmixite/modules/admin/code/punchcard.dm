@@ -1,5 +1,3 @@
-#define PRE_GAME_TIME 3 MINUTES
-
 /// A simple-esque punchcard system for round scheduling, mainly for convenience's sake.
 
 SUBSYSTEM_DEF(punchcard_reader)
@@ -40,7 +38,6 @@ SUBSYSTEM_DEF(punchcard_reader)
 		set_off_hours_state()
 	else
 		SSticker.start_immediately = FALSE
-		SSticker.SetTimeLeft(PRE_GAME_TIME)
 
 	return SS_INIT_SUCCESS
 
@@ -137,5 +134,3 @@ ADMIN_VERB(clockserverout, R_ADMIN, "Clock Server Out", "Server down!", ADMIN_CA
 	log_admin("[key_name(user)] clocked the server out.")
 	message_admins("[key_name_admin(user)] clocked the server out.")
 	BLACKBOX_LOG_ADMIN_VERB("Punch Server out")
-
-#undef PRE_GAME_TIME
