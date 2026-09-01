@@ -1,0 +1,7 @@
+author: "misleadingname"
+delete-after: True
+changes:
+  - rscadd: "New menu screen!"
+  - balance: "Using wings drains your stamina now."
+  - rscadd: "As a Protean, you'll be stuck in your MODsuit instead of dead."
+  - rscdel: "ERP"
