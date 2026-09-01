@@ -29,6 +29,10 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/carpet/executive,
 /area/station/command/heads_quarters/nt_rep)
+"k" = (
+/obj/structure/cable,
+/turf/closed/wall/r_wall,
+/area/station/command/heads_quarters/nt_rep)
 "m" = (
 /obj/structure/table/wood,
 /obj/machinery/light/directional/north,
@@ -218,7 +222,7 @@
 (1,1,1) = {"
 E
 a
-B
+k
 a
 a
 a
