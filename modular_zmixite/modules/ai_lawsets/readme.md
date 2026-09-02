@@ -1,6 +1,6 @@
 https://github.com/Moon-Wizards/Mixite-13/pulls
 
-## Title: Quirks
+## Title: Lawsets
 
 MODULE ID: LAWSETS
 
