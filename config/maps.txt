@@ -51,7 +51,6 @@ map nebulastation
 endmap
 
 map kilostation
-	votable
 	maxplayers 40
 endmap
 
