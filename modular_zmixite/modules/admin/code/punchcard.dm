@@ -34,10 +34,12 @@ SUBSYSTEM_DEF(punchcard_reader)
 	if(!("last_clockout" in clock_info))
 		clock_info["last_clockout"] = null
 
+	#ifndef AUTOSTART_GAME // we don't care about the punchcard with autostart
 	if(!is_punched())
 		set_off_hours_state()
 	else
 		SSticker.start_immediately = FALSE
+	#endif
 
 	return SS_INIT_SUCCESS
 
