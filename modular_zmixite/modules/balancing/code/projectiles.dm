@@ -1,0 +1,12 @@
+#define PROJECTILE_SPEED_MULTIPLIER 3
+#define BEAM_SPEED_MULTIPLIER_ADD 0.25
+#define PROJECTILE_DAMAGE_MULTIPLIER 0.5
+
+/obj/projectile/fire(fire_angle, atom/direct_target)
+	speed *= PROJECTILE_SPEED_MULTIPLIER + (istype(src, /obj/projectile/beam) ? BEAM_SPEED_MULTIPLIER_ADD : 0)
+	damage *= PROJECTILE_DAMAGE_MULTIPLIER
+	return ..()
+
+#undef PROJECTILE_SPEED_MULTIPLIER
+#undef BEAM_SPEED_MULTIPLIER_ADD
+#undef PROJECTILE_DAMAGE_MULTIPLIER
