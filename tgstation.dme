@@ -9912,6 +9912,7 @@
 #include "modular_zmixite\modules\accessories\code\accessories\accessories.dm"
 #include "modular_zmixite\modules\accessories\code\markings\ears.dm"
 #include "modular_zmixite\modules\admin\code\punchcard.dm"
+#include "modular_zmixite\modules\ai_lawsets\code\AI_modules.dm"
 #include "modular_zmixite\modules\arachnids\code\arachnid_blood.dm"
 #include "modular_zmixite\modules\arachnids\code\arachnid_bodyparts.dm"
 #include "modular_zmixite\modules\arachnids\code\arachnid_emotes.dm"
