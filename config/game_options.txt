@@ -431,6 +431,9 @@ ROUNDSTART_RACES protean
 ROUNDSTART_RACES shadekin
 ROUNDSTART_RACES holosynth
 
+## MIXITE/13 RACES DOWN THERE
+ROUNDSTART_RACES arachnid
+
 ##-------------------------------------------------------------------------------------------
 
 ## Roundstart no-reset races
