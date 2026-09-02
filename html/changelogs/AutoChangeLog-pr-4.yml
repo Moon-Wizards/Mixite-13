@@ -1,0 +1,4 @@
+author: "Lokachop"
+delete-after: True
+changes:
+  - rscadd: "Added Arachnids as a playable species"
