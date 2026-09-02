@@ -80,6 +80,7 @@
 		/datum/design/board/hulkamania_module,
 		/datum/design/board/liveandletlive_module,
 		/datum/design/board/maintain_module,
+		/datum/design/board/nanotrasen_safeguard, // MS13 EDIT ADDITION
 		/datum/design/board/onehuman_module,
 		/datum/design/board/overlord_module,
 		/datum/design/board/painter_module,
