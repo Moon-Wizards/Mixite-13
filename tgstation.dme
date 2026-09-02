@@ -9904,6 +9904,7 @@
 #include "modular_nova\modules\xenomorph\alien.dm"
 #include "modular_nova\modules\xenomorph\queen.dm"
 #include "modular_nova\modules\zubbers_taur\code\taur.dm"
+#include "modular_zmixite\master_files\code\datums\chat.dm"
 #include "modular_zmixite\master_files\code\datums\augment\augment_items.dm"
 #include "modular_zmixite\master_files\code\datums\keybindings\mixite-defaults.dm"
 #include "modular_zmixite\master_files\code\game\machinery\limbgrower.dm"
