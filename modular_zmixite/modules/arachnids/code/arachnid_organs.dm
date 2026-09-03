@@ -93,11 +93,6 @@
 /datum/bodypart_overlay/mutant/arachnid_appendages/get_global_feature_list()
 	return SSaccessories.sprite_accessories[FEATURE_ARACHNID_APPENDAGES]
 
-/*
-/datum/bodypart_overlay/mutant/arachnid_appendages/get_base_icon_state()
-	return sprite_datum.icon_state //i hate you
-*/
-
 /datum/bodypart_overlay/mutant/arachnid_appendages/can_draw_on_bodypart(mob/living/carbon/human/human)
 	. = ..()
 	return TRUE //show them anyway no matter what you're wearing
