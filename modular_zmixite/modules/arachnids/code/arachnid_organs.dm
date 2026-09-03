@@ -85,12 +85,18 @@
 		EXTERNAL_FRONT = BODY_FRONT_LAYER,
 		EXTERNAL_BEHIND = BODY_BEHIND_LAYER,
 	)
+	color_source = ORGAN_COLOR_OVERRIDE
+
+/datum/bodypart_overlay/mutant/arachnid_appendages/override_color(rgb_value)
+	return draw_color
 
 /datum/bodypart_overlay/mutant/arachnid_appendages/get_global_feature_list()
 	return SSaccessories.sprite_accessories[FEATURE_ARACHNID_APPENDAGES]
 
+/*
 /datum/bodypart_overlay/mutant/arachnid_appendages/get_base_icon_state()
 	return sprite_datum.icon_state //i hate you
+*/
 
 /datum/bodypart_overlay/mutant/arachnid_appendages/can_draw_on_bodypart(mob/living/carbon/human/human)
 	. = ..()

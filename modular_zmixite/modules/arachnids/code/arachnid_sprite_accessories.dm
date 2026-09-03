@@ -2,7 +2,7 @@
 	icon = 'modular_zmixite/modules/arachnids/icons/arachnid_appendages.dmi'
 	key = FEATURE_ARACHNID_APPENDAGES
 	organ_type = /obj/item/organ/arachnid_appendages
-	color_src = USE_ONE_COLOR
+	color_src = USE_MATRIXED_COLORS
 	em_block = TRUE
 	recommended_species = list(SPECIES_ARACHNID = 1)
 
@@ -36,6 +36,42 @@
 	name = "Curled"
 	icon_state = "curled"
 
+/datum/sprite_accessory/arachnid_appendages/harvest_col
+	name = "Harvest (Striped)"
+	icon_state = "harvest_col"
+
+/datum/sprite_accessory/arachnid_appendages/chipped_col
+	name = "Chipped (Striped)"
+	icon_state = "chipped_col"
+
+/datum/sprite_accessory/arachnid_appendages/curled_col
+	name = "Curled (Striped)"
+	icon_state = "curled_col"
+
+/datum/sprite_accessory/arachnid_appendages/freaky_col
+	name = "Freaky (Striped)"
+	icon_state = "freaky_col"
+
+/datum/sprite_accessory/arachnid_appendages/long_col
+	name = "Long (Striped)"
+	icon_state = "long_col"
+
+/datum/sprite_accessory/arachnid_appendages/sharp_col
+	name = "Sharp (Striped)"
+	icon_state = "sharp_col"
+
+/datum/sprite_accessory/arachnid_appendages/short_col
+	name = "Short (Striped)"
+	icon_state = "short_col"
+
+/datum/sprite_accessory/arachnid_appendages/stingers_col
+	name = "Stingers (Striped)"
+	icon_state = "stingers_col"
+
+/datum/sprite_accessory/arachnid_appendages/zigzag_col
+	name = "Zigzag (Striped)"
+	icon_state = "zigzag_col"
+
 /datum/dna_block/feature/mutant/arachnid_appendages
 	feature_key = FEATURE_ARACHNID_APPENDAGES
 
@@ -63,10 +99,21 @@
 
 
 /datum/preference/toggle/mutant_toggle/arachnid_appendages
+	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
+	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "arachnid_appendages_toggle"
 	relevant_mutant_bodypart = FEATURE_ARACHNID_APPENDAGES
 
+/datum/preference/tri_color/arachnid_appendages_color
+	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
+	savefile_identifier = PREFERENCE_CHARACTER
+	savefile_key = "arachnid_appendages_color"
+	relevant_mutant_bodypart = FEATURE_ARACHNID_APPENDAGES
+	type_to_check = /datum/preference/toggle/mutant_toggle/arachnid_appendages
+
 /datum/preference/choiced/mutant_choice/arachnid_appendages
+	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
+	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "feature_arachnid_appendages"
 	relevant_mutant_bodypart = FEATURE_ARACHNID_APPENDAGES
 	type_to_check = /datum/preference/toggle/mutant_toggle/arachnid_appendages
@@ -74,10 +121,14 @@
 
 
 /datum/preference/toggle/mutant_toggle/arachnid_chelicerae
+	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
+	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "arachnid_chelicerae_toggle"
 	relevant_mutant_bodypart = FEATURE_ARACHNID_CHELICERAE
 
 /datum/preference/choiced/mutant_choice/arachnid_chelicerae
+	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
+	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "feature_arachnid_chelicerae"
 	relevant_mutant_bodypart = FEATURE_ARACHNID_CHELICERAE
 	type_to_check = /datum/preference/toggle/mutant_toggle/arachnid_chelicerae
