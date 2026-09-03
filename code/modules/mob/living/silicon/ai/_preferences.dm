@@ -57,6 +57,7 @@ GLOBAL_LIST_INIT(ai_core_to_status_display_mapping, list(
 	"Too Deep" = "ai_status_too_deep",
 	"Triumvirate" = "ai_status_triumvirate",
 	"Weird" = "ai_status_weird",
+	"Stars" = "ai_status_stars",
 ))
 
 // Combined list for AI status display preferences, including both emotion states and AI core display options
@@ -191,6 +192,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sort_list(list(
 	"Triumvirate-M",
 	"Triumvirate",
 	"Weird",
+	"Stars",
 )))
 
 /// A form of resolve_ai_icon that is guaranteed to never sleep.
