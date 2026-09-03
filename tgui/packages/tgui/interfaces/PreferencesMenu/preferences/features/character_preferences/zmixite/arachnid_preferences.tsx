@@ -4,6 +4,7 @@ import {
   type Feature,
   type FeatureChoicedServerData,
   type FeatureToggle,
+  FeatureTriColorInput,
   type FeatureValueProps,
 } from '../../base';
 import { FeatureDropdownInput } from '../../dropdowns';
@@ -11,6 +12,11 @@ import { FeatureDropdownInput } from '../../dropdowns';
 export const arachnid_appendages_toggle: FeatureToggle = {
   name: 'Arachnid Appendages',
   component: CheckboxInput,
+};
+
+export const arachnid_appendages_color: Feature<string[]> = {
+  name: 'Arachnid Appendages Colours',
+  component: FeatureTriColorInput,
 };
 
 export const feature_arachnid_appendages: Feature<string> = {
