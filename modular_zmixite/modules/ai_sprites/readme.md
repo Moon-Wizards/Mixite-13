@@ -14,7 +14,7 @@ Adds sprites for AI holograms, displays, and cores.
 
 ### Defines:
 
-- AI_HOLOGRAM_CUBE
+- AI_HOLOGRAM_CUBE, AI_HOLOGRAM_CUBE_GREY
 
 ### Master file additions
 
