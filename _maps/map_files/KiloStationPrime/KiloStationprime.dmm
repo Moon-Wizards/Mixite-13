@@ -35965,10 +35965,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "kOF" = (
-/obj/structure/sign/poster/official/work_for_a_future/directional/west{
-	pixel_x = -29;
-	pixel_y = 4
-	},
+/obj/structure/sign/poster/official/work_for_a_future/directional/west,
 /obj/effect/turf_decal/tile/dark_blue/opposingcorners,
 /turf/open/floor/iron/checker{
 	dir = 8
@@ -69283,10 +69280,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/decal/cleanable/blood/gibs/up,
-/obj/structure/sign/poster/official/wtf_is_co2/directional/north{
-	pixel_x = 17;
-	pixel_y = 36
-	},
+/obj/structure/sign/poster/official/wtf_is_co2/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/light/small/directional/north,

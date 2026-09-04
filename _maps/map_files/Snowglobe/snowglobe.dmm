@@ -32133,11 +32133,6 @@
 	dir = 1
 	},
 /area/station/hallway/floor2)
-"iBu" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/open/openspace/icemoon,
-/area/icemoon/surface/outdoors/nospawn)
 "iBG" = (
 /obj/structure/transit_tube/horizontal,
 /obj/structure/window/reinforced/fulltile,
@@ -242447,7 +242442,7 @@ uGw
 vMu
 vMu
 vMu
-iBu
+otf
 vMu
 vMu
 vMu
@@ -245879,7 +245874,7 @@ gKu
 vMu
 dKk
 dKk
-iBu
+otf
 vMu
 vMu
 vMu
@@ -264651,7 +264646,7 @@ vMu
 vMu
 vMu
 vMu
-iBu
+otf
 vMu
 vMu
 vMu
