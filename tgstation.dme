@@ -539,6 +539,7 @@
 #include "code\__DEFINES\~nova_defines\traits\declarations.dm"
 #include "code\__DEFINES\~zmixite_defines\colours.dm"
 #include "code\__DEFINES\~zmixite_defines\DNA.dm"
+#include "code\__DEFINES\~zmixite_defines\holograms.dm"
 #include "code\__DEFINES\~zmixite_defines\is_helper.dm"
 #include "code\__DEFINES\~zmixite_defines\mobs.dm"
 #include "code\__DEFINES\~zmixite_defines\traits\declarations.dm"
