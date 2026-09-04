@@ -124,8 +124,8 @@ GLOBAL_LIST_INIT(ai_hologram_icons, list(
 	AI_HOLOGRAM_NARSIE = 'icons/mob/silicon/ai.dmi',
 	AI_HOLOGRAM_RATVAR = 'icons/mob/silicon/ai.dmi',
 	AI_HOLOGRAM_XENO = 'icons/mob/nonhuman-player/alien.dmi',
-	AI_HOLOGRAM_CUBE = 'modular_zmixite/modules/ai_sprites/icons/holograms.dmi', // MS13 EDIT ADDITION
-	AI_HOLOGRAM_CUBEGREY = 'modular_zmixite/modules/ai_sprites/icons/holograms.dmi', // MS13 EDIT ADDITION
+	AI_HOLOGRAM_CUBE = 'modular_zmixite/modules/accessories/icons/accessories/holograms.dmi', // MS13 EDIT ADDITION
+	AI_HOLOGRAM_CUBEGREY = 'modular_zmixite/modules/accessories/icons/accessories/holograms.dmi', // MS13 EDIT ADDITION
 ))
 
 // New items need to also be added to ai_hologram_icons list

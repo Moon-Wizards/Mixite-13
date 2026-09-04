@@ -756,8 +756,6 @@
 	#define AI_HOLOGRAM_NARSIE "Narsie"
 	#define AI_HOLOGRAM_RATVAR "Ratvar"
 	#define AI_HOLOGRAM_XENO "Xeno Queen"
-	#define AI_HOLOGRAM_CUBE "Cube" // MS13 EDIT ADDITION
-	#define AI_HOLOGRAM_CUBEGREY "Cube Grey" // MS13 EDIT ADDITION
 
 /// Icon state to use for ai displays that just turns them off
 #define AI_DISPLAY_DONT_GLOW "ai_off"
