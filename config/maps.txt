@@ -51,9 +51,15 @@ map nebulastation
 endmap
 
 map kilostation
+	maxplayers 40
+endmap
+
+# MS13 EDIT START
+map kilostationprime
 	votable
 	maxplayers 40
 endmap
+# MS13 EDIT END
 
 # Debug-only maps.
 
