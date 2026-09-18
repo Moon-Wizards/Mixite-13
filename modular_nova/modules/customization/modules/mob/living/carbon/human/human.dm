@@ -116,6 +116,7 @@ GLOBAL_LIST_INIT(underwear_visibility_slots, list(
 	update_body()
 	return TRUE
 
+/* // M13 REMOVAL START
 /// Shows or hides every underwear slot at once.
 /mob/living/carbon/human/proc/set_all_underwear_visibility(hidden)
 	underwear_visibility = hidden ? UNDERWEAR_HIDE_ALL : NONE
@@ -176,6 +177,7 @@ GAME_VERB_DESC(/mob/living/carbon/human, toggle_undies, "Toggle underwear visibi
 			set_all_underwear_visibility(TRUE)
 		else
 			set_underwear_visibility(picked_choice, !(underwear_visibility & GLOB.underwear_visibility_slots[picked_choice]))
+*/ // M13 REMOVAL END
 
 /mob/living/carbon/human/revive(full_heal_flags = NONE, excess_healing = 0, force_grab_ghost = FALSE)
 	. = ..()
