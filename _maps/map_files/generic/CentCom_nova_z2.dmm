@@ -13414,7 +13414,6 @@
 "nNq" = (
 /obj/structure/table/wood,
 /obj/machinery/light/floor,
-/obj/item/bdsm_candle,
 /turf/open/floor/carpet/stellar,
 /area/centcom/interlink)
 "nOb" = (
@@ -20751,7 +20750,6 @@
 /area/centcom/holding/cafe)
 "wUU" = (
 /obj/structure/table/wood,
-/obj/item/bdsm_candle,
 /obj/machinery/light/floor,
 /turf/open/floor/carpet/stellar,
 /area/centcom/interlink)
