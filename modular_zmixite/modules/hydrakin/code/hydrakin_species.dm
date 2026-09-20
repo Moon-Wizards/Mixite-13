@@ -142,7 +142,8 @@
 			SPECIES_PERK_ICON = "fire",
 			SPECIES_PERK_NAME = "Cold Adapted",
 			SPECIES_PERK_DESC = "Hydrakin have terrible heat regulation along with being cold-blooded, and must radiate their heat manually. \
-			They can just about handle typical station atmosphere, but will have trouble in any insulated wear.",
+			They can just about handle typical station atmosphere, but will have trouble in any insulated wear. \
+			Their thermal regulation fails completely when they are critically injured, leading to dangerous temperatures.",
 		),
 	)
 
