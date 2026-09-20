@@ -104,7 +104,6 @@
 		if(need_mob_update)
 			breather.updatehealth()
 
-
 /obj/item/organ/lungs/hydrakin/proc/freon_cooling(mob/living/carbon/breather, datum/gas_mixture/breath, freon_pp, old_freon_pp)
 	if(breather.bodytemperature>213)
 		breather.adjust_bodytemperature(-25)

@@ -1,7 +1,7 @@
 /datum/language/hydraspeak
 	name = "Hy'drav'tha"
 	desc = "A Mix of warbles, trills and chirps, with heavy tonal shifts and pitch changes make up this unusual language. Due to the avian nature of hydrakin, one word can mean a million other things at the same time, which makes this language next to incomprehensible for even other birdlike races to figure out."
-	key = "z"
+	key = "B"
 	space_chance = 25
 	sentence_chance = 50
 	between_word_sentence_chance = 5
