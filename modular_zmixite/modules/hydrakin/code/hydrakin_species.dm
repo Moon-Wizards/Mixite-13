@@ -102,7 +102,7 @@
 
 /datum/species/hydrakin/get_species_lore()
 	return list(
-		"Fluffy, exceptionally warm, and notoriously noisy, these birds originate from a desolate iceworld far beyond the normal limits of habitable space. Their home planet is locked in perpetual ice storms, dimly lit, and surrounded by liquid oxygen oceans beneath a freon-heavy atmosphere—once thought entirely lifeless."
+		"Fluffy, exceptionally warm, and notoriously noisy, these birds originate from a desolate iceworld far beyond the normal limits of habitable space. Their home planet is locked in perpetual ice storms, dimly lit, and surrounded by liquid oxygen oceans beneath a freon-heavy atmosphere, once thought entirely lifeless."
 	)
 
 
