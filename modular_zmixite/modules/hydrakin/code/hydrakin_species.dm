@@ -105,7 +105,6 @@
 		"Fluffy, exceptionally warm, and notoriously noisy, these birds originate from a desolate iceworld far beyond the normal limits of habitable space. Their home planet is locked in perpetual ice storms, dimly lit, and surrounded by liquid oxygen oceans beneath a freon-heavy atmosphere, once thought entirely lifeless."
 	)
 
-
 /datum/species/hydrakin/prepare_human_for_preview(mob/living/carbon/human/hydrakin)
 	hydrakin.set_eye_color("#e9e9e9", "#e9e9e9")
 	hydrakin.dna.features[FEATURE_MUTANT_COLOR] = "#a0a0a0"

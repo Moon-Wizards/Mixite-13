@@ -29,7 +29,6 @@
 
 /datum/sprite_accessory/tails/mammal/hydrakin
 	icon = 'modular_zmixite/modules/hydrakin/icons/sprite_accessories.dmi'
-	//organ_type = /obj/item/organ/tail/fluffy/no_wag
 	color_src = USE_MATRIXED_COLORS
 	recommended_species = list(
 		SPECIES_HYDRAKIN = 1,
