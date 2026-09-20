@@ -10,8 +10,6 @@
 	)
 	inherent_biotypes = MOB_ORGANIC | MOB_HUMANOID
 
-	//mutant_organs = list(/obj/item/organ/silkgland)
-
 	sexes = TRUE
 	meat = /obj/item/food/meat/slab/spider
 
@@ -40,13 +38,7 @@
 	bodytemp_cold_damage_limit = 50
 
 	var/datum/action/innate/hydrakin_radiate/hydrakin_radiate
-/*
-/datum/species/arachnid/get_default_mutant_bodyparts()
-	return list(
-		FEATURE_ARACHNID_APPENDAGES = MUTPART_BLUEPRINT("Long", is_randomizable = TRUE),
-		FEATURE_ARACHNID_CHELICERAE = MUTPART_BLUEPRINT("Basic", is_randomizable = TRUE),
-	)
-*/
+
 /datum/species/hydrakin/randomize_features()
 	var/list/features = ..()
 	features[FEATURE_MUTANT_COLOR] = "#e9e9e9"
@@ -106,22 +98,17 @@
 		playsound(user, pick(hydrakin_flaps), 50)
 
 /datum/species/hydrakin/get_species_description()
-	return "Hydrakin are avian creatures with an odd appearance and an extreme tolerance for cold. Fluffy, exceptionally warm, and notoriously noisy, these birds originate from a desolate iceworld far beyond the normal limits of habitable space. Their home planet is locked in perpetual ice storms, dimly lit, and surrounded by liquid oxygen oceans beneath a frezon-heavy atmosphere—once thought entirely lifeless."
+	return "Hydrakin are avian creatures with an odd appearance and an extreme tolerance for cold."
 
 /datum/species/hydrakin/get_species_lore()
 	return list(
-		"The true origin of Arachnids is still debated to this day. \
-		Some say they were born in a lab out of sheer experimentation. \
-		Others say they've naturally evolved over countless years. \
-		What is actually known, is the fact that they've had to emigrate from a very, very far away place to make it here.",
+		"Fluffy, exceptionally warm, and notoriously noisy, these birds originate from a desolate iceworld far beyond the normal limits of habitable space. Their home planet is locked in perpetual ice storms, dimly lit, and surrounded by liquid oxygen oceans beneath a freon-heavy atmosphere—once thought entirely lifeless."
 	)
 
 
 /datum/species/hydrakin/prepare_human_for_preview(mob/living/carbon/human/hydrakin)
 	hydrakin.set_eye_color("#e9e9e9", "#e9e9e9")
 	hydrakin.dna.features[FEATURE_MUTANT_COLOR] = "#a0a0a0"
-	//arachnid.dna.mutant_bodyparts[FEATURE_ARACHNID_CHELICERAE] = build_mutant_part("Basic")
-	//arachnid.dna.mutant_bodyparts[FEATURE_ARACHNID_APPENDAGES] = build_mutant_part("Zigzag")
 	regenerate_organs(hydrakin, src, visual_only = TRUE)
 	hydrakin.update_body(is_creating = TRUE)
 
@@ -131,36 +118,31 @@
 	to_add += list(
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
-			SPECIES_PERK_ICON = "spider",
-			SPECIES_PERK_NAME = "Sericulture",
-			SPECIES_PERK_DESC = "Arachnids have a silk gland organ that connects to their wrists, \
-			allowing them to convert nutrition into silk related items and furniture.",
+			SPECIES_PERK_ICON = FA_ICON_WIND,
+			SPECIES_PERK_NAME = "Adaptive Biology",
+			SPECIES_PERK_DESC = "Hydrakin have unique lungs adapted to their unusual homeworld, \
+			allowing them to breathe (and benefit) from most gasses.",
 		),
 		list(
-			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
-			SPECIES_PERK_ICON = "bolt",
-			SPECIES_PERK_NAME = "Agile",
-			SPECIES_PERK_DESC = "Arachnids run slightly faster than other species.",
+			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+			SPECIES_PERK_ICON = "eye",
+			SPECIES_PERK_NAME = "Abnormal Ocular Biology",
+			SPECIES_PERK_DESC = "Hydrakin cannot equip any kind of eyewear, requiring \
+			alternatives like welding helmets or implants.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
-			SPECIES_PERK_ICON = "spider",
-			SPECIES_PERK_NAME = "Big Appendages",
-			SPECIES_PERK_DESC = "Arachnids have appendages that are not hidden by space suits \
-			or MODsuits. This can make concealing your identity harder.",
+			SPECIES_PERK_ICON = "bed",
+			SPECIES_PERK_NAME = "Cryogenic",
+			SPECIES_PERK_DESC = "Hydrakin are naturally immune to the effects of N2O, however, \
+			Cryoxadone will put them to sleep if their body temperature is below freezing.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
-			SPECIES_PERK_ICON = "sun",
-			SPECIES_PERK_NAME = "Maybe Too Many Eyes",
-			SPECIES_PERK_DESC = "Arachnids cannot equip any kind of eyewear, requiring \
-			alternatives like welding helmets or implants. Their eyes have night vision however.",
-		),
-		list(
-			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
-			SPECIES_PERK_ICON = "fist-raised",
-			SPECIES_PERK_NAME = "Arachnid Biology",
-			SPECIES_PERK_DESC = "Fly swatters and pest killer will deal significantly higher amounts of damage to an Arachnid.",
+			SPECIES_PERK_ICON = "fire",
+			SPECIES_PERK_NAME = "Cold Adapted",
+			SPECIES_PERK_DESC = "Hydrakin have terrible heat regulation along with being cold-blooded, and must radiate their heat manually. \
+			They can just about handle typical station atmosphere, but will have trouble in any insulated wear.",
 		),
 	)
 
