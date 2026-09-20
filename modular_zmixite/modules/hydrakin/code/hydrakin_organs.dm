@@ -7,51 +7,19 @@
 	icon_state = "arachnid_eyeballs"
 	no_glasses = TRUE
 	blink_animation = FALSE
-/*
-	/obj/item/organ/eyes/hydrakin/get_emissive_overlays(mutable_appearance/eye_left, mutable_appearance/eye_right, atom/spokesman)
-	. = list()
 
-	. += emissive_appearance(eye_left.icon, eye_left.icon_state, spokesman, -EYES_LAYER, alpha = eye_left.alpha, effect_type = EMISSIVE_BLOOM)
-	. += emissive_appearance(eye_right.icon, eye_right.icon_state, spokesman, -EYES_LAYER, alpha = eye_right.alpha, effect_type = EMISSIVE_BLOOM)
-
-	zone = BODY_ZONE_CHEST
-	slot = ORGAN_SLOT_EXTERNAL_WINGS
-
-	mutantpart_key = FEATURE_HYDRAKIN_EYES
-
-	bodypart_overlay = /datum/bodypart_overlay/mutant/hydrakin_eyes
-	use_mob_sprite_as_obj_sprite = TRUE
-
-	organ_flags = parent_type::organ_flags | ORGAN_EXTERNAL
-
-/datum/bodypart_overlay/mutant/hydrakin_eyes
-	feature_key = FEATURE_HYDRAKIN_EYES
-	layers = list(
-		EXTERNAL_FRONT = BODY_FRONT_LAYER,
-		EXTERNAL_BEHIND = BODY_BEHIND_LAYER,
-	)
-
-/datum/bodypart_overlay/mutant/arachnid_appendages/get_global_feature_list()
-	return SSaccessories.sprite_accessories[FEATURE_HYDRAKIN_EYES]
-
-/datum/bodypart_overlay/mutant/arachnid_appendages/get_base_icon_state()
-	return sprite_datum.icon_state //i hate you
-*/
 /obj/item/organ/tongue/hydrakin
 	name = "hydrakin tongue"
 	desc = "The chirpy tongue of a Hydrakin."
 	say_mod = "wurbles"
 	modifies_speech = TRUE
-	disliked_foodtypes = FRUIT | VEGETABLES
-	liked_foodtypes = GORE | MEAT | BUGS | GROSS
+	disliked_foodtypes =  VEGETABLES
+	liked_foodtypes = GORE | MEAT | BUGS
 	emote_sounds = list(
 		/datum/emote/living/gasp::key = 'modular_zmixite/modules/hydrakin/sounds/hydrakin-gasp-1.ogg',
 		/datum/emote/living/deathgasp::key = 'modular_zmixite/modules/hydrakin/sounds/hydrakin-deathgasp-1.ogg',
 		/datum/emote/living/cough::key = 'modular_zmixite/modules/hydrakin/sounds/hydrakin-cough-1.ogg',
-		//datum/emote/living/cry::key = 'modular_zmixite/modules/hydrakin/sounds/hydrakin-cry-1.ogg',
-		//datum/emote/living/sigh::key = 'modular_zmixite/modules/hydrakin/sounds/hydrakin-sigh-1.ogg',
 		/datum/emote/living/yawn::key = 'modular_zmixite/modules/hydrakin/sounds/hydrakin-yawn-1.ogg',
-		//datum/emote/living/whistle::key = 'modular_zmixite/modules/hydrakin/sounds/hydrakin-whistle-1.ogg'
 	)
 
 /obj/item/organ/liver/hydrakin
