@@ -25,8 +25,8 @@
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/hydrakin,
 		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/hydrakin,
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/hydrakin,
-		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/hydrakin,
-		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/hydrakin,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/digitigrade/hydrakin,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/digitigrade/hydrakin,
 	)
 
 	COOLDOWN_DECLARE(cryo_sleep)

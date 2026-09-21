@@ -37,14 +37,14 @@
 	is_dimorphic = FALSE
 	bodyshape = parent_type::bodyshape | BODYSHAPE_SNOUTED
 
-/obj/item/bodypart/leg/left/hydrakin
+/obj/item/bodypart/leg/left/digitigrade/hydrakin
 	icon_greyscale = 'modular_zmixite/modules/hydrakin/icons/bodyparts.dmi'
 	limb_id = SPECIES_HYDRAKIN
 	is_dimorphic = FALSE
-	bodyshape = parent_type::bodyshape | BODYSHAPE_SNOUTED
+	bodyshape = BODYSHAPE_DIGITIGRADE
 
-/obj/item/bodypart/leg/right/hydrakin
+/obj/item/bodypart/leg/right/digitigrade/hydrakin
 	icon_greyscale = 'modular_zmixite/modules/hydrakin/icons/bodyparts.dmi'
 	limb_id = SPECIES_HYDRAKIN
 	is_dimorphic = FALSE
-	bodyshape = parent_type::bodyshape | BODYSHAPE_SNOUTED
+	bodyshape = BODYSHAPE_DIGITIGRADE
