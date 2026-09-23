@@ -9927,6 +9927,7 @@
 #include "modular_zmixite\modules\emotes\code\laugh_datums.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_bodyparts.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_emotes.dm"
+#include "modular_zmixite\modules\hydrakin\code\hydrakin_markings.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_organs.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_species.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_sprite_accessories.dm"

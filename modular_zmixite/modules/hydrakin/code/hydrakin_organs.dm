@@ -36,7 +36,7 @@
 
 /obj/item/organ/lungs/hydrakin
 
-		//Breath damage
+	//Breath damage
 	//These thresholds are checked against what amounts to total_mix_pressure * (gas_type_mols/total_mols)
 	safe_oxygen_min = 0 // Minimum safe partial pressure of O2, in kPa
 	safe_oxygen_max = 0
