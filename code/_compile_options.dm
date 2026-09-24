@@ -160,7 +160,6 @@
 #endif
 
 #if defined(CIBUILDING) && !defined(OPENDREAM)
-#warn We're gonna be doing unit testing
 #define UNIT_TESTS
 #endif
 
