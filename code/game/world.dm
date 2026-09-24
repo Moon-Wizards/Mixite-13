@@ -184,6 +184,7 @@ GLOBAL_VAR(restart_counter)
 	#endif
 
 /world/proc/HandleTestRun()
+	log_world("im tired boss, will this run?")
 	//trigger things to run the whole process
 	Master.sleep_offline_after_initializations = FALSE
 	SSticker.start_immediately = TRUE
