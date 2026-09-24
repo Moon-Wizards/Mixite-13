@@ -9934,6 +9934,7 @@
 #include "modular_zmixite\modules\arachnids\code\arachnid_silk_structures.dm"
 #include "modular_zmixite\modules\arachnids\code\arachnid_species.dm"
 #include "modular_zmixite\modules\arachnids\code\arachnid_sprite_accessories.dm"
+#include "modular_zmixite\modules\balancing\code\assembler_wooden_crates.dm"
 #include "modular_zmixite\modules\balancing\code\wings.dm"
 #include "modular_zmixite\modules\colourable_ipc_screens\code\monitor_change.dm"
 #include "modular_zmixite\modules\emotes\code\emotes.dm"
