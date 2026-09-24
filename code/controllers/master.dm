@@ -454,7 +454,7 @@ ADMIN_VERB(cmd_controller_view_ui, R_SERVER|R_DEBUG, "Controller Overview", "Vie
 	var/time = (REALTIMEOFDAY - start_timeofday) / 10
 
 
-
+	log_world("If this is 1, we're going eep; [sleep_offline_after_initializations] and for good measure i wonder if we're testing; [UNIT_TESTS]")
 	var/msg = "Initializations complete within [time] second[time == 1 ? "" : "s"]!"
 	to_chat(world, span_boldannounce("[msg]"), MESSAGE_TYPE_DEBUG)
 	log_world(msg)
