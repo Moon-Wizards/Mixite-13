@@ -1,7 +1,7 @@
 /obj/item/organ/eyes/night_vision/arachnid
 	name = "arachnid eyes"
 	desc = "So many eyes!"
-	icon = 'modular_zmixite/modules/arachnids/icons/organs.dmi'
+	icon = 'modular_zmixite/modules/arachnids/icons/arachnid_organs.dmi'
 	eye_icon = 'modular_zmixite/modules/arachnids/icons/bodyparts.dmi'
 	eye_icon_state = "arachnideyes"
 	icon_state = "arachnid_eyeballs"
@@ -65,7 +65,7 @@
 /obj/item/organ/arachnid_appendages
 	name = "arachnid appendages"
 	desc = "Extra limbs that go on your back, they don't actually work for walking sadly."
-	icon = 'modular_zmixite/modules/arachnids/icons/organs.dmi'
+	icon = 'modular_zmixite/modules/arachnids/icons/arachnid_organs.dmi'
 	icon_state = "arachnid_appendages"
 
 	zone = BODY_ZONE_CHEST
@@ -129,7 +129,7 @@
 /obj/item/organ/silkgland
 	name = "silk gland"
 	desc = "The silk actually comes out of your wrists, this is just the thing that produces it."
-	icon = 'modular_zmixite/modules/arachnids/icons/organs.dmi'
+	icon = 'modular_zmixite/modules/arachnids/icons/arachnid_organs.dmi'
 	icon_state = "arachnid_silkgland"
 	visual = FALSE
 	zone = BODY_ZONE_PRECISE_GROIN
