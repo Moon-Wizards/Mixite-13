@@ -1,10 +1,10 @@
 /obj/item/organ/eyes/hydrakin
 	name = "hydrakin eyes"
-	desc = "The unique eyes of the Hydrakin."
-	icon = 'modular_zmixite/modules/arachnids/icons/organs.dmi'
+	desc = "The unique and strangely shaped compound eyes of the Hydrakin."
+	icon = 'modular_zmixite/modules/hydrakin/icons/organs.dmi'
 	eye_icon = 'modular_zmixite/modules/hydrakin/icons/bodyparts.dmi'
 	eye_icon_state = "hydrakineyes"
-	icon_state = "arachnid_eyeballs"
+	icon_state = "hydrakin_eyes"
 	no_glasses = TRUE
 	blink_animation = FALSE
 
