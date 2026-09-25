@@ -57,6 +57,7 @@ GLOBAL_LIST_INIT(ai_core_to_status_display_mapping, list(
 	"Too Deep" = "ai_status_too_deep",
 	"Triumvirate" = "ai_status_triumvirate",
 	"Weird" = "ai_status_weird",
+	"Stars" = "ai_status_stars", // MS13 EDIT ADDITION
 ))
 
 // Combined list for AI status display preferences, including both emotion states and AI core display options
@@ -96,6 +97,8 @@ GLOBAL_LIST_INIT(ai_hologram_category_options, list(
 		AI_HOLOGRAM_NARSIE,
 		AI_HOLOGRAM_RATVAR,
 		AI_HOLOGRAM_XENO,
+		AI_HOLOGRAM_CUBE, // MS13 EDIT ADDITION
+		AI_HOLOGRAM_CUBEGREY, // MS13 EDIT ADDITION
 	),
 ))
 
@@ -121,6 +124,8 @@ GLOBAL_LIST_INIT(ai_hologram_icons, list(
 	AI_HOLOGRAM_NARSIE = 'icons/mob/silicon/ai.dmi',
 	AI_HOLOGRAM_RATVAR = 'icons/mob/silicon/ai.dmi',
 	AI_HOLOGRAM_XENO = 'icons/mob/nonhuman-player/alien.dmi',
+	AI_HOLOGRAM_CUBE = 'modular_zmixite/modules/accessories/icons/accessories/holograms.dmi', // MS13 EDIT ADDITION
+	AI_HOLOGRAM_CUBEGREY = 'modular_zmixite/modules/accessories/icons/accessories/holograms.dmi', // MS13 EDIT ADDITION
 ))
 
 // New items need to also be added to ai_hologram_icons list
@@ -145,6 +150,8 @@ GLOBAL_LIST_INIT(ai_hologram_icon_state, list(
 	AI_HOLOGRAM_NARSIE = "horror",
 	AI_HOLOGRAM_RATVAR = "clock",
 	AI_HOLOGRAM_XENO = "alienq",
+	AI_HOLOGRAM_CUBE = "iso_cube_color", // MS13 EDIT ADDITION
+	AI_HOLOGRAM_CUBEGREY = "iso_cube_grey", // MS13 EDIT ADDITION
 ))
 
 
@@ -188,6 +195,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sort_list(list(
 	"Triumvirate-M",
 	"Triumvirate",
 	"Weird",
+	"Stars", // MS13 EDIT ADDITION
 )))
 
 /// A form of resolve_ai_icon that is guaranteed to never sleep.
