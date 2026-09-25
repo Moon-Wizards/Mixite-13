@@ -1,0 +1,1 @@
+#define BLOOD_COLOR_ARACHNID "#04e1ed"

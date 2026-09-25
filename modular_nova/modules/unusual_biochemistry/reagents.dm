@@ -32,6 +32,7 @@
 		/obj/item/reagent_containers/blood/hemerythrin = 2,
 		/obj/item/reagent_containers/blood/pinnaglobin = 2,
 		/obj/item/reagent_containers/blood/exotic = 2,
+		/obj/item/reagent_containers/blood/arachnid = 2, // M13 EDIT ADDITION
 	)
 	crate_name = "blood freezer"
 	crate_type = /obj/structure/closet/crate/freezer
