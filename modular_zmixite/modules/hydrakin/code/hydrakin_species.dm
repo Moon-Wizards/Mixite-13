@@ -44,6 +44,12 @@
 	features[FEATURE_MUTANT_COLOR] = "#e9e9e9"
 	return features
 
+/datum/species/hydrakin/get_default_mutant_bodyparts()
+	return list(
+		FEATURE_TAIL = MUTPART_BLUEPRINT("Hydrakin", is_randomizable = FALSE),
+		FEATURE_EARS = MUTPART_BLUEPRINT("Hydrakin", is_randomizable = FALSE),
+	)
+
 /datum/scream_type/hydrakin
 	name = "Hydrakin Scream"
 	scream_sounds = list(

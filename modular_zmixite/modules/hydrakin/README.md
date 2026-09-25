@@ -32,4 +32,4 @@ None, I think?
 [Zenthine07](https://github.com/Zethine07): Species concept and original sprite work.
 [snebl](https://github.com/snebl): Originally developing Hydrakin for [SS14/Obelisk](https://github.com/Obelisk-Sector/Obelisk/pull/1).
 [Redrover1760](https://github.com/Redrover1760): Maintaining and continuing Hydrakin to [SS14/Monolith](https://github.com/Monolith-Station/Monolith/pull/2644).
-[Technetyzed](https://github.com/Technetyzed): Porting Hydrakin to SS13/Mixite/13
+[Technetyzed](https://github.com/Technetyzed): Porting Hydrakin to SS13/Mixite/13, New Hydrakin content
