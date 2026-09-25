@@ -15,6 +15,7 @@
 	#include "map_files\CatwalkStation\CatwalkStation_2023.dmm"
 	#include "map_files\NebulaStation\NebulaStation.dmm"
 	#include "map_files\KiloStation\KiloStation.dmm"
+	#include "map_files\KiloStationPrime\KiloStationprime.dmm" // MS13 EDIT ADDITION
 	// NOVA EDIT ADDITION START - Compiling our modular maps too!
 	#include "map_files\VoidRaptor\VoidRaptor.dmm"
 	#include "map_files\NSVBlueshift\Blueshift.dmm"

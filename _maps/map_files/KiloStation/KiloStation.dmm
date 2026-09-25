@@ -8475,11 +8475,9 @@
 "cPR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
-/obj/effect/decal/cleanable/cobweb,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/machinery/camera/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/fore)
 "cPW" = (
@@ -11066,6 +11064,9 @@
 /obj/structure/sign/warning/secure_area,
 /turf/closed/wall/r_wall,
 /area/station/engineering/storage/tech)
+"dHw" = (
+/turf/open/floor/engine,
+/area/station/hallway/primary/fore)
 "dHE" = (
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/item/mmi,
@@ -14153,6 +14154,14 @@
 /obj/machinery/light/floor,
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
+"eHh" = (
+/obj/machinery/door/airlock/external{
+	name = "Common Mining Dock"
+	},
+/obj/effect/landmark/navigate_destination,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/fore)
 "eHu" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -23459,12 +23468,10 @@
 /turf/open/floor/iron,
 /area/station/security/execution/transfer)
 "hCV" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/machinery/door/airlock/external{
-	name = "Common Mining Dock"
-	},
-/obj/effect/landmark/navigate_destination,
-/turf/open/floor/iron/dark,
+/obj/structure/table,
+/obj/item/storage/toolbox/emergency,
+/obj/item/radio,
+/turf/open/floor/engine,
 /area/station/hallway/primary/fore)
 "hCY" = (
 /obj/item/disk/computer{
@@ -24388,6 +24395,7 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/effect/spawner/random/structure/crate,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "hQg" = (
@@ -28811,13 +28819,8 @@
 /turf/open/floor/engine/vacuum,
 /area/station/science/ordnance/bomb)
 "jcj" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/tile/neutral/half/contrasted,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/machinery/computer/shuttle/mining/common,
-/turf/open/floor/iron/dark,
+/obj/effect/turf_decal/caution/stand_clear,
+/turf/open/floor/engine,
 /area/station/hallway/primary/fore)
 "jck" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -49737,10 +49740,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/structure/table,
-/obj/item/storage/toolbox/emergency,
-/obj/item/radio,
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/fore)
 "pMe" = (
@@ -55813,6 +55812,15 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/iron/smooth_large,
 /area/station/engineering/atmos)
+"rHQ" = (
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark/corner{
+	dir = 1
+	},
+/area/station/hallway/primary/fore)
 "rHX" = (
 /obj/machinery/door/poddoor/shutters{
 	dir = 1;
@@ -70084,6 +70092,15 @@
 /obj/effect/mapping_helpers/airlock/access/any/command/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/department/crew_quarters/bar)
+"wbx" = (
+/obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/camera/directional/west,
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/fore)
 "wbR" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/bot,
@@ -70456,6 +70473,11 @@
 /obj/machinery/suit_storage_unit/engine,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage_shared)
+"whV" = (
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/effect/turf_decal/caution/stand_clear,
+/turf/open/floor/engine,
+/area/station/hallway/primary/fore)
 "whX" = (
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/power/apc/auto_name/directional/south,
@@ -74869,11 +74891,10 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
 "xzc" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/mapping_helpers/burnt_floor,
-/obj/effect/spawner/random/structure/crate,
-/turf/open/floor/plating,
-/area/station/maintenance/port/fore)
+/obj/effect/decal/cleanable/cobweb,
+/obj/machinery/computer/shuttle/mining/common,
+/turf/open/floor/engine,
+/area/station/hallway/primary/fore)
 "xzI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/structure/closet_maintenance,
@@ -93642,9 +93663,9 @@ aeu
 aeu
 aeu
 aeu
-aUz
-aeu
-aeu
+xuZ
+xuZ
+xuZ
 xuZ
 xuZ
 xuZ
@@ -93899,10 +93920,10 @@ aeu
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
 xuZ
+pCu
+pCu
+pCu
 pbY
 tpY
 rgF
@@ -94156,10 +94177,10 @@ aeu
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
 xuZ
+pCu
+pCu
+pCu
 tfY
 qzJ
 crH
@@ -94413,16 +94434,16 @@ aeu
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
 xuZ
 pCu
 pCu
 pCu
+pCu
+pCu
+cXZ
 pVz
-xzc
-ukc
+pVz
+pVz
 pVz
 hPY
 obi
@@ -94670,16 +94691,16 @@ aeU
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
 xuZ
 pCu
 pCu
 pCu
-pVz
-pVz
-pVz
+pCu
+jQR
+eHh
+jcj
+wbx
+rHQ
 pVz
 xBI
 wrz
@@ -94927,14 +94948,14 @@ aeu
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
 xuZ
 pCu
 pCu
 pCu
+pCu
+pCu
 ejc
+xzc
 cPR
 bzp
 dtA
@@ -95184,13 +95205,13 @@ aeu
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
 xuZ
 pCu
 pCu
-jQR
+pCu
+pCu
+pCu
+ejc
 hCV
 xAK
 jeT
@@ -95441,15 +95462,15 @@ aeu
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
 xuZ
 pCu
 pCu
 pCu
+pCu
+pCu
 ejc
-jcj
+dHw
+cPR
 qVD
 eUN
 gaN
@@ -95704,8 +95725,8 @@ cIV
 cXZ
 pCu
 pCu
-pCu
 ejc
+whV
 pLO
 xtt
 psv
@@ -103227,7 +103248,7 @@ pRP
 itN
 alO
 gva
-jwV
+wRM
 uTC
 wRM
 rTi

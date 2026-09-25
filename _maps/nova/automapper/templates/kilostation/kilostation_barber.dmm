@@ -39,6 +39,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/corner{
 	dir = 4
 	},
@@ -98,12 +99,14 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/structure/cable,
 /turf/open/floor/wood/parquet,
 /area/station/service/barber)
 "jT" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/wood/parquet,
 /area/station/service/barber)
 "ka" = (
@@ -213,6 +216,7 @@
 "qu" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "ry" = (
@@ -260,11 +264,17 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/wood/parquet,
 /area/station/service/barber)
 "wI" = (
 /turf/closed/wall,
 /area/station/service/barber)
+"wY" = (
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/station/hallway/primary/fore)
 "xs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line{
@@ -294,6 +304,7 @@
 /obj/machinery/light_switch/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/wood/parquet,
 /area/station/service/barber)
 "yI" = (
@@ -318,6 +329,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/directional/south,
+/obj/structure/cable,
 /turf/open/floor/wood/parquet,
 /area/station/service/barber)
 "Cf" = (
@@ -393,6 +405,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/wood/parquet,
 /area/station/service/barber)
 "QR" = (
@@ -420,6 +433,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/wood/parquet,
 /area/station/service/barber)
 "UQ" = (
@@ -433,6 +447,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/structure/cable,
 /turf/open/floor/wood/parquet,
 /area/station/service/barber)
 "WS" = (
@@ -468,7 +483,7 @@ Pd
 oA
 Cf
 tq
-mC
+wY
 qu
 hH
 "}
