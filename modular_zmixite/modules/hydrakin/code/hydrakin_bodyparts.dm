@@ -103,7 +103,7 @@
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	icon_static =  'modular_zmixite/modules/hydrakin/icons/cyberkin.dmi'
 	icon = 'modular_zmixite/modules/hydrakin/icons/cyberkin.dmi'
-	icon_state = "robotic_r_leg"
+	icon_state = "robotic_r_leg_digi"
 	is_dimorphic = FALSE
 	bodyshape = BODYSHAPE_DIGITIGRADE
 
@@ -112,7 +112,7 @@
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	icon_static =  'modular_zmixite/modules/hydrakin/icons/cyberkin.dmi'
 	icon = 'modular_zmixite/modules/hydrakin/icons/cyberkin.dmi'
-	icon_state = "robotic_l_leg"
+	icon_state = "robotic_l_leg_digi"
 	is_dimorphic = FALSE
 	bodyshape = BODYSHAPE_DIGITIGRADE
 
