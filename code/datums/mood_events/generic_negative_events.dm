@@ -666,8 +666,3 @@
 	description = span_warning("I was forced to eat cement...")
 	mood_change = -6
 	timeout = 4 MINUTES
-
-/datum/mood_event/perceptomatrix
-	description = "▟▖▟▜▚▞▟▞▚▜▜▟▜!!!"
-	mood_change = -200
-	timeout = 6 SECONDS
