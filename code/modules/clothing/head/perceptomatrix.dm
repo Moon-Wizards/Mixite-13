@@ -169,7 +169,7 @@
 	/// The amount of blurriness to apply
 	var/eye_blur_duration = 7 SECONDS
 	/// The amount of stagger to apply
-	var/stagger_duration = 6 SECONDS
+	var/stagger_duration = 3 SECONDS
 	/// The amount of hallucination to apply
 	var/hallucination_duration = 25 SECONDS
 
