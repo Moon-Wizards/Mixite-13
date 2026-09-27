@@ -45,8 +45,10 @@
 		TRAIT_SIGHT_BYPASS,
 		TRAIT_EXPANDED_FOV,
 		TRAIT_GOOD_HEARING,
-		TRAOT_XRAY_HEARING,
+	/// mixite addition
+		TRAIT_XRAY_HEARING,
 		TRAIT_XRAY_VISION,
+	/// mixite addition end
 		/* mental protection */
 		TRAIT_PERCEPTUAL_TRAUMA_BYPASS,
 		TRAIT_RDS_SUPPRESSED,
@@ -171,7 +173,9 @@
 	/// The amount of blurriness to apply
 	var/eye_blur_duration = 7 SECONDS
 	/// The amount of stagger to apply
+	/// mixite addition
 	var/stagger_duration = 6 SECONDS
+	/// mixite addition end
 	/// The amount of hallucination to apply
 	var/hallucination_duration = 30 SECONDS
 
@@ -237,4 +241,6 @@
 	cast_on.set_eye_blur_if_lower(eye_blur_duration)
 	cast_on.adjust_staggered(stagger_duration)
 	cast_on.apply_status_effect(/datum/status_effect/hallucination/perceptomatrix, hallucination_duration, HALLUCINATION_TIER_RARE)
+/// mixite addition
 	cast_on.flash_act(1, TRUE)
+/// mixite addition end
