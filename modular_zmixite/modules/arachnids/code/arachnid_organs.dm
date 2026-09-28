@@ -1,7 +1,7 @@
 /obj/item/organ/eyes/night_vision/arachnid
 	name = "arachnid eyes"
 	desc = "So many eyes!"
-	icon = 'modular_zmixite/modules/arachnids/icons/organs.dmi'
+	icon = 'modular_zmixite/modules/arachnids/icons/arachnid_organs.dmi'
 	eye_icon = 'modular_zmixite/modules/arachnids/icons/bodyparts.dmi'
 	eye_icon_state = "arachnideyes"
 	icon_state = "arachnid_eyeballs"
@@ -65,7 +65,7 @@
 /obj/item/organ/arachnid_appendages
 	name = "arachnid appendages"
 	desc = "Extra limbs that go on your back, they don't actually work for walking sadly."
-	icon = 'modular_zmixite/modules/arachnids/icons/organs.dmi'
+	icon = 'modular_zmixite/modules/arachnids/icons/arachnid_organs.dmi'
 	icon_state = "arachnid_appendages"
 
 	zone = BODY_ZONE_CHEST
@@ -85,12 +85,13 @@
 		EXTERNAL_FRONT = BODY_FRONT_LAYER,
 		EXTERNAL_BEHIND = BODY_BEHIND_LAYER,
 	)
+	color_source = ORGAN_COLOR_OVERRIDE
+
+/datum/bodypart_overlay/mutant/arachnid_appendages/override_color(rgb_value)
+	return draw_color
 
 /datum/bodypart_overlay/mutant/arachnid_appendages/get_global_feature_list()
 	return SSaccessories.sprite_accessories[FEATURE_ARACHNID_APPENDAGES]
-
-/datum/bodypart_overlay/mutant/arachnid_appendages/get_base_icon_state()
-	return sprite_datum.icon_state //i hate you
 
 /datum/bodypart_overlay/mutant/arachnid_appendages/can_draw_on_bodypart(mob/living/carbon/human/human)
 	. = ..()
@@ -128,7 +129,7 @@
 /obj/item/organ/silkgland
 	name = "silk gland"
 	desc = "The silk actually comes out of your wrists, this is just the thing that produces it."
-	icon = 'modular_zmixite/modules/arachnids/icons/organs.dmi'
+	icon = 'modular_zmixite/modules/arachnids/icons/arachnid_organs.dmi'
 	icon_state = "arachnid_silkgland"
 	visual = FALSE
 	zone = BODY_ZONE_PRECISE_GROIN
