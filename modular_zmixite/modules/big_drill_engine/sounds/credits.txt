@@ -1,0 +1,4 @@
+button_down.ogg -> GT5U
+button_up.ogg -> GT5U
+
+pump_loop.ogg -> Mix of IC2 sounds & TRG sounds
