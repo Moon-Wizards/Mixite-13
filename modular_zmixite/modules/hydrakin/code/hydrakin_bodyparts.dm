@@ -226,7 +226,7 @@
 	name = "Cyberkin Head"
 	build_type = MECHFAB
 	build_path = /obj/item/bodypart/head/robot/cyberkin
-	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 2)
+	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 2.5)
 	construction_time = 8 SECONDS
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG,
@@ -236,7 +236,7 @@
 	name = "Cyberkin Chest"
 	build_type = MECHFAB
 	build_path = /obj/item/bodypart/chest/robot/cyberkin
-	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 4)
+	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 20)
 	construction_time = 12 SECONDS
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG,
@@ -246,7 +246,7 @@
 	name = "Cyberkin Left Arm"
 	build_type = MECHFAB
 	build_path = /obj/item/bodypart/arm/left/robot/cyberkin
-	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 2)
+	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 5)
 	construction_time = 8 SECONDS
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG,
@@ -256,7 +256,7 @@
 	name = "Cyberkin Right Arm"
 	build_type = MECHFAB
 	build_path = /obj/item/bodypart/arm/right/robot/cyberkin
-	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 2)
+	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 5)
 	construction_time = 8 SECONDS
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG,
@@ -266,7 +266,7 @@
 	name = "Cyberkin Left Leg"
 	build_type = MECHFAB
 	build_path = /obj/item/bodypart/leg/left/robot/cyberkin
-	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 2)
+	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 5)
 	construction_time = 8 SECONDS
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG,
@@ -276,7 +276,7 @@
 	name = "Cyberkin Right Leg"
 	build_type = MECHFAB
 	build_path = /obj/item/bodypart/leg/right/robot/cyberkin
-	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 2)
+	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 5)
 	construction_time = 8 SECONDS
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG,
