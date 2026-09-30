@@ -8,6 +8,58 @@
 	no_glasses = TRUE
 	blink_animation = FALSE
 
+/obj/item/organ/eyes/hydrakin/cybernetic
+	name = "robotic hydrakin eyes"
+	desc = "Your vision is augmented."
+	icon_state = "cyberkin_eyes"
+	organ_flags = ORGAN_ROBOTIC
+	failing_desc = "seems to be broken."
+	pupils_name = "shutters"
+	penlight_message = "are cybernetic, click-whirring as the shutters adjust"
+	custom_materials = list(/datum/material/glass = SMALL_MATERIAL_AMOUNT * 4, /datum/material/iron = SMALL_MATERIAL_AMOUNT * 2.5)
+
+/obj/item/organ/eyes/hydrakin/welding
+	name = "shielded hydrakin eyes"
+	desc = "These reactive micro-shields will protect you from welders and flashes without obscuring your vision."
+	icon_state = "cyberkin_welding"
+	organ_flags = ORGAN_ROBOTIC
+	iris_overlay = null
+	eye_color_left = "#353845"
+	eye_color_right = "#353845"
+	flash_protect = FLASH_PROTECTION_WELDER
+	pupils_name = "flash shields"
+	penlight_message = "have polarized cybernetic lenses, blocking bright lights"
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.6, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 4)
+
+/obj/item/organ/eyes/hydrakin/xray
+	name = "x-ray hydrakin eyes"
+	desc = "These cybernetic eyes will give you X-ray vision. Blinking is futile."
+	icon_state = "cyberkin_xray"
+	organ_flags = ORGAN_ROBOTIC
+	iris_overlay = null
+	eye_color_left = "#3cb8a5"
+	eye_color_right = "#3cb8a5"
+	sight_flags = SEE_MOBS | SEE_OBJS | SEE_TURFS
+	flash_protect = FLASH_PROTECTION_SENSITIVE
+	organ_traits = list(TRAIT_XRAY_VISION)
+	penlight_message = "are replaced by small radiation emitters and detectors"
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.6, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 0.6, /datum/material/silver = SHEET_MATERIAL_AMOUNT * 0.6, /datum/material/gold = SHEET_MATERIAL_AMOUNT * 0.6, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/uranium = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/diamond = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/bluespace = HALF_SHEET_MATERIAL_AMOUNT)
+
+/obj/item/organ/eyes/hydrakin/thermal
+	name = "thermal hydrakin eyes"
+	desc = "These cybernetic eye implants will give you thermal vision."
+	icon_state = "cyberkin_thermal"
+	organ_flags = ORGAN_ROBOTIC
+	iris_overlay = null
+	eye_color_left = "#ce2525"
+	eye_color_right = "#ce2525"
+	color_cutoffs = list(25, 8, 5)
+	sight_flags = SEE_MOBS
+	flash_protect = FLASH_PROTECTION_SENSITIVE
+	pupils_name = "slit shutters"
+	penlight_message = "are cybernetic, with vertically slit metalic shutters."
+	custom_materials = list(/datum/material/diamond = SHEET_MATERIAL_AMOUNT, /datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.6, /datum/material/glass = SHEET_MATERIAL_AMOUNT * 0.6, /datum/material/silver = SHEET_MATERIAL_AMOUNT * 0.6, /datum/material/gold = SHEET_MATERIAL_AMOUNT * 0.6, /datum/material/plasma = HALF_SHEET_MATERIAL_AMOUNT)
+
 /obj/item/organ/tongue/hydrakin
 	name = "hydrakin tongue"
 	desc = "The chirpy tongue of a Hydrakin."
@@ -37,35 +89,22 @@
 /obj/item/organ/lungs/hydrakin
 	name = "hydrakin lungs"
 	desc = "Seems rather cold."
-	//Breath damage
-	//These thresholds are checked against what amounts to total_mix_pressure * (gas_type_mols/total_mols)
-	safe_oxygen_min = 0 // Minimum safe partial pressure of O2, in kPa
+	safe_oxygen_min = 0
 	safe_oxygen_max = 0
 	safe_nitro_min = 0
-	safe_co2_max = 10 // Yes it's an arbitrary value who cares?
-	//safe_plasma_min = 0
-	///How much breath partial pressure is a safe amount of plasma. 0 means that we are immune to plasma.
-	//safe_plasma_max = 1000
-	n2o_detect_min = 1000 //Minimum n2o for effects
-	n2o_para_min = 1000 //Sleeping agent
-	n2o_sleep_min = 1000 //Sleeping agent
-	BZ_trip_balls_min = 1000 //BZ gas
-	BZ_brain_damage_min = 1000 //Give people some room to play around without killing the station
-	gas_stimulation_min = 1000 // For, Pluoxium, Nitrium and Freon
-	///Minimum amount of healium to make you unconscious for 4 seconds
+	safe_co2_max = 10
+	n2o_detect_min = 1000
+	n2o_para_min = 1000
+	n2o_sleep_min = 1000
+	BZ_trip_balls_min = 1000
+	BZ_brain_damage_min = 1000
+	gas_stimulation_min = 1000
 	healium_para_min = 10
-	///Minimum amount of healium to knock you down for good
 	healium_sleep_min = 20
-	///Minimum amount of helium to affect speech
 	helium_speech_min = 7
-	///Whether these lungs react negatively to miasma
 	suffers_miasma = FALSE
-	// Vars for N2O/healium induced euphoria, stun, and sleep.
 	n2o_euphoria = EUPHORIA_LAST_FLAG
 	healium_euphoria = EUPHORIA_LAST_FLAG
-
-	/// All incoming breaths will have their pressure multiplied against this. Higher values allow more air to be breathed at once,
-	/// while lower values can cause suffocation in low pressure environments.
 	received_pressure_mult = 2
 
 /obj/item/organ/lungs/hydrakin/Initialize(mapload)
@@ -113,3 +152,39 @@
 	breathe_gas_volume(breath, /datum/gas/nitrium)
 	var/existing = breather.reagents.get_reagent_amount(/datum/reagent/nitrium_low_metabolization)
 	breather.reagents.add_reagent(/datum/reagent/nitrium_low_metabolization, max(0, 2 - existing))
+
+// Cybernetic designs
+
+/datum/design/cybernetic_eyes/hydrakin
+	name = "Cybernetic Hydrakin Eyes"
+	desc = "A basic pair of cybernetic hydrakin eyes."
+	build_path = /obj/item/organ/eyes/hydrakin/cybernetic
+
+/datum/design/cyberimp_welding/hydrakin
+	name = "Welding Hydrakin Eyes"
+	desc = "These reactive micro-shields will protect you from welders and flashes without obscuring your vision."
+	build_path = /obj/item/organ/eyes/hydrakin/welding
+
+/datum/design/cyberimp_thermals/hydrakin
+	name = "Thermal Hydrakin Eyes"
+	desc = "These cybernetic eyes will give you Thermal vision."
+	build_path = /obj/item/organ/eyes/hydrakin/thermal
+
+/datum/design/cyberimp_xray/hydrakin
+	name = "X-ray Hydrakin Eyes"
+	desc = "These cybernetic eyes will give you Thermal vision."
+	build_path = /obj/item/organ/eyes/hydrakin/xray
+
+// Put the organs into augment prefs
+
+/datum/augment_item/organ/eyes/hydrakin
+	name = "Hydrakin eyes"
+	path = /obj/item/organ/eyes/hydrakin
+
+/datum/augment_item/organ/eyes/hydrakin/cybernetic
+	name = "Cybernetic Hydrakin eyes"
+	path = /obj/item/organ/eyes/hydrakin/cybernetic
+
+/datum/augment_item/organ/tongue/hydrakin
+	name = "Hydrakin tongue"
+	path = /obj/item/organ/tongue/hydrakin
