@@ -24,6 +24,9 @@
 			TEST_ASSERT_NOTEQUAL(selected_template["coordinates"], selected_template_two["coordinates"], "Automap template [template] had the same coords as [template_two]!")
 			TEST_ASSERT_NOTEQUAL(selected_template["map_files"], selected_template_two["map_files"], "Automap template [template] had the same map files as [template_two]!")
 
+/// This is like /datum/unit_test/log_mapping and tests if the integration with the current map failed.
+/datum/unit_test/area_spawn
+
 /datum/unit_test/area_spawn/Run()
 	for(var/list/failed_area_spawn_entry as anything in SSarea_spawn.failed_area_spawns) // each failed_area_spawn_entry is a list keyed to area_spawn with the value being the map name where it occurred
 		for(var/datum/area_spawn/area_spawn as anything in failed_area_spawn_entry)
