@@ -14,11 +14,12 @@ Adds accessories, either ported or brand new ones.
 
 ### Defines:
 
-- N/A
+- AI_HOLOGRAM_CUBE, AI_HOLOGRAM_CUBEGREY
 
 ### Master file additions
 
-- N/A
+- Adding defines from code/__DEFINES/~zmixite_defines/holograms.dm to the global list in code/modules/mob/living/silicon/ai/_preferences.dm
+- Additions to icons/mob/silicon/ai.dmi and icons/obj/machines/status_display.dmi
 
 ### Included files that are not contained in this module:
 
@@ -29,3 +30,4 @@ Adds accessories, either ported or brand new ones.
 <!-- Remember to credit others if porting! -->
 
 - Bubberstation, misc. markings.
+- Technetyzed, AI sprites
