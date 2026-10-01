@@ -58,6 +58,7 @@
 	is_dimorphic = FALSE
 	bodyshape = parent_type::bodyshape | BODYSHAPE_SNOUTED
 	head_flags = HEAD_EYESPRITES | HEAD_EYEHOLES | HEAD_EYECOLOR | HEAD_HAIR
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.5)
 
 /obj/item/bodypart/chest/robot/cyberkin
 	name = "cyberkin chest"
@@ -67,6 +68,7 @@
 	icon_state = "robotic_chest"
 	is_dimorphic = FALSE
 	bodyshape = parent_type::bodyshape | BODYSHAPE_SNOUTED
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 5)
 
 /obj/item/bodypart/arm/right/robot/cyberkin
 	name = "cyberkin right arm"
@@ -82,6 +84,7 @@
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
 	unarmed_attack_sound = 'sound/items/weapons/slash.ogg'
 	unarmed_miss_sound = 'sound/items/weapons/slashmiss.ogg'
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2)
 
 /obj/item/bodypart/arm/left/robot/cyberkin
 	name = "cyberkin left arm"
@@ -97,6 +100,7 @@
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
 	unarmed_attack_sound = 'sound/items/weapons/slash.ogg'
 	unarmed_miss_sound = 'sound/items/weapons/slashmiss.ogg'
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2)
 
 /obj/item/bodypart/leg/right/robot/cyberkin
 	name = "cyberkin right leg"
@@ -106,6 +110,7 @@
 	icon_state = "robotic_r_leg_digi"
 	is_dimorphic = FALSE
 	bodyshape = BODYSHAPE_DIGITIGRADE
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2)
 
 /obj/item/bodypart/leg/left/robot/cyberkin
 	name = "cyberkin left leg"
@@ -115,6 +120,7 @@
 	icon_state = "robotic_l_leg_digi"
 	is_dimorphic = FALSE
 	bodyshape = BODYSHAPE_DIGITIGRADE
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2)
 
 /obj/item/bodypart/head/robot/cyberkin/grayscale
 	icon_static = null
@@ -236,7 +242,7 @@
 	name = "Cyberkin Chest"
 	build_type = MECHFAB
 	build_path = /obj/item/bodypart/chest/robot/cyberkin
-	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 20)
+	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 5)
 	construction_time = 12 SECONDS
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG,
@@ -246,7 +252,7 @@
 	name = "Cyberkin Left Arm"
 	build_type = MECHFAB
 	build_path = /obj/item/bodypart/arm/left/robot/cyberkin
-	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 5)
+	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 2)
 	construction_time = 8 SECONDS
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG,
@@ -256,7 +262,7 @@
 	name = "Cyberkin Right Arm"
 	build_type = MECHFAB
 	build_path = /obj/item/bodypart/arm/right/robot/cyberkin
-	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 5)
+	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 2)
 	construction_time = 8 SECONDS
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG,
@@ -266,7 +272,7 @@
 	name = "Cyberkin Left Leg"
 	build_type = MECHFAB
 	build_path = /obj/item/bodypart/leg/left/robot/cyberkin
-	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 5)
+	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 2)
 	construction_time = 8 SECONDS
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG,
@@ -276,7 +282,7 @@
 	name = "Cyberkin Right Leg"
 	build_type = MECHFAB
 	build_path = /obj/item/bodypart/leg/right/robot/cyberkin
-	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 5)
+	materials = list(/datum/material/iron= SHEET_MATERIAL_AMOUNT * 2)
 	construction_time = 8 SECONDS
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG,
