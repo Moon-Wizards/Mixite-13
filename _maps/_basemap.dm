@@ -33,3 +33,8 @@
 	#include "templates_nova.dm"
 #endif
 // NOVA EDIT ADDITION END
+// M13 EDIT ADDITION START
+#ifdef MIXITE_TEMPLATES
+	#include "templates_mixite.dm"
+#endif
+// M13 EDIT ADDITION END
