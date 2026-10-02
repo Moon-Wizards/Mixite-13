@@ -9942,6 +9942,7 @@
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_emotes.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_markings.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_organs.dm"
+#include "modular_zmixite\modules\hydrakin\code\hydrakin_plushie.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_species.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_sprite_accessories.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydraspeak.dm"
