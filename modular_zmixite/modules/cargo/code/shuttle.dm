@@ -49,3 +49,12 @@
 
 /obj/docking_port/mobile/supply/sell()
 	return
+
+/obj/docking_port/mobile/supply/proc/get_purchase_turfs()
+	var/list/empty_turfs = list()
+	for(var/area/shuttle/shuttle_area as anything in shuttle_areas)
+		for(var/turf/open/floor/shuttle_turf in shuttle_area.get_turfs_from_all_zlevels())
+			if(shuttle_turf.is_blocked_turf())
+				continue
+			empty_turfs += shuttle_turf
+	return empty_turfs

@@ -61,6 +61,12 @@ with open(file_reference, 'r') as file:
         elif line == "// NOVA EDIT END":
             continue
         # NOVA EDIT END
+        # M13 EDIT ADDITION START
+        elif line == "// M13 EDIT ADDITION START":
+            continue
+        elif line == "// M13 EDIT ADDITION END":
+            continue
+        # M13 EDIT ADDITION END
 
         lines.append(line)
 
