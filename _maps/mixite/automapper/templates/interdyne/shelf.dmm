@@ -1,0 +1,32 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/machinery/turretid{
+	name = "Base turret controls";
+	desc = "Used to control the base's automated defenses.";
+	dir = 1;
+	pixel_y = 30;
+	req_access = list("syndicate");
+	lethal = 1;
+	control_area = "/area/ruin/interdyne_planetary_base";
+	ailock = 1
+	},
+/obj/item/folder/syndicate/red/secretformula,
+/obj/item/circuitboard/computer/cargo/interdyne{
+	pixel_x = 0;
+	pixel_y = 3
+	},
+/obj/item/circuitboard/computer/bountypad{
+	pixel_x = 0;
+	pixel_y = -7
+	},
+/obj/item/circuitboard/machine/bountypad{
+	pixel_x = 0;
+	pixel_y = 13
+	},
+/obj/structure/rack/shelf,
+/turf/open/floor/iron/dark/textured_large,
+/area/template_noop)
+
+(1,1,1) = {"
+a
+"}

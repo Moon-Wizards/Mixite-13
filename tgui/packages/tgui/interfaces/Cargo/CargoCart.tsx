@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import {
   Button,
-  Icon,
   NoticeBox,
   RestrictedInput,
   Section,
@@ -15,9 +14,11 @@ import type { CargoData } from './types';
 
 export function CargoCart(props) {
   const { act, data } = useBackend<CargoData>();
-  const { can_send, away, cart = [], docked, location } = data;
+  const { can_send, can_purchase = can_send, cart = [] } = data; // M13 EDIT CHANGE - ORIGINAL: const { can_send, cart = [] } = data;
 
+  /* // M13 EDIT REMOVAL START
   const sendable = !!away && !!docked;
+  */ // M13 EDIT REMOVAL END
 
   return (
     <Stack fill vertical g={0}>
@@ -26,23 +27,31 @@ export function CargoCart(props) {
           <CheckoutItems />
         </Section>
       </Stack.Item>
-      {cart.length > 0 && !!can_send && (
+      {cart.length > 0 && !!can_purchase && ( // M13 EDIT CHANGE - ORIGINAL: {cart.length > 0 && !!can_send && (
         <Stack.Item>
           <Section textAlign="right">
             <Stack fill align="center">
               <Stack.Item grow>
+                {
+                 /* // M13 EDIT REMOVAL START
                 {!sendable && (
                   <Icon mr={0.5} size={1.5} color="blue" name="toolbox" spin />
                 )}
+                 */ // M13 EDIT REMOVAL END
+                }
               </Stack.Item>
               <Stack.Item>
                 <Button
                   color="green"
+                  /* // M13 EDIT REMOVAL START
                   disabled={!sendable}
-                  onClick={() => act('send')}
+                  */ // M13 EDIT REMOVAL END
+                  onClick={() => act('purchase')} // M13 EDIT CHANGE - ORIGINAL: onClick={() => act('send')}
                   px={2}
                   py={1}
+                  /* // M13 EDIT REMOVAL START
                   tooltip={sendable ? '' : `Shuttle is at ${location}`}
+                  */ // M13 EDIT REMOVAL END
                 >
                   Confirm the order
                 </Button>
@@ -57,7 +66,7 @@ export function CargoCart(props) {
 
 function CheckoutItems(props) {
   const { act, data } = useBackend<CargoData>();
-  const { can_send, cart = [], max_order } = data;
+  const { can_send, can_purchase = can_send, cart = [], max_order } = data; // M13 EDIT CHANGE - ORIGINAL: const { can_send, cart = [], max_order } = data;
 
   const [isValid, setIsValid] = useState(true);
 
@@ -85,7 +94,7 @@ function CheckoutItems(props) {
           <Table.Cell>{entry.object}</Table.Cell>
 
           <Table.Cell width={11}>
-            {can_send && entry.can_be_cancelled ? (
+            {can_purchase && entry.can_be_cancelled ? ( // M13 EDIT CHANGE - ORIGINAL: {can_send && entry.can_be_cancelled ? (
               <>
                 <Button
                   icon="minus"
