@@ -13,6 +13,7 @@
 	circuit = /obj/item/circuitboard/computer/cargo_seller
 
 	resistance_flags = INDESTRUCTIBLE
+	req_access = list(ACCESS_CARGO)
 
 	// ID of the marker region.
 	var/region_id = "default"
@@ -189,3 +190,4 @@
 
 /obj/machinery/computer/cargo_seller/interdyne
 	cargo_account = ACCOUNT_INT
+	req_access = list(ACCESS_SYNDICATE)

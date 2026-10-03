@@ -1,24 +1,3 @@
-/obj/docking_port/mobile/supply/get_purchase_turfs()
-	var/list/buy_region = get_cargo_marker_region("nt_buy")
-	if(!length(buy_region))
-		return list()
-
-	var/list/empty_turfs = list()
-	var/list/pad_turfs = list()
-	for(var/turf/open/floor/pad_turf as anything in buy_region)
-		pad_turfs += pad_turf
-		var/occupied = FALSE
-		for(var/atom/movable/occupant in pad_turf.contents)
-			if(occupant.anchored || istype(occupant, /obj/effect/landmark/cargo_marker))
-				continue
-			occupied = TRUE
-			break
-
-		if(!occupied)
-			empty_turfs += pad_turf
-
-	return length(empty_turfs) ? empty_turfs : pad_turfs
-
 /obj/machinery/computer/cargo/proc/create_requisition()
 	if(!length(SSshuttle.shopping_list))
 		return FALSE
@@ -54,7 +33,7 @@
 
 		SSshuttle.supply.buy()
 		playsound(src, 'sound/machines/beep/twobeep_high.ogg', 50, FALSE)
-		say("Order processed. Navigate to the Automated Trade Station to collect it.")
+		say("Order processed. Navigate to the Automated Trade Station to retrieve it.")
 		return TRUE
 
 	if(action == "send" && SSshuttle.supply.getDockedId() != docking_home)

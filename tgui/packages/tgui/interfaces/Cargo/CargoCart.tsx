@@ -14,7 +14,7 @@ import type { CargoData } from './types';
 
 export function CargoCart(props) {
   const { act, data } = useBackend<CargoData>();
-  const { can_send, cart = [] } = data;
+  const { can_send, can_purchase = can_send, cart = [] } = data; // M13 EDIT CHANGE - ORIGINAL: const { can_send, cart = [] } = data;
 
   /* // M13 EDIT REMOVAL START
   const sendable = !!away && !!docked;
@@ -27,7 +27,7 @@ export function CargoCart(props) {
           <CheckoutItems />
         </Section>
       </Stack.Item>
-      {cart.length > 0 && !!can_send && (
+      {cart.length > 0 && !!can_purchase && ( // M13 EDIT CHANGE - ORIGINAL: {cart.length > 0 && !!can_send && (
         <Stack.Item>
           <Section textAlign="right">
             <Stack fill align="center">
@@ -66,7 +66,7 @@ export function CargoCart(props) {
 
 function CheckoutItems(props) {
   const { act, data } = useBackend<CargoData>();
-  const { can_send, cart = [], max_order } = data;
+  const { can_send, can_purchase = can_send, cart = [], max_order } = data; // M13 EDIT CHANGE - ORIGINAL: const { can_send, cart = [], max_order } = data;
 
   const [isValid, setIsValid] = useState(true);
 
@@ -94,7 +94,7 @@ function CheckoutItems(props) {
           <Table.Cell>{entry.object}</Table.Cell>
 
           <Table.Cell width={11}>
-            {can_send && entry.can_be_cancelled ? (
+            {can_purchase && entry.can_be_cancelled ? ( // M13 EDIT CHANGE - ORIGINAL: {can_send && entry.can_be_cancelled ? (
               <>
                 <Button
                   icon="minus"

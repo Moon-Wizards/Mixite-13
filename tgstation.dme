@@ -9939,6 +9939,7 @@
 #include "modular_zmixite\modules\automapper\code\automapper.dm"
 #include "modular_zmixite\modules\balancing\code\wings.dm"
 #include "modular_zmixite\modules\cargo\code\area.dm"
+#include "modular_zmixite\modules\cargo\code\interdyne.dm"
 #include "modular_zmixite\modules\cargo\code\markers.dm"
 #include "modular_zmixite\modules\cargo\code\orderconsole.dm"
 #include "modular_zmixite\modules\cargo\code\sellconsole.dm"

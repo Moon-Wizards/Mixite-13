@@ -51,10 +51,22 @@
 	return
 
 /obj/docking_port/mobile/supply/proc/get_purchase_turfs()
+	var/list/buy_region = get_cargo_marker_region("nt_buy")
+	if(!length(buy_region))
+		return list()
+
 	var/list/empty_turfs = list()
-	for(var/area/shuttle/shuttle_area as anything in shuttle_areas)
-		for(var/turf/open/floor/shuttle_turf in shuttle_area.get_turfs_from_all_zlevels())
-			if(shuttle_turf.is_blocked_turf())
+	var/list/pad_turfs = list()
+	for(var/turf/open/floor/pad_turf as anything in buy_region)
+		pad_turfs += pad_turf
+		var/occupied = FALSE
+		for(var/atom/movable/occupant in pad_turf.contents)
+			if(occupant.anchored || istype(occupant, /obj/effect/landmark/cargo_marker))
 				continue
-			empty_turfs += shuttle_turf
-	return empty_turfs
+			occupied = TRUE
+			break
+
+		if(!occupied)
+			empty_turfs += pad_turf
+
+	return length(empty_turfs) ? empty_turfs : pad_turfs

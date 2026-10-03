@@ -56,7 +56,7 @@
 	shuttleId = "interdyne_cargo"
 	icon_screen = "syndishuttle"
 	icon_keyboard = "syndie_key"
-	possible_destinations = "interdyne_cargo_home;interdyne_cargo_away;interdyne_cargo_custom;whiteship_home"
+	possible_destinations = "interdyne_cargo_home;interdyne_cargo_away;interdyne_cargo_custom;whiteship_home;interdyne_cargo_away_ats"
 
 /obj/item/circuitboard/computer/interdyne_cargo
 	name = "Interdyne Shuttle Control (Computer Board)"
