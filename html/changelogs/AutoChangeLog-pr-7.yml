@@ -1,0 +1,9 @@
+author: "Technetyzed"
+delete-after: True
+changes:
+  - config: "removes Kilo Station from voting and adds Kilo Station Prime instead"
+  - map: "fixes wiring with new Kilo NTR office"
+  - map: "fixes wiring with new Kilo Barber"
+  - map: "shifts public mining on new Kilo slightly so the shuttle no longer crushes the station"
+  - map: "4 escape pods placed around Snowglobe"
+  - map: "brings back an older version of Kilo with some modifications (NTR bedroom, larger cargobay, proper security cell timers)"

@@ -1,0 +1,6 @@
+author: "Technetyzed"
+delete-after: True
+changes:
+  - image: "Stars AI core"
+  - image: "Stars AI display"
+  - image: "Cube AI hologram+grey version"

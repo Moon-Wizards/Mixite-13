@@ -100,7 +100,7 @@
 	arachnid.set_eye_color("#4c4c1c", "#4c4c1c")
 	arachnid.dna.features[FEATURE_MUTANT_COLOR] = "#e9e9e9"
 	arachnid.dna.mutant_bodyparts[FEATURE_ARACHNID_CHELICERAE] = build_mutant_part("Basic")
-	arachnid.dna.mutant_bodyparts[FEATURE_ARACHNID_APPENDAGES] = build_mutant_part("Zigzag")
+	arachnid.dna.mutant_bodyparts[FEATURE_ARACHNID_APPENDAGES] = build_mutant_part("Zigzag", list("#e9e9e9", "#e9e9e9", "#e9e9e9"))
 	regenerate_organs(arachnid, src, visual_only = TRUE)
 	arachnid.update_body(is_creating = TRUE)
 
