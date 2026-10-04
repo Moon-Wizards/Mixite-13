@@ -122,7 +122,9 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 
 /obj/docking_port/mobile/supply/initiate_docking(obj/docking_port/stationary/new_dock, force=FALSE)
 	if(getDockedId() == "cargo_away") // Buy when we leave home.
+		/* // M13 EDIT REMOVAL START
 		buy()
+		*/ // M13 EDIT REMOVAL END
 		create_mail()
 		if(SSshuttle.renew_cargo_air)
 			refill_air()
@@ -340,19 +342,21 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		return
 
 	//spawn crate
-	/* // M13 REMOVAL START
+	/* // M13 EDIT REMOVAL START
 	var/list/empty_turfs = list()
 	for(var/area/shuttle/shuttle_area as anything in shuttle_areas)
 		for(var/turf/open/floor/shuttle_floor in shuttle_area.get_turfs_from_all_zlevels())
 			if(shuttle_floor.is_blocked_turf())
 				continue
 			empty_turfs += shuttle_floor
-	*/ // M13 REMOVAL END
-	// M13 ADDITION START
-	var/list/empty_turfs = get_purchase_turfs()
-	// M13 ADDITION END
 
 	new /obj/structure/closet/crate/mail/economy(pick(empty_turfs))
+	*/ // M13 EDIT REMOVAL END
+	// M13 EDIT ADDITION START
+	var/list/empty_turfs = get_purchase_turfs()
+	var/crate = new /obj/structure/closet/crate/mail/economy(pick(empty_turfs))
+	do_sparks(1, FALSE, crate)
+	// M13 EDIT ADDITION END
 
 /// Takes a supply pack, returns the amount we currently have on order (or OVER_ORDER_LIMIT if we are over the hardcap on orders of this type)
 /obj/docking_port/mobile/supply/proc/get_order_count(datum/supply_pack/ordering)
