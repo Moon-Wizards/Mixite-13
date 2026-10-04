@@ -433,6 +433,7 @@ ROUNDSTART_RACES holosynth
 
 ## MIXITE/13 RACES DOWN THERE
 ROUNDSTART_RACES arachnid
+ROUNDSTART_RACES hydrakin
 
 ##-------------------------------------------------------------------------------------------
 

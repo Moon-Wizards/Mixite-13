@@ -77,3 +77,56 @@
 	name = "Arachnid Organ Design Disk"
 	desc = "Contains designs for arachnid organs for the limbgrower - Arachnid heart, liver, tongue, silk gland, appendages, chelicerae and eyes."
 	build_path = /obj/item/disk/design_disk/limbs/arachnid
+
+/datum/design/leftarm/New()
+	category += list(SPECIES_HYDRAKIN)
+	return ..()
+
+/datum/design/rightarm/New()
+	category += list(SPECIES_HYDRAKIN)
+	return ..()
+
+/datum/design/leftleg/New()
+	category += list(SPECIES_HYDRAKIN)
+	return ..()
+
+/datum/design/rightleg/New()
+	category += list(SPECIES_HYDRAKIN)
+	return ..()
+
+/datum/design/tongue/hydrakin
+	name = "Hydrakin Tongue"
+	build_path = /obj/item/organ/tongue/hydrakin
+	category = list(
+		SPECIES_HYDRAKIN,
+	)
+
+/datum/design/lungs/hydrakin
+	name = "Hydrakin Lungs"
+	build_path = /obj/item/organ/lungs/hydrakin
+	category = list(
+		SPECIES_HYDRAKIN,
+	)
+
+/datum/design/liver/hydrakin
+	name = "Hydrakin Liver"
+	build_path = /obj/item/organ/liver/hydrakin
+	category = list(
+		SPECIES_HYDRAKIN,
+	)
+
+/datum/design/eyes/hydrakin
+	name = "Hydrakin Eyes"
+	build_path = /obj/item/organ/eyes/hydrakin
+	category = list(
+		SPECIES_HYDRAKIN,
+	)
+
+/obj/item/disk/design_disk/limbs/hydrakin
+	name = "Hydrakin Organ Design Disk"
+	blueprints = list(/datum/design/liver/hydrakin, /datum/design/lungs/hydrakin, /datum/design/tongue/hydrakin, /datum/design/eyes/hydrakin)
+
+/datum/design/limb_disk/hydrakin
+	name = "Hydrakin Organ Design Disk"
+	desc = "Contains designs for hydrakin organs for the limbgrower - Hydrakin liver, lungs, tongue, and eyes."
+	build_path = /obj/item/disk/design_disk/limbs/arachnid
