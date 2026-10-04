@@ -20,7 +20,7 @@ trait_name = "CentCom"
 [templates.interdyne_lavaland_vaulttable]
 map_files = ["vault_table.dmm"]
 directory = "_maps/mixite/automapper/templates/interdyne/"
-required_map = "lavaland_underground_interdyne_base1.dmm"
+required_map = "lavaland_surface_interdyne_base1.dmm"
 coordinates = [33, 28, 1]
 trait_name = "Mining"
 

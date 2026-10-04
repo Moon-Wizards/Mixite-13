@@ -97,6 +97,7 @@
 	data["can_send"] = can_send
 	data["can_approve_requests"] = can_approve_requests
 	data["requestonly"] = requestonly
+	data["can_confirm"] = TRUE // M13 EDIT ADDITION
 	var/message = "Remember to stamp and send back the supply manifests."
 	if(SSshuttle.centcom_message)
 		message = SSshuttle.centcom_message

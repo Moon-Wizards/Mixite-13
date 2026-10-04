@@ -33,7 +33,7 @@
 	var/update_interval = 1 SECONDS
 
 /obj/machinery/computer/cargo_seller/screwdriver_act(mob/living/user, obj/item/tool)
-	return TRUE
+	return ITEM_INTERACT_FAILURE
 
 /obj/machinery/computer/cargo_seller/ui_interact(mob/user, datum/tgui/ui)
 	refresh_preview(TRUE)
@@ -45,7 +45,8 @@
 
 /obj/machinery/computer/cargo_seller/post_machine_initialize()
 	. = ..()
-	region = get_cargo_marker_region(region_id)
+	if(region_id != "default") // i have no clue why it calls for the "default" region
+		region = get_cargo_marker_region(region_id)
 
 /obj/machinery/computer/cargo_seller/proc/get_sellable_atoms()
 	var/list/items = list()
@@ -79,12 +80,8 @@
 	if(is_type_in_typecache(item, GLOB.blacklisted_cargo_types))
 		return TRUE
 
-	// TODO: emagging allows to sell contraband?
-	if(HAS_TRAIT(item, TRAIT_CONTRABAND))
+	if(HAS_TRAIT(item, TRAIT_BANNED_FROM_CARGO_SHUTTLE))
 		return TRUE
-
-	if(HAS_TRAIT(item, TRAIT_CONTRABAND_BLOCKER))
-		return FALSE
 
 	for(var/atom/movable/contained in item.contents)
 		var/atom/movable/found_contraband = find_contraband(contained)
@@ -180,6 +177,10 @@
 /obj/machinery/computer/cargo_seller/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if(.)
+		return
+
+	if(!allowed(ui.user))
+		balloon_alert(ui.user, "no access!")
 		return
 
 	switch(action)

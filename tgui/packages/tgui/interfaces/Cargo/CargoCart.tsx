@@ -14,7 +14,7 @@ import type { CargoData } from './types';
 
 export function CargoCart(props) {
   const { act, data } = useBackend<CargoData>();
-  const { can_send, can_purchase = can_send, cart = [] } = data; // M13 EDIT CHANGE - ORIGINAL: const { can_send, cart = [] } = data;
+  const { can_send, can_purchase = can_send, cart = [], can_confirm } = data; // M13 EDIT CHANGE - ORIGINAL: const { can_send, cart = [] } = data;
 
   /* // M13 EDIT REMOVAL START
   const sendable = !!away && !!docked;
@@ -34,28 +34,32 @@ export function CargoCart(props) {
               <Stack.Item grow>
                 {
                  /* // M13 EDIT REMOVAL START
-                {!sendable && (
+                 {!sendable && (
                   <Icon mr={0.5} size={1.5} color="blue" name="toolbox" spin />
-                )}
-                 */ // M13 EDIT REMOVAL END
+                  )}
+                  */ // M13 EDIT REMOVAL END
                 }
               </Stack.Item>
-              <Stack.Item>
-                <Button
-                  color="green"
-                  /* // M13 EDIT REMOVAL START
-                  disabled={!sendable}
-                  */ // M13 EDIT REMOVAL END
-                  onClick={() => act('purchase')} // M13 EDIT CHANGE - ORIGINAL: onClick={() => act('send')}
-                  px={2}
-                  py={1}
-                  /* // M13 EDIT REMOVAL START
-                  tooltip={sendable ? '' : `Shuttle is at ${location}`}
-                  */ // M13 EDIT REMOVAL END
-                >
-                  Confirm the order
-                </Button>
-              </Stack.Item>
+                {/*M13 EDIT START*/}
+                {can_confirm ? (
+                  <Stack.Item>
+                    <Button
+                      color="green"
+                      /* // M13 EDIT REMOVAL START
+                      disabled={!sendable}
+                      */ // M13 EDIT REMOVAL END
+                      onClick={() => act('purchase')} // M13 EDIT CHANGE - ORIGINAL: onClick={() => act('send')}
+                      px={2}
+                      py={1}
+                      /* // M13 EDIT REMOVAL START
+                      tooltip={sendable ? '' : `Shuttle is at ${location}`}
+                      */ // M13 EDIT REMOVAL END
+                    >
+                      Confirm the order
+                    </Button>
+                  </Stack.Item>
+                ) : null}
+                {/*M13 EDIT END*/}
             </Stack>
           </Section>
         </Stack.Item>

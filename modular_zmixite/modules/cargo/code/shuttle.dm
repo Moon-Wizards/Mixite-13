@@ -70,3 +70,24 @@
 			empty_turfs += pad_turf
 
 	return length(empty_turfs) ? empty_turfs : pad_turfs
+
+/obj/docking_port/mobile/supply/buy()
+	. = ..()
+
+	// random chance chance to get somethingz from the entire cargo catalog, the ATS employees messed up!
+	if(anyprob(1) || (HAS_TRAIT(SSstation, STATION_TRAIT_ATS) ? anyprob(1) : FALSE))
+		var/datum/supply_pack/pack = SSshuttle.supply_packs[pick(SSshuttle.supply_packs)]
+		var/a_msg = "Randomly dropped in [pack.name]([pack.group]) in a cargo shipment."
+
+		investigate_log(a_msg, INVESTIGATE_CARGO)
+		log_admin(a_msg)
+
+		var/storage = pack.crate_type
+		if(pack.storage_override)
+			storage = pack.storage_override
+		if(pack.order_flags & ORDER_GOODY)
+			storage = /obj/item/storage/briefcase/empty
+
+		var/obj/structure/closet/crate = pack.generate(pick(get_purchase_turfs()), crate_override = storage)
+		crate.name += " - #[rand(1, 9000)]"
+		do_sparks(1, FALSE, crate)

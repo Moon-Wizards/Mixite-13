@@ -1,3 +1,15 @@
+#define SAFETY_WARNING "For safety and ethical reasons, the automated supply shuttle cannot transport non supply crew, \
+	human remains, classified nuclear weaponry, mail, undelivered departmental order crates, syndicate bombs, \
+	homing beacons, unstable eigenstates, or machinery housing any form of artificial intelligence."
+
+/datum/computer_file/program/budgetorders
+	safety_warning = SAFETY_WARNING
+
+/obj/machinery/computer/cargo
+	safety_warning = SAFETY_WARNING
+
+#undef SAFETY_WARNING
+
 /obj/machinery/computer/cargo/proc/create_requisition()
 	if(!length(SSshuttle.shopping_list))
 		return FALSE
@@ -50,3 +62,35 @@
 		return TRUE
 
 	return ..()
+
+/datum/computer_file/program/budgetorders/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+	if(action == "send" && SSshuttle.supply.getDockedId() != docking_home)
+		if(!SSshuttle.supply.canMove())
+			computer.say(safety_warning)
+			return
+		if(SSshuttle.supply_blocked)
+			computer.say(blockade_warning)
+			return
+
+		ui.user.investigate_log("called the supply shuttle.", INVESTIGATE_CARGO)
+		computer.say("The supply shuttle has been called and will arrive in [SSshuttle.supply.timeLeft(600)] minute\s.")
+		SSshuttle.moveShuttle(cargo_shuttle, docking_home, TRUE)
+		return TRUE
+
+	return ..()
+
+// The PDAs need to somehow access NTNet to use the app.
+/obj/item/modular_computer/pda/crew/heads/captain
+	long_ranged = TRUE
+
+/obj/item/modular_computer/pda/crew/heads/quartermaster
+	long_ranged = TRUE
+
+/obj/item/modular_computer/pda/crew/cargo
+	long_ranged = TRUE
+
+/obj/item/modular_computer/pda/crew/shaftminer
+	long_ranged = TRUE
+
+/obj/item/modular_computer/pda/crew/bitrunner
+	long_ranged = TRUE
