@@ -13,7 +13,7 @@
 /obj/machinery/atmos_shield_gen/active/preset/attack_hand_secondary()
 	return ITEM_INTERACT_FAILURE
 
-obj/machinery/atmos_shield_gen/active/preset/screwdriver_act()
+/obj/machinery/atmos_shield_gen/active/preset/screwdriver_act()
 	return ITEM_INTERACT_FAILURE
 
 /obj/machinery/atmos_shield_gen/active/preset/crowbar_act()
