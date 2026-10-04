@@ -1,0 +1,5 @@
+author: "Technetyzed"
+delete-after: True
+changes:
+  - rscadd: "NT Default lawset"
+  - config: "made NT Default the default lawset"
