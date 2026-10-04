@@ -78,7 +78,6 @@
 			for(var/turf/affected_turf as anything in map.get_affected_turfs(load_turf, FALSE))
 				if(SSautomapper.has_turf_noop(map, affected_turf.x - load_turf.x, affected_turf.y - load_turf.y))
 					continue
-				affected_turf.lighting_clear_overlay()
 				for(var/atom/affected_atom as anything in affected_turf.get_all_contents())
 					if(istype(affected_atom, /obj))
 						objects_to_delete += affected_atom
@@ -88,6 +87,9 @@
 			var/load_result = map.load(load_turf, FALSE)
 			SSatoms.initialized = previous_initialized_value
 			if(load_result)
+				if(!SSlighting.initialized)
+					for(var/turf/affected_turf as anything in map.get_affected_turfs(load_turf, FALSE))
+						affected_turf.lighting_clear_overlay()
 				for(var/obj/object_to_delete as anything in objects_to_delete)
 					if(QDELETED(object_to_delete))
 						continue

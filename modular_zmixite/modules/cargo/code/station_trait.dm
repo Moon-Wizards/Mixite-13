@@ -5,4 +5,3 @@
 	show_in_report = TRUE
 	report_message = "Reports indicate that the ATS is overwhelmed, occasional extra shipments may be dispatched alongside regular orders."
 	trait_to_give = STATION_TRAIT_ATS
-	force = TRUE
