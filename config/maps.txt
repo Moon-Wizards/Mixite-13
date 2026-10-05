@@ -51,9 +51,15 @@ map nebulastation
 endmap
 
 map kilostation
+	maxplayers 40
+endmap
+
+# MS13 EDIT START
+map kilostationprime
 	votable
 	maxplayers 40
 endmap
+# MS13 EDIT END
 
 # Debug-only maps.
 
@@ -97,6 +103,11 @@ endmap
 
 map oceanpubby
     votable
+endmap
+
+map northstar
+    votable
+    minplayers 50
 endmap
 
 map runtimestation_minimal

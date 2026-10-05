@@ -8,6 +8,10 @@ SUBSYSTEM_DEF(punchcard_reader)
 	var/list/clock_info
 
 /datum/controller/subsystem/punchcard_reader/Initialize()
+	#ifdef UNIT_TESTS // We're testing, no point doing anything punchcard related.
+	return SS_INIT_SUCCESS
+	#endif
+
 	var/json_file = file("data/punchcard.json")
 
 	if(!fexists(json_file))
@@ -34,10 +38,12 @@ SUBSYSTEM_DEF(punchcard_reader)
 	if(!("last_clockout" in clock_info))
 		clock_info["last_clockout"] = null
 
+	#ifndef AUTOSTART_GAME // we don't care about the punchcard with autostart
 	if(!is_punched())
 		set_off_hours_state()
 	else
 		SSticker.start_immediately = FALSE
+	#endif
 
 	return SS_INIT_SUCCESS
 

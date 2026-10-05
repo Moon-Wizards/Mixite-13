@@ -1,0 +1,22 @@
+2026-10-05:
+  Lokachop:
+  - rscadd: A bunch of arachnid appendages.
+  Technetyzed:
+  - rscadd: HYDRAKIN!!!
+  - rscadd: Hydrakin's associated organs, ears, and tails, and language
+  - rscadd: Hydrakin unique cybernetics to fit their bodyshape
+  - sound: Silly Hydrakin noises
+  - config: Hydrakin is roundstart
+  - image: Stars AI core
+  - image: Stars AI display
+  - image: Cube AI hologram+grey version
+  - config: removes Kilo Station from voting and adds Kilo Station Prime instead
+  - map: fixes wiring with new Kilo NTR office
+  - map: fixes wiring with new Kilo Barber
+  - map: shifts public mining on new Kilo slightly so the shuttle no longer crushes
+      the station
+  - map: 4 escape pods placed around Snowglobe
+  - map: brings back an older version of Kilo with some modifications (NTR bedroom,
+      larger cargobay, proper security cell timers)
+  - rscadd: NT Default lawset
+  - config: made NT Default the default lawset

@@ -15,12 +15,15 @@
 	#include "map_files\CatwalkStation\CatwalkStation_2023.dmm"
 	#include "map_files\NebulaStation\NebulaStation.dmm"
 	#include "map_files\KiloStation\KiloStation.dmm"
+	#include "map_files\KiloStationPrime\KiloStationprime.dmm" // MS13 EDIT ADDITION
 	// NOVA EDIT ADDITION START - Compiling our modular maps too!
 	#include "map_files\VoidRaptor\VoidRaptor.dmm"
 	#include "map_files\NSVBlueshift\Blueshift.dmm"
 	#include "map_files\Ouroboros\Ouroboros.dmm"
 	#include "map_files\SerenityStation\SerenityStation.dmm"
 	#include "map_files\Snowglobe\snowglobe.dmm"
+	#include "map_files\oceanpubby\oceanpubby.dmm"
+	#include "map_files\NorthStar\north_star.dmm"
 	// NOVA EDIT ADDITION END
 #endif
 #ifdef ALL_TEMPLATES
