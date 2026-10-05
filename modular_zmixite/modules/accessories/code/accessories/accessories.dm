@@ -120,4 +120,10 @@
 	name = "Color Test"
 	icon_state = "color_test"
 
+/datum/sprite_accessory/tails/large_plug
+	icon = 'modular_zmixite/modules/accessories/icons/accessories/extra_tails.dmi'
+	name = "Large Plug"
+	icon_state = "largeplug"
+	color_src = USE_MATRIXED_COLORS
+
 #undef CUSTOM_SCREEN_ICON
