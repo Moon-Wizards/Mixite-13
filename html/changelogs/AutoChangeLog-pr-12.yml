@@ -1,8 +1,0 @@
-author: "Technetyzed"
-delete-after: True
-changes:
-  - rscadd: "HYDRAKIN!!!"
-  - rscadd: "Hydrakin's associated organs, ears, and tails, and language"
-  - rscadd: "Hydrakin unique cybernetics to fit their bodyshape"
-  - sound: "Silly Hydrakin noises"
-  - config: "Hydrakin is roundstart"
