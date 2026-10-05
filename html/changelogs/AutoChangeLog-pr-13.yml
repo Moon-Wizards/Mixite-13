@@ -1,0 +1,6 @@
+author: "Lokachop"
+delete-after: True
+changes:
+  - rscadd: "Added a bunch of new IPC hulls."
+  - rscadd: "Added the large plug tail (from monke)"
+  - rscadd: "Manufacturing assemblers can make wooden crates now."
