@@ -714,7 +714,9 @@
 /area/shared/solars)
 "rh" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line,
-/obj/machinery/telecomms/relay/preset/telecomms,
+/obj/machinery/telecomms/relay/preset/telecomms{
+	freq_listening = list(1459, 1347, 1209)
+	},
 /turf/open/floor/iron,
 /area/shared/ats)
 "rp" = (
