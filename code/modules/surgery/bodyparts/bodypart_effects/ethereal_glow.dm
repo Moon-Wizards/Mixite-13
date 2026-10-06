@@ -56,7 +56,7 @@
 
 	var/mob/living/carbon/human/ethereal = owner
 	// Requires a crystal core or emissive blood to actually glow
-	var/can_glow = istype(owner.get_organ_slot(ORGAN_SLOT_HEART), /obj/item/organ/heart/ethereal) || owner.get_bloodtype()?.get_emissive_alpha()
+	var/can_glow = TRUE // M13 EDIT CHANGE - NO ETHEREAL CHECK - make custom ethereal bodyparts able to glow - ORIGINAL: var/can_glow = istype(owner.get_organ_slot(ORGAN_SLOT_HEART), /obj/item/organ/heart/ethereal) || owner.get_bloodtype()?.get_emissive_alpha()
 	if(ethereal.stat == DEAD || disrupted || !can_glow)
 		ethereal_light.set_light_on(FALSE)
 		var/has_head = FALSE
