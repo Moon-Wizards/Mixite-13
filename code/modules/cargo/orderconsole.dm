@@ -97,6 +97,7 @@
 	data["can_send"] = can_send
 	data["can_approve_requests"] = can_approve_requests
 	data["requestonly"] = requestonly
+	data["can_confirm"] = TRUE // M13 EDIT ADDITION
 	var/message = "Remember to stamp and send back the supply manifests."
 	if(SSshuttle.centcom_message)
 		message = SSshuttle.centcom_message
@@ -415,6 +416,7 @@
 				say("The supply shuttle is departing.")
 				ui.user.investigate_log("sent the supply shuttle away.", INVESTIGATE_CARGO)
 			else
+				/* // M13 REMOVAL START
 				//create the paper from the SSshuttle.shopping_list
 				if(length(SSshuttle.shopping_list))
 					var/obj/item/paper/requisition/requisition_paper = new(get_turf(src))
@@ -439,7 +441,7 @@
 					requisition_paper.add_raw_text(requisition_text, advanced_html = TRUE)
 					requisition_paper.color = "#9ef5ff"
 					requisition_paper.update_appearance()
-
+				*/ // M13 REMOVAL END
 				ui.user.investigate_log("called the supply shuttle.", INVESTIGATE_CARGO)
 				say("The supply shuttle has been called and will arrive in [SSshuttle.supply.timeLeft(600)] minute\s.")
 				SSshuttle.moveShuttle(cargo_shuttle, docking_home, TRUE)

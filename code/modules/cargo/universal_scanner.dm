@@ -228,8 +228,15 @@
 			var/obj/item/bounty_cube/cube = target
 			var/datum/bank_account/scanner_account = scan_human.get_bank_account()
 
+			/* // M13 EDIT REMOVAL START
 			if(!istype(get_area(cube), /area/shuttle/supply))
 				to_chat(user, span_warning("Shuttle placement not detected. Handling tip not registered."))
+			*/ // M13 EDIT REMOVAL END
+			// M13 EDIT ADDITION START
+			var/area/area = get_area(cube)
+			if(!istype(area, /area/shuttle/supply) && !istype(area, /area/shared/ats))
+				to_chat(user, span_warning("Shuttle or ATS placement not detected. Handling tip not registered."))
+			// M13 EDIT ADDITION END
 
 			else if(cube.bounty_handler_account)
 				to_chat(user, span_warning("Bank account for handling tip already registered!"))
