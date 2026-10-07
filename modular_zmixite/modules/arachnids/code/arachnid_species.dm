@@ -23,7 +23,7 @@
 
 	COOLDOWN_DECLARE(pesticide_toxin_damage_cooldown)
 
-	exotic_bloodtype = /datum/blood_type/arachnid
+	exotic_bloodtype = /datum/blood_type/haemocyanin
 	inherent_factions = list(FACTION_SPIDER)
 	bodypart_overrides = list(
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/arachnid,
@@ -84,15 +84,15 @@
 		damage_mods += 2 // Yes, a 2x damage modifier
 
 /datum/species/arachnid/get_species_description()
-	return "Arachnids are a species of humanoid spiders from a very far away place. \
+	return "Arachnids are a species of humanoid spiders, created via genetic infusion. \
 	They are known for their ability to weave silk, which has saved lives in emergencies."
 
 /datum/species/arachnid/get_species_lore()
 	return list(
-		"The true origin of Arachnids is still debated to this day. \
-		Some say they were born in a lab out of sheer experimentation. \
-		Others say they've naturally evolved over countless years. \
-		What is actually known, is the fact that they've had to emigrate from a very, very far away place to make it here.",
+		"Arachnids came to exist from a \"cruel\" prank by a geneticist to one of their co-workers. \
+		They infused a human with spider genes in order to scare their co-worker (which had arachnophobia) \
+		Over time, Arachnids *very* slowly became part of the workforce due to their surprisingly helpful abilities. \
+		As of the current year, they're somewhat well-adjusted and integrated within the workforce.",
 	)
 
 
@@ -114,12 +114,6 @@
 			SPECIES_PERK_NAME = "Sericulture",
 			SPECIES_PERK_DESC = "Arachnids have a silk gland organ that connects to their wrists, \
 			allowing them to convert nutrition into silk related items and furniture.",
-		),
-		list(
-			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
-			SPECIES_PERK_ICON = "bolt",
-			SPECIES_PERK_NAME = "Agile",
-			SPECIES_PERK_DESC = "Arachnids run slightly faster than other species.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
