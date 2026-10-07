@@ -8,6 +8,10 @@ SUBSYSTEM_DEF(punchcard_reader)
 	var/list/clock_info
 
 /datum/controller/subsystem/punchcard_reader/Initialize()
+	#ifdef UNIT_TESTS // We're testing, no point doing anything punchcard related.
+	return SS_INIT_SUCCESS
+	#endif
+
 	var/json_file = file("data/punchcard.json")
 
 	if(!fexists(json_file))
