@@ -21,7 +21,7 @@
 | Contribution Guide               | [./.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md)                                                                                   |
 | Getting Started With Development | [https://hackmd.io/@tgstation/HJ8OdjNBc#tgstation-Development-Guide](https://hackmd.io/@tgstation/HJ8OdjNBc#tgstation-Development-Guide) |
 | Maintainer-Approved Design Docs  | [https://hackmd.io/@tgstation](https://hackmd.io/@tgstation)                                                                             |
-| Common Core Lore (Coming soon!)  | [https://codeberg.org/MoonWizards/CommonCore](https://codeberg.org/MoonWizards/CommonCore)                                               |
+| Server Lore                      | [https://wiki.luastation.org/en/mixite13/lore](https://wiki.luastation.org/en/mixite13/lore)                                               |
 
 This is Mixite/13's downstream a fork of Nova Sector which is a fork of /tg/station created in byond.
 

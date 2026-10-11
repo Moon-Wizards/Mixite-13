@@ -1,5 +1,7 @@
 name: Bug Report
 description: Create a report to help reproduce and fix the issue.
+labels:
+  - "bug"
 body:
   - type: markdown
     attributes:
