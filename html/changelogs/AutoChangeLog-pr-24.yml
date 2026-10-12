@@ -1,6 +1,0 @@
-author: "Lokachop"
-delete-after: True
-changes:
-  - bugfix: "Ethereal limbs can now glow without needing an ethereal heart"
-  - bugfix: "Arachnids now use Haemocyanin"
-  - rscdel: "Arachnid blood is gone"
