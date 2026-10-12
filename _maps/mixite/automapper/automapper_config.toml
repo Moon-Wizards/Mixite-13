@@ -30,3 +30,10 @@ directory = "_maps/mixite/automapper/templates/interdyne/"
 required_map = "icemoon_underground_interdyne_base1.dmm"
 coordinates = [26, 30, 1]
 trait_name = "Station"
+
+[templates.interdyne_icemoon_shuttle]
+map_files = ["iceshuttle.dmm"]
+directory = "_maps/mixite/automapper/templates/interdyne/"
+required_map = "icemoon_underground_interdyne_base1.dmm"
+coordinates = [30, 41, 1]
+trait_name = "Station"

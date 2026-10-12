@@ -61,6 +61,7 @@
 	max_range = 5;
 	dir = 1
 	},
+/obj/structure/sign/warning/vacuum/external/directional/south,
 /turf/open/floor/iron/dark,
 /area/shared/ats)
 "bR" = (
@@ -176,8 +177,8 @@
 /obj/machinery/light/small/directional/south,
 /obj/structure/window/reinforced/survival_pod/spawner/directional/east,
 /obj/item/toy/plush/nukeplushie{
-	pixel_y = -1;
-	pixel_x = 0;
+	pixel_y = -3;
+	pixel_x = 4;
 	anchored = 1
 	},
 /turf/open/floor/engine/o2,
@@ -725,13 +726,6 @@
 	},
 /turf/open/floor/engine/n2,
 /area/shared/ats)
-"rr" = (
-/obj/structure/marker_beacon/teal{
-	alpha = 0;
-	desc = "A Prism-brand path illumination device. It is anchored in place and glowing steadily. Can you pretend that it simply doesn't exist? Thanks."
-	},
-/turf/open/space/basic,
-/area/space)
 "sd" = (
 /obj/effect/turf_decal/stripes{
 	dir = 4
@@ -8226,7 +8220,7 @@ Pf
 Pf
 jt
 sI
-sI
+jt
 Dr
 gy
 jt
@@ -8235,7 +8229,7 @@ Qz
 sI
 sI
 jt
-Pf
+jP
 Pf
 wu
 dM
@@ -8350,7 +8344,7 @@ sz
 sz
 sz
 Pf
-rr
+AE
 jP
 jt
 sI
@@ -10691,7 +10685,7 @@ sz
 sz
 Pf
 AE
-Pf
+Ew
 jt
 sI
 jt
@@ -10835,7 +10829,7 @@ AI
 oN
 jt
 jt
-Pf
+Ew
 Pf
 Pf
 AE
@@ -11085,16 +11079,16 @@ sz
 sz
 sz
 sz
-Ew
 Pf
+Ew
 jt
 gy
 jt
 jt
 DJ
 oN
+jt
 Ew
-AE
 AE
 AE
 AE

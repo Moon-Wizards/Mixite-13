@@ -17,7 +17,8 @@
 	flags_1 = NONE
 	default_gravity = ZERO_GRAVITY
 	requires_power = FALSE
+	ambient_buzz = null
 	outdoors = TRUE
 
-	ambience_index = AMBIENCE_SPOOKY
+	ambience_index = AMBIENCE_SPACE
 	sound_environment = SOUND_AREA_SPACE

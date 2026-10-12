@@ -6456,13 +6456,6 @@
 /obj/machinery/duct,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/cargo)
-"vH" = (
-/obj/effect/supplypod_rubble,
-/obj/effect/turf_decal/weather/snow,
-/turf/open/floor/plating/reinforced{
-	initial_gas_mix = "ICEMOON_ATMOS"
-	},
-/area/icemoon/underground/explored)
 "vU" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6566,15 +6559,6 @@
 	},
 /turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal/shielded,
 /area/ruin/interdyne_planetary_base)
-"Al" = (
-/obj/structure/shipping_container/interdyne{
-	pixel_x = 2
-	},
-/obj/effect/turf_decal/weather/snow,
-/turf/open/floor/plating/reinforced{
-	initial_gas_mix = "ICEMOON_ATMOS"
-	},
-/area/icemoon/underground/explored)
 "AE" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6688,15 +6672,6 @@
 	},
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/science)
-"CW" = (
-/obj/structure/shipping_container/kosmologistika{
-	pixel_x = -6;
-	pixel_y = 7
-	},
-/turf/open/floor/plating/reinforced{
-	initial_gas_mix = "ICEMOON_ATMOS"
-	},
-/area/icemoon/underground/explored)
 "Dq" = (
 /obj/effect/turf_decal/trimline/dark_red/filled/corner{
 	dir = 8
@@ -6821,12 +6796,6 @@
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/eng/disp)
-"GW" = (
-/obj/item/toy/figure/syndie,
-/turf/open/floor/plating/reinforced{
-	initial_gas_mix = "ICEMOON_ATMOS"
-	},
-/area/icemoon/underground/explored)
 "Hm" = (
 /obj/machinery/hydroponics/constructable{
 	dir = 8
@@ -6902,14 +6871,6 @@
 	},
 /turf/open/floor/iron/white/textured_large,
 /area/ruin/interdyne_planetary_base/med)
-"Iu" = (
-/obj/structure/shipping_container/kahraman{
-	pixel_y = -14
-	},
-/turf/open/floor/plating/reinforced{
-	initial_gas_mix = "ICEMOON_ATMOS"
-	},
-/area/icemoon/underground/explored)
 "Iv" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -7133,12 +7094,6 @@
 /obj/machinery/duct,
 /turf/open/floor/iron/diagonal,
 /area/ruin/interdyne_planetary_base/cargo)
-"PJ" = (
-/obj/effect/supplypod_rubble,
-/turf/open/floor/plating/reinforced{
-	initial_gas_mix = "ICEMOON_ATMOS"
-	},
-/area/icemoon/underground/explored)
 "QK" = (
 /obj/structure/railing{
 	dir = 10
@@ -7332,14 +7287,6 @@
 /obj/item/circuitboard/machine/powerator/interdyne,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
-"WQ" = (
-/obj/structure/shipping_container/donk_co{
-	pixel_x = 6
-	},
-/turf/open/floor/plating/reinforced{
-	initial_gas_mix = "ICEMOON_ATMOS"
-	},
-/area/icemoon/underground/explored)
 "WT" = (
 /obj/structure/safe{
 	dir = 4
@@ -9592,11 +9539,11 @@ BT
 LM
 LM
 LM
-Al
+LM
 rF
 rF
 rF
-WQ
+rF
 LM
 Iv
 ab
@@ -9649,13 +9596,13 @@ ab
 as
 BT
 LM
-CW
 rF
 rF
 rF
-PJ
 rF
-GW
+rF
+rF
+rF
 rF
 Iv
 as
@@ -9709,9 +9656,9 @@ as
 BT
 LM
 LM
-GW
 rF
-Iu
+rF
+rF
 rF
 rF
 rF
@@ -9826,12 +9773,12 @@ ab
 ab
 xc
 LM
-PJ
+rF
 rF
 rF
 rF
 LM
-vH
+LM
 LM
 LM
 BG
