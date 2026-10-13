@@ -95,7 +95,6 @@ for code_file in scannable_files:
             dm_path = "~nova\\" + dm_path
         # NOVA EDIT END
         # M13 EDIT ADDITION START - Ditto
-        print(code_file)
         if("~zmixite/" in code_file):
             dm_path = "~zmixite\\" + dm_path
         # M13 EDIT ADDITION END
