@@ -94,6 +94,11 @@ for code_file in scannable_files:
         if("~nova/" in code_file):
             dm_path = "~nova\\" + dm_path
         # NOVA EDIT END
+        # M13 EDIT ADDITION START - Ditto // altho they did it wrong so lol
+        print(code_file)
+        if("~zmixite\\" in code_file):
+            dm_path = "~zmixite\\" + dm_path
+        # M13 EDIT ADDITION END
 
     included = f"#include \"{dm_path}\"" in lines
 
