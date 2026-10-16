@@ -161,7 +161,6 @@
 /area/shared/ats)
 "dj" = (
 /obj/structure/lattice,
-/turf/closed/indestructible/reinforced,
 /area/shared/ats)
 "dt" = (
 /obj/effect/turf_decal/caution/stand_clear{
@@ -395,7 +394,6 @@
 /area/shared/ats)
 "iK" = (
 /obj/effect/spawner/structure/window/reinforced/indestructible,
-/turf/closed/indestructible/reinforced,
 /area/shared/ats)
 "iR" = (
 /obj/effect/turf_decal/stripes{
@@ -472,7 +470,6 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "ka" = (
-/obj/structure/lattice,
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space/nearstation)
@@ -673,7 +670,6 @@
 /area/shared/ats)
 "pK" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/visible/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/visible/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible/layer2,
 /turf/open/floor/iron,
 /area/shared/ats)
@@ -795,7 +791,6 @@
 /turf/open/space/basic,
 /area/space)
 "tH" = (
-/obj/structure/lattice,
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden,
 /turf/open/space/basic,
@@ -1693,7 +1688,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/green/hidden,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/green/hidden,
 /turf/open/floor/iron/dark,
 /area/shared/ats)
 "Qw" = (
@@ -1841,7 +1835,6 @@
 /turf/open/floor/iron/dark,
 /area/shared/ats)
 "TO" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden,
 /turf/open/floor/iron/dark,
 /area/shared/ats)
@@ -2040,7 +2033,6 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/shared/ats)
 "YQ" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/green/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/green/hidden,
 /turf/open/floor/iron/dark,
 /area/shared/ats)
