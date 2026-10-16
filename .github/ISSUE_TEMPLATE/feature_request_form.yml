@@ -1,0 +1,86 @@
+name: Feature Request
+description: Suggest a feature or change to improve Mixite/13.
+labels:
+  - "feature request"
+type: "Feature"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # **Please read the following guidelines before submitting a request.**
+
+        Feature requests should explain what you want changed and why it would benefit the server. Proposals should consider roleplay quality and the effect on other players.
+
+        - Search existing issues before submitting a new request. Duplicate requests may be closed in favour of an existing issue.
+        - Keep proposals focused on the problem they aim to solve rather than prescribing an implementation.
+        - Consider potential abuse, unintended consequences, and how the proposed change would affect different roles and playstyles.
+        - Requests that primarily benefit one player or role at the expense of the wider game may be declined.
+        - A feature request is a proposal, not a guarantee that the feature will be implemented.
+        - If you have a concrete implementation ready, consider submitting a pull request instead.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Feature Summary"
+      description: |
+        Briefly describe the feature or change you are proposing. Focus on what you want added, changed, or removed.
+      placeholder: |
+        I would like to see...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Problem or Motivation"
+      description: |
+        What problem does this address, or what is currently missing? Explain why the existing mechanics or available alternatives are insufficient.
+      placeholder: |
+        Currently, ...
+        This can be an issue because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: roleplay-benefit
+    attributes:
+      label: "Roleplay Benefits"
+      description: |
+        How would this improve the roleplay experience on Mixite/13? Consider character interaction, meaningful decisions, immersion, and opportunities for roleplay.
+      placeholder: |
+        This would improve roleplay by...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: "Proposed Solution"
+      description: |
+        Describe how you imagine the feature working. Include relevant mechanics, interactions, or examples where useful. You do *not* need to provide technical implementation details.
+      placeholder: |
+        The feature could work by...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives Considered"
+      description: |
+        Have you considered other ways to address the problem? Explain why the proposed feature would be preferable, if applicable.
+      placeholder: |
+        Possible alternatives include...
+    validations:
+      required: false
+
+  - type: textarea
+    id: consequences
+    attributes:
+      label: "Potential Drawbacks"
+      description: |
+        Could this feature be abused, disrupt existing mechanics, create balance issues, or negatively affect other players or departments? Mention any concerns you can identify.
+      placeholder: |
+        Potential issues could include...
+    validations:
+      required: false

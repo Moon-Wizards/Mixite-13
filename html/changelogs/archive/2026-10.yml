@@ -20,3 +20,13 @@
       larger cargobay, proper security cell timers)
   - rscadd: NT Default lawset
   - config: made NT Default the default lawset
+2026-10-12:
+  Bester22:
+  - rscadd: Adds loadout item high-heeled jackboots. (From Monkestation)
+  Lokachop:
+  - bugfix: Ethereal limbs can now glow without needing an ethereal heart
+  - bugfix: Arachnids now use Haemocyanin
+  - rscdel: Arachnid blood is gone
+  - rscadd: Added a bunch of new IPC hulls.
+  - rscadd: Added the large plug tail (from monke)
+  - rscadd: Manufacturing assemblers can make wooden crates now.
