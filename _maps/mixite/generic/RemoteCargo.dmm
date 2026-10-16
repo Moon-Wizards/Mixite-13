@@ -161,6 +161,7 @@
 /area/shared/ats)
 "dj" = (
 /obj/structure/lattice,
+/turf/open/floor/plating,
 /area/shared/ats)
 "dt" = (
 /obj/effect/turf_decal/caution/stand_clear{
@@ -392,9 +393,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/shared/ats)
-"iK" = (
-/obj/effect/spawner/structure/window/reinforced/indestructible,
-/area/shared/ats)
 "iR" = (
 /obj/effect/turf_decal/stripes{
 	dir = 4
@@ -432,11 +430,6 @@
 	},
 /turf/open/space/basic,
 /area/space/nearstation)
-"jn" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden,
-/turf/open/space/basic,
-/area/space/nearstation)
 "jt" = (
 /turf/closed/indestructible/reinforced,
 /area/shared/ats)
@@ -467,10 +460,6 @@
 	alpha = 0;
 	desc = "A Prism-brand path illumination device. It is anchored in place and glowing steadily. Can you pretend that it simply doesn't exist? Thanks."
 	},
-/turf/open/space/basic,
-/area/space/nearstation)
-"ka" = (
-/obj/structure/lattice,
 /turf/open/space/basic,
 /area/space/nearstation)
 "km" = (
@@ -657,10 +646,6 @@
 /area/shared/ats)
 "pr" = (
 /obj/structure/sign/poster/random/directional/south,
-/turf/open/floor/iron/dark,
-/area/shared/ats)
-"pF" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/green/hidden,
 /turf/open/floor/iron/dark,
 /area/shared/ats)
 "pJ" = (
@@ -1832,10 +1817,6 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
-/area/shared/ats)
-"TO" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden,
 /turf/open/floor/iron/dark,
 /area/shared/ats)
 "Ub" = (
@@ -7575,13 +7556,13 @@ AE
 AE
 AE
 AE
-ka
 Pf
 Pf
 Pf
 Pf
 Pf
-ka
+Pf
+Pf
 AE
 AE
 AE
@@ -7835,7 +7816,7 @@ AE
 AE
 AE
 AE
-jn
+tH
 QV
 gU
 Fe
@@ -7965,7 +7946,7 @@ Pf
 Pf
 Pf
 Pf
-jn
+tH
 KG
 BO
 BO
@@ -8355,7 +8336,7 @@ sI
 jt
 wu
 Pf
-jn
+tH
 jt
 KG
 KG
@@ -8491,7 +8472,7 @@ Pf
 Pf
 Pf
 Pf
-ka
+Pf
 AE
 AE
 AE
@@ -8605,17 +8586,17 @@ UF
 xs
 UF
 YQ
-pF
-pF
-pF
+YQ
+YQ
+YQ
 xz
-pF
+YQ
 UE
 xZ
 WE
 wu
-ka
-jn
+Pf
+tH
 Pf
 AE
 AE
@@ -8734,8 +8715,8 @@ Re
 UF
 hP
 UF
-pF
-TO
+YQ
+xY
 xY
 xY
 gL
@@ -8851,7 +8832,7 @@ Pf
 sz
 AE
 AE
-ka
+Pf
 jt
 sI
 sI
@@ -10177,7 +10158,7 @@ bR
 jM
 jt
 sI
-iK
+sI
 jt
 Pf
 gi
@@ -10935,7 +10916,7 @@ AE
 AE
 AE
 AE
-ka
+Pf
 AE
 AE
 AE
