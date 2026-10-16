@@ -4,6 +4,7 @@ export type CargoData = {
   app_cost?: number;
   away: BooleanLike;
   can_approve_requests: BooleanLike;
+  can_purchase?: BooleanLike; // M13 EDIT ADDITION
   can_send: BooleanLike;
   cart: CartEntry[];
   department: string;

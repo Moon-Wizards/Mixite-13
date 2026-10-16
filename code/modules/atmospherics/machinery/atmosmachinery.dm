@@ -406,7 +406,14 @@
 	if(istype(reference, /obj/machinery/atmospherics/pipe))
 		var/obj/machinery/atmospherics/pipe/P = reference
 		P.destroy_network()
+	/* // M13 EDIT REMOVAL START
 	nodes[nodes.Find(reference)] = null
+	*/ // M13 EDIT REMOVAL END
+	if(!nodes)
+		return
+	var/node_index = nodes.Find(reference)
+	if(node_index)
+		nodes[node_index] = null
 	update_appearance()
 
 /obj/machinery/atmospherics/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
