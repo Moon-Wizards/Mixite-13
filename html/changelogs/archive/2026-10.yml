@@ -30,3 +30,7 @@
   - rscadd: Added a bunch of new IPC hulls.
   - rscadd: Added the large plug tail (from monke)
   - rscadd: Manufacturing assemblers can make wooden crates now.
+2026-10-19:
+  misleadingname:
+  - rscadd: Ported Iris Station sprite accessories.
+  - image: The "Snaggletooth" snout actually fits the markings now.
