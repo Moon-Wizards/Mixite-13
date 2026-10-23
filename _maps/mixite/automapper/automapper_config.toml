@@ -11,7 +11,7 @@
 
 # CARGO
 [templates.centcom_no_cargo]
-map_files = ["space.dmm"]
+map_files = ["centcom_cargo.dmm"]
 directory = "_maps/mixite/automapper/templates/generic/"
 required_map = "builtin"
 coordinates = [152, 108, 1]

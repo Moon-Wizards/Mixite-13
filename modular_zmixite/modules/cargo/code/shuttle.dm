@@ -1,3 +1,6 @@
+/obj/docking_port/mobile/supply
+	callTime = 15 SECONDS
+
 /obj/docking_port/mobile/supply/canMove()
 	. = ..()
 	if(!.)
@@ -70,9 +73,6 @@
 			empty_turfs += pad_turf
 
 	return length(empty_turfs) ? empty_turfs : pad_turfs
-
-/obj/docking_port/mobile/supply
-	callTime = 15 SECONDS
 
 /obj/docking_port/mobile/supply/buy()
 	. = ..()

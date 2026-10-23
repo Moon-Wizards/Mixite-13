@@ -14,6 +14,7 @@ export type CargoData = {
   grocery: number;
   loan_dispatched: BooleanLike;
   loan: BooleanLike;
+  loan_available: BooleanLike; // M13 EDIT ADDITION
   location: string;
   max_order: number;
   message: string;

@@ -40,6 +40,8 @@
 
 /obj/machinery/computer/cargo/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	if(action == "purchase")
+		if(!is_station_level(z))
+			return
 		if(!create_requisition())
 			return
 
@@ -48,7 +50,30 @@
 		say("Order processed. Navigate to the Automated Trade Station to retrieve it.")
 		return TRUE
 
+	if(action == "loan")
+		if(!SSshuttle.shuttle_loan || SSshuttle.supply_blocked || SSshuttle.supply.mode != SHUTTLE_IDLE)
+			return
+		if(SSshuttle.supply.getDockedId() != docking_home)
+			return
+		if(stationcargo != TRUE)
+			return
+		for(var/area/shuttle_area as anything in SSshuttle.supply.shuttle_areas)
+			for(var/list/zlevel_turfs as anything in shuttle_area.get_zlevel_turf_lists())
+				for(var/turf/shuttle_turf as anything in zlevel_turfs)
+					for(var/atom/movable/thing as anything in shuttle_turf.get_all_contents())
+						if(!thing.anchored)
+							say("The supply shuttle cannot be loaned while it contains unloaded cargo or personnel.")
+							return
+
+		SSshuttle.shuttle_loan.loan_shuttle()
+		say("The supply shuttle has been loaned to CentCom.")
+		ui.user.investigate_log("accepted a shuttle loan event.", INVESTIGATE_CARGO)
+		ui.user.log_message("accepted a shuttle loan event.", LOG_GAME)
+		return TRUE
+
 	if(action == "send" && SSshuttle.supply.getDockedId() != docking_home)
+		if(SSshuttle.shuttle_loan && SSshuttle.shuttle_loan.centcom_visit && !SSshuttle.shuttle_loan.dispatched)
+			return
 		if(!SSshuttle.supply.canMove())
 			say(safety_warning)
 			return
@@ -57,14 +82,37 @@
 			return
 
 		ui.user.investigate_log("called the supply shuttle.", INVESTIGATE_CARGO)
-		say("The supply shuttle has been called and will arrive in [SSshuttle.supply.timeLeft(600)] minute\s.")
+		say("The supply shuttle has been called and will arrive in [SSshuttle.supply.timeLeft(10)] second\s.")
 		SSshuttle.moveShuttle(cargo_shuttle, docking_home, TRUE)
 		return TRUE
 
 	return ..()
 
 /datum/computer_file/program/budgetorders/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+	if(action == "loan")
+		if(!SSshuttle.shuttle_loan || SSshuttle.supply_blocked || SSshuttle.supply.mode != SHUTTLE_IDLE)
+			return
+		if(SSshuttle.supply.getDockedId() != docking_home)
+			return
+		if(stationcargo != TRUE)
+			return
+		for(var/area/shuttle_area as anything in SSshuttle.supply.shuttle_areas)
+			for(var/list/zlevel_turfs as anything in shuttle_area.get_zlevel_turf_lists())
+				for(var/turf/shuttle_turf as anything in zlevel_turfs)
+					for(var/atom/movable/thing as anything in shuttle_turf.get_all_contents())
+						if(!thing.anchored)
+							computer.say("The supply shuttle cannot be loaned while it contains unloaded cargo or personnel.")
+							return
+
+		SSshuttle.shuttle_loan.loan_shuttle()
+		computer.say("The supply shuttle has been loaned to CentCom.")
+		ui.user.investigate_log("accepted a shuttle loan event.", INVESTIGATE_CARGO)
+		ui.user.log_message("accepted a shuttle loan event.", LOG_GAME)
+		return TRUE
+
 	if(action == "send" && SSshuttle.supply.getDockedId() != docking_home)
+		if(SSshuttle.shuttle_loan && SSshuttle.shuttle_loan.centcom_visit && !SSshuttle.shuttle_loan.dispatched)
+			return
 		if(!SSshuttle.supply.canMove())
 			computer.say(safety_warning)
 			return
@@ -73,24 +121,18 @@
 			return
 
 		ui.user.investigate_log("called the supply shuttle.", INVESTIGATE_CARGO)
-		computer.say("The supply shuttle has been called and will arrive in [SSshuttle.supply.timeLeft(600)] minute\s.")
+		computer.say("The supply shuttle has been called and will arrive in [SSshuttle.supply.timeLeft(10)] second\s.")
 		SSshuttle.moveShuttle(cargo_shuttle, docking_home, TRUE)
 		return TRUE
 
 	return ..()
 
-// The PDAs need to somehow access NTNet to use the app.
-/obj/item/modular_computer/pda/crew/heads/captain
-	long_ranged = TRUE
+/obj/machinery/computer/cargo/ui_data()
+	var/list/data = ..()
+	data["loan_available"] = SSshuttle.supply.getDockedId() == docking_home || SSshuttle.supply.getDockedId() == docking_away
+	return data
 
-/obj/item/modular_computer/pda/crew/heads/quartermaster
-	long_ranged = TRUE
-
-/obj/item/modular_computer/pda/crew/cargo
-	long_ranged = TRUE
-
-/obj/item/modular_computer/pda/crew/shaftminer
-	long_ranged = TRUE
-
-/obj/item/modular_computer/pda/crew/bitrunner
-	long_ranged = TRUE
+/datum/computer_file/program/budgetorders/ui_data(mob/user)
+	var/list/data = ..()
+	data["loan_available"] = SSshuttle.supply.getDockedId() == docking_home || SSshuttle.supply.getDockedId() == docking_away
+	return data

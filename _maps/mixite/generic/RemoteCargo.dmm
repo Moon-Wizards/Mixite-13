@@ -121,7 +121,8 @@
 /area/shared/ats)
 "cK" = (
 /obj/machinery/recycler{
-	dir = 4
+	dir = 4;
+	obj_flags = 3
 	},
 /obj/machinery/conveyor/auto{
 	dir = 8

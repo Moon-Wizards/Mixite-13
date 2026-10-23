@@ -182,7 +182,7 @@
 
 	return manifest_paper
 
-/datum/supply_order/proc/generate(atom/A)
+/datum/supply_order/proc/generate(atom/A, skip_manifest = FALSE) // M13 EDIT - ORIGINAL: /datum/supply_order/proc/generate(atom/A)
 	var/account_holder
 	if(paying_account)
 		account_holder = paying_account.account_holder
@@ -194,7 +194,11 @@
 			ADD_TRAIT(item_within, TRAIT_CONTRABAND, INNATE_TRAIT)
 	if(department_destination)
 		crate.AddElement(/datum/element/deliver_first, department_destination, pack.cost)
-	generateManifest(crate, account_holder, pack, pack.cost)
+	// generateManifest(crate, account_holder, pack, pack.cost) // M13 EDIT REMOVAL
+	// M13 EDIT ADDITION START
+	if(skip_manifest)
+		generateManifest(crate, account_holder, pack, pack.cost)
+	// M13 EDIT ADDITION END
 	return crate
 
 /datum/supply_order/proc/generateCombo(miscbox, misc_own, misc_contents, misc_cost)

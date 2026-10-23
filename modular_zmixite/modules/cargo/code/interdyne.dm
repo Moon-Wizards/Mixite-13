@@ -170,7 +170,7 @@
 			landing_turfs = get_purchase_turfs()
 		var/turf/landing_turf = pick(landing_turfs)
 		landing_turfs -= landing_turf
-		var/atom/crate = order.generate(landing_turf)
+		var/atom/crate = order.generate(landing_turf, TRUE)
 		do_sparks(1, FALSE, crate)
 		qdel(order)
 
