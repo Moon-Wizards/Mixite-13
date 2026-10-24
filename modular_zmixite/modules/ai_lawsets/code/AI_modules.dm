@@ -12,6 +12,7 @@
 /obj/item/ai_module/law/core/full/nanotrasen_safeguard
 	name = "'NT Default' Core AI Module"
 	law_id = "ntdefault"
+	custom_materials = AI_MODULE_MATERIALS_COMMON
 
 /datum/design/board/nanotrasen_safeguard
 	name = "NT Default Module"
