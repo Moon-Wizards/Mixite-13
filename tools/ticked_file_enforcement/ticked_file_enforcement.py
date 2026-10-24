@@ -61,6 +61,12 @@ with open(file_reference, 'r') as file:
         elif line == "// NOVA EDIT END":
             continue
         # NOVA EDIT END
+        # M13 EDIT ADDITION START
+        elif line == "// M13 EDIT ADDITION START":
+            continue
+        elif line == "// M13 EDIT ADDITION END":
+            continue
+        # M13 EDIT ADDITION END
 
         lines.append(line)
 
@@ -88,6 +94,10 @@ for code_file in scannable_files:
         if("~nova/" in code_file):
             dm_path = "~nova\\" + dm_path
         # NOVA EDIT END
+        # M13 EDIT ADDITION START - Ditto
+        if("~zmixite/" in code_file):
+            dm_path = "~zmixite\\" + dm_path
+        # M13 EDIT ADDITION END
 
     included = f"#include \"{dm_path}\"" in lines
 
