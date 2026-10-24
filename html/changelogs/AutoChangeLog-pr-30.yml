@@ -1,0 +1,4 @@
+author: "misleadingname"
+delete-after: True
+changes:
+  - qol: "Navigate works across z-levels and produces more sanier paths."
