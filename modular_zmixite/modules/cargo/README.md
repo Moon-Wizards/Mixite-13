@@ -18,6 +18,7 @@ Cargo but you drive shuttle, viva la Space Station 14.
 - `modular_zmixite/modules/cargo/code/orderconsole.dm`: `/obj/docking_port/mobile/supply/proc/get_purchase_turfs`, `/obj/machinery/computer/cargo/proc/create_requisition`, `/obj/machinery/computer/cargo/ui_act`
 - `modular_zmixite/modules/cargo/code/sellconsole.dm`: `/obj/item/circuitboard/computer/cargo_seller`, `/obj/machinery/computer/cargo_seller` and its UI/export/sale procs
 - `modular_zmixite/modules/cargo/code/markers.dm`: `/obj/effect/landmark/cargo_marker`, `/proc/get_cargo_marker_region`
+- `modular_zmixite/master_files/code/modules/modular_computers/role_tablet_presets.dm`
 
 ### Defines:
 

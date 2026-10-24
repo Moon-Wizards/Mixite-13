@@ -9923,6 +9923,7 @@
 #include "modular_zmixite\master_files\code\game\machinery\limbgrower.dm"
 #include "modular_zmixite\master_files\code\game\objects\structures\pride_flags.dm"
 #include "modular_zmixite\master_files\code\modules\modules_supply.dm"
+#include "modular_zmixite\master_files\code\modules\cargo\exports\crates.dm"
 #include "modular_zmixite\master_files\code\modules\mob\living\carbon\human\_species.dm"
 #include "modular_zmixite\master_files\code\modules\modular_computers\role_tablet_presets.dm"
 #include "modular_zmixite\master_files\code\modules\research\designs\limbgrower_designs.dm"
