@@ -9928,6 +9928,7 @@
 #include "modular_zmixite\master_files\code\modules\modular_computers\role_tablet_presets.dm"
 #include "modular_zmixite\master_files\code\modules\research\designs\limbgrower_designs.dm"
 #include "modular_zmixite\master_files\code\modules\research\techweb\all_nodes.dm"
+#include "modular_zmixite\master_files\code\modules\shuttle\mobile_port\supply.dm"
 #include "modular_zmixite\modules\accessories\code\accessories\accessories.dm"
 #include "modular_zmixite\modules\accessories\code\accessories\ipc_hulls.dm"
 #include "modular_zmixite\modules\accessories\code\accessories\jackboots.dm"

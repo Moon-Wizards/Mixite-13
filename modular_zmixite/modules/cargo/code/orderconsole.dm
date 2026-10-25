@@ -58,12 +58,11 @@
 		if(stationcargo != TRUE)
 			return
 		for(var/area/shuttle_area as anything in SSshuttle.supply.shuttle_areas)
-			for(var/list/zlevel_turfs as anything in shuttle_area.get_zlevel_turf_lists())
-				for(var/turf/shuttle_turf as anything in zlevel_turfs)
-					for(var/atom/movable/thing as anything in shuttle_turf.get_all_contents())
-						if(!thing.anchored)
-							say("The supply shuttle cannot be loaned while it contains unloaded cargo or personnel.")
-							return
+			for(var/turf/shuttle_turf as anything in shuttle_area.get_turfs_from_all_zlevels())
+				for(var/atom/movable/thing in shuttle_turf.contents)
+					if(!thing.anchored)
+						say("The supply shuttle cannot be loaned while it contains unloaded cargo or personnel.")
+						return
 
 		SSshuttle.shuttle_loan.loan_shuttle()
 		say("The supply shuttle has been loaned to CentCom.")
@@ -97,12 +96,11 @@
 		if(stationcargo != TRUE)
 			return
 		for(var/area/shuttle_area as anything in SSshuttle.supply.shuttle_areas)
-			for(var/list/zlevel_turfs as anything in shuttle_area.get_zlevel_turf_lists())
-				for(var/turf/shuttle_turf as anything in zlevel_turfs)
-					for(var/atom/movable/thing as anything in shuttle_turf.get_all_contents())
-						if(!thing.anchored)
-							computer.say("The supply shuttle cannot be loaned while it contains unloaded cargo or personnel.")
-							return
+			for(var/turf/shuttle_turf as anything in shuttle_area.get_turfs_from_all_zlevels())
+				for(var/atom/movable/thing in shuttle_turf.contents)
+					if(!thing.anchored)
+						computer.say("The supply shuttle cannot be loaned while it contains unloaded cargo or personnel.")
+						return
 
 		SSshuttle.shuttle_loan.loan_shuttle()
 		computer.say("The supply shuttle has been loaned to CentCom.")

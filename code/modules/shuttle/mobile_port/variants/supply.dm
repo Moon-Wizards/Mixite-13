@@ -1,3 +1,4 @@
+/* // M13 REMOVAL START - Look in: modular_zmixite\master_files\code\modules\shuttle\mobile_port\supply.dm
 GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		/mob/living,
 		/obj/docking_port,
@@ -35,6 +36,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		/obj/structure/guardian_beacon,
 		/obj/tear_in_reality,
 	)))
+*/ // M13 REMOVAL END
 
 /// How many goody orders we can fit in a lockbox before we upgrade to a crate
 #define GOODY_FREE_SHIPPING_MAX 15 // NOVA EDIT CHANGE - ORIGINAL: GOODY_FREE_SHIPPING_MAX 5

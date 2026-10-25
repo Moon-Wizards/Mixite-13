@@ -24,7 +24,7 @@
 
 /datum/round_event/shuttle_loan/tick()
 	if(centcom_visit && !dispatched)
-		end_when = activeFor + 60 SECONDS
+		end_when = activeFor + 90 SECONDS
 		if(SSshuttle.supply.mode != SHUTTLE_IDLE)
 			centcom_trip_started = TRUE
 			return
