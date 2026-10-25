@@ -4,7 +4,7 @@
 /datum/controller/subsystem/mapping/loadWorld()
 	. = ..()
 	var/list/FailedZsRat = list()
-	LoadGroup(FailedZsRat, "Automated Trading Station", "mixite/generic", "RemoteCargo.dmm", default_traits = ZTRAITS_SPACE)
+	LoadGroup(FailedZsRat, "Automated Trading Station", "mixite/generic", "RemoteCargo.dmm", default_traits = ZTRAITS_AWAY)
 	if(LAZYLEN(FailedZsRat)) //but seriously, unless the server's filesystem is messed up this will never happen
 		var/msg = "RED ALERT! The following map files failed to load: [FailedZsRat[1]]"
 		if(FailedZsRat.len > 1)

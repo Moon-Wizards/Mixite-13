@@ -266,7 +266,6 @@
 /obj/effect/turf_decal/stripes/end{
 	dir = 8
 	},
-/obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "ATSWest2"
@@ -538,7 +537,6 @@
 "mQ" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/door/window/left/directional/south,
-/obj/effect/mapping_helpers/airlock/access/all,
 /turf/open/floor/iron,
 /area/shared/ats)
 "mR" = (
@@ -619,7 +617,6 @@
 	dir = 8;
 	id = "ATSEast2"
 	},
-/obj/effect/mapping_helpers/airlock/cutaiwire,
 /turf/open/floor/iron/dark,
 /area/shared/ats)
 "oT" = (
@@ -1031,7 +1028,6 @@
 /obj/effect/turf_decal/stripes/end{
 	dir = 8
 	},
-/obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "ATSEast1"
@@ -1158,7 +1154,6 @@
 /area/shared/ats)
 "Dr" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "ATSWest1"
@@ -1175,7 +1170,6 @@
 /area/shared/ats)
 "DJ" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "ATSEast1"
@@ -1687,7 +1681,6 @@
 /area/shared/ats)
 "Qz" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "ATSWest2"
@@ -1932,7 +1925,6 @@
 	dir = 4;
 	id = "ATSWest1"
 	},
-/obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/poddoor{
 	id = "ATSWestDoor1";
 	name = "Supply Dock Loading Door"
