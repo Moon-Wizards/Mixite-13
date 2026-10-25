@@ -69,10 +69,16 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 		var/list/to_del = spawn_at.contents - cached_contents
 		if(length(to_del))
 			for(var/atom/to_kill in to_del)
-		// NOVA EDIT ADDITION START - Remove persistent effects created by previous test iterations.
+			// NOVA EDIT ADDITION START - Remove persistent effects created by previous test iterations.
 				// Some effects, such as liquid turfs, intentionally ignore ordinary qdel().
 				// Force them out of the test area before the next atom is created.
 				qdel(to_kill, force = TRUE)
+				// M13 EDIT ADDITION START
+				// Explicitly clear loop references; BYOND can retain the last value after the loop.
+				to_kill = null
+			// Explicitly clear the list as well, so it cannot retain its last deleted atom.
+		to_del = null
+		// M13 EDIT ADDITION END
 		// Explosions process their affected turfs asynchronously. Do not let a blast
 		// queued by one type affect an atom created by a later iteration.
 		SSexplosions.wipe_turf(spawn_at)
