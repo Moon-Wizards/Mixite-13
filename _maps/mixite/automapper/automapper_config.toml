@@ -35,5 +35,5 @@ trait_name = "Station"
 map_files = ["iceshuttle.dmm"]
 directory = "_maps/mixite/automapper/templates/interdyne/"
 required_map = "icemoon_underground_interdyne_base1.dmm"
-coordinates = [30, 41, 1]
+coordinates = [29, 40, 1]
 trait_name = "Station"
