@@ -34,3 +34,6 @@
   misleadingname:
   - rscadd: Ported Iris Station sprite accessories.
   - image: The "Snaggletooth" snout actually fits the markings now.
+2026-10-26:
+  misleadingname:
+  - qol: Navigate works across z-levels and produces more sanier paths.
