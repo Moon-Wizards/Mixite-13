@@ -194,9 +194,8 @@
 			ADD_TRAIT(item_within, TRAIT_CONTRABAND, INNATE_TRAIT)
 	if(department_destination)
 		crate.AddElement(/datum/element/deliver_first, department_destination, pack.cost)
-	// generateManifest(crate, account_holder, pack, pack.cost) // M13 EDIT REMOVAL
 	// M13 EDIT ADDITION START
-	if(skip_manifest)
+	if(!skip_manifest)
 		generateManifest(crate, account_holder, pack, pack.cost)
 	// M13 EDIT ADDITION END
 	return crate
