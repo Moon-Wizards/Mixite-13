@@ -4,6 +4,8 @@
 
 /obj/item/shockpaddles/interdyne
 	icon_state = "ippaddles0"
-	inhand_icon_state = "dynepaddles"
 	base_icon_state = "ippaddles"
+	lefthand_file = 'modular_nova/master_files/icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = 'modular_nova/master_files/icons/mob/inhands/equipment/medical_righthand.dmi'
+	inhand_icon_state = "dynepaddles"
 	icon = 'modular_zmixite/master_files/icons/obj/medical/defib.dmi'
