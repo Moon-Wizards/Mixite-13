@@ -9925,6 +9925,7 @@
 #include "modular_zmixite\master_files\code\game\machinery\limbgrower.dm"
 #include "modular_zmixite\master_files\code\game\turfs\turf.dm"
 #include "modular_zmixite\master_files\code\game\turfs\open\openspace.dm"
+#include "modular_zmixite\master_files\code\modules\company_imports\interdyne\interdyne_kits.dm"
 #include "modular_zmixite\master_files\code\modules\mob\living\navigation.dm"
 #include "modular_zmixite\master_files\code\modules\mob\living\carbon\human\_species.dm"
 #include "modular_zmixite\master_files\code\modules\research\designs\limbgrower_designs.dm"
