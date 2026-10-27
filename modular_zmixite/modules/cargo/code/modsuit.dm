@@ -12,6 +12,11 @@
 	complexity_max = DEFAULT_MAX_COMPLEXITY - 5
 	charge_drain = DEFAULT_CHARGE_DRAIN * 1.25
 	slowdown_deployed = 0.5
+	inbuilt_modules = list(
+		/obj/item/mod/module/hydraulic,
+		/obj/item/mod/module/clamp/loader,
+		/obj/item/mod/module/magnet,
+	)
 
 /datum/mod_theme/loader/New()
 	. = ..()
@@ -34,7 +39,7 @@
 
 /obj/item/mod/control/pre_equipped/loader
 	applied_modules = list(
-		/obj/item/mod/module/storage/large_capacity,
+		/obj/item/mod/module/storage,
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/paper_dispenser,
 		/obj/item/mod/module/stamp,
@@ -48,3 +53,7 @@
 /datum/supply_pack/service/MODsuit_cargo
 	name = "Cargo Loader MK2 MODsuit Crate"
 	desc = "Contains a single sealed, back-mounted cargo MODsuit with utility modules and powered loading equipment."
+
+/datum/outfit/job/cargo_tech/mod
+	back = /obj/item/mod/control/pre_equipped/loader
+	belt = null
