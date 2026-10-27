@@ -1,4 +1,5 @@
 GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
+		/mob/living,
 		/obj/docking_port,
 		/obj/effect/hierophant,
 		/obj/effect/mob_spawn,
