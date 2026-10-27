@@ -16,9 +16,10 @@
 		for(var/list/zlevel_turfs as anything in shuttle_area.get_zlevel_turf_lists())
 			for(var/turf/shuttle_turf as anything in zlevel_turfs)
 				for(var/atom/passenger in shuttle_turf.get_all_contents())
-					if(ismob(passenger))
-						var/mob/mob = passenger
-						if(ACCESS_CARGO in mob.get_access())
+					if(ismob(passenger) && mode == SHUTTLE_IDLE)
+						var/mob/living/living_passenger = passenger
+						var/obj/item/card/id/id_card = living_passenger?.get_idcard(TRUE)
+						if(ACCESS_CARGO in id_card?.GetAccess())
 							continue
 						else
 							return FALSE
