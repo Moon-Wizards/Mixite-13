@@ -19,7 +19,7 @@
 					if(ismob(passenger))
 						var/mob/living/living_passenger = passenger
 						var/obj/item/card/id/id_card = living_passenger?.get_idcard(TRUE)
-						if(ACCESS_CARGO in id_card?.GetAccess() || mode != SHUTTLE_IDLE)
+						if((ACCESS_CARGO in id_card?.GetAccess()) || mode != SHUTTLE_IDLE)
 							continue
 						else
 							return FALSE
