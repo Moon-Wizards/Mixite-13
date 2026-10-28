@@ -100,7 +100,8 @@
 	preview_items = list()
 	preview_value = 0
 	for(var/atom/movable/item as anything in get_sellable_atoms())
-		preview_items += list(get_preview_item(item))
+		if(!istype(item, /obj/item/delivery))
+			preview_items += list(get_preview_item(item))
 		preview_value += get_export_value(item)
 
 		for(var/atom/movable/contained in item.get_all_contents_skipping_traits(TRAIT_CONTRABAND_BLOCKER))
@@ -154,6 +155,8 @@
 
 	for(var/atom/movable/item as anything in items)
 		export_item_and_contents(item, delete_unsold = FALSE, external_report = report)
+		if(istype(item, /obj/item/delivery))
+			qdel(item)
 
 
 	for(var/datum/export/exported_datum in report.total_amount)
