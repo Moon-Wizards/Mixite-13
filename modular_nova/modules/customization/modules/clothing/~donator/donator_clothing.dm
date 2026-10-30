@@ -734,6 +734,7 @@
 	icon_state = "infcloak"
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/custom_w.dmi'
 
+/* // M13 REMOVAL START
 // Donation reward for inferno707
 /obj/item/clothing/neck/inferno_collar
 	name = "Kiara's collar"
@@ -765,6 +766,7 @@
 	icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
 	icon_state = "steele"
 	medaltype = "medal-silver"
+*/ // M13 REMOVAL END
 
 // Donation reward for inferno707
 /obj/item/toy/darksabre

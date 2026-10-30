@@ -443,7 +443,7 @@
 /obj/item/gun/ballistic/automatic/miecz/ak105/no_mag
 	//Made this one for completion, the thing is, the kit doesnt affect no_mag, so, the day we change the paradigm of the miecz to spawn with no_mag, likely we want this one. (alternatively we do somethiing better thhan to use subtypes.)
 	spawnwithmagazine = FALSE
-
+/* // M13 REMOVAL START
 //Tora's Body Pillow (DarkRilo)
 /obj/item/toy/pillow/torapillow
 	name = "\improper Shork.INC Body Pillow"
@@ -496,3 +496,4 @@
 	else
 		icon_state = "torapillbod"
 	user.visible_message(span_notice("[user] flips the [src]."))
+*/ // M13 REMOVAL END
