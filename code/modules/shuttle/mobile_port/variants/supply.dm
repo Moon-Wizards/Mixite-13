@@ -1,3 +1,4 @@
+/* // M13 REMOVAL START - Look in: modular_zmixite\master_files\code\modules\shuttle\mobile_port\supply.dm
 GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		/mob/living,
 		/obj/docking_port,
@@ -35,6 +36,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		/obj/structure/guardian_beacon,
 		/obj/tear_in_reality,
 	)))
+*/ // M13 REMOVAL END
 
 /// How many goody orders we can fit in a lockbox before we upgrade to a crate
 #define GOODY_FREE_SHIPPING_MAX 15 // NOVA EDIT CHANGE - ORIGINAL: GOODY_FREE_SHIPPING_MAX 5
@@ -142,7 +144,9 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 
 /obj/docking_port/mobile/supply/initiate_docking(obj/docking_port/stationary/new_dock, force=FALSE)
 	if(getDockedId() == "cargo_away") // Buy when we leave home.
+		/* // M13 EDIT REMOVAL START
 		buy()
+		*/ // M13 EDIT REMOVAL END
 		create_mail()
 		if(SSshuttle.renew_cargo_air)
 			refill_air()
@@ -162,12 +166,17 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 	var/list/misc_contents = list() //list of lists of items that each box will contain
 	var/list/misc_costs = list() //list of overall costs sustained by each buyer.
 
+	/* // M13 REMOVAL START
 	var/list/empty_turfs = list()
 	for(var/area/shuttle/shuttle_area as anything in shuttle_areas)
 		for(var/turf/open/floor/shuttle_turf in shuttle_area.get_turfs_from_all_zlevels())
 			if(turf_is_occupied(shuttle_turf)) // NOVA EDIT CHANGE - Enhanced checks that a turf is unavailable - ORIGINAL: if(shuttle_turf.is_blocked_turf())
 				continue
 			empty_turfs += shuttle_turf
+	*/ // M13 REMOVAL END
+	// M13 ADDITION START
+	var/list/empty_turfs = get_purchase_turfs()
+	// M13 ADDITION END
 
 	// NOVA EDIT ADDITION START - Providing feedback, and safety
 	if(!length(empty_turfs))
@@ -259,6 +268,9 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 
 		if(!(spawning_order.pack.order_flags & ORDER_GOODY) && !(spawning_order?.paying_account in forced_briefcases)) //we handle goody crates below // NOVA EDIT CHANGE - ORIGINAL : if(!(spawning_order.pack.order_flags & ORDER_GOODY)) //we handle goody crates below
 			var/obj/structure/closet/crate = spawning_order.generate(pick_n_take(empty_turfs))
+			// M13 EDIT ADDITION START
+			do_sparks(1, FALSE, crate)
+			// M13 EDIT ADDITION END
 			crate.name += " - #[spawning_order.id]"
 
 		SSblackbox.record_feedback("nested tally", "cargo_imports", 1, list("[spawning_order.pack.get_cost()]", "[spawning_order.pack.name]"))
@@ -360,6 +372,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		return
 
 	//spawn crate
+	/* // M13 EDIT REMOVAL START
 	var/list/empty_turfs = list()
 	for(var/area/shuttle/shuttle_area as anything in shuttle_areas)
 		for(var/turf/open/floor/shuttle_floor in shuttle_area.get_turfs_from_all_zlevels())
@@ -369,6 +382,12 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 
 	if (!length(empty_turfs)) { return } // NOVA EDIT ADDITION - There can now be zero empty turfs to go around
 	new /obj/structure/closet/crate/mail/economy(pick(empty_turfs))
+	*/ // M13 EDIT REMOVAL END
+	// M13 EDIT ADDITION START
+	var/list/empty_turfs = get_purchase_turfs()
+	var/crate = new /obj/structure/closet/crate/mail/economy(pick(empty_turfs))
+	do_sparks(1, FALSE, crate)
+	// M13 EDIT ADDITION END
 
 /// Takes a supply pack, returns the amount we currently have on order (or OVER_ORDER_LIMIT if we are over the hardcap on orders of this type)
 /obj/docking_port/mobile/supply/proc/get_order_count(datum/supply_pack/ordering)

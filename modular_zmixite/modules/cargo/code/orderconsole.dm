@@ -1,0 +1,136 @@
+#define SAFETY_WARNING "For safety and ethical reasons, the automated supply shuttle cannot transport non supply crew, \
+	human remains, classified nuclear weaponry, mail, undelivered departmental order crates, syndicate bombs, \
+	homing beacons, unstable eigenstates, or machinery housing any form of artificial intelligence."
+
+/datum/computer_file/program/budgetorders
+	safety_warning = SAFETY_WARNING
+
+/obj/machinery/computer/cargo
+	safety_warning = SAFETY_WARNING
+
+#undef SAFETY_WARNING
+
+/obj/machinery/computer/cargo/proc/create_requisition()
+	if(!length(SSshuttle.shopping_list))
+		return FALSE
+
+	var/obj/item/paper/requisition/requisition_paper = new(get_turf(src))
+	requisition_paper.name = "requisition form - [server_timestamp(ic_time = TRUE)] (PT: [round_timestamp()])"
+	var/requisition_text = "<h2>[station_name()] Supply Requisition</h2>"
+	requisition_text += "<hr/>"
+	requisition_text += "Time of Order: [UNDERLINED_HTML_TEXT("[server_timestamp(ic_time = TRUE)]", "Shift Time: [round_timestamp()]")]<br/><br/>"
+	for(var/datum/supply_order/order as anything in SSshuttle.shopping_list)
+		requisition_text += "<b>[order.pack.name]</b></br>"
+		requisition_text += "- Order ID: [order.id]</br>"
+		var/restrictions = SSid_access.get_access_desc(order.pack.access)
+		if(restrictions)
+			requisition_text += "- Access Restrictions: [restrictions]</br>"
+		requisition_text += "- Ordered by: [order.orderer] ([order.orderer_rank])</br>"
+		var/paying_account = order.paying_account
+		if(paying_account)
+			requisition_text += "- Paid Privately by: [order.paying_account.account_holder]<br/>"
+		var/reason = order.reason
+		if(reason)
+			requisition_text += "- Reason Given: [reason]</br>"
+		requisition_text += "</br></br>"
+	requisition_paper.add_raw_text(requisition_text, advanced_html = TRUE)
+	requisition_paper.color = "#9ef5ff"
+	requisition_paper.update_appearance()
+	return TRUE
+
+/obj/machinery/computer/cargo/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+	if(action == "purchase")
+		if(!is_station_level(z))
+			return
+		if(!create_requisition())
+			return
+
+		SSshuttle.supply.buy()
+		playsound(src, 'sound/machines/beep/twobeep_high.ogg', 50, FALSE)
+		say("Order processed. Navigate to the Automated Trade Station to retrieve it.")
+		return TRUE
+
+	if(action == "loan")
+		if(!SSshuttle.shuttle_loan || SSshuttle.supply_blocked || SSshuttle.supply.mode != SHUTTLE_IDLE)
+			return
+		if(SSshuttle.supply.getDockedId() != docking_home)
+			return
+		if(stationcargo != TRUE)
+			return
+		for(var/area/shuttle_area as anything in SSshuttle.supply.shuttle_areas)
+			for(var/turf/shuttle_turf as anything in shuttle_area.get_turfs_from_all_zlevels())
+				for(var/atom/movable/thing in shuttle_turf.contents)
+					if(!thing.anchored)
+						say("The supply shuttle cannot be loaned while it contains unloaded cargo or personnel.")
+						return
+
+		SSshuttle.shuttle_loan.loan_shuttle()
+		say("The supply shuttle has been loaned to CentCom.")
+		ui.user.investigate_log("accepted a shuttle loan event.", INVESTIGATE_CARGO)
+		ui.user.log_message("accepted a shuttle loan event.", LOG_GAME)
+		return TRUE
+
+	if(action == "send" && SSshuttle.supply.getDockedId() != docking_home)
+		if(SSshuttle.shuttle_loan && SSshuttle.shuttle_loan.centcom_visit && !SSshuttle.shuttle_loan.dispatched)
+			return
+		if(!SSshuttle.supply.canMove())
+			say(safety_warning)
+			return
+		if(SSshuttle.supply_blocked)
+			say(blockade_warning)
+			return
+
+		ui.user.investigate_log("called the supply shuttle.", INVESTIGATE_CARGO)
+		say("The supply shuttle has been called and will arrive in [SSshuttle.supply.timeLeft(10)] second\s.")
+		SSshuttle.moveShuttle(cargo_shuttle, docking_home, TRUE)
+		return TRUE
+
+	return ..()
+
+/datum/computer_file/program/budgetorders/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+	if(action == "loan")
+		if(!SSshuttle.shuttle_loan || SSshuttle.supply_blocked || SSshuttle.supply.mode != SHUTTLE_IDLE)
+			return
+		if(SSshuttle.supply.getDockedId() != docking_home)
+			return
+		if(stationcargo != TRUE)
+			return
+		for(var/area/shuttle_area as anything in SSshuttle.supply.shuttle_areas)
+			for(var/turf/shuttle_turf as anything in shuttle_area.get_turfs_from_all_zlevels())
+				for(var/atom/movable/thing in shuttle_turf.contents)
+					if(!thing.anchored)
+						computer.say("The supply shuttle cannot be loaned while it contains unloaded cargo or personnel.")
+						return
+
+		SSshuttle.shuttle_loan.loan_shuttle()
+		computer.say("The supply shuttle has been loaned to CentCom.")
+		ui.user.investigate_log("accepted a shuttle loan event.", INVESTIGATE_CARGO)
+		ui.user.log_message("accepted a shuttle loan event.", LOG_GAME)
+		return TRUE
+
+	if(action == "send" && SSshuttle.supply.getDockedId() != docking_home)
+		if(SSshuttle.shuttle_loan && SSshuttle.shuttle_loan.centcom_visit && !SSshuttle.shuttle_loan.dispatched)
+			return
+		if(!SSshuttle.supply.canMove())
+			computer.say(safety_warning)
+			return
+		if(SSshuttle.supply_blocked)
+			computer.say(blockade_warning)
+			return
+
+		ui.user.investigate_log("called the supply shuttle.", INVESTIGATE_CARGO)
+		computer.say("The supply shuttle has been called and will arrive in [SSshuttle.supply.timeLeft(10)] second\s.")
+		SSshuttle.moveShuttle(cargo_shuttle, docking_home, TRUE)
+		return TRUE
+
+	return ..()
+
+/obj/machinery/computer/cargo/ui_data()
+	var/list/data = ..()
+	data["loan_available"] = SSshuttle.supply.getDockedId() == docking_home || SSshuttle.supply.getDockedId() == docking_away
+	return data
+
+/datum/computer_file/program/budgetorders/ui_data(mob/user)
+	var/list/data = ..()
+	data["loan_available"] = SSshuttle.supply.getDockedId() == docking_home || SSshuttle.supply.getDockedId() == docking_away
+	return data

@@ -60,6 +60,9 @@ Then the player gets the profit from selling his own wasted time.
 
 	for(var/atom/movable/thing as anything in to_delete)
 		if(!QDELETED(thing))
+			// M13 ADDITION START
+			do_sparks(1, FALSE, thing)
+			// M13 ADDITION END
 			qdel(thing)
 
 	return external_report

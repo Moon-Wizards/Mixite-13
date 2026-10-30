@@ -210,9 +210,10 @@ xxx xxx xxx
 			} \
 		} while(FALSE)
 
+	// M13 EDIT - ORIGINAL: if(canSmoothWith[target] & their_groups[target] &&
 	#define SMOOTH_AGAINST(thing, direction, direction_flag, their_groups) \
 		for(var/target in canSmoothWith) { \
-			if(canSmoothWith[target] & their_groups[target] && \
+			if((target in their_groups) && canSmoothWith[target] & their_groups[target] && \
 				(!(thing.smoothing_flags & SMOOTH_PROC_FILTER) || thing.smoothing_allowed(src, REVERSE_DIR(direction), reverse_junction(direction_flag)))) { \
 				JUNCTION_FOUND(thing, direction, direction_flag); \
 			} \
