@@ -17649,10 +17649,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/station/maintenance/bloodcasino)
-"eIu" = (
-/obj/item/condom_pack,
-/turf/open/floor/iron,
-/area/station/maintenance/dorm_room)
 "eIz" = (
 /turf/open/floor/iron/dark/side{
 	dir = 1
@@ -23812,10 +23808,6 @@
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron/freezer,
 /area/station/command/heads_quarters/nt_rep)
-"gon" = (
-/obj/item/storage/box/lewd_toys,
-/turf/open/floor/plating,
-/area/station/maintenance/aft)
 "gor" = (
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible,
 /turf/closed/wall/r_wall,
@@ -30911,10 +30903,6 @@
 /area/station/hallway/secondary/recreation)
 "icS" = (
 /obj/structure/table/wood,
-/obj/item/serviette_pack{
-	pixel_x = 3;
-	pixel_y = 2
-	},
 /turf/open/floor/iron/sepia,
 /area/station/service/kitchen/diner)
 "icY" = (
@@ -185508,7 +185496,7 @@ xSb
 fxD
 ojl
 qgV
-eIu
+ifp
 pRT
 krS
 sWm
@@ -191930,7 +191918,7 @@ xgz
 aPO
 lXQ
 fDD
-gon
+fIm
 fDD
 emF
 dCO
