@@ -3,7 +3,6 @@
 	name = "personal items box"
 	desc = "It's full of things you brought from home."
 
-/* // M13 REMOVAL START
 //Donator reward for UltramariFox
 /obj/item/cigarette/khi
 	name = "\improper Kitsuhana Singularity cigarette"
@@ -344,7 +343,6 @@
 /obj/item/instrument/piano_synth/headphones/catear_headphone/update_overlays()
 	. = ..()
 	. += emissive_appearance('modular_nova/modules/GAGS/icons/head/catear_headphone.dmi', "catearphones_obj_lights_emissive", src, alpha = src.alpha)
-*/ // M13 REMOVAL END
 
 /obj/item/clothing/head/cone_of_shame
 	name = "collar cone"
@@ -410,7 +408,6 @@
 	worn_icon_state = "[base_icon_state]_[toggle_state]"
 	return ..()
 
-/* // M13 REMOVAL START
 // Kaynite Donor Item
 /obj/item/storage/backpack/merctac_backpack
 	name = "\improper Xplore Go! bag"
@@ -446,7 +443,7 @@
 /obj/item/gun/ballistic/automatic/miecz/ak105/no_mag
 	//Made this one for completion, the thing is, the kit doesnt affect no_mag, so, the day we change the paradigm of the miecz to spawn with no_mag, likely we want this one. (alternatively we do somethiing better thhan to use subtypes.)
 	spawnwithmagazine = FALSE
-
+/* // M13 REMOVAL START
 //Tora's Body Pillow (DarkRilo)
 /obj/item/toy/pillow/torapillow
 	name = "\improper Shork.INC Body Pillow"
