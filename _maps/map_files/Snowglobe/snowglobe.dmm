@@ -6594,12 +6594,6 @@
 	},
 /turf/open/floor/grass,
 /area/station/hallway/secondary/recreation)
-"bJK" = (
-/obj/docking_port/stationary/random/icemoon{
-	dir = 8
-	},
-/turf/open/openspace/icemoon,
-/area/icemoon/surface/outdoors/nospawn)
 "bJM" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 5
@@ -11200,13 +11194,6 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/carpet,
 /area/station/security/courtroom)
-"cUT" = (
-/obj/machinery/door/airlock/external{
-	name = "Brig Shuttle Airlock";
-	space_dir = 4
-	},
-/turf/open/floor/plating,
-/area/station/security/office)
 "cUU" = (
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 8
@@ -17662,6 +17649,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/station/maintenance/bloodcasino)
+"eIu" = (
+/obj/item/condom_pack,
+/turf/open/floor/iron,
+/area/station/maintenance/dorm_room)
 "eIz" = (
 /turf/open/floor/iron/dark/side{
 	dir = 1
@@ -19251,9 +19242,6 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron,
 /area/station/hallway/primary)
-"fen" = (
-/turf/open/floor/plating,
-/area/icemoon/surface/outdoors/nospawn)
 "feq" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
@@ -23824,6 +23812,10 @@
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron/freezer,
 /area/station/command/heads_quarters/nt_rep)
+"gon" = (
+/obj/item/storage/box/lewd_toys,
+/turf/open/floor/plating,
+/area/station/maintenance/aft)
 "gor" = (
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible,
 /turf/closed/wall/r_wall,
@@ -30747,12 +30739,6 @@
 /obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron/white/smooth_large,
 /area/station/medical/storage)
-"iaI" = (
-/obj/docking_port/stationary/random/icemoon{
-	dir = 4
-	},
-/turf/open/misc/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors/nospawn)
 "iaJ" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/dark_blue/opposingcorners,
@@ -30925,6 +30911,10 @@
 /area/station/hallway/secondary/recreation)
 "icS" = (
 /obj/structure/table/wood,
+/obj/item/serviette_pack{
+	pixel_x = 3;
+	pixel_y = 2
+	},
 /turf/open/floor/iron/sepia,
 /area/station/service/kitchen/diner)
 "icY" = (
@@ -31015,12 +31005,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/morgue)
-"idN" = (
-/obj/docking_port/stationary/escape_pod{
-	dir = 8
-	},
-/turf/open/openspace/icemoon,
-/area/icemoon/surface/outdoors/nospawn)
 "idT" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
@@ -32711,6 +32695,10 @@
 /obj/structure/table,
 /obj/item/camera{
 	pixel_x = 3;
+	pixel_y = 4
+	},
+/obj/item/hairbrush/switchblade{
+	pixel_x = -12;
 	pixel_y = 4
 	},
 /turf/open/floor/plating,
@@ -80005,12 +79993,6 @@
 	dir = 4
 	},
 /area/station/hallway/primary/port)
-"vbk" = (
-/obj/docking_port/stationary/escape_pod{
-	dir = 4
-	},
-/turf/open/misc/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors/nospawn)
 "vbl" = (
 /obj/effect/turf_decal/trimline/yellow/line{
 	dir = 8
@@ -180922,7 +180904,7 @@ tPn
 occ
 tPn
 tPn
-kTq
+tPn
 tPn
 occ
 vBO
@@ -185526,7 +185508,7 @@ xSb
 fxD
 ojl
 qgV
-ifp
+eIu
 pRT
 krS
 sWm
@@ -191948,7 +191930,7 @@ xgz
 aPO
 lXQ
 fDD
-fIm
+gon
 fDD
 emF
 dCO
@@ -199694,11 +199676,11 @@ qBp
 tPn
 tPn
 tPn
-kTq
+tPn
 tPn
 hJF
 tPn
-kTq
+tPn
 tPn
 tPn
 tPn
@@ -201240,7 +201222,7 @@ tPn
 tPn
 tPn
 tPn
-kTq
+tPn
 tKY
 tKY
 tKY
@@ -243026,11 +243008,11 @@ vMu
 vMu
 vMu
 vMu
-fen
-fen
 vMu
-fen
-fen
+vMu
+vMu
+vMu
+vMu
 eUS
 dKk
 vMu
@@ -243283,11 +243265,11 @@ vMu
 vMu
 vMu
 vMu
-fen
-fen
-bJK
-fen
-fen
+vMu
+vMu
+vMu
+vMu
+vMu
 mtN
 dKk
 otf
@@ -243540,11 +243522,11 @@ vMu
 vMu
 vMu
 vMu
-fen
 vMu
 vMu
 vMu
-fen
+vMu
+vMu
 dKk
 dKk
 otf
@@ -243797,11 +243779,11 @@ vMu
 vMu
 vMu
 vMu
-otf
 vMu
 vMu
 vMu
-otf
+vMu
+vMu
 vMu
 vMu
 vMu
@@ -244054,11 +244036,11 @@ uGw
 vMu
 vMu
 vMu
-otf
 vMu
 vMu
 vMu
-otf
+vMu
+vMu
 vMu
 vMu
 vMu
@@ -244311,11 +244293,11 @@ uGw
 vMu
 vMu
 vMu
-fen
 vMu
-idN
 vMu
-fen
+vMu
+vMu
+vMu
 vMu
 vMu
 vMu
@@ -244570,7 +244552,7 @@ vCj
 bXn
 ihy
 eVg
-cUT
+vIO
 bXn
 bXn
 bXn
@@ -246481,8 +246463,10 @@ vMu
 vMu
 vMu
 vMu
-fen
-fen
+vMu
+vMu
+vMu
+vMu
 vMu
 vMu
 vMu
@@ -246993,7 +246977,8 @@ vMu
 vMu
 vMu
 vMu
-fen
+vMu
+vMu
 vMu
 vMu
 vMu
@@ -247248,7 +247233,8 @@ vMu
 vMu
 vMu
 vMu
-otf
+vMu
+vMu
 vMu
 vMu
 vMu
@@ -247740,7 +247726,6 @@ vMu
 kvT
 ibg
 vMu
-idN
 vMu
 vMu
 vMu
@@ -265227,11 +265212,11 @@ eUS
 dKk
 vMu
 vMu
-fen
-fen
 vMu
-fen
-fen
+vMu
+vMu
+vMu
+vMu
 vMu
 vMu
 vMu
@@ -265484,11 +265469,11 @@ mtN
 dKk
 vMu
 vMu
-fen
-fen
-bJK
-fen
-fen
+vMu
+vMu
+vMu
+vMu
+vMu
 vMu
 vMu
 vMu
@@ -265741,11 +265726,11 @@ dKk
 dKk
 vMu
 vMu
-fen
 vMu
 vMu
 vMu
-fen
+vMu
+vMu
 vMu
 vMu
 vMu
@@ -265998,11 +265983,11 @@ vMu
 vMu
 vMu
 vMu
-otf
 vMu
 vMu
 vMu
-otf
+vMu
+vMu
 vMu
 vMu
 vMu
@@ -266255,11 +266240,11 @@ vMu
 vMu
 vMu
 vMu
-otf
 vMu
 vMu
 vMu
-otf
+vMu
+vMu
 vMu
 vMu
 vMu
@@ -266512,11 +266497,11 @@ vMu
 vMu
 vMu
 vMu
-fen
 vMu
-idN
 vMu
-fen
+vMu
+vMu
+vMu
 vMu
 vMu
 jcZ
@@ -266769,11 +266754,11 @@ vMu
 vbF
 vMu
 vMu
-fen
-fen
-dKk
-fen
-fen
+vMu
+vMu
+vMu
+vMu
+vMu
 jcZ
 jcZ
 jcZ
@@ -275700,7 +275685,7 @@ jcZ
 jcZ
 jcZ
 jcZ
-vbk
+jcZ
 jcZ
 jcZ
 jcZ
@@ -276728,7 +276713,7 @@ jcZ
 jcZ
 jcZ
 jcZ
-iaI
+jcZ
 jcZ
 jcZ
 jcZ
