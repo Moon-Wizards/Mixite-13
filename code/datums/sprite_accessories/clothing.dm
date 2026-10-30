@@ -45,7 +45,7 @@
 			created = wear_female_version(icon_state_to_use, icon_file_path, icon, female_sprite_flags_to_use)
 		if(use_digi)
 			var/icon/replacement = icon(SSgreyscale.GetColoredIconByType(/datum/greyscale_config/digitigrade_underwear, greyscale_colors), digi_icon_state)
-			created = replace_icon_legs(created, replacement)
+			created = apply_icon_mask(created, LEGS_MASK, replacement)
 
 		cached_icons[key] = fcopy_rsc(created)
 		result = mutable_appearance(created)
@@ -107,7 +107,6 @@
 	gender = MALE
 	digi_icon_state = "longjohns"
 
-/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/underwear/male_kinky
 	name = "Jockstrap"
 	icon_state = "male_kinky"
@@ -117,7 +116,6 @@
 	name = "Mankini"
 	icon_state = "male_mankini"
 	gender = MALE
-*/ // M13 REMOVAL START
 
 /datum/sprite_accessory/clothing/underwear/male_hearts
 	name = "Hearts Boxers"
@@ -612,11 +610,9 @@
 	name = "Knee-high (White)"
 	icon_state = "white_knee"
 
-/* // M13 REMOVAL START
 /datum/sprite_accessory/clothing/socks/fishnet_knee
 	name = "Knee-high (Fishnet)"
 	icon_state = "fishnet_knee"
-*/ // M13 REMOVAL END
 
 /datum/sprite_accessory/clothing/socks/black_norm
 	name = "Normal (Black)"

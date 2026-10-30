@@ -27262,7 +27262,7 @@
 /area/station/command/vault)
 "ifv" = (
 /obj/structure/table,
-/obj/item/mmi,
+/obj/item/brain_processor/organic,
 /obj/item/bodypart/chest/robot{
 	pixel_y = 4
 	},
@@ -38688,7 +38688,7 @@
 /area/space/nearstation)
 "lHE" = (
 /obj/structure/table/wood,
-/obj/structure/displaycase/forsale/kitchen{
+/obj/structure/tipjar/prefilled{
 	pixel_y = 4
 	},
 /obj/structure/sign/picture_frame/portrait/bar{
@@ -43458,9 +43458,9 @@
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/suit/apron/surgical,
 /obj/item/clothing/mask/surgical,
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/mmi,
+/obj/item/brain_processor/organic,
+/obj/item/brain_processor/organic,
+/obj/item/brain_processor/organic,
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/posialert/directional/south,
 /turf/open/floor/iron/dark,
@@ -57657,7 +57657,7 @@
 /area/station/security/prison)
 "rBV" = (
 /obj/structure/table/reinforced/plastitaniumglass,
-/obj/item/mmi,
+/obj/item/brain_processor/organic,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/storage)
 "rCe" = (
@@ -59409,7 +59409,7 @@
 /area/station/maintenance/disposal)
 "sde" = (
 /obj/structure/table/reinforced,
-/obj/structure/displaycase/forsale/kitchen{
+/obj/structure/tipjar/prefilled{
 	pixel_y = 4
 	},
 /obj/machinery/door/firedoor,
