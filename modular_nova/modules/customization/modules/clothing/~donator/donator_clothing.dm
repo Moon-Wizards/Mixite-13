@@ -81,7 +81,6 @@
 	greyscale_config = /datum/greyscale_config/cloak/shroud
 	greyscale_config_worn = /datum/greyscale_config/cloak/shroud/worn
 
-/* // M13 REMOVAL START
 /**************CKEY EXCLUSIVES*************/
 
 // Donation reward for Grunnyyy
@@ -102,7 +101,6 @@
 	icon_state = "infcloak"
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/custom_w.dmi'
 	supports_variations_flags = NONE
-*/ // M13 REMOVAL END
 // Donation reward
 // might make it have some flavour functionality in future, a'la rewritable piece of paper - JOKES ON YOU I'M MAKING IT DRAW
 // Note from thedragmeme- The fact this can actually draw is epic, Im making this an item accessable to all donors so if an actual coder could make it print out drawings or make it save the drawings to the library that would be epic
@@ -206,7 +204,6 @@
 	button_icon = 'modular_nova/master_files/icons/donator/obj/custom.dmi'
 	button_icon_state = "drawingtablet"
 
-/* // M13 REMOVAL START
 // Donation reward for DrpMstr
 /obj/item/clothing/suit/costume/butter
 	name = "butter costume"
@@ -1373,7 +1370,6 @@
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/belt.dmi'
 	icon_state = "occultfannypack"
 	worn_icon_state = "occultfannypack"
-*/ // M13 REMOVAL END
 
 // Donation reward for gamerguy14948
 /obj/item/clothing/under/occult
@@ -1384,7 +1380,6 @@
 	icon_state = "occultoutfit"
 	supports_variations_flags = NONE
 
-/* // M13 REMOVAL START
 // Donation reward for gamerguy14948
 /obj/item/clothing/head/hooded/occult
 	name = "hood"
@@ -2782,4 +2777,3 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	sign_path = /obj/structure/sign/flag/pride/bon
 	worn_icon_state = "bon"
 
-*/ // M13 REMOVAL END
