@@ -298,6 +298,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/shared/ats)
 "gJ" = (
@@ -1319,6 +1322,9 @@
 /obj/effect/mapping_helpers/airlock/access/all,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/shared/ats)
 "HT" = (
@@ -1775,6 +1781,20 @@
 	region_id = "nt_buy"
 	},
 /turf/open/floor/iron/dark/smooth_large,
+/area/shared/ats)
+"Sx" = (
+/obj/machinery/door/airlock/external/ruin{
+	name = "Supply Shuttle"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/mapping_helpers/airlock/access/all,
+/obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
 /area/shared/ats)
 "SD" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
@@ -7922,13 +7942,13 @@ sz
 sz
 sz
 HI
-sI
+jt
 VZ
 HP
 jt
-gy
+Sx
 gb
-sI
+jt
 HI
 Pf
 Pf
@@ -8052,13 +8072,13 @@ AE
 Pf
 Pf
 Pf
-jt
+sI
 Rg
 qx
 wj
 qx
 wP
-jt
+sI
 Pf
 Pf
 Pf
@@ -8188,7 +8208,7 @@ gy
 jt
 gy
 Qz
-sI
+jt
 sI
 jt
 jP
@@ -10784,7 +10804,7 @@ jt
 sI
 sI
 jt
-gy
+Sx
 jt
 jt
 AI

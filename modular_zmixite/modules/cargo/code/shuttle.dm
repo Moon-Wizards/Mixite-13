@@ -1,5 +1,6 @@
 /obj/docking_port/mobile/supply
 	callTime = 15 SECONDS
+	movement_force = list("KNOCKDOWN" = 3, "THROW" = 0)
 
 /obj/docking_port/mobile/supply/canMove()
 	. = ..()
@@ -22,9 +23,11 @@
 						if(ACCESS_CARGO in id_card?.GetAccess() || mode != SHUTTLE_IDLE)
 							continue
 						else
+							investigate_log("Failed to send the supply shuttle due to [living_passenger.name] not having access while in the shuttle.", INVESTIGATE_CARGO)
 							return FALSE
 
 					if((is_type_in_typecache(passenger, GLOB.blacklisted_cargo_types) || HAS_TRAIT(passenger, TRAIT_BANNED_FROM_CARGO_SHUTTLE)) && !istype(passenger, /obj/docking_port))
+						investigate_log("Failed to send the supply shuttle due to [passenger.name] being banned from it.", INVESTIGATE_CARGO)
 						return FALSE
 	return TRUE
 
@@ -78,8 +81,8 @@
 /obj/docking_port/mobile/supply/buy()
 	. = ..()
 
-	// random chance chance to get somethingz from the entire cargo catalog, the ATS employees messed up!
-	if(anyprob(100) || (HAS_TRAIT(SSstation, STATION_TRAIT_ATS) ? anyprob(50) : FALSE))
+	// random chance chance to get something from the entire cargo catalog, the ATS employees messed up!
+	if(anyprob(50) || (HAS_TRAIT(SSstation, STATION_TRAIT_ATS) ? anyprob(20) : FALSE))
 		var/datum/supply_pack/pack = SSshuttle.supply_packs[pick(SSshuttle.supply_packs)]
 		var/a_msg = "Randomly dropped in [pack.name]([pack.group]) in a cargo shipment."
 

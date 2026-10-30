@@ -7,7 +7,7 @@
 		"emergency": "emergency_northstar",
 		"ferry": "ferry_nova",
 		"mining": "mining_northstar",
-		"cargo": "cargo_northstar",
+		"cargo": "cargo_mixite_northstar",
 		"whiteship": "whiteship_delta"
 	},
 	"space_ruin_levels": 3,

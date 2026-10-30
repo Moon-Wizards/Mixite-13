@@ -9928,6 +9928,7 @@
 #include "modular_zmixite\master_files\code\game\turfs\turf.dm"
 #include "modular_zmixite\master_files\code\game\turfs\open\openspace.dm"
 #include "modular_zmixite\master_files\code\modules\modules_supply.dm"
+#include "modular_zmixite\master_files\code\modules\advanced_shuttles\shuttles.dm"
 #include "modular_zmixite\master_files\code\modules\cargo\exports\crates.dm"
 #include "modular_zmixite\master_files\code\modules\company_imports\interdyne\interdyne_kits.dm"
 #include "modular_zmixite\master_files\code\modules\mob\living\navigation.dm"
