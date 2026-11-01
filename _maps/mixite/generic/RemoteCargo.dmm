@@ -275,7 +275,7 @@
 "gi" = (
 /obj/effect/turf_decal/vg_decals/numbers/seven{
 	pixel_x = -12;
-	alpha = 50
+	alpha = 5
 	},
 /turf/open/floor/plating,
 /area/space/nearstation)
@@ -1123,7 +1123,12 @@
 /obj/effect/turf_decal/vg_decals/numbers/six{
 	pixel_y = -7;
 	pixel_x = 8;
-	alpha = 50
+	alpha = 5
+	},
+/obj/item/toy/plush/lizard_plushie/space{
+	pixel_x = -7;
+	pixel_y = 4;
+	name = "Sixes-The-Seven"
 	},
 /turf/open/floor/plating,
 /area/space/nearstation)
@@ -1200,7 +1205,8 @@
 	},
 /obj/item/toy/plush/lizard_plushie{
 	pixel_x = 8;
-	pixel_y = 4
+	pixel_y = 4;
+	name = "Tours-The-Galaxy"
 	},
 /turf/open/floor/grass/fairy,
 /area/shared/ats)
@@ -1728,13 +1734,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/shared/ats)
-"Rf" = (
-/obj/item/toy/plush/lizard_plushie/space{
-	pixel_x = 5;
-	pixel_y = 4
-	},
-/turf/open/floor/plating,
-/area/space/nearstation)
 "Rg" = (
 /obj/structure/plasticflaps,
 /obj/effect/turf_decal/stripes/line,
@@ -10559,7 +10558,7 @@ AE
 AE
 sz
 sz
-Rf
+sz
 AE
 Pf
 AE
