@@ -4,6 +4,7 @@ export type CargoData = {
   app_cost?: number;
   away: BooleanLike;
   can_approve_requests: BooleanLike;
+  can_purchase?: BooleanLike; // M13 EDIT ADDITION
   can_send: BooleanLike;
   cart: CartEntry[];
   catalogue: Catalogue;
@@ -14,6 +15,7 @@ export type CargoData = {
   grocery: number;
   loan_dispatched: BooleanLike;
   loan: BooleanLike;
+  loan_available: BooleanLike; // M13 EDIT ADDITION
   location: string;
   max_order: number;
   message: string;

@@ -1,0 +1,16 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 8;
+	height = 8;
+	name = "CentCom";
+	shuttle_id = "cargo_centcom";
+	width = 20
+	},
+/turf/open/space/basic,
+/area/space)
+
+(1,1,1) = {"
+a
+"}

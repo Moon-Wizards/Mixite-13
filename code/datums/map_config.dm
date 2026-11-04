@@ -56,7 +56,7 @@
 	)
 	*/
 	var/shuttles = list(
-		"cargo" = "cargo_nova",
+		"cargo" = "cargo_mixite_nova", // M13 EDIT
 		"ferry" = "ferry_fancy",
 		"whiteship" = "whiteship_meta",
 		"emergency" = "emergency_nova",
