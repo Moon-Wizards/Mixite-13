@@ -60,6 +60,10 @@
 		for(var/area/shuttle_area as anything in SSshuttle.supply.shuttle_areas)
 			for(var/turf/shuttle_turf as anything in shuttle_area.get_turfs_from_all_zlevels())
 				for(var/atom/movable/thing in shuttle_turf.contents)
+					if(iseyemob(thing))
+						continue
+					if(isobserver(thing))
+						continue
 					if(!thing.anchored)
 						say("The supply shuttle cannot be loaned while it contains unloaded cargo or personnel.")
 						return

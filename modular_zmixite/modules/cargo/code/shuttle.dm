@@ -17,6 +17,12 @@
 		for(var/list/zlevel_turfs as anything in shuttle_area.get_zlevel_turf_lists())
 			for(var/turf/shuttle_turf as anything in zlevel_turfs)
 				for(var/atom/passenger in shuttle_turf.get_all_contents())
+					if(isbasicmob(passenger))
+						continue
+					if(iseyemob(passenger))
+						continue
+					if(isobserver(passenger))
+						continue
 					if(ismob(passenger))
 						var/mob/living/living_passenger = passenger
 						var/obj/item/card/id/id_card = living_passenger?.get_idcard(TRUE)
