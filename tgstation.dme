@@ -9962,6 +9962,7 @@
 #include "modular_zmixite\master_files\code\modules\research\designs\limbgrower_designs.dm"
 #include "modular_zmixite\master_files\code\modules\research\techweb\all_nodes.dm"
 #include "modular_zmixite\master_files\code\modules\shuttle\mobile_port\supply.dm"
+#include "modular_zmixite\master_files\code\reagents\medicine.dm"
 #include "modular_zmixite\modules\accessories\code\accessories\accessories.dm"
 #include "modular_zmixite\modules\accessories\code\accessories\ipc_hulls.dm"
 #include "modular_zmixite\modules\accessories\code\accessories\jackboots.dm"
@@ -10017,5 +10018,6 @@
 #include "modular_zmixite\modules\proteans\protean_undying.dm"
 #include "modular_zmixite\modules\quirks\code\neutral_quirks\fluffy_tongue.dm"
 #include "modular_zmixite\modules\title_screen\code\new_player.dm"
+#include "modular_zmixite\modules\votes\code\map_vote.dm"
 #include "modular_zmixite\modules\whitelist\code\whitelist.dm"
 // END_INCLUDE
