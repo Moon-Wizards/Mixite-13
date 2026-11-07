@@ -1,0 +1,6 @@
+author: "misleadingname"
+delete-after: True
+changes:
+  - bugfix: "Vocal barks *should* be consistently playing now."
+  - rscdel: "Restores regular map voting and makes map votes no longer tallied."
+  - spellcheck: "Fabricated Coagulant is now, capitalized."
