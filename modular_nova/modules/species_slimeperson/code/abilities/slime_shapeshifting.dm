@@ -290,9 +290,14 @@
  * It lets you pick between a few options for DNA specifics
  */
 /datum/action/innate/alter_form/proc/alter_dna(mob/living/carbon/human/alterer)
+	// M13 EDIT START - ORIGINAL:
+	/*
 	var/list/key_list = list("Body Size", "Genitals", "Mutant Parts")
 	if(CONFIG_GET(flag/disable_erp_preferences))
 		key_list.Remove("Genitals")
+	*/
+	var/list/key_list = list("Body Size", "Mutant Parts")
+	// M13 EDIT END
 	var/dna_alteration = tgui_input_list(
 		alterer,
 		"Select what part of your DNA you'd like to alter",
@@ -328,8 +333,10 @@
 			alterer.dna.features["body_size"] = new_body_size
 			alterer.dna.update_body_size()
 
+		/* // M13 EDIT REMOVAL START
 		if("Genitals")
 			alter_genitals(alterer)
+		*/ // M13 EDIT REMOVAL END
 		if("Mutant Parts")
 			alter_parts(alterer)
 
@@ -342,10 +349,18 @@
  */
 /datum/action/innate/alter_form/proc/alter_parts(mob/living/carbon/human/alterer)
 	var/list/mutant_part_list = list()
+	// M13 EDIT START - ORIGINAL:
+	/*
 	for(var/datum/dna_block/feature/mutant/block as anything in subtypesof(/datum/dna_block/feature/mutant))
 		if(CONFIG_GET(flag/disable_erp_preferences) && (block::feature_key in ORGAN_ERP_LIST))
 			continue
 		mutant_part_list[block::feature_key] = block
+	*/
+	for(var/datum/dna_block/feature/mutant/block as anything in subtypesof(/datum/dna_block/feature/mutant))
+		if(block::feature_key in ORGAN_ERP_LIST) // redundancy just in case there's an erp organ that slipped somehow but it shouldn't ever happen
+			continue
+		mutant_part_list[block::feature_key] = block
+	// M13 EDIT END
 	var/chosen_key = tgui_input_list(
 		alterer,
 		"Select the part you want to alter",
@@ -435,6 +450,7 @@
 	alterer.dna.body_markings = assemble_body_markings_from_set(marking_set, alterer.dna.features, alterer.dna.species)
 	alterer.update_body(is_creating = TRUE)
 
+/* // M13 EDIT REMOVAL START
 /**
  * Alter genitals lets you adjust the size or functionality of genitalia
  * If you don't own the genital you try to adjust, it'll ask you if you want to add it first
@@ -550,3 +566,4 @@
 				avocados.set_size(alterer.dna.features["balls_size"])
 
 #undef SLIME_ACTIONS_ICON_FILE
+*/ // M13 REMOVAL END
