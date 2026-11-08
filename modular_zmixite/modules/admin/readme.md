@@ -23,3 +23,7 @@ Mixite/13 admin thingies
 ### Included files that are not contained in this module:
 
 - N/A
+
+### Credits
+
+- Iris Station

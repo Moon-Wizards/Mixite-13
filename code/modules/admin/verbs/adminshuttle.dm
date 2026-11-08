@@ -54,6 +54,11 @@ ADMIN_VERB(cancel_shuttle, R_ADMIN, "Cancel Shuttle", "Recall the shuttle, regar
 	if(tgui_alert(user, "You sure?", "Confirm Shuttle Cancellation", list("Yes", "No")) != "Yes")
 		return
 
+	// M13 EDIT ADDITION START
+	if(SSshuttle.endvote_passed)
+		SSshuttle.revert_autoend()
+	// M13 EDIT ADDITION END
+
 	if(!SSshuttle.cancel_evac(user.mob, hide_origin = TRUE)) // handles the case where the shuttle is set to unrecallable by another admin or the code
 		return
 

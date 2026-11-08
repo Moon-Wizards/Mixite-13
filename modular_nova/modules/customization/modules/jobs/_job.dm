@@ -134,6 +134,7 @@
 	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 /datum/job/bridge_assistant
+	banned_quirks = list(HEAD_RESTRICTED_QUIRKS)
 	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 //Silicon
