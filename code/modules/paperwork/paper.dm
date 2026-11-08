@@ -191,8 +191,13 @@
  * * color - The font color to use.
  * * bold - Whether this text should be rendered completely bold.
  * * advanced_html - Boolean that is true when the writer has R_FUN permission, which sanitizes less HTML (such as images) from the new paper_input
+ * * user - The mob writing this text, used by paper tags. // M13 EDIT ADDITION
  */
-/obj/item/paper/proc/add_raw_text(text, font, color, bold, advanced_html)
+/obj/item/paper/proc/add_raw_text(text, font, color, bold, advanced_html, mob/user)
+	// M13 EDIT ADDITION START - PAPERWORK
+	if(user && findtext(text, "\[sign\]"))
+		text = replacetext(text, "\[sign\]", "<font face=\"[SIGNATURE_FONT]\"><i>[user.real_name]</i></font>")
+	// M13 EDIT ADDITION END
 	var/new_input_datum = new /datum/paper_input(
 		text,
 		font,
@@ -620,6 +625,7 @@ GAME_VERB_SRC(/obj/item/paper, rename, usr, "Rename paper", null)
 	static_data["default_pen_font"] = PEN_FONT
 	static_data["default_pen_color"] = COLOR_BLACK
 	static_data["signature_font"] = FOUNTAIN_PEN_FONT
+	static_data["station_name"] = station_name() // M13 EDIT ADDITION - PAPERWORK
 
 	return static_data
 
@@ -665,6 +671,13 @@ GAME_VERB_SRC(/obj/item/paper, rename, usr, "Rename paper", null)
 	if(.)
 		return
 
+	// M13 EDIT ADDITION - PAPERWORK
+	if(action == "admin_log")
+		var/message = params["message"]
+		message_admins("[key_name(usr)] [message]")
+		log_admin("[key_name(usr)] [message]")
+		return TRUE
+	// M13 EDIT ADDITION END
 	var/mob/user = ui.user
 
 	switch(action)
@@ -704,6 +717,11 @@ GAME_VERB_SRC(/obj/item/paper, rename, usr, "Rename paper", null)
 			return TRUE
 		if("add_text")
 			var/paper_input = params["text"]
+			// M13 EDIT ADDITION - PAPERWORK
+			var/blocked_summary = params["blocked_summary"]
+			if(blocked_summary && blocked_summary != "")
+				log_admin("[key_name(user)] had forbidden HTML/CSS sanitized from paper: [blocked_summary]")
+			// M13 EDIT ADDITION END
 			var/this_input_length = length_char(paper_input)
 
 			if(this_input_length == 0)
@@ -743,7 +761,7 @@ GAME_VERB_SRC(/obj/item/paper, rename, usr, "Rename paper", null)
 
 			playsound(src, /datum/sound_effect/writing_pen, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE, SOUND_FALLOFF_EXPONENT + 3, ignore_walls = FALSE)
 
-			add_raw_text(paper_input, writing_implement_data["font"], writing_implement_data["color"], writing_implement_data["use_bold"], check_rights_for(user?.client, R_FUN))
+			add_raw_text(paper_input, writing_implement_data["font"], writing_implement_data["color"], writing_implement_data["use_bold"], check_rights_for(user?.client, R_FUN), user) // M13 EDIT - PAPERWORK ORIGINAL: add_raw_text(paper_input, writing_implement_data["font"], writing_implement_data["color"], writing_implement_data["use_bold"], check_rights_for(user?.client, R_FUN))
 
 			log_paper("[key_name(user)] wrote to [name]: \"[paper_input]\"")
 			to_chat(user, "You have added to your paper masterpiece!");

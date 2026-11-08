@@ -2,6 +2,7 @@ import { Component, createRef, type RefObject } from 'react';
 import { Box, Button, Flex, Section, TextArea } from 'tgui-core/components';
 
 import { useBackend, useLocalState } from '../../backend';
+import { sanitizeText } from '../../sanitize'; // M13 EDIT - PAPERWORK
 import { TEXTAREA_INPUT_HEIGHT } from './constants';
 import { PreviewView } from './Preview';
 import { PaperSheetStamper } from './Stamper';
@@ -111,7 +112,26 @@ export class PrimaryView extends Component {
                       color="good"
                       onClick={() => {
                         if (textAreaText.length) {
-                          act('add_text', { text: textAreaText });
+                          // M13 EDIT ADDITION START - PAPERWORK
+                          const result = sanitizeText(
+                            textAreaText,
+                            false,
+                            undefined,
+                            undefined,
+                            undefined,
+                            true,
+                          );
+                          act('add_text', {
+                            text:
+                              typeof result === 'object'
+                                ? result.sanitized
+                                : result,
+                            blocked_summary:
+                              typeof result === 'object'
+                                ? result.blockedSummary
+                                : '',
+                          });
+                          // M13 EDIT ADDITION END
                           setTextAreaText('');
                         }
                         if (Object.keys(inputFieldData).length) {

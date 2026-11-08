@@ -150,11 +150,20 @@ export class PreviewView extends Component<PreviewViewProps> {
     document.removeEventListener('input', this.onInputHandler);
   }
 
+  /* M13 EDIT - PAPERWORK ORIGINAL:
   shouldComponentUpdate(nextProps: Readonly<PreviewViewProps>): boolean {
     if (!this.props.canEdit) return true;
 
     return this.props.canEdit !== nextProps.canEdit;
   }
+  */
+  shouldComponentUpdate(nextProps: Readonly<PreviewViewProps>): boolean {
+    return (
+      this.props.canEdit !== nextProps.canEdit ||
+      this.props.textArea !== nextProps.textArea
+    );
+  }
+  // M13 EDIT END
 
   // Creates the partial inline HTML for previewing or reading the paper from
   // only static_ui_data from DM.
@@ -314,14 +323,28 @@ export class PreviewView extends Component<PreviewViewProps> {
     forceReadonlyFields: boolean = false,
     advanced_html = false,
   ): FieldCreationReturn => {
+    const { data } = useBackend<PaperContext>();
+    const { station_name } = data;
     // First lets make sure it ends in a new line
+    rawText = rawText.replace(/\[station\]/gi, station_name || '');
     rawText += rawText[rawText.length] === '\n' ? '\n' : '\n\n';
 
     // Second, parse the text using markup
     const parsedText = this.runMarkedDefault(rawText);
 
     // Third, we sanitize the text of html
-    const sanitizedText = sanitizeText(parsedText, advanced_html);
+    const sanitizedResult = sanitizeText(
+      parsedText,
+      advanced_html,
+      undefined,
+      undefined,
+      undefined,
+      true,
+    );
+    const sanitizedText =
+      typeof sanitizedResult === 'object'
+        ? sanitizedResult.sanitized
+        : sanitizedResult;
 
     // Fourth we replace the [__] with fields
     const fieldedText = this.createFields(
