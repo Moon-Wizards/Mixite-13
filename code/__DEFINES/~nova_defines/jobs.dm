@@ -8,9 +8,15 @@
 #define JOB_UNAVAILABLE_MEDREC (JOB_UNAVAILABLE_AUGMENT + 1)
 #define JOB_UNAVAILABLE_SECREC (JOB_UNAVAILABLE_MEDREC + 1)
 
+/* M13 EDIT START - ORIGINAL:
 #define SEC_RESTRICTED_QUIRKS "Blind" = TRUE, "Brain Tumor" = TRUE, "Deaf" = TRUE, "Paraplegic" = TRUE, "Hemiplegic" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Pacifist" = TRUE, "No Guns" = TRUE, "Illiterate" = TRUE, "Nerve Stapled" = TRUE, "Underworld Connections" = TRUE
 #define HEAD_RESTRICTED_QUIRKS "Blind" = TRUE, "Deaf" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Brain Tumor" = TRUE, "Illiterate" = TRUE, "Underworld Connections" = TRUE
 #define HEAD_RESTRICTED_QUIRKS_QM "Blind" = TRUE, "Deaf" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Brain Tumor" = TRUE, "Illiterate" = TRUE
+*/
+#define SEC_RESTRICTED_QUIRKS "Blind" = TRUE, "Brain Tumor" = TRUE, "Deaf" = TRUE, "Paraplegic" = TRUE, "Hemiplegic" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Pacifist" = TRUE, "No Guns" = TRUE, "Illiterate" = TRUE, "Nerve Stapled" = TRUE, "Underworld Connections" = TRUE, "Undersized" = TRUE
+#define HEAD_RESTRICTED_QUIRKS "Blind" = TRUE, "Deaf" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Brain Tumor" = TRUE, "Illiterate" = TRUE, "Underworld Connections" = TRUE, "Undersized" = TRUE
+#define HEAD_RESTRICTED_QUIRKS_QM "Blind" = TRUE, "Deaf" = TRUE, "Mute" = TRUE, "Foreigner" = TRUE, "Brain Tumor" = TRUE, "Illiterate" = TRUE, "Undersized" = TRUE
+// M13 EDIT END
 #define GUARD_RESTRICTED_QUIRKS "Blind" = TRUE, "Deaf" = TRUE, "Foreigner" = TRUE, "Pacifist" = TRUE, "Nerve Stapled" = TRUE
 #define PRISONER_RESTRICTED_QUIRKS "Underworld Connections" = TRUE
 

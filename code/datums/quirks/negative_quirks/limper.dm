@@ -1,3 +1,4 @@
+/* // M13 REMOVAL START
 /datum/quirk/item_quirk/limper
 	name = "Limper"
 	desc = "You have a pronounced limp when you walk. This will slow you down considerably. Good thing you brought your cane."
@@ -27,3 +28,4 @@
 /datum/quirk/item_quirk/limper/remove(client/client_source)
 	quirk_holder.remove_status_effect(/datum/status_effect/limp/quirk)
 
+*/ // M13 REMOVAL END

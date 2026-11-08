@@ -1,0 +1,12 @@
+author: "misleadingname"
+delete-after: True
+changes:
+  - rscadd: "Added the Undersized quirk and related tiny mob mechanics, excluded from Command or Security."
+  - rscadd: "Added the Registered Prescription quirk with customizable medication preferences."
+  - rscadd: "Added a Jukebox cargo crate."
+  - rscadd: "Added new vocal bark options."
+  - rscdel: "Removed the Limper quirk as an adequate quirk already exists."
+  - qol: "Improved paper formatting, live previews, station/sign tags, and increased the paper character limit, like on Iris."
+  - bugfix: "Admin shuttle cancellation now correctly clears a the vote or epsilon."
+  - admin: "Added the marketable-plush smite."
+  - code_imp: "Added ghost role restrictions for selected quirks and expanded paper HTML/CSS sanitization."

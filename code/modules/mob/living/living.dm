@@ -2818,6 +2818,10 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 
 //Used specifically for the clown box suicide act
 /mob/living/carbon/human/will_escape_storage()
+	// M13 EDIT ADDITION START
+	if(HAS_TRAIT(src, TRAIT_UNDERSIZED))
+		return FALSE
+	// M13 EDIT ADDITION END
 	return TRUE
 
 /// Changes the value of the [living/body_position] variable. Call this before set_lying_angle()
