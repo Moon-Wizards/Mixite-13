@@ -27,3 +27,5 @@ Adds quirks, either ported or brand new ones.
 ### Credits:
 
 - Monkestation
+- Iris Station
+- Doppler Shift 13

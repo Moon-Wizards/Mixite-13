@@ -74,6 +74,11 @@
 	if((quirk_flags & QUIRK_HUMAN_ONLY) && !ishuman(new_holder))
 		CRASH("Human only quirk attempted to be added to non-human mob.")
 
+	// M13 EDIT ADDITION ADD - ghostrole exclude
+	if((quirk_flags & QUIRK_EXCLUDES_GHOSTROLES) && !(new_holder.mind.assigned_role.job_flags & JOB_CREW_MEMBER))
+		CRASH("Blacklisted quirk attempted to be added to a ghostrole mob.")
+	// M13 EDIT ADDITION END
+
 	if(new_holder.has_quirk(type))
 		CRASH("Quirk attempted to be added to mob which already had this quirk.")
 

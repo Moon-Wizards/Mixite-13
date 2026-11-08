@@ -11,6 +11,7 @@ export type PaperContext = {
   raw_text_input?: PaperInput[];
   sanitize_text: boolean;
   signature_font: string;
+  station_name?: string; // M13 EDIT - PAPERWORK
   user_name: string;
 
   // ui_data
