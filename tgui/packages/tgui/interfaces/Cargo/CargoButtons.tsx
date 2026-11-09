@@ -6,7 +6,7 @@ import type { CargoData } from './types';
 
 export function CargoCartButtons(props) {
   const { act, data } = useBackend<CargoData>();
-  const { cart = [], requestonly, can_send, can_approve_requests, displayed_currency_name } = data;
+  const { cart = [], requestonly, can_send, can_purchase = can_send, can_approve_requests, displayed_currency_name } = data; // M13 EDIT CHANGE - ORIGINAL: const { cart = [], requestonly, can_send, can_approve_requests, displayed_currency_name } = data;
 
   let total = 0;
   let amount = 0;
@@ -16,7 +16,7 @@ export function CargoCartButtons(props) {
   }
 
   const canClear =
-    !requestonly && !!can_send && !!can_approve_requests && cart.length > 0;
+    !requestonly && !!can_purchase && !!can_approve_requests && cart.length > 0; // M13 EDIT CHANGE - ORIGINAL: !requestonly && !!can_send && !!can_approve_requests && cart.length > 0;
 
   return (
     <>

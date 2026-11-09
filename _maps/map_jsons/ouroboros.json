@@ -8,7 +8,7 @@
 		"emergency": "emergency_nova",
 		"ferry": "ferry_nova",
 		"mining": "mining_nova_large",
-		"cargo": "cargo_ouroboros",
+		"cargo": "cargo_mixite_ouroboros",
 		"whiteship": "whiteship_ouroboros"
 	},
 	"traits": [
