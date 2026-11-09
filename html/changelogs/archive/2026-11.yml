@@ -1,8 +1,3 @@
-2026-11-02:
-  Infernal-0:
-  - bugfix: for the first time ever, the interdyne defibrillator has paddles
-  TheSS13Melon:
-  - rscadd: Adds 4 areas for the halloween events.
 2026-11-01:
   ATHATH:
   - balance: Added a flash to the captain's locker for consistency with the other
@@ -75,6 +70,11 @@
   - admin: overflayer once again shows the base plane and offset for unregistered
       planes it can decode.
   - bugfix: the potential manifest in the pre-game lobby updates when someone unreadies.
+2026-11-02:
+  Infernal-0:
+  - bugfix: for the first time ever, the interdyne defibrillator has paddles
+  TheSS13Melon:
+  - rscadd: Adds 4 areas for the halloween events.
 2026-11-03:
   Ruslanllll:
   - bugfix: kill once objective now considered to be completed after target died from
@@ -192,3 +192,20 @@
   vinylspiders:
   - bugfix: switched off lights no longer count as light for shadow walking and other
       darkness checks, and lights that move around count where they actually are
+2026-11-09:
+  misleadingname:
+  - bugfix: Vocal barks *should* be consistently playing now.
+  - rscdel: Restores regular map voting and makes map votes no longer tallied.
+  - spellcheck: Fabricated Coagulant is now, capitalized.
+  - rscadd: Added the Undersized quirk and related tiny mob mechanics, excluded from
+      Command or Security.
+  - rscadd: Added the Registered Prescription quirk with customizable medication preferences.
+  - rscadd: Added a Jukebox cargo crate.
+  - rscadd: Added new vocal bark options.
+  - rscdel: Removed the Limper quirk as an adequate quirk already exists.
+  - qol: Improved paper formatting, live previews, station/sign tags, and increased
+      the paper character limit, like on Iris.
+  - bugfix: Admin shuttle cancellation now correctly clears a the vote or epsilon.
+  - admin: Added the marketable-plush smite.
+  - code_imp: Added ghost role restrictions for selected quirks and expanded paper
+      HTML/CSS sanitization.
