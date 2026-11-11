@@ -9957,6 +9957,7 @@
 #include "modular_zmixite\master_files\code\controller\subsystem\shuttle.dm"
 #include "modular_zmixite\master_files\code\datums\chat.dm"
 #include "modular_zmixite\master_files\code\datums\augment\augment_items.dm"
+#include "modular_zmixite\master_files\code\datums\id_trim\jobs.dm"
 #include "modular_zmixite\master_files\code\datums\keybindings\mixite-defaults.dm"
 #include "modular_zmixite\master_files\code\game\areas.dm"
 #include "modular_zmixite\master_files\code\game\atoms_movable.dm"
