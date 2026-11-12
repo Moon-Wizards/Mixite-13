@@ -480,6 +480,11 @@
 	else
 		// Return without taking a breath if there is no air tank.
 		return
+	// M13 EDIT ADDITION START - internals also ingest the tank's reagents
+	var/obj/item/tank/breathed_tank = external || internal
+	if(breathed_tank.reagents?.total_volume)
+		breathed_tank.reagents.trans_to(src, TANK_REAGENTS_INGEST_ON_BREATH_AMOUNT, methods = INGEST)
+	// M13 EDIT ADDITION END
 	// To differentiate between no internals and active, but empty internals.
 	return . || FALSE
 

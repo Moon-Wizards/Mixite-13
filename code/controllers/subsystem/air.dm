@@ -325,7 +325,11 @@ SUBSYSTEM_DEF(air)
 		currentrun.len--
 		if(!M)
 			atmos_machinery -= M
-		if(M.process_atmos(wait * 0.1) == PROCESS_KILL)
+		// M13 EDIT START - ORIGINAL: if(M.process_atmos(wait * 0.1) == PROCESS_KILL)
+		var/process_atmos_result = M.process_atmos(wait * 0.1)
+		var/process_reagents_result = istype(M, /obj/machinery) && M.process_atmos_reagents(wait * 0.1)
+		if(process_atmos_result == PROCESS_KILL && !process_reagents_result)
+		// M13 EDIT END
 			stop_processing_machine(M)
 		if(MC_TICK_CHECK)
 			return
@@ -461,7 +465,10 @@ SUBSYSTEM_DEF(air)
 			net.members += item
 			border += item
 
-			net.air.volume += item.volume
+			// M13 EDIT START - ORIGINAL: net.air.volume += item.volume
+			net.physical_volume += item.volume
+			net.update_reagent_capacity() // M13 EDIT ADDITION
+			// M13 EDIT END
 			item.replace_pipenet(item.parent, net)
 
 			if(item.air_temporary)
