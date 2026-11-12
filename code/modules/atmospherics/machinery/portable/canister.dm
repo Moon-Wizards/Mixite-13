@@ -502,6 +502,7 @@
 	set_density(FALSE)
 	playsound(src.loc, 'sound/effects/spray.ogg', 10, TRUE, -3)
 	investigate_log("was destroyed.", INVESTIGATE_ATMOS)
+	spill_reagents() // M13 EDIT ADDITION
 
 	if(holding)
 		holding.forceMove(T)
@@ -569,6 +570,8 @@
 		if(air_contents.release_gas_to(target_air, release_pressure))
 			if(!holding)
 				air_update_turf(FALSE, FALSE)
+
+		release_reagents() // M13 EDIT ADDITION
 
 	// A bit different than other atmos devices. Wont stop if currently taking damage.
 	if(take_atmos_damage())

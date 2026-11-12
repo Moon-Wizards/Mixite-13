@@ -126,6 +126,7 @@
 	// This is separate from the reaction recorder.
 	// In this case we are only listening to determine if the tank is overpressurized but not destroyed.
 	RegisterSignal(air_contents, COMSIG_GASMIX_MERGED, PROC_REF(merging_information))
+	initialize_reagents() // M13 EDIT ADDITION
 
 	START_PROCESSING(SSobj, src)
 
@@ -134,6 +135,7 @@
 
 /obj/item/tank/Destroy()
 	STOP_PROCESSING(SSobj, src)
+	spill_reagents() // M13 EDIT ADDITION
 	air_contents = null
 	QDEL_NULL(tank_assembly)
 	QDEL_NULL(volume_bar)
@@ -327,6 +329,7 @@
 	if(!QDELETED(volume_bar))
 		volume_bar.update(air_contents.return_pressure())
 
+	process_reagents(seconds_per_tick) // M13 EDIT ADDITION
 	//Allow for reactions
 	excited = (excited | air_contents.react(src))
 	excited = (excited | handle_tolerances(seconds_per_tick))

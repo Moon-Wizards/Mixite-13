@@ -59,6 +59,7 @@
 		air_contents = new
 		air_contents.temperature = T20C
 	air_contents.volume = volume
+	initialize_reagents() // M13 EDIT ADDITION
 	SSair.start_processing_machine(src)
 	AddElement(/datum/element/climbable, climb_time = 3 SECONDS, climb_stun = 3 SECONDS)
 	AddElement(/datum/element/elevation, pixel_shift = 8)
@@ -75,6 +76,7 @@
 	return ..()
 
 /obj/machinery/portable_atmospherics/Destroy()
+	spill_reagents() // M13 EDIT ADDITION
 	disconnect(destroyed = TRUE)
 	air_contents = null
 	if(holding)
