@@ -88,7 +88,7 @@
 	. = ..()
 
 	// random chance chance to get something from the entire cargo catalog, the ATS employees messed up!
-	if(anyprob(50) || (HAS_TRAIT(SSstation, STATION_TRAIT_ATS) ? anyprob(20) : FALSE))
+	if(anyprob(20) || (HAS_TRAIT(SSstation, STATION_TRAIT_ATS) ? anyprob(8) : FALSE))
 		var/datum/supply_pack/pack = SSshuttle.supply_packs[pick(SSshuttle.supply_packs)]
 		var/a_msg = "Randomly dropped in [pack.name]([pack.group]) in a cargo shipment."
 

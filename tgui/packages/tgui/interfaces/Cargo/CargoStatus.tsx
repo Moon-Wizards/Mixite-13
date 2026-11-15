@@ -42,7 +42,7 @@ export function CargoStatus(props) {
     >
       <LabeledList>
         <LabeledList.Item label="Shuttle">
-          {docked && !requestonly && can_send ? (
+          {docked && can_send ? ( // M13 EDIT CHANGE - ORIGINAL: {docked && !requestonly && can_send ? (
             <Button
               color={grocery ? 'orange' : 'green'}
               tooltip={

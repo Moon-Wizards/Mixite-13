@@ -1,15 +1,13 @@
+// For mapping
 /obj/effect/landmark/cargo_marker
 	name = "cargo marker"
 	icon = 'modular_zmixite/modules/cargo/icons/markers.dmi'
 	icon_state = "start"
 
 	var/region_id = ""
-	var/end = FALSE
 
-// For mapping
 /obj/effect/landmark/cargo_marker/end
 	icon_state = "end"
-	end = TRUE
 
 /proc/get_cargo_marker_region(region_id)
 	var/turf/region_start
@@ -18,7 +16,7 @@
 		if(marker.region_id != region_id)
 			continue
 
-		if(marker.end)
+		if(istype(marker, /obj/effect/landmark/cargo_marker/end))
 			region_end = get_turf(marker)
 		else
 			region_start = get_turf(marker)

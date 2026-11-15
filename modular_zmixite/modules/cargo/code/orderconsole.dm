@@ -137,4 +137,5 @@
 /datum/computer_file/program/budgetorders/ui_data(mob/user)
 	var/list/data = ..()
 	data["loan_available"] = SSshuttle.supply.getDockedId() == docking_home || SSshuttle.supply.getDockedId() == docking_away
+	data["can_send"] = (ACCESS_CARGO in computer.GetAccess())
 	return data
