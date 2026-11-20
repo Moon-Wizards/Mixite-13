@@ -209,3 +209,25 @@
   - admin: Added the marketable-plush smite.
   - code_imp: Added ghost role restrictions for selected quirks and expanded paper
       HTML/CSS sanitization.
+2026-11-20:
+  misleadingname:
+  - map: The Automated Trading Station that replaces CentCom Cargo.
+  - rscadd: Crew members now get to ride the cargo shuttle.
+  - rscadd: The Interdyne Supply Console replacing their Express Cargo Console.
+  - map: Interdyne no longer has the Sell Pad and the Express Cargo Console circuit
+      boards for the Interdyne Supply Console.
+  - map: Every Supply shuttle is now fitted with a set of three seats.
+  - image: The Interdyne flag now actually has the Interdyne logo on it.
+  - rscadd: Anyone with cargo access can now manipulate the shuttle via the Shopping
+      Network app.
+  - code_imp: The automapper takes ruins into accounts properly for non destructive
+      map editing.
+  - rscadd: Cargo can receive an extra crate alongside the "Overwhelmed ATS Management"
+      station trait which increases the chances.
+  - server: Sets up the automapper and map inserting for Mixite/13, additionally fixes
+      unit testing.
+  - rscadd: all of Command and all of Cargo PDAs are now capable of long-range NTNet
+      communications.
+  - rscadd: Random pride flag that picks a pride flag on round-start, everyone deserves
+      a little pride.
+  - rscadd: Mail crates now sell for 25 credits and goodie cases for 10.
