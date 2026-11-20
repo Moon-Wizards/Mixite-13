@@ -2767,17 +2767,19 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	female_sprite_flags = NO_FEMALE_UNIFORM
 
-
-/obj/structure/sign/flag/pride/bon
+// M13 EDIT: not a pride flag.
+/obj/structure/sign/flag/bon
 	name = "\improper Bon's cape"
 	desc = "The cape of Bon in all its glory, looks yummy."
+	icon = 'modular_nova/master_files/icons/obj/structures/pride_flags.dmi' // M13 EDIT ADDITION
 	icon_state = "flag_bon"
-	item_flag = /obj/item/sign/flag/pride/bon
+	item_flag = /obj/item/sign/flag/bon
 
-/obj/item/sign/flag/pride/bon
+/obj/item/sign/flag/bon
 	name = "folded Bon's cape"
 	desc = "The folded cape of Bon's ice cone hair."
+	icon = 'modular_nova/master_files/icons/obj/structures/pride_flags.dmi' // M13 EDIT ADDITION
 	icon_state = "folded_pride_bon"
-	sign_path = /obj/structure/sign/flag/pride/bon
+	sign_path = /obj/structure/sign/flag/bon
 	worn_icon_state = "bon"
 

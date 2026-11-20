@@ -44,13 +44,13 @@ function getCutterPath() {
 
 const cutter_path = getCutterPath();
 
-const define_params_file = 'data/last_define_params.json'
+const define_params_file = 'data/last_define_params.json';
 
 // Have compilation defines changed since last build?
 async function defineParametersChanged(defines: string[]): Promise<boolean> {
   const defines_string = JSON.stringify(defines);
   const params_file = Bun.file(define_params_file);
-  if(!await params_file.exists()) {
+  if (!(await params_file.exists())) {
     await params_file.write(defines_string);
     return true;
   }
@@ -179,6 +179,7 @@ export const DmMapsIncludeTarget = new Juke.Target({
       ...Juke.glob('_maps/shuttles/**/*.dmm'),
       ...Juke.glob('_maps/templates/**/*.dmm'),
     ];
+
     // NOVA EDIT ADDITION START
     const isNovaTemplate = (file: string) =>
       file.startsWith('_maps/nova/') ||
@@ -192,33 +193,62 @@ export const DmMapsIncludeTarget = new Juke.Target({
       const file = folders[i];
       if (isNovaTemplate(file)) {
         foldersNova.push(file);
-        folders.splice(i, 1); // remove from folders
+        folders.splice(i, 1);
       }
     }
 
     foldersNova.push(...Juke.glob('_maps/nova/**/*.dmm'));
     // NOVA EDIT ADDITION END
+
+    // MIXITE EDIT ADDITION START
+    const isMixiteTemplate = (file: string) =>
+      file.startsWith('_maps/mixite/') ||
+      file.startsWith('_maps/RandomRuins/SpaceRuins/mixite/') ||
+      file.startsWith('_maps/RandomRuins/IceRuins/mixite/') ||
+      file.startsWith('_maps/RandomRuins/LavaRuins/mixite/') ||
+      file.startsWith('_maps/shuttles/mixite/');
+
+    const foldersMixite = [];
+    for (let i = folders.length - 1; i >= 0; i--) {
+      const file = folders[i];
+      if (isMixiteTemplate(file)) {
+        foldersMixite.push(file);
+        folders.splice(i, 1);
+      }
+    }
+
+    foldersMixite.push(...Juke.glob('_maps/mixite/**/*.dmm'));
+    // MIXITE EDIT ADDITION END
+
     const content = `${folders
       .map((file) => file.replace('_maps/', ''))
       .map((file) => `#include "${file}"`)
       .join('\n')}\n`;
+
     fs.writeFileSync('_maps/templates.dm', content);
+
     // NOVA EDIT ADDITION START
     const contentNova = `${foldersNova
       .map((file) => file.replace('_maps/', ''))
       .map((file) => `#include "${file}"`)
       .join('\n')}\n`;
+
     fs.writeFileSync('_maps/templates_nova.dm', contentNova);
     // NOVA EDIT ADDITION END
+
+    // MIXITE EDIT ADDITION START
+    const contentMixite = `${foldersMixite
+      .map((file) => file.replace('_maps/', ''))
+      .map((file) => `#include "${file}"`)
+      .join('\n')}\n`;
+
+    fs.writeFileSync('_maps/templates_mixite.dm', contentMixite);
+    // MIXITE EDIT ADDITION END
   },
 });
 
 export const BehaviorTreeCompilerTarget = new Juke.Target({
-  inputs: [
-    'code/**/*.bt.json',
-    'code/__DEFINES/**/*.dm',
-    'tools/build_bt.py',
-  ],
+  inputs: ['code/**/*.bt.json', 'code/__DEFINES/**/*.dm', 'tools/build_bt.py'],
   outputs: () => {
     return Juke.glob('code/**/*.bt.json').map((file) => {
       const rel = file.replace(/\.bt\.json$/, '');
@@ -242,6 +272,7 @@ export const DmTarget = new Juke.Target({
   dependsOn: ({ get }) => [
     get(DefineParameter).includes('ALL_TEMPLATES') && DmMapsIncludeTarget,
     get(DefineParameter).includes('NOVA_TEMPLATES') && DmMapsIncludeTarget, // NOVA EDIT ADDITION
+    get(DefineParameter).includes('MIXITE_TEMPLATES') && DmMapsIncludeTarget, // M13 EDIT ADDITION
     !get(SkipIconCutter) && IconCutterTarget,
     BehaviorTreeCompilerTarget,
   ],
@@ -254,12 +285,16 @@ export const DmTarget = new Juke.Target({
     'interface/**',
     'sound/**',
     'tgui/public/tgui.html',
-    "modular_nova/**", ///NOVA EDIT ADDITION - Making the CBT work
+    'modular_nova/**', ///NOVA EDIT ADDITION - Making the CBT work
+    'modular_zmixite/**', ///M13 EDIT ADDITION - Making the CBT work
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],
   outputs: async ({ get }) => {
-    if (get(DmVersionParameter) || await defineParametersChanged(get(DefineParameter))) {
+    if (
+      get(DmVersionParameter) ||
+      (await defineParametersChanged(get(DefineParameter)))
+    ) {
       // Always rebuild when a dm version is provided or CLI defines have changed from last run
       return [];
     }

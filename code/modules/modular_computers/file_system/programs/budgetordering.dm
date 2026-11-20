@@ -117,6 +117,7 @@
 	data["can_send"] = FALSE //There is no situation where I want the app to be able to send the shuttle AWAY from the station, but conversely is fine.
 	data["can_approve_requests"] = can_approve_requests
 	data["app_cost"] = TRUE
+	data["can_confirm"] = FALSE // M13 EDIT ADDITION
 	var/message = "Remember to stamp and send back the supply manifests."
 	if(SSshuttle.centcom_message)
 		message = SSshuttle.centcom_message

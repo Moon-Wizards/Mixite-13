@@ -15,10 +15,11 @@ export function CargoStatus(props) {
   const {
     department,
     grocery,
-    away,
+    // away, // M13 EDIT REMOVAL
     docked,
     loan,
     loan_dispatched,
+    loan_available, // M13 EDIT ADDITION
     location,
     message,
     points,
@@ -41,7 +42,7 @@ export function CargoStatus(props) {
     >
       <LabeledList>
         <LabeledList.Item label="Shuttle">
-          {docked && !requestonly && can_send ? (
+          {docked && can_send ? ( // M13 EDIT CHANGE - ORIGINAL: {docked && !requestonly && can_send ? (
             <Button
               color={grocery ? 'orange' : 'green'}
               tooltip={
@@ -62,7 +63,7 @@ export function CargoStatus(props) {
         {!!loan && !requestonly && (
           <LabeledList.Item label="Loan">
             {!loan_dispatched ? (
-              <Button disabled={!(away && docked)} onClick={() => act('loan')}>
+              <Button disabled={!(loan_available && docked)} onClick={() => act('loan')}> {/* M13 EDIT - ORIGINAL: <Button disabled={!(away && docked)} onClick={() => act('loan')}> */}
                 Loan Shuttle
               </Button>
             ) : (
