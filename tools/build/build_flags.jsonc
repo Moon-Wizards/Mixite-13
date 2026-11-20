@@ -193,6 +193,15 @@
 			"description": "Includes all Nova map templates in the build (needed for testing our modular ruins, shuttles and away missions).",
 		},
 		// NOVA EDIT ADDITION END
+		// M13 EDIT ADDITION START
+		{
+			"id": "MIXITE_TEMPLATES",
+			"define": "MIXITE_TEMPLATES",
+			"label": "All Mixite templates",
+			"category": "Map",
+			"description": "Includes all Mixite map templates in the build (ditto).",
+		},
+		// M13 EDIT ADDITION END
 		{
 			"id": "ALL_MAPS",
 			"define": "ALL_MAPS",
