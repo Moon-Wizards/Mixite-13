@@ -326,8 +326,8 @@ SUBSYSTEM_DEF(air)
 		if(!M)
 			atmos_machinery -= M
 		// M13 EDIT START - ORIGINAL: if(M.process_atmos(wait * 0.1) == PROCESS_KILL)
-		var/process_atmos_result = M.process_atmos(wait * 0.1)
 		var/process_reagents_result = istype(M, /obj/machinery) && M.process_atmos_reagents(wait * 0.1)
+		var/process_atmos_result = M.process_atmos(wait * 0.1)
 		if(process_atmos_result == PROCESS_KILL && !process_reagents_result)
 		// M13 EDIT END
 			stop_processing_machine(M)

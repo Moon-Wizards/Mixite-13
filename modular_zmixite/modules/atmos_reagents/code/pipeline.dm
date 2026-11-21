@@ -16,9 +16,9 @@
 /datum/pipeline/proc/update_reagent_capacity()
 	if(!reagents || !air)
 		return
-	reagents.maximum_volume = max(physical_volume * REAGENT_VOLUME_RATIO, reagents.total_volume)
+	reagents.maximum_volume = max(physical_volume * REAGENT_VOLUME_RATIO LITERS_TO_UNITS, reagents.total_volume)
 	// Liquids displace gas, so the gas volume shrinks as reagents fill the network.
-	air.volume = max(physical_volume - reagents.total_volume, MINIMUM_GAS_VOLUME)
+	air.volume = max(physical_volume - reagents.total_volume UNITS_TO_LITERS, MINIMUM_GAS_VOLUME)
 
 /// When reagents change, ensure the pipeline keeps processing.
 /datum/pipeline/proc/on_reagents_changed(datum/reagents/holder)

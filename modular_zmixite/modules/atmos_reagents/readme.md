@@ -15,6 +15,7 @@ The usual atmos machinery handles reagents in these ways:
 - **Vent pumps** scoop reagents when siphoning and spill them when releasing, **scrubbers** scoop when siphoning, and **passive vents** scoop or spill whichever side has more liquid. Scrubbers drown thus refuse to work while sitting in liquid.
 - **Pressure and volume pumps** move reagents along with the gas when running.
 - **Gates** (temperature, pressure, passive) pass reagents whenever they pass gas, and **valves** equalize reagent concentration between both sides when opened.
+- **Gas filters** split reagents between the side and main outputs in the same ratio as the filtered and passed gas, and **gas mixers** carry reagents from both intakes into the output in proportion to the gas pulled from each.
 - **Connector ports** transfer pipeline reagents into the connected machine.
 - **Portable pumps and scrubbers** move reagents between their holding tank and the surrounding atmos.
 - **Canisters** transfer reagents into their holding tank when the valve is open, or spill them onto the turf if no tank is connected.
@@ -81,6 +82,9 @@ The usual atmos machinery handles reagents in these ways:
   - `/obj/item/tank/process_reagents`
   - `/obj/item/tank/process_reagent_temperature`
   - `/obj/item/tank/spill_reagents`
+- `modular_zmixite/modules/atmos_reagents/code/trinary.dm`
+  - `/obj/machinery/atmospherics/components/trinary/filter/process_atmos_reagents`
+  - `/obj/machinery/atmospherics/components/trinary/mixer/process_atmos_reagents`
 - `modular_zmixite/modules/atmos_reagents/code/unary.dm`
   - `/obj/machinery/atmospherics/components/unary/scoop_reagents`
   - `/obj/machinery/atmospherics/components/unary/spill_reagents`

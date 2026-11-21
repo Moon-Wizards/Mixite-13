@@ -1,6 +1,6 @@
 /// Sets up the reagent holder for a gas tank.
 /obj/item/tank/proc/initialize_reagents()
-	create_reagents(volume)
+	create_reagents(volume LITERS_TO_UNITS)
 	reagents.my_atom = src
 	RegisterSignal(reagents, COMSIG_REAGENTS_HOLDER_UPDATED, PROC_REF(on_reagents_changed))
 	update_reagent_capacity()
@@ -14,9 +14,9 @@
 /obj/item/tank/proc/update_reagent_capacity()
 	if(!reagents)
 		return
-	reagents.maximum_volume = max(volume * REAGENT_VOLUME_RATIO, reagents.total_volume)
+	reagents.maximum_volume = max(volume * REAGENT_VOLUME_RATIO LITERS_TO_UNITS, reagents.total_volume)
 	if(air_contents)
-		air_contents.volume = max(volume - reagents.total_volume, MINIMUM_GAS_VOLUME)
+		air_contents.volume = max(volume - reagents.total_volume UNITS_TO_LITERS, MINIMUM_GAS_VOLUME)
 
 /// Processes reagent chemistry and temperature coupling each tank tick.
 /obj/item/tank/proc/process_reagents(seconds_per_tick)

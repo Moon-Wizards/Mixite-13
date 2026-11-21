@@ -1,7 +1,7 @@
 /// Sets up the reagent holder for a portable atmos machine.
 /obj/machinery/portable_atmospherics/proc/initialize_reagents()
 	if(!reagents)
-		create_reagents(volume)
+		create_reagents(volume LITERS_TO_UNITS)
 	reagents.my_atom = src
 	RegisterSignal(reagents, COMSIG_REAGENTS_HOLDER_UPDATED, PROC_REF(on_reagents_changed))
 	update_reagent_capacity()
@@ -10,9 +10,9 @@
 /obj/machinery/portable_atmospherics/proc/update_reagent_capacity()
 	if(!reagents)
 		return
-	reagents.maximum_volume = max(volume * REAGENT_VOLUME_RATIO, reagents.total_volume)
+	reagents.maximum_volume = max(volume * REAGENT_VOLUME_RATIO LITERS_TO_UNITS, reagents.total_volume)
 	if(air_contents)
-		air_contents.volume = max(volume - reagents.total_volume, MINIMUM_GAS_VOLUME)
+		air_contents.volume = max(volume - reagents.total_volume UNITS_TO_LITERS, MINIMUM_GAS_VOLUME)
 
 /// When reagents change, ensure the machine keeps processing.
 /obj/machinery/portable_atmospherics/proc/on_reagents_changed(datum/reagents/holder)
