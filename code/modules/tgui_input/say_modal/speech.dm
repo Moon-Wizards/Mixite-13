@@ -12,7 +12,7 @@
 	var/list/phrases = alter_phrases || hurt_phrases
 
 	/// No OOC leaks
-	if(!entry || payload["channel"] == OOC_CHANNEL || payload["channel"] == ME_CHANNEL || payload["channel"] == PRAY_CHANNEL || payload["channel"] == LOOC_CHANNEL) // NOVA EDIT CHANGE - ORIGINAL: if(!entry || payload["channel"] == OOC_CHANNEL || payload["channel"] == ME_CHANNEL || payload["channel"] == PRAY_CHANNEL)
+	if(!entry || payload["channel"] == OOC_CHANNEL || payload["channel"] == ME_CHANNEL || payload["channel"] == PRAY_CHANNEL || payload["channel"] == LOOC_CHANNEL || payload["channel"] == SUBTLE_CHANNEL) // NOVA EDIT CHANGE - ORIGINAL: if(!entry || payload["channel"] == OOC_CHANNEL || payload["channel"] == ME_CHANNEL || payload["channel"] == PRAY_CHANNEL) // M13 EDIT ADDITION - SUBTLE
 		return pick(phrases)
 	/// Random trimming for larger sentences
 	if(length(entry) > 50)
@@ -42,6 +42,9 @@
 			return TRUE
 		if(ME_CHANNEL)
 			client.mob.me_verb(entry)
+			return TRUE
+		if(SUBTLE_CHANNEL) // M13 ADDITION - SUBTLE
+			client.mob.subtle_me_verb(entry)
 			return TRUE
 		if(OOC_CHANNEL)
 			ASYNC
@@ -143,7 +146,7 @@
 		return TRUE
 	if(type == "force")
 		var/target_channel = payload["channel"]
-		if(target_channel == ME_CHANNEL || target_channel == OOC_CHANNEL || target_channel == PRAY_CHANNEL)
+		if(target_channel == ME_CHANNEL || target_channel == OOC_CHANNEL || target_channel == PRAY_CHANNEL || target_channel == SUBTLE_CHANNEL) // M13 EDIT ADDITION - SUBTLE
 			target_channel = SAY_CHANNEL // No ooc leaks
 		delegate_speech(alter_entry(payload), target_channel)
 		return TRUE
