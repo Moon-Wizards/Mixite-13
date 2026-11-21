@@ -1,8 +1,10 @@
 
-#define EMOTE_DELAY (2 SECONDS) //To prevent spam emotes.
+#define EMOTE_DELAY (5 DECISECONDS) //To prevent spam emotes. // M13 EDIT - EMOTES - ORIGINAL: #define EMOTE_DELAY (5 DECISECONDS)
 
+/* // M13 EDIT REMOVAL START - EMOTES
 /mob
 	var/nextsoundemote = 1 //Time at which the next emote can be played
+*/ // M13 EDIT REMOVAL END
 
 /datum/emote
 	cooldown = EMOTE_DELAY

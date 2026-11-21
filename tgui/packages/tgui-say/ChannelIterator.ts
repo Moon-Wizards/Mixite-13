@@ -1,4 +1,4 @@
-export type Channel = 'Say' | 'Radio' | 'Me' | 'Whis' | 'LOOC' | 'Do' | 'OOC' | 'Admin' | 'Pray'; // NOVA EDIT CHANGE - ORIGINAL: export type Channel = 'Say' | 'Radio' | 'Me' | 'OOC' | 'Admin' | 'Pray';
+export type Channel = 'Say' | 'Radio' | 'Me' | 'Whis' | 'LOOC' | 'Do' | 'OOC' | 'Admin' | 'Pray' | 'Subtle'; // NOVA EDIT CHANGE - ORIGINAL: export type Channel = 'Say' | 'Radio' | 'Me' | 'OOC' | 'Admin' | 'Pray'; // M13 EDIT ADDITION - SUBTLE
 
 /**
  * ### ChannelIterator
@@ -8,7 +8,7 @@ export type Channel = 'Say' | 'Radio' | 'Me' | 'Whis' | 'LOOC' | 'Do' | 'OOC' | 
  */
 export class ChannelIterator {
   private index: number = 0;
-  private readonly channels: Channel[] = ['Say', 'Radio', 'Me', 'Whis', 'LOOC', 'Do', 'OOC', 'Admin', 'Pray']; // NOVA EDIT CHANGE - ORIGINAL: private readonly channels: Channel[] = ['Say', 'Radio', 'Me', 'OOC', 'Admin', 'Pray'];
+  private readonly channels: Channel[] = ['Say', 'Radio', 'Me', 'Subtle', 'Whis', 'LOOC', 'Do', 'OOC', 'Admin', 'Pray']; // NOVA EDIT CHANGE - ORIGINAL: private readonly channels: Channel[] = ['Say', 'Radio', 'Me', 'OOC', 'Admin', 'Pray']; // M13 EDIT ADDITION - SUBTLE
   private readonly blacklist: Channel[] = ['Admin'];
   private readonly quiet: Channel[] = ['OOC', 'LOOC', 'Admin', 'Pray']; // NOVA EDIT CHANGE - ORIGINAL: private readonly quiet: Channel[] = ['OOC', 'Admin', 'Pray'];
 

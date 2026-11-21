@@ -32,11 +32,11 @@
 			silenced = TRUE
 			continue
 		if(!forced && !emote.can_run_emote(src, TRUE, intentional, param))
-			src.nextsoundemote = world.time // NOVA EDIT ADDITION - Since the cooldown is global and not specific to each emote, we need to reset it on an unsuccessful emote
+			// src.nextsoundemote = world.time // NOVA EDIT ADDITION - Since the cooldown is global and not specific to each emote, we need to reset it on an unsuccessful emote
 			continue
 		if(SEND_SIGNAL(src, COMSIG_MOB_PRE_EMOTED, emote.key, param, type_override, intentional, emote) & COMPONENT_CANT_EMOTE)
 			silenced = TRUE
-			src.nextsoundemote = world.time // NOVA EDIT ADDITION
+			// src.nextsoundemote = world.time // NOVA EDIT ADDITION
 			continue
 		emote.run_emote(src, param, type_override, intentional)
 		SEND_SIGNAL(src, COMSIG_MOB_EMOTE, emote, act, type_override, message, intentional)
