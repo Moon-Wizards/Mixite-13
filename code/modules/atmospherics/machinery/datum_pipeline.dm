@@ -26,6 +26,10 @@
 	other_atmos_machines = list()
 	require_custom_reconcilation = list()
 	//gas_visuals = list() // NOVA EDIT REMOVAL - Pipe gas visuals removed
+	// M13 EDIT ADDITION START
+	reagents = new /datum/reagents(0)
+	RegisterSignal(reagents, COMSIG_REAGENTS_HOLDER_UPDATED, PROC_REF(on_reagents_changed))
+	// M13 EDIT ADDITION END
 	SSair.networks += src
 
 /datum/pipeline/Destroy()
@@ -34,6 +38,10 @@
 		SSair.remove_from_expansion(src)
 	if(air?.volume)
 		temporarily_store_air()
+	// M13 EDIT ADDITION START
+	spill_reagents()
+	QDEL_NULL(reagents)
+	// M13 EDIT ADDITION END
 	for(var/obj/machinery/atmospherics/pipe/considered_pipe in members)
 		considered_pipe.replace_pipenet(considered_pipe.parent, null)
 		if(QDELETED(considered_pipe))
@@ -44,11 +52,15 @@
 	return ..()
 
 /datum/pipeline/process()
-	if(!update || building)
+	if(building)
 		return
-	reconcile_air()
-	//Only react if the mix has changed, and don't keep updating if it hasn't
-	update = air.react(src)
+	// M13 EDIT START - ORIGINAL: if(!update || building) return
+	if(update)
+		reconcile_air()
+		//Only react if the mix has changed, and don't keep updating if it hasn't
+		update = air.react(src)
+	process_reagents(SSair.wait * 0.1)
+	// M13 EDIT END
 	//CalculateGasmixColor(air) // NOVA EDIT REMOVAL - Pipe gas visuals removed
 
 /datum/pipeline/proc/set_air(datum/gas_mixture/new_air)
@@ -74,7 +86,11 @@
 	if(!air)
 		set_air(new /datum/gas_mixture)
 
-	air.volume = volume
+	physical_volume = volume // M13 EDIT - ORIGINAL: air.volume = volume
+	// M13 EDIT ADDITION START
+	reagents.my_atom = base
+	update_reagent_capacity()
+	// M13 EDIT ADDITION END
 	SSair.add_to_expansion(src, base)
 
 ///Has the same effect as build_pipeline(), but this doesn't queue its work, so overrun abounds. It's useful for the pregame
@@ -127,7 +143,11 @@
 
 			possible_expansions -= borderline
 
-	air.volume = volume
+	physical_volume = volume // M13 EDIT - ORIGINAL: air.volume = volume
+	// M13 EDIT ADDITION START
+	reagents.my_atom = base
+	update_reagent_capacity()
+	// M13 EDIT ADDITION END
 
 	/**
 	 *  For a machine to properly "connect" to a pipeline and share gases,
@@ -165,12 +185,23 @@
 			merge(parent_pipeline)
 		if(!members.Find(reference_pipe))
 			members += reference_pipe
-			air.volume += reference_pipe.volume
+			physical_volume += reference_pipe.volume // M13 EDIT - ORIGINAL: air.volume += reference_pipe.volume
+			// M13 EDIT ADDITION START
+			if(!reagents.my_atom)
+				reagents.my_atom = reference_pipe
+			update_reagent_capacity()
+			// M13 EDIT ADDITION END
 
 /datum/pipeline/proc/merge(datum/pipeline/parent_pipeline)
 	if(parent_pipeline == src)
 		return
-	air.volume += parent_pipeline.air.volume
+	physical_volume += parent_pipeline.physical_volume // M13 EDIT - ORIGINAL: air.volume += parent_pipeline.air.volume
+	// M13 EDIT ADDITION START
+	update_reagent_capacity()
+	if(!reagents.my_atom)
+		reagents.my_atom = parent_pipeline.reagents.my_atom
+	parent_pipeline.reagents.trans_to(reagents, parent_pipeline.reagents.total_volume)
+	// M13 EDIT ADDITION END
 	members.Add(parent_pipeline.members)
 	for(var/obj/machinery/atmospherics/pipe/reference_pipe in parent_pipeline.members)
 		reference_pipe.replace_pipenet(reference_pipe.parent, src)
@@ -202,11 +233,16 @@
 
 /datum/pipeline/proc/temporarily_store_air()
 	//Update individual gas_mixtures by volume ratio
+	// M13 EDIT START - liquids displace gas, so distribute over the full physical volume to conserve moles
+	var/network_volume = physical_volume || air.volume
+	if(!network_volume)
+		return
+	// M13 EDIT END
 
 	for(var/obj/machinery/atmospherics/pipe/member in members)
 		member.air_temporary = new
 		member.air_temporary.volume = member.volume
-		member.air_temporary.copy_from_ratio(air, member.volume / air.volume)
+		member.air_temporary.copy_from_ratio(air, member.volume / network_volume) // M13 EDIT - ORIGINAL: member.air_temporary.copy_from_ratio(air, member.volume / air.volume)
 
 		member.air_temporary.temperature = air.temperature
 
