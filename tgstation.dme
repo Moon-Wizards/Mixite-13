@@ -544,6 +544,7 @@
 #include "code\__DEFINES\~zmixite_defines\astar.dm"
 #include "code\__DEFINES\~zmixite_defines\DNA.dm"
 #include "code\__DEFINES\~zmixite_defines\holograms.dm"
+#include "code\__DEFINES\~zmixite_defines\hud.dm"
 #include "code\__DEFINES\~zmixite_defines\is_helper.dm"
 #include "code\__DEFINES\~zmixite_defines\quirks.dm"
 #include "code\__DEFINES\~zmixite_defines\dcs\signals.dm"
@@ -10046,6 +10047,8 @@
 #include "modular_zmixite\modules\subtle\code\subtle.dm"
 #include "modular_zmixite\modules\subtle\code\verb.dm"
 #include "modular_zmixite\modules\title_screen\code\new_player.dm"
+#include "modular_zmixite\modules\screen_vote\code\preference.dm"
+#include "modular_zmixite\modules\screen_vote\code\screen_vote.dm"
 #include "modular_zmixite\modules\votes\code\map_vote.dm"
 #include "modular_zmixite\modules\whitelist\code\whitelist.dm"
 // END_INCLUDE
