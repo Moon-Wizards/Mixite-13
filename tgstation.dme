@@ -10044,11 +10044,11 @@
 #include "modular_zmixite\modules\quirks\code\undersized\inhand_holder.dm"
 #include "modular_zmixite\modules\quirks\code\undersized\squashable.dm"
 #include "modular_zmixite\modules\quirks\code\undersized\undersized.dm"
+#include "modular_zmixite\modules\screen_vote\code\preference.dm"
+#include "modular_zmixite\modules\screen_vote\code\screen_vote.dm"
 #include "modular_zmixite\modules\subtle\code\subtle.dm"
 #include "modular_zmixite\modules\subtle\code\verb.dm"
 #include "modular_zmixite\modules\title_screen\code\new_player.dm"
-#include "modular_zmixite\modules\screen_vote\code\preference.dm"
-#include "modular_zmixite\modules\screen_vote\code\screen_vote.dm"
 #include "modular_zmixite\modules\votes\code\map_vote.dm"
 #include "modular_zmixite\modules\whitelist\code\whitelist.dm"
 // END_INCLUDE
