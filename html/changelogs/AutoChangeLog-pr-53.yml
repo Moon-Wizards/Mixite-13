@@ -1,0 +1,8 @@
+author: "misleadingname"
+delete-after: True
+changes:
+  - rscadd: "Subtle emote `*subtle <text>` (or tsay) to make it only appear within a 1 tile radius."
+  - rscadd: "Added Raptor Laugh and Bad Laugh."
+  - rscadd: "Added *huff, *sclick, *notif, *dialup, *victory emotes."
+  - rscadd: "Certain emotes have a synth angst when played via cybernetics."
+  - rscdel: "Global emote cooldown."
