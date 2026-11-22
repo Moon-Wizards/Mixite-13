@@ -1,3 +1,8 @@
+/datum/emote/living/huff
+	key = "huff"
+	key_third_person = "huffs"
+	message = "huffs!"
+
 /datum/emote/living/tail_thump
 	key = "tailthump"
 	key_third_person = "tailthumps"

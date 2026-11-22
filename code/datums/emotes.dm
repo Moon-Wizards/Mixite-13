@@ -320,16 +320,11 @@
 	if(!intentional)
 		return TRUE
 
-	if(user.nextsoundemote > world.time) // NOVA EDIT CHANGE - ORIGINAL: if(user.emotes_used && user.emotes_used[src] + cooldown > world.time)
-		var/datum/emote/default_emote = /datum/emote
-		if(cooldown > initial(default_emote.cooldown)) // only worry about longer-than-normal emotes
-			to_chat(user, span_danger("You must wait another [DisplayTimeText(user.nextsoundemote - world.time)] before using that emote."))
+	if(user.emotes_used && user.emotes_used[src] + cooldown > world.time)
 		return FALSE
-	//if(!user.emotes_used)
-	//	user.emotes_used = list()
-	//user.emotes_used[src] = world.time - NOVA EDIT - ORIGINAL
-	user.nextsoundemote = world.time + cooldown
-	//NOVA EDIT CHANGE END
+	if(!user.emotes_used)
+		user.emotes_used = list()
+	user.emotes_used[src] = world.time
 	return TRUE
 
 /**
@@ -420,6 +415,8 @@
 		. = message_robot
 	else if(isanimal_or_basicmob(user) && message_animal_or_basic)
 		. = message_animal_or_basic
+	else if(issynthetic(user) && message_synthetic) // M13 EDIT ADDITION - EMOTES
+		. = message_synthetic
 
 	return .
 

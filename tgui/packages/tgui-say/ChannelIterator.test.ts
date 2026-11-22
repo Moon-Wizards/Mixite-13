@@ -13,6 +13,9 @@ describe('ChannelIterator', () => {
     expect(channelIterator.current()).toBe('Say');
     expect(channelIterator.next()).toBe('Radio');
     expect(channelIterator.next()).toBe('Me');
+    // M13 EDIT ADDITION START
+    expect(channelIterator.next()).toBe('Subtle');
+    // M13 EDIT ADDITION END
     // NOVA EDIT ADDITION START
     expect(channelIterator.next()).toBe('Whis');
     expect(channelIterator.next()).toBe('LOOC');
