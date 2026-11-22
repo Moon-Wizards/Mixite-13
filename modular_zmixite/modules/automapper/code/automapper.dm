@@ -88,14 +88,22 @@
 
 			var/datum/map_template/automap_template/map = new(map_file, template, required_map, load_turf)
 			var/list/objects_to_delete = list()
+			var/list/deleted_turfs = list()
 			for(var/turf/affected_turf as anything in map.get_affected_turfs(load_turf, FALSE))
 				// template_noop tiles are the map's polite way of saying "don't fuck with this".
 				if(SSautomapper.has_turf_noop(map, affected_turf.x - load_turf.x, affected_turf.y - load_turf.y))
 					continue
+				deleted_turfs[affected_turf] = TRUE
 				affected_turf.lighting_clear_overlay()
 				for(var/atom/affected_atom as anything in affected_turf.get_all_contents())
 					if(istype(affected_atom, /obj))
 						objects_to_delete += affected_atom
+
+			for(var/turf/border_turf as anything in CORNER_BLOCK_OFFSET(load_turf, map.width + 2, map.height + 2, -1, -1))
+				if(deleted_turfs[border_turf])
+					continue
+				for(var/obj/machinery/atmospherics/pipe/left_behind in border_turf)
+					left_behind.destroy_network()
 
 			// Remove the old contents before initializing the replacement map. In
 			// particular, atmos machines must disconnect before the new machines
