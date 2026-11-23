@@ -239,3 +239,6 @@
   - rscadd: Added *huff, *sclick, *notif, *dialup, *victory emotes.
   - rscadd: Certain emotes have a synth angst when played via cybernetics.
   - rscdel: Global emote cooldown.
+2026-11-23:
+  misleadingname:
+  - bugfix: Fixes Runtimes related to the Automapper changes
