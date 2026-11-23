@@ -403,6 +403,7 @@
 /mob/eye/imaginary_friend/create_thinking_indicator()
 	if(active_thinking_indicator || active_typing_indicator || !HAS_TRAIT(src, TRAIT_THINKING_IN_CHARACTER))
 		return FALSE
+	var/bubble_icon = client?.tgui_say?.initial_channel == LOOC_CHANNEL ? "looc" : src.bubble_icon // M13 EDIT ADDITION
 	active_thinking_indicator = image('icons/mob/effects/talk.dmi', src, "[bubble_icon]3", TYPING_LAYER)
 	add_image_to_clients(active_thinking_indicator, group_clients())
 
@@ -415,6 +416,7 @@
 /mob/eye/imaginary_friend/create_typing_indicator()
 	if(active_typing_indicator || active_thinking_indicator || !HAS_TRAIT(src, TRAIT_THINKING_IN_CHARACTER))
 		return FALSE
+	var/bubble_icon = client?.tgui_say?.initial_channel == LOOC_CHANNEL ? "looc" : src.bubble_icon // M13 EDIT ADDITION
 	active_typing_indicator = image('icons/mob/effects/talk.dmi', src, "[bubble_icon]0", TYPING_LAYER)
 	add_image_to_clients(active_typing_indicator, group_clients())
 
