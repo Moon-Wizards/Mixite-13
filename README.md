@@ -9,21 +9,23 @@
 
 | Website                          | Link                                                                                                                                     |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Organization Homepage            | [https://luastation.org/](https://luastation.org/)                                                                                       |
 | How to Write a Design Doc        | [https://hackmd.io/@tgstation/BkzmU9EyK](https://hackmd.io/@tgstation/BkzmU9EyK)                                                         |
 | Git / GitHub cheatsheet          | [https://www.notion.so/Git-GitHub-61bc81766b2e4c7d9a346db3078ce833](https://www.notion.so/Git-GitHub-61bc81766b2e4c7d9a346db3078ce833)   |
-| Guide to Modularization          | [./modular_nova/readme.md](./modular_nova/readme.md)                                                                                     |
+| Guide to Modularization          | [./modular_zmixite/readme.md](./modular_zmixite/readme.md)                                                                               |
 | Guide to Mirroring               | [./modular_nova/mirroring_guide.md](./modular_nova/mirroring_guide.md)                                                                   |
 | Code                             | [https://github.com/Moon-Wizards/Mixite-13](https://github.com/Moon-Wizards/Mixite-13)                                                   |
-| Wiki                             | [https://wiki.novasector13.com](https://wiki.novasector13.com)                                                                           |
+| Upstream Wiki                    | [https://wiki.novasector13.com](https://wiki.novasector13.com)                                                                           |
+| Project Wiki                     | [https://wiki.luastation.org/en/mixite13](https://wiki.luastation.org/en/mixite13)                                                       |
 | Codedocs                         | [https://NovaSector.github.io/NovaSector/](https://NovaSector.github.io/NovaSector/)                                                     |
-| Nova Sector's Discord            | [https://discord.gg/novasector](https://discord.gg/novasector)                                                                           |
+| MoonWizards's Discord            | [https://discord.gg/Auc3ekNVQa](https://discord.gg/Auc3ekNVQa)                                                                           |
 | Coderbus Discord                 | [https://discord.gg/Vh8TJp9](https://discord.gg/Vh8TJp9)                                                                                 |
 | Contribution Guide               | [./.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md)                                                                                   |
 | Getting Started With Development | [https://hackmd.io/@tgstation/HJ8OdjNBc#tgstation-Development-Guide](https://hackmd.io/@tgstation/HJ8OdjNBc#tgstation-Development-Guide) |
 | Maintainer-Approved Design Docs  | [https://hackmd.io/@tgstation](https://hackmd.io/@tgstation)                                                                             |
-| Server Lore                      | [https://wiki.luastation.org/en/mixite13/lore](https://wiki.luastation.org/en/mixite13/lore)                                               |
+| Server Lore                      | [https://wiki.luastation.org/en/mixite13/lore](https://wiki.luastation.org/en/mixite13/lore)                                             |
 
-This is Mixite/13's downstream a fork of Nova Sector which is a fork of /tg/station created in byond.
+This is MoonWizards's downstream of the Nova Sector codebase which is a fork of /tg/station created in byond.
 
 There might be NSFW sprites in the codebase, but all NSFW code has been removed. Sprites will be removed when possible. This is a SFW fork.
 

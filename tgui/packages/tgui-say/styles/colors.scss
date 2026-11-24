@@ -37,6 +37,9 @@ $_channel_map: (
   'SolFed': hsl(68, 70%, 60%),
   'Whis': hsl(238, 55%, 67%),
   'Do': hsl(137, 64%, 60%), // NOVA EDIT ADDITION END
+  // M3 EDIT ADDITION ADD
+  'Subtle': hsl(227, 43.5%, 40.2%)
+  // M13 EDIT ADDITION END
 );
 
 $channel_keys: map.keys($_channel_map) !default;

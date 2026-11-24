@@ -119,6 +119,10 @@ GLOBAL_LIST_INIT(available_erp_ui_styles, list(
 	// will fall back to the default if any of these are null
 	ui_style ||= ui_style2icon(owner.client?.prefs?.read_preference(/datum/preference/choiced/ui_style))
 
+	// M13 EDIT ADDITION START - SCREENVOTE
+	if(owner?.client?.prefs?.read_preference(/datum/preference/toggle/mapvote_hud))
+		add_screen_object(/atom/movable/screen/mapvote_hud, HUD_MAPVOTE)
+	// M13 EDIT ADDITION END
 	add_screen_object(/atom/movable/screen/button_palette, HUD_MOB_TOGGLE_PALETTE)
 	add_screen_object(/atom/movable/screen/palette_scroll/down, HUD_MOB_PALETTE_DOWN)
 	add_screen_object(/atom/movable/screen/palette_scroll/up, HUD_MOB_PALETTE_UP)

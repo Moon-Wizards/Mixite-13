@@ -68,6 +68,7 @@
 /mob/living/create_thinking_indicator()
 	if(active_thinking_indicator || active_typing_indicator || IS_UNCONSCIOUS_OR_CRIT(src) || !HAS_TRAIT(src, TRAIT_THINKING_IN_CHARACTER))
 		return FALSE
+	var/bubble_icon = client?.tgui_say?.initial_channel == LOOC_CHANNEL ? "looc" : src.bubble_icon // M13 EDIT ADDITION
 	active_thinking_indicator = mutable_appearance('icons/mob/effects/talk.dmi', "[bubble_icon]3", TYPING_LAYER)
 	add_overlay(active_thinking_indicator)
 	post_indicator_update(indicator_signal = COMSIG_LIVING_THINKING_INDICATOR_UPDATED)
@@ -83,6 +84,7 @@
 /mob/living/create_typing_indicator()
 	if(active_typing_indicator || active_thinking_indicator || IS_UNCONSCIOUS_OR_CRIT(src) || !HAS_TRAIT(src, TRAIT_THINKING_IN_CHARACTER))
 		return FALSE
+	var/bubble_icon = client?.tgui_say?.initial_channel == LOOC_CHANNEL ? "looc" : src.bubble_icon // M13 EDIT ADDITION
 	active_typing_indicator = mutable_appearance('icons/mob/effects/talk.dmi', "[bubble_icon]0", TYPING_LAYER)
 	add_overlay(active_typing_indicator)
 	post_indicator_update(indicator_signal = COMSIG_LIVING_TYPING_INDICATOR_UPDATED)

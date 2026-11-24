@@ -6,6 +6,7 @@ export const CHANNELS = [
   'Whis', // NOVA EDIT ADDITION - CUSTOMIZATION
   'LOOC', // NOVA EDIT ADDITION - CUSTOMIZATION
   'Do', // NOVA EDIT ADDITION - Do roleplay addition
+  'Subtle', // M13 EDIT ADDITION - SUBTLE
   'OOC',
   'Admin',
 ] as const;

@@ -1,0 +1,4 @@
+author: "misleadingname"
+delete-after: True
+changes:
+  - rscadd: "HUD voting UI."

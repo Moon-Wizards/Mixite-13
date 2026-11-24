@@ -231,3 +231,14 @@
   - rscadd: Random pride flag that picks a pride flag on round-start, everyone deserves
       a little pride.
   - rscadd: Mail crates now sell for 25 credits and goodie cases for 10.
+2026-11-22:
+  misleadingname:
+  - rscadd: Subtle emote `*subtle <text>` (or tsay) to make it only appear within
+      a 1 tile radius.
+  - rscadd: Added Raptor Laugh and Bad Laugh.
+  - rscadd: Added *huff, *sclick, *notif, *dialup, *victory emotes.
+  - rscadd: Certain emotes have a synth angst when played via cybernetics.
+  - rscdel: Global emote cooldown.
+2026-11-23:
+  misleadingname:
+  - bugfix: Fixes Runtimes related to the Automapper changes
