@@ -10023,6 +10023,7 @@
 #include "modular_zmixite\modules\emotes\code\emotes.dm"
 #include "modular_zmixite\modules\emotes\code\laughs.dm"
 #include "modular_zmixite\modules\emotes\code\synth.dm"
+#include "modular_zmixite\modules\gordons-crowbar\code\crowbar.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_bodyparts.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_emotes.dm"
 #include "modular_zmixite\modules\hydrakin\code\hydrakin_markings.dm"
